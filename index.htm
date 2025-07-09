@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo: Quem é?</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div id="container">
+        <img id="titulo" src="/imagens/titulo.png">
+        <div id="orientacoes">
+            <div class="tooltip">
+                Como jogar:
+                <span class="tooltip1">
+                    Advinhe a personagem bíblica secreta.<br>
+                    1. Escolha uma letra clicando no teclado que está na parte inferior da tela.<br>
+                    2. Se a palavra contiver a letra escolhida, ela aparecerá no seu devido local.<br>
+                    3. Você poderá acessar um total de quatro "dicas",<br> mas cada dica lhe custará alguns pontos.<br>
+                    O jogo desconsidera acentos e sinais ortográficos.<br>
+                    Pode haver nomes compostos.
+                </span>
+            </div>
+        </div>
+        <button id="mostra-dicas" class="flash-effect-tip">Clique aqui para obter uma dica</button>
+        <div id="dicas"></div>
+        <table id="palavra-secreta">
+            <tr>
+                <td><input class="box" type="text" maxlength="1" id="A1"></td>
+                <td><input class="box" type="text" maxlength="1" id="A2"></td>
+                <td><input class="box" type="text" maxlength="1" id="A3"></td>
+                <td><input class="box" type="text" maxlength="1" id="A4"></td>
+                <td><input class="box" type="text" maxlength="1" id="A5"></td>
+                <td><input class="box" type="text" maxlength="1" id="A6"></td>
+                <td><input class="box" type="text" maxlength="1" id="A7"></td>
+                <td><input class="box" type="text" maxlength="1" id="A8"></td>
+                <td><input class="box" type="text" maxlength="1" id="A9"></td>
+                <td><input class="box" type="text" maxlength="1" id="A10"></td>
+                <td><input class="box" type="text" maxlength="1" id="A11"></td>
+                <td><input class="box" type="text" maxlength="1" id="A12"></td>
+                <td><input class="box" type="text" maxlength="1" id="A13"></td>
+                <td><input class="box" type="text" maxlength="1" id="A14"></td>
+                <td><input class="box" type="text" maxlength="1" id="A15"></td>
+                <td><input class="box" type="text" maxlength="1" id="A16"></td>
+                <td><input class="box" type="text" maxlength="1" id="A17"></td>
+                <td><input class="box" type="text" maxlength="1" id="A18"></td>
+            </tr>
+        </table>
+
+        <table id="teclado">
+            <tr>
+                <td><button type="button" maxlength="1" class="tecla" id="Q">Q</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="E">E</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="R">R</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="T">T</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="Y">Y</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="U">U</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="I">I</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="O">O</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="P">P</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" maxlength="1" class="tecla" id="A">A</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="S">S</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="D">D</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="F">F</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="G">G</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="H">H</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="J">J</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="K">K</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="L">L</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="tecla-nula"></button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="Z">Z</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="X">X</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="C">C</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="V">V</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="B">B</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="N">N</button></td>
+                <td><button type="button" maxlength="1" class="tecla" id="M">M</button></td>
+                <td><button type="button" class="tecla-nula"></button></td>
+            </tr>
+        </table>
+        <div id="rodape">
+            <div id="Marcatempo">
+                <h5>TEMPO:</h5>
+                <h2 id="cronometro">00:00</h2>
+            </div>
+            <div id="Marcapontuacao">
+                <h5>PONTOS:</h5>
+                <h2 id="indicador"></h2>
+            </div>
+            <button id="sair" onclick="clicarSair()">SAIR</button>
+        </div>
+        <div id="mensagem-dica">
+            <img src="imagens/mensagem-dica.png">
+            <button id="ok" onclick="clicarOk()" class="efeitoflash-button">OK!</button>
+        </div>
+        <div id="mensagem-dica2">
+            <img src="imagens/mensagem-dica2.png">
+            <button id="ok2" onclick="clicarOk2()" class="efeitoflash-button">OK!</button>
+        </div>
+        <div id="mensagem-letra-certa">
+            <img src="imagens/mensagem-letra-certa.png">
+            <button id="ok3" onclick="clicarOk3()" class="efeitoflash-button">OK!</button>
+        </div>
+        <div id="mensagem-letra-errada">
+            <img src="imagens/mensagem-letra-errada.png">
+            <button id="ok2" onclick="clicarOk4()" class="efeitoflash-button">OK!</button>
+        </div>
+        <div id="mensagem-game-over-erro">
+            <img src="imagens/mensagem-game-over-erro.png">
+        </div>
+        <div id="mensagem-game-over-acerto">
+            <img src="imagens/mensagem-game-over-acerto.png">
+        </div>
+    </div>
+    <script src="js/relacaoDeDicas.js" defer></script>
+    <script src="js/script3.js" defer></script>
+    <script src="js/dicas.js" defer></script>
+    <script src="js/botao-sair.js" defer></script>
+</body>
+
+</html>
