@@ -19,8 +19,8 @@ function acionaBotaoDica() {
 const botao = document.getElementById("mostra-dicas");
 botao.addEventListener("click", () => { // Adiciona um evento de clique ao botão "mostra-dicas"
   score -= 2;            // penaliza 2 pontos sempre que o botão for clicado
-  exibirDica();           // mostra a dica
   acrescentaPontuacao();  // atualiza o indicador na tela
+  exibirDica();           // mostra a dica
 });
 
 let dicaAtual = 0; // Variável para rastrear o índice da dica atual
@@ -64,7 +64,6 @@ function exibirDica() {
 function clicarOk() {
     const mensagemDica = document.getElementById("mensagem-dica");
     mensagemDica.style.display = 'none'; // Esconde a mensagem de dica
-
     digitarPalavraCerta(); // Chama a função que configura os inputs
 }
 

@@ -28,6 +28,6 @@
     }
     iniciaCronometro(){
         this.isCronometroAtivo = true
-        // console.log('iniciaCronometro')
+        console.log('iniciaCronometro')
     }
 }
