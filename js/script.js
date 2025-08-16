@@ -54,8 +54,14 @@ document.getElementById("indicador").textContent = score;
 
 function acrescentaPontuacao() {
     // só atualiza o <div id="indicador">
-    document.getElementById("indicador").textContent = score;
+    document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
+
+//*******CRONOMETRO********
+const cronometro = new Cronometro()
+setInterval(() => {
+    cronometro.atualizaCronometro()
+}, 1000);
 
 function configurarTeclado() {
     const teclas = document.querySelectorAll(".tecla");
@@ -63,7 +69,8 @@ function configurarTeclado() {
 
     teclas.forEach(tecla => {
         tecla.addEventListener("click", () => {
-            contadorCliques++;
+            cronometro.iniciaCronometro() // Inicia o cronômetro ao clicar na tecla
+            contadorCliques++; // Incrementa o contador de cliques
             const letra = tecla.textContent.trim().toUpperCase();
             const inputs = Array.from(
                 document.querySelectorAll(`input[data-letra="${letra}"]`)
@@ -89,34 +96,35 @@ function configurarTeclado() {
                 score -= 2; // Perde 2 pontos se clicou numa letra errada
                 acrescentaPontuacao();
             }
-            verificarInputsVazios();
-
-            if (contadorCliques >= 5) {
-                setTimeout(() => {
-                    const msgCerta = document.getElementById("mensagem-letra-certa");
-                    const msgDica2 = document.getElementById("mensagem-dica2");
-                    const casasVazias = conjuntoInputsVazios.length;
+            verificarInputsVazios(); // Verifica se o input está vazio após cada clique
+            if (contadorCliques >= 5) { // Se o número de cliques for maior ou igual a 5
+                setTimeout(() => { // Aguarda 1 segundo antes de exibir a mensagem
+                    const msgCerta = document.getElementById("mensagem-letra-certa");// Obtém o elemento de id = "mensagem-letra-certa"
+                    const msgDica2 = document.getElementById("mensagem-dica2"); // Obtém o elemento de id = "mensagem-dica2"
+                    const casasVazias = conjuntoInputsVazios.length; // Obtém a quantidade de inputs vazios
                     const limiteCasasVazias =
-                        (nomeSorteado.length < 6 && casasVazias > 2) ||
-                        (nomeSorteado.length >= 6 && casasVazias > 3);
+                        (nomeSorteado.length < 6 && casasVazias > 2) || // Verifica se o número de inputs vazios é maior que 2 se o nome sorteado tiver menos de 6 letras
+                        (nomeSorteado.length >= 6 && casasVazias > 3); // Verifica se o número de inputs vazios é maior que 3 se o nome sorteado tiver 6 letras ou mais
 
-                    if (acertouLetra) {
-                        if (msgCerta && limiteCasasVazias) {
+                    if (acertouLetra) { // Se acertou a letra
+                        if (msgCerta && limiteCasasVazias) { // Se a mensagem de letra certa existe e o número de inputs vazios é maior que o limite
                             msgCerta.style.display = "block";
                         } else {
-                            if (msgDica2) msgDica2.style.display = "block";
+                            if (msgDica2) {
+                                msgDica2.style.display = "block";
+                            }
                         }
                     } else {
-                        // após o 5º clique, se errou a letra
-                        setTimeout(() => { // aguarda 1 segundo para exibir a mensagem de erro
+                        setTimeout(() => {
                             const msgErrada = document.getElementById("mensagem-letra-errada");
                             if (msgErrada) {
                                 msgErrada.style.display = "block";
                             }
-                        }, 2000);
+                        }, 1000);
                     }
                 }, 1000);
             }
+
             const casasVazias = conjuntoInputsVazios.length;
             if (
                 (nomeSorteado.length < 6 && casasVazias <= 2) ||
@@ -172,43 +180,56 @@ function desabilitarTeclado() {
     }, 5000);
 }
 
-function verificaPalavraSecreta(input) { // Função para verificar se a palavra secreta foi digitada corretamente
-    const valorCorreto = input.getAttribute("data-letra"); // Obtém o valor correto da letra do atributo data-letra do input
+function verificaPalavraSecreta(input) {
+ 
+    verificarInputsVazios();
+    const todosInputs = document.querySelectorAll('input[data-letra]');
+    // const inputsVazios = Array.from(todosInputs)
+    //     .filter(el => el.value.trim() === '')
+    //     .length;
+    // console.log(`Quantidade de inputs vazios, no momento: ${inputsVazios}`);
 
-    if (input.value.toUpperCase() === valorCorreto) { // Compara o valor do input com o valor correto, ambos em maiúsculas, neste caso ...
+    const valorCorreto = input.getAttribute("data-letra");
+    if (input.value.toUpperCase() === valorCorreto) {
         input.style.backgroundColor = "rgb(186, 150, 43)";
         input.style.border = "outset 3px rgb(252, 237, 177)";
         input.style.color = "black";
-        pontuacaoFinal(input); // Chama a função para calcular a pontuação final
+        input.style.cursor = "not-allowed";
+        input.style.userSelect = "none";
+        input.style.webkitUserSelect = "none";
+        input.style.MozUserSelect = "none";
+        input.style.msUserSelect = "none";
     } else {
         input.style.backgroundColor = "red";
         input.style.color = "white";
         input.style.border = "none";
+        cronometro.pararCronometro();
+        pontuacaoFinalErro(input);
         setTimeout(() => {
             document.getElementById("mensagem-game-over-erro").style.display = "block";
             document.getElementById("dicas").style.display = "none";
             document.getElementById("palavra-secreta").style.display = "none";
             document.getElementById("teclado").style.display = "none";
         }, 2000);
-        const boxes = document.querySelectorAll(".box-editavel");// faz com que inputsVazios os inputs já preenchidos não possam mais ser editados
-        boxes.forEach(box => {
-            box.className = "box-nao-editavel";
-        });
+
+        document.querySelectorAll(".box-editavel")
+            .forEach(box => box.className = "box-nao-editavel");
+
         document.getElementById("sair").classList.add("flash-effect-tip");
         return;
     }
 
     const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]"));
-    // Verifica se inputsVazios os inputs visíveis já foram preenchidos
-    const inputsVaziosPreenchidos = inputsDaPalavra.every(inp => { // verifica se todos os inputs visíveis estão preenchidos
-        if (window.getComputedStyle(inp).display === "none") { // Se o input não está visível, ignora a verificação
-            return true;
-        }
-        return inp.value.trim() !== ""; //Retorna true se o input estiver preenchido
+    const inputsVaziosPreenchidos = inputsDaPalavra.every(inp => {
+        if (window.getComputedStyle(inp).display === "none") return true;
+        return inp.value.trim() !== "";
     });
 
-    // Se a palavra estiver completa, exibe a mensagem de acerto após 2,5 segundos
     if (inputsVaziosPreenchidos) {
+        cronometro.pararCronometro();
+
+        // 0.1) Exibe novamente a quantidade de vazios antes do cálculo final
+        console.log(`Inputs vazios antes do acerto final: ${conjuntoInputsVazios.length}`);
         setTimeout(() => {
             document.getElementById("mensagem-game-over-acerto").style.display = "block";
             document.getElementById("sair").classList.add("flash-effect-tip");
@@ -216,32 +237,30 @@ function verificaPalavraSecreta(input) { // Função para verificar se a palavra
             document.getElementById("palavra-secreta").style.display = "none";
             document.getElementById("teclado").style.display = "none";
         }, 1000);
+        pontuacaoFinalAcerto();
     }
 }
 
-function pontuacaoFinal(input) {
-    // 1) se veio um input válido
-    if (input) {
-        input.style.backgroundColor = "rgb(186,150,43)";
-        input.style.border = "outset 3px rgb(252,237,177)";
-        input.style.color = "black";
-    }
+function pontuacaoFinalErro() {
+    score *= 0; // Zera a pontuação atual multiplicando por zero
+    acrescentaPontuacao();  // Atualiza a exibição da pontuação zerada
+}
 
-    // 2) desabilita teclado
-    desabilitarTeclado();
+function pontuacaoFinalAcerto() {
+//   verificarInputsVazios();
+//     const todosInputs = document.querySelectorAll('input[data-letra]');
+//     const inputsVazios = Array.from(todosInputs)
+//     const condicaoQCV =
+//         (letras < 6 && inputsVazios > 2) ||
+//         (letras >= 6 && inputsVazios >= 3);
 
-    // 3) conta vazios e log
-    const vazios = Array.from(
-        document.querySelectorAll("input.box-editavel")
-    ).filter(i => i.value.trim() === "");
-    console.log(`Ainda há ${vazios.length} inputs vazios.`);
+//     if (condicaoQCV) {
+//         score += 20;
+//     } else {
+//         score += 10;
+//     }
 
-    // 4/5) multiplica score
-    const casas = vazios.length;
-    const mul3 = (nomeSorteado.length < 6 && casas > 2) ||
-        (nomeSorteado.length >= 6 && casas >= 3);
-    score *= (mul3 ? 3 : 2);
-    acrescentaPontuacao();
+//     acrescentaPontuacao();
 }
 
 // Chamadas das funções na ordem correta para que a variável nomeSorteado seja definida antes

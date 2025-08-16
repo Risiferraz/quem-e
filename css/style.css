@@ -45,7 +45,7 @@ html {
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
 }
 
 .tooltip {
@@ -91,7 +91,7 @@ html {
     text-align: center;
     display: none;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     position: relative;
     grid-area: 1 / 1;
 }
@@ -108,13 +108,15 @@ html {
 }
 
 @keyframes flash-effect-tip {
-    0%  {
+    0% {
         background-color: rgb(50, 150, 160);
     }
-    50%{
+
+    50% {
         background-color: rgb(49, 111, 178);
     }
-    100%{
+
+    100% {
         background-color: rgb(50, 150, 160);
     }
 }
@@ -154,8 +156,9 @@ p {
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
     text-transform: uppercase;
-    cursor: not-allowed; 
-    user-select: none; /* Evita a seleção de texto */
+    cursor: not-allowed;
+    user-select: none;
+    /* Evita a seleção de texto */
 }
 
 .box-editavel {
@@ -184,8 +187,9 @@ p {
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 2rem;
     text-transform: uppercase;
-    cursor: not-allowed; 
-    user-select: none; /* Evita a seleção de texto */
+    cursor: not-allowed;
+    user-select: none;
+    /* Evita a seleção de texto */
     z-index: 2;
     position: relative;
 }
@@ -233,13 +237,15 @@ input:focus {
 }
 
 @keyframes efeito-letra-errada {
-    0%  {
+    0% {
         background-color: rgb(252, 4, 4);
     }
-    50%{
+
+    50% {
         background-color: rgb(249, 144, 6);
     }
-    100%{
+
+    100% {
         background-color: rgb(250, 3, 3);
     }
 }
@@ -251,7 +257,8 @@ input:focus {
     left: 50%;
     transform: translate(-50%, 0);
     transition: opacity 1s ease-in-out;
-    opacity: 0; /* Começa invisível */
+    opacity: 0;
+    /* Começa invisível */
 }
 
 .tecla-nula {
@@ -272,7 +279,8 @@ input:focus {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -17%);
-    transition: opacity 9s ease; /* Transição de 2 segundos */
+    transition: opacity 9s ease;
+    /* Transição de 2 segundos */
     opacity: 1;
 }
 
@@ -282,7 +290,8 @@ input:focus {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, -30%);
-    transition: opacity 9s ease; /* Transição de 2 segundos */
+    transition: opacity 9s ease;
+    /* Transição de 2 segundos */
     opacity: 1;
 }
 
@@ -292,8 +301,15 @@ input:focus {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 1%);
-    transition: opacity 9s ease; /* Transição de 2 segundos */
+    opacity: 0;   /* Começa invisível */
+    visibility: hidden; /* Garante que não ocupe espaço quando invisível */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+#mensagem-letra-certa.mensagem-letra-certa-show {
+    display: block;
     opacity: 1;
+    visibility: visible;
 }
 
 #mensagem-letra-errada {
@@ -302,8 +318,15 @@ input:focus {
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 1%);
-    transition: opacity 9s ease; /* Transição de 2 segundos */
+    opacity: 0;   /* Começa invisível */
+    visibility: hidden; /* Garante que não ocupe espaço quando invisível */
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+#mensagem-letra-errada.mensagem-letra-errada-show {
+    display: block;
     opacity: 1;
+    visibility: visible;
 }
 
 #ok {
@@ -345,17 +368,20 @@ input:focus {
 .efeitoflash-button {
     animation-name: efeitoflash-button;
     animation-duration: 1s;
-    animation-iteration-count: infinite; /*- caso você queira que o efeito se repita infinitamente*/
+    animation-iteration-count: infinite;
+    /*- caso você queira que o efeito se repita infinitamente*/
 }
 
 @keyframes efeitoflash-button {
-    0%  {
+    0% {
         background-color: brown;
     }
-    50%{
+
+    50% {
         background-color: rgb(182, 4, 4);
     }
-    100%{
+
+    100% {
         background-color: brown;
     }
 }
@@ -397,7 +423,7 @@ input:focus {
 }
 
 #Marcapontuacao {
-    background-color:rgb(49, 111, 178);
+    background-color: rgb(49, 111, 178);
     width: 100px;
     height: 80px;
     box-sizing: border-box;
