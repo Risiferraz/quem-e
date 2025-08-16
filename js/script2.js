@@ -77,17 +77,17 @@ function configurarTeclado() {
       );
       const acertouLetra = inputs.length > 0;
       if (acertouLetra) { // Se acertou a letra
+        score--; // Perde 1 ponto se clicou numa letra certa
         inputs.forEach(input => {  // Percorre os inputs que correspondem à letra clicada
           if (input.value === "") { // Se o input estiver vazio
-            score--; // Perde 1 ponto se clicou numa letra certa
             input.value = letra; // Preenche o input com a letra clicada
             input.style.background = "rgb(186,150,43)";  // Altera o fundo do input
             input.style.border = "outset 3px rgb(252,237,177)"; // Altera a borda do input
             input.style.color = "black"; // Altera a cor do texto do input
             input.classList.remove("box-editavel"); // Remove a classe "box-editavel" do input
             input.classList.add("box-nao-editavel"); // Adiciona a classe "box-nao-editavel" ao input
-            acrescentaPontuacao();
             matches++;  // Incrementa o contador de letras acertadas
+            acrescentaPontuacao();
             setTimeout(() => {
               const mensagemLetraCerta = document.getElementById("mensagem-letra-certa"); // seleciona a div de id="mensagem-letra-certa"
               if (!mensagemLetraCerta) return;
@@ -170,23 +170,22 @@ function clicarOk3() {
   if (botaoMostraDicas.disabled) {
     botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
   }
-    setTimeout(() => {
+  setTimeout(() => {
     botaoMostraDicas.style.display = 'flex';
   }, 1000);
 }
-    document.addEventListener("DOMContentLoaded", () => {
-      const botaoMostraDicas = document.getElementById("mostra-dicas");
-      if (!botaoMostraDicas) return;
 
-      // Anexa listener ao botão
-      botaoMostraDicas.addEventListener("click", exibirDica);
+document.addEventListener("DOMContentLoaded", () => {
+  const botaoMostraDicas = document.getElementById("mostra-dicas");
+  if (!botaoMostraDicas) return;
 
-      // Se você precisar disparar clicarOk3 automaticamente:
-      // clicarOk3();
-    });
-
-    score -= 2;            // penaliza 2 pontos sempre que o botão for clicado
+  botaoMostraDicas.addEventListener("click", () => {
+    score -= 2;            // penaliza 2 pontos só quando clicar
     acrescentaPontuacao();  // atualiza o indicador na tela
+    exibirDica();           // chama a sua função que mostra a dica
+  });
+});
+
 
 function clicarOk4() {
   const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
@@ -207,11 +206,6 @@ function verificaPalavraSecreta(input) {
 
   verificarInputsVazios();
   const todosInputs = document.querySelectorAll('input[data-letra]');
-  // const inputsVazios = Array.from(todosInputs)
-  //     .filter(el => el.value.trim() === '')
-  //     .length;
-  // console.log(`Quantidade de inputs vazios, no momento: ${inputsVazios}`);
-
   const valorCorreto = input.getAttribute("data-letra");
   if (input.value.toUpperCase() === valorCorreto) {
     input.style.backgroundColor = "rgb(186, 150, 43)";
