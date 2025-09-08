@@ -1,4 +1,3 @@
-const botaoMostraDicas = document.getElementById('mostra-dicas'); // Seleciona o botão "mostra-dicas"
 function acionaBotaoDica() {
     document.getElementById('orientacoes').style.display = 'none'; // Ocultar o elemento "orientacoes"
     document.getElementById("titulo").style.display = "none";  //  Ocultar o elemento "título"
@@ -7,6 +6,13 @@ function acionaBotaoDica() {
     document.getElementById("dicas").style.gridArea = "1 / 1";
 
 }
+
+const botao = document.getElementById("mostra-dicas");
+botao.addEventListener("click", () => { // Adiciona um evento de clique ao botão "mostra-dicas"
+    score -= 2;            // penaliza 2 pontos sempre que o botão for clicado
+    acrescentaPontuacao();  // atualiza o indicador na tela
+    exibirDica();           // mostra a dica
+});
 
 let dicaAtual = 0; // Variável para rastrear o índice da dica atual
 
@@ -20,6 +26,7 @@ function exibirDica() {
         botaoMostraDicas.disabled = true; // desabilita o botão para evitar cliques repetidos
     }
     const dicasPersonagem = dicas[nomeSorteado]; // Obtém o array de dicas do personagem sorteado
+    const divDicas = document.getElementById("dicas");
     if (dicaAtual < dicasPersonagem.length) { // Verifica se o número atual de dicas é menor que a quantidade total de dicas
         const dica = dicasPersonagem[dicaAtual]; // Obtém a dica atual
         const divDicas = document.getElementById("dicas"); // seleciona a div de id="dicas"
@@ -27,7 +34,7 @@ function exibirDica() {
         divDicas.innerHTML += `${dica}<br/>`; // modifica o conteúdo da constante divDicas que recebe a div id="dicas".
 
         const mensagemDica = document.getElementById("mensagem-dica"); // seleciona a div de id="mensagem-dica"
-        if (dicaAtual < 4) {
+        if (dicaAtual <= 5) {
             mensagemDica.style.display = 'grid'; // faz aparecer a div "mensagem-dica"
             // botaoMostraDicas.style.display = "flex"; //faz aparecer o botaoMostraDicas
             mensagemDica.style.opacity = '0'; // dá o valor inicial da opacidade para a mensagemDica de 0 possibilitando o efeito do setTimeOut a seguir

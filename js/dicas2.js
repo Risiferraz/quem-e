@@ -40,20 +40,6 @@ function exibirDica() {
         botaoMostraDicas.style.cursor = "none";
         botaoMostraDicas.disabled = true;
 
-        // 2) Agendar a reexibição e habilitação após 5 segundos
-        setTimeout(() => {
-            // garantir que ainda exista no DOM
-            if (!botaoMostraDicas) return;
-
-            // reexibe o botão (display pode ser ajustado via CSS inicial)
-            botaoMostraDicas.style.display = 'flex';
-
-            // restaura estilo e estado
-            botaoMostraDicas.disabled = false;
-            botaoMostraDicas.style.cursor = "pointer";
-            botaoMostraDicas.style.opacity = "1";
-        }, 5000);
-
         if (dicaAtual < dicasPersonagem.length) { // Verifica se o número atual de dicas é menor que a quantidade total de dicas
             const dica = dicasPersonagem[dicaAtual]; // Obtém a dica atual
             const divDicas = document.getElementById("dicas"); // seleciona a div de id="dicas"
@@ -66,14 +52,14 @@ function exibirDica() {
                 // botaoMostraDicas.style.display = "flex"; //faz aparecer o botaoMostraDicas
                 mensagemDica.style.opacity = '0'; // dá o valor inicial da opacidade para a mensagemDica de 0 possibilitando o efeito do setTimeOut a seguir
 
-                setTimeout(() => {
-                    mensagemDica.style.opacity = '1'; // faz aparecer a mensagemDica após alguns segundos
-                    const inputs = document.querySelectorAll(".box-editavel"); // Certifica-se de que está pegando inputs editáveis
-                    const primeiroInputVazio = Array.from(inputs).find(input => input.value === "");
-                    if (primeiroInputVazio) {
-                        primeiroInputVazio.focus(); // Aplica o foco no primeiro input vazio
-                    }
-                }, 2500); // estipula um tempo de demora para aparecer a div "mensagem-dica"
+            //     setTimeout(() => {
+            //         mensagemDica.style.opacity = '1'; // faz aparecer a mensagemDica após alguns segundos
+            //         const inputs = document.querySelectorAll(".box-editavel"); // Certifica-se de que está pegando inputs editáveis
+            //         const primeiroInputVazio = Array.from(inputs).find(input => input.value === "");
+            //         if (primeiroInputVazio) {
+            //             primeiroInputVazio.focus(); // Aplica o foco no primeiro input vazio
+            //         }
+            //     }, 2500); // estipula um tempo de demora para aparecer a div "mensagem-dica"
             }
             dicaAtual++; // Incrementa o índice para exibir a próxima dica no próximo clique
         }

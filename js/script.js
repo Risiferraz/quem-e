@@ -1,269 +1,119 @@
 const listaDePersonagens = ["Maria-Madalena", "Jeremias", "Abias"];
-let nomeSorteado;
-let letras = [];
+let personagemSecreto = "";
+let score = 100;                // pontuação inicial
 
-function sortearNome(lista) {
-    const indiceAleatorio = Math.floor(Math.random() * lista.length);
-    nomeSorteado = lista[indiceAleatorio];
-    console.log(`Nome sorteado: ${nomeSorteado}`);
-    return nomeSorteado;
+// Sorteia o personagem e retorna em maiúsculas
+function sortearPersonagem() {
+    const idx = Math.floor(Math.random() * listaDePersonagens.length);
+    personagemSecreto = listaDePersonagens[idx];
+    return personagemSecreto.toUpperCase();
 }
 
-function configurarInputsBox() {
-    // Divide o nome sorteado em array de letras
-    const letrasArray = nomeSorteado.split("");
+function configurarInputsBox(nome) {
+    const letrasArray = nome.split(""); // Divide o nome sorteado em um array de letras
+    for (let i = 1; i <= 18; i++) { // numera sequencialmente os inputs de 1 a 18 (no máximo) conforme quantidade de letras
+        const inputBox = document.getElementById(`A${i}`); // especifica o inputBox como A1, A2, A3...
+        if (!inputBox) continue; //
 
-    // Percorre os inputs de A1 a A18
-    for (let i = 1; i <= 18; i++) {
-        const input = document.getElementById(`A${i}`);
-        //if (!input) continue;  Garante que o elemento existe
+        if (i <= letrasArray.length) { // Se o índice for menor ou igual ao número de letras do nome sorteado
+            const letra = letrasArray[i - 1]; // Pega a letra correspondente do array (ajustando o índice)
+            inputBox.setAttribute("data-letra", letra); // Define o atributo data-letra com a letra correspondente
+            inputBox.disabled = true; // Desabilita o inputBox para evitar edição
+            inputBox.value = ""; // Limpa o valor do inputBox, evitando assim efeitos colaterais e garantindo que cada inputBox comece sem sobras de valores anteriores.
 
-        if (i <= letrasArray.length) {
-            const letra = letrasArray[i - 1]; // Obtém a letra correspondente ao índice atual
-            input.setAttribute("data-letra", letra.toUpperCase()); // Define o atributo data-letra para a validação posterior (em maiúsculas)
-            input.disabled = true; // Comando para desabilitar o input
-            input.value = ""; // Inicializa o input com valor vazio
-            if (letra === "-") { // Se a letra for hífen, ajusta o estilo e mantém o input vazio
-                input.value = ""; // 
-                input.style.backgroundColor = "transparent";
-                input.style.border = "none";
+            if (letra === "-" || letra === " ") { // Se a letra for um hífen ou espaço, define o valor do inputBox como nulo.
+                inputBox.value = letra;
+                inputBox.style.backgroundColor = "transparent";
+                inputBox.style.border = "none";
             }
         } else {
-            // Esconde os inputs excedentes à quantidade de letras
-            input.style.display = "none";
+            inputBox.style.display = "none"; // Esconde os inputs excedentes à quantidade de letras
         }
     }
 }
 
-let conjuntoInputsVazios = []; // Variável que cria um array para armazenar os inputs vazios
-function verificarInputsVazios() {
-    const inputsVazios = document.querySelectorAll('input.box-editavel, input.box'); // Pega todos os inputs que têm a classe "box-editavel" ou "box"
-    conjuntoInputsVazios = Array.from(inputsVazios).filter(inp => {  // recebe o array de inputs e filtra-os
-        const inputsVisiveis = window.getComputedStyle(inp).display !== 'none'; // recebe os inputs que não estão com display none
-        const inputsNaoPreenchidos = inp.value.trim() === ''; // recebe os inputs que estão vazios
-        const inputsSemHifen = inp.getAttribute('data-letra') !== '-'; // recebe os inputs que não são hífen
+function iniciarJogo() { // Ao iniciar o jogo, são feitas três coisas:
+    // 1. Sorteia e exibe no console
+    const nomeSorteado = sortearPersonagem();
+    console.log("Personagem sorteado:", personagemSecreto);
 
-        return inputsVisiveis && inputsNaoPreenchidos && inputsSemHifen;
-    });
-    console.log(`Quantidade de inputs vazios: ${conjuntoInputsVazios.length}`); // Indica a quantidade de inputs vazios que ainda restam.
+    // 2. Exibe a pontuação inicial
+    document.getElementById("indicador").textContent = score;
+
+    // 3. Configura os inputs
+    configurarInputsBox(nomeSorteado);
 }
 
-let matches = 0; // Variável que armazena a quantidade de letras acertadas
-let score = 100; // pontuação começa com 100 pontos
-document.getElementById("indicador").textContent = score;
+document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código
+    configurarTeclado();
+    iniciarJogo();
+    verificarLetraClicada();
+    //******* CRONÔMETRO ********
+    const cronometro = new Cronometro();
+    cronometro.iniciaCronometro();
+    setInterval(() => cronometro.atualizaCronometro(), 1000); // Atualiza o cronômetro a cada segundo
+});
+
+function configurarTeclado() { // Atribui a cada botão de classe "tecla" a letra do seu próprio id
+    const botoesTecla = document.querySelectorAll("button.tecla");
+    botoesTecla.forEach(buttonClicado => {
+        const letra = buttonClicado.id; // recebe o id do botão
+        buttonClicado.textContent = letra; // atribui o id do botão ao seu próprio conteúdo
+    });
+}
+let contadorDeCliques = 0; // Contador de cliques nas letras
+
+function verificarLetraClicada() {
+    const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
+    botoesTecla.forEach(buttonClicado => { // Para cada botão, adiciona um listener de evento de clique
+        buttonClicado.addEventListener("click", () => {
+            acionaBotaoDica();
+            contadorDeCliques++;
+            const letra = buttonClicado.id;
+            let acertou = false;
+
+            // Preenche e estiliza inputs que casam com a letra clicada
+            document.querySelectorAll("input.box").forEach(inputBox => { // Seleciona todos os inputs com a classe "box"
+                if (inputBox.dataset.letra === letra) { // Compara o atributo data-letra do inputBox com a letra do botão clicado
+                    inputBox.value = letra; // Se coincidir, preenche o inputBox com a letra
+                    inputBox.style.background = "rgb(186,150,43)";
+                    inputBox.style.border = "outset 3px rgb(252,237,177)";
+                    inputBox.style.color = "black";
+                    inputBox.classList.replace("box", "box-nao-editavel");
+                    acertou = true;
+                }
+            });
+
+            acrescentaPontuacao();
+            desabilitarTecla(buttonClicado);
+        });
+    });
+}
+
+function desabilitarTecla(buttonClicado) {
+    buttonClicado.disabled = true;
+    buttonClicado.style.opacity = "0.5";
+    buttonClicado.style.cursor = "not-allowed";
+    buttonClicado.style.pointerEvents = "none";
+    buttonClicado.classList.add("tecla-clicada");
+}
+
+function exibeMensagens(id, showClass, delay = 1500) {
+    setTimeout(() => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.display = "block";
+        el.classList.add(showClass);
+    }, delay);
+}
 
 function acrescentaPontuacao() {
-    // só atualiza o <div id="indicador">
-    document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
+  // só atualiza o <div id="indicador">
+  document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
 
 //*******CRONOMETRO********
 const cronometro = new Cronometro()
 setInterval(() => {
-    cronometro.atualizaCronometro()
+  cronometro.atualizaCronometro()
 }, 1000);
-
-function configurarTeclado() {
-    const teclas = document.querySelectorAll(".tecla");
-    let contadorCliques = 0;
-
-    teclas.forEach(tecla => {
-        tecla.addEventListener("click", () => {
-            cronometro.iniciaCronometro() // Inicia o cronômetro ao clicar na tecla
-            contadorCliques++; // Incrementa o contador de cliques
-            const letra = tecla.textContent.trim().toUpperCase();
-            const inputs = Array.from(
-                document.querySelectorAll(`input[data-letra="${letra}"]`)
-            );
-            const acertouLetra = inputs.length > 0;
-
-            if (acertouLetra) { // Se acertou a letra
-                score--; // Perde 1 ponto se clicou numa letra certa
-                inputs.forEach(input => {  // Percorre os inputs que correspondem à letra clicada
-                    if (input.value === "") { // Se o input estiver vazio
-                        input.value = letra; // Preenche o input com a letra clicada
-                        input.style.background = "rgb(186,150,43)";  // Altera o fundo do input
-                        input.style.border = "outset 3px rgb(252,237,177)"; // Altera a borda do input
-                        input.style.color = "black"; // Altera a cor do texto do input
-                        input.classList.remove("box-editavel"); // Remove a classe "box-editavel" do input
-                        input.classList.add("box-nao-editavel"); // Adiciona a classe "box-nao-editavel" ao input
-                        matches++;  // Incrementa o contador de letras acertadas
-                        acrescentaPontuacao();
-                    }
-                });
-            } else {
-                tecla.classList.add("efeito-letra-errada");
-                score -= 2; // Perde 2 pontos se clicou numa letra errada
-                acrescentaPontuacao();
-            }
-            verificarInputsVazios(); // Verifica se o input está vazio após cada clique
-            if (contadorCliques >= 5) { // Se o número de cliques for maior ou igual a 5
-                setTimeout(() => { // Aguarda 1 segundo antes de exibir a mensagem
-                    const msgCerta = document.getElementById("mensagem-letra-certa");// Obtém o elemento de id = "mensagem-letra-certa"
-                    const msgDica2 = document.getElementById("mensagem-dica2"); // Obtém o elemento de id = "mensagem-dica2"
-                    const casasVazias = conjuntoInputsVazios.length; // Obtém a quantidade de inputs vazios
-                    const limiteCasasVazias =
-                        (nomeSorteado.length < 6 && casasVazias > 2) || // Verifica se o número de inputs vazios é maior que 2 se o nome sorteado tiver menos de 6 letras
-                        (nomeSorteado.length >= 6 && casasVazias > 3); // Verifica se o número de inputs vazios é maior que 3 se o nome sorteado tiver 6 letras ou mais
-
-                    if (acertouLetra) { // Se acertou a letra
-                        if (msgCerta && limiteCasasVazias) { // Se a mensagem de letra certa existe e o número de inputs vazios é maior que o limite
-                            msgCerta.style.display = "block";
-                        } else {
-                            if (msgDica2) {
-                                msgDica2.style.display = "block";
-                            }
-                        }
-                    } else {
-                        setTimeout(() => {
-                            const msgErrada = document.getElementById("mensagem-letra-errada");
-                            if (msgErrada) {
-                                msgErrada.style.display = "block";
-                            }
-                        }, 1000);
-                    }
-                }, 1000);
-            }
-
-            const casasVazias = conjuntoInputsVazios.length;
-            if (
-                (nomeSorteado.length < 6 && casasVazias <= 2) ||
-                (nomeSorteado.length >= 6 && casasVazias <= 3)
-            ) {
-                document.getElementById("mensagem-dica2").style.display = "block";
-                desabilitarTeclado();
-            }
-
-            if (contadorCliques <= 4) {  // até o 4º clique → mostra dica
-                acionaBotaoDica();
-            } else {    // depois “pisca” a dica
-                const msgDica = document.getElementById("mensagem-dica");
-                if (msgDica) {
-                    msgDica.style.opacity = "0";
-                    setTimeout(() => (msgDica.style.opacity = "1"), 2500);
-                }
-            }
-            digitarPalavraCerta(); // Chama a função que configura os inputs
-            // ------------------------------------------------------
-            // Marca a tecla como usada
-            // ------------------------------------------------------
-            tecla.classList.remove("tecla");
-            tecla.classList.add("tecla-clicada");
-        });                // fecha addEventListener
-    });                  // fecha forEach
-}                      // fecha configurarTeclado
-
-function clicarOk3() {
-    const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
-    mensagemLetraCerta.style.display = 'none'; // Esconde a mensagem-letra-certa
-}
-
-function clicarOk4() {
-    const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
-    mensagemLetraErrada.style.display = 'none'; // Esconde a mensagem-letra-errada
-}
-
-function desabilitarTeclado() {
-    const teclas = document.querySelectorAll('.tecla, .tecla-clicada'); // Seleciona todas as teclas, tanto as normais quanto as já clicadas
-    teclas.forEach(tecla => { // Itera (percorre cada elemento) sobre cada tecla executando as funções abaixo
-        tecla.disabled = true; // Desabilita a tecla/tecla-clicada
-        tecla.style.opacity = "0.5"; // Diminui a opacidade da tecla
-        tecla.style.cursor = "not-allowed"; // Muda o cursor para indicar que a tecla não pode ser clicada
-        tecla.style.pointerEvents = "none"; // Faz sumir o cursor do evento hover
-        // Após 2,5 segundos, exibe a mensagem de dica e programa o desaparecimento de "mostra-dicas"
-        setTimeout(() => {
-            const mostraDicas = document.getElementById("mostra-dicas");
-            if (mostraDicas) {
-                mostraDicas.style.opacity = "0"; // Diminui a opacidade do botão "mostra-dicas"
-            }
-        }, 1000);
-    }, 5000);
-}
-
-function verificaPalavraSecreta(input) {
- 
-    verificarInputsVazios();
-    const todosInputs = document.querySelectorAll('input[data-letra]');
-    // const inputsVazios = Array.from(todosInputs)
-    //     .filter(el => el.value.trim() === '')
-    //     .length;
-    // console.log(`Quantidade de inputs vazios, no momento: ${inputsVazios}`);
-
-    const valorCorreto = input.getAttribute("data-letra");
-    if (input.value.toUpperCase() === valorCorreto) {
-        input.style.backgroundColor = "rgb(186, 150, 43)";
-        input.style.border = "outset 3px rgb(252, 237, 177)";
-        input.style.color = "black";
-        input.style.cursor = "not-allowed";
-        input.style.userSelect = "none";
-        input.style.webkitUserSelect = "none";
-        input.style.MozUserSelect = "none";
-        input.style.msUserSelect = "none";
-    } else {
-        input.style.backgroundColor = "red";
-        input.style.color = "white";
-        input.style.border = "none";
-        cronometro.pararCronometro();
-        pontuacaoFinalErro(input);
-        setTimeout(() => {
-            document.getElementById("mensagem-game-over-erro").style.display = "block";
-            document.getElementById("dicas").style.display = "none";
-            document.getElementById("palavra-secreta").style.display = "none";
-            document.getElementById("teclado").style.display = "none";
-        }, 2000);
-
-        document.querySelectorAll(".box-editavel")
-            .forEach(box => box.className = "box-nao-editavel");
-
-        document.getElementById("sair").classList.add("flash-effect-tip");
-        return;
-    }
-
-    const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]"));
-    const inputsVaziosPreenchidos = inputsDaPalavra.every(inp => {
-        if (window.getComputedStyle(inp).display === "none") return true;
-        return inp.value.trim() !== "";
-    });
-
-    if (inputsVaziosPreenchidos) {
-        cronometro.pararCronometro();
-
-        // 0.1) Exibe novamente a quantidade de vazios antes do cálculo final
-        console.log(`Inputs vazios antes do acerto final: ${conjuntoInputsVazios.length}`);
-        setTimeout(() => {
-            document.getElementById("mensagem-game-over-acerto").style.display = "block";
-            document.getElementById("sair").classList.add("flash-effect-tip");
-            document.getElementById("dicas").style.display = "none";
-            document.getElementById("palavra-secreta").style.display = "none";
-            document.getElementById("teclado").style.display = "none";
-        }, 1000);
-        pontuacaoFinalAcerto();
-    }
-}
-
-function pontuacaoFinalErro() {
-    score *= 0; // Zera a pontuação atual multiplicando por zero
-    acrescentaPontuacao();  // Atualiza a exibição da pontuação zerada
-}
-
-function pontuacaoFinalAcerto() {
-//   verificarInputsVazios();
-//     const todosInputs = document.querySelectorAll('input[data-letra]');
-//     const inputsVazios = Array.from(todosInputs)
-//     const condicaoQCV =
-//         (letras < 6 && inputsVazios > 2) ||
-//         (letras >= 6 && inputsVazios >= 3);
-
-//     if (condicaoQCV) {
-//         score += 20;
-//     } else {
-//         score += 10;
-//     }
-
-//     acrescentaPontuacao();
-}
-
-// Chamadas das funções na ordem correta para que a variável nomeSorteado seja definida antes
-sortearNome(listaDePersonagens);
-configurarInputsBox();
-configurarTeclado();

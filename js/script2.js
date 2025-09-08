@@ -43,7 +43,7 @@ function verificarInputsVazios() {
     const inputsNaoPreenchidos = inp.value.trim() === ''; // recebe os inputs que estão vazios
     const inputsSemHifen = inp.getAttribute('data-letra') !== '-'; // recebe os inputs que não são hífen
 
-    return inputsVisiveis && inputsNaoPreenchidos && inputsSemHifen;
+    return inputsVisiveis && inputsNaoPreenchidos && inputsSemHifen; // retorna apenas os inputs que são visíveis, não preenchidos e não contem hífen-
   });
   console.log(`Quantidade de inputs vazios: ${conjuntoInputsVazios.length}`); // Indica a quantidade de inputs vazios que ainda restam.
 }
@@ -67,130 +67,134 @@ function configurarTeclado() {
   const teclas = document.querySelectorAll(".tecla");
   let contadorCliques = 0;
 
+  function exibeMensagens(id, showClass, delay = 1500) {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = "block";
+      el.classList.add(showClass);
+    }, delay);
+  }
+
   teclas.forEach(tecla => {
     tecla.addEventListener("click", () => {
-      cronometro.iniciaCronometro() // Inicia o cronômetro ao clicar na tecla
-      contadorCliques++; // Incrementa o contador de cliques
+      cronometro.iniciaCronometro();
+      contadorCliques++; // Incrementa o contador de cliques a cada clique na tecla
+
       const letra = tecla.textContent.trim().toUpperCase();
       const inputs = Array.from(
         document.querySelectorAll(`input[data-letra="${letra}"]`)
       );
-      const acertouLetra = inputs.length > 0;
-      if (acertouLetra) { // Se acertou a letra
-        score--; // Perde 1 ponto se clicou numa letra certa
-        inputs.forEach(input => {  // Percorre os inputs que correspondem à letra clicada
-          if (input.value === "") { // Se o input estiver vazio
-            input.value = letra; // Preenche o input com a letra clicada
-            input.style.background = "rgb(186,150,43)";  // Altera o fundo do input
-            input.style.border = "outset 3px rgb(252,237,177)"; // Altera a borda do input
-            input.style.color = "black"; // Altera a cor do texto do input
-            input.classList.remove("box-editavel"); // Remove a classe "box-editavel" do input
-            input.classList.add("box-nao-editavel"); // Adiciona a classe "box-nao-editavel" ao input
-            matches++;  // Incrementa o contador de letras acertadas
+      const acertouLetra = inputs.length > 0; // Verifica se a letra existe na palavra
+
+      if (acertouLetra) {
+        // Preenche inputs vazios, estiliza e atualiza pontuação
+        score--;
+        inputs.forEach(input => {
+          if (input.value === "") {
+            input.value = letra;
+            input.style.background = "rgb(186,150,43)";
+            input.style.border = "outset 3px rgb(252,237,177)";
+            input.style.color = "black";
+            input.classList.replace("box-editavel", "box-nao-editavel");
+            matches++;
             acrescentaPontuacao();
-            setTimeout(() => {
-              const mensagemLetraCerta = document.getElementById("mensagem-letra-certa"); // seleciona a div de id="mensagem-letra-certa"
-              if (!mensagemLetraCerta) return;
-              mensagemLetraCerta.style.display = 'block'; // faz aparecer a div "mensagem-letra-certa"
-              mensagemLetraCerta.classList.add("mensagem-letra-certa-show"); // Adiciona a classe "show" para exibir a mensagem
-            }, 1500);
           }
         });
+        exibeMensagens("mensagem-letra-certa", "mensagem-letra-certa-show");
       } else {
+        // Marca erro, aplica efeito e penaliza
         tecla.classList.add("efeito-letra-errada");
-        score -= 2; // Perde 2 pontos se clicou numa letra errada
+        score -= 2;
         acrescentaPontuacao();
-        setTimeout(() => {
-          const mensagemLetraErrada = document.getElementById("mensagem-letra-errada"); // seleciona a div de id="mensagem-letra-errada"
-          if (!mensagemLetraErrada) return;
-          mensagemLetraErrada.style.display = 'block'; // faz aparecer a div "mensagem-letra-errada"
-          mensagemLetraErrada.classList.add("mensagem-letra-errada-show"); // Adiciona a classe "show" para exibir a mensagem
-        }, 1500);
+        exibeMensagens("mensagem-letra-errada", "mensagem-letra-errada-show");
       }
-      verificarInputsVazios(); // Verifica se o input está vazio após cada clique
-      if (contadorCliques >= 5) { // Se o número de cliques for maior ou igual a 5
-        setTimeout(() => { // Aguarda 1 segundo antes de exibir a mensagem
-          const msgCerta = document.getElementById("mensagem-letra-certa");// Obtém o elemento de id = "mensagem-letra-certa"
-          const msgDica2 = document.getElementById("mensagem-dica2"); // Obtém o elemento de id = "mensagem-dica2"
-          const casasVazias = conjuntoInputsVazios.length; // Obtém a quantidade de inputs vazios
-          const limiteCasasVazias =
-            (nomeSorteado.length < 6 && casasVazias > 2) || // Verifica se o número de inputs vazios é maior que 2 se o nome sorteado tiver menos de 6 letras
-            (nomeSorteado.length >= 6 && casasVazias > 3); // Verifica se o número de inputs vazios é maior que 3 se o nome sorteado tiver 6 letras ou mais
 
-          if (acertouLetra) { // Se acertou a letra
-            if (msgCerta && limiteCasasVazias) { // Se a mensagem de letra certa existe e o número de inputs vazios é maior que o limite
-              msgCerta.style.display = "block";
+      // Atualiza quantidade de espaços vazios
+      verificarInputsVazios();
+      const casasVazias = conjuntoInputsVazios.length;
+      const limiteCasasVazias =
+        (nomeSorteado.length < 6 && casasVazias > 2) ||
+        (nomeSorteado.length >= 6 && casasVazias > 3); // constante recebe informação se o número de casas vazias for maior que 2 ou 3, dependendo do tamanho da palavra
+      const dica2 = document.getElementById("mensagem-dica2");
+
+      // Lógica extra após 5 cliques
+      if (contadorCliques >= 5) { // Após o 5º clique
+        setTimeout(() => { // Espera 1 segundo antes de executar a lógica abaixo
+          if (acertouLetra) { // Se a letra foi acertada
+            if (limiteCasasVazias) {
             } else {
-              if (msgDica2) {
-                msgDica2.style.display = "block";
-              }
+              if (dica2) dica2.style.display = "block";
             }
           } else {
-            setTimeout(() => {
-              const msgErrada = document.getElementById("mensagem-letra-errada");
-              if (msgErrada) {
-                msgErrada.style.display = "block";
-              }
-            }, 1000);
+            exibeMensagens("mensagem-letra-errada", "mensagem-letra-errada-show", 1000);
           }
         }, 1000);
       }
 
-      const casasVazias = conjuntoInputsVazios.length;
+      // Desabilita teclado se restarem poucas casas vagas e exibe dica final
       if (
         (nomeSorteado.length < 6 && casasVazias <= 2) ||
         (nomeSorteado.length >= 6 && casasVazias <= 3)
       ) {
-        document.getElementById("mensagem-dica2").style.display = "block";
+        const dica2 = document.getElementById("mensagem-dica2");
+        if (dica2) dica2.style.display = "block";
         desabilitarTeclado();
       }
 
-      if (contadorCliques <= 4) {  // até o 4º clique → mostra dica
+      // Ação da dica antes/depois do 4º clique
+      if (contadorCliques <= 4) {
         acionaBotaoDica();
-      } else {    // depois “pisca” a dica
+      } else {
         const msgDica = document.getElementById("mensagem-dica");
         if (msgDica) {
           msgDica.style.opacity = "0";
           setTimeout(() => (msgDica.style.opacity = "1"), 2500);
         }
       }
-      digitarPalavraCerta(); // Chama a função que configura os inputs
-      // ------------------------------------------------------
+
+      digitarPalavraCerta();
+
       // Marca a tecla como usada
-      // ------------------------------------------------------
-      tecla.classList.remove("tecla");
-      tecla.classList.add("tecla-clicada");
-    });                // fecha addEventListener
-  });                  // fecha forEach
-}                      // fecha configurarTeclado
+      tecla.classList.replace("tecla", "tecla-clicada");
+    });
+  });
+}   // fecha configurarTeclado
 
 function clicarOk3() {
   const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
   mensagemLetraCerta.style.display = 'none'; // Esconde a mensagem-letra-certa
+  const botaoMostraDicas = document.getElementById('mostra-dicas')
+  setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
+    if (!botaoMostraDicas) return; //
+    botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
+  }, 500);
   if (botaoMostraDicas.disabled) {
     botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
   }
-  setTimeout(() => {
-    botaoMostraDicas.style.display = 'flex';
-  }, 1000);
+  if (botaoMostraDicas.style.cursor === "none") {
+    botaoMostraDicas.style.cursor = "pointer"; // Alterar o cursor para "pointer" se estiver "none"
+  }
+  botaoMostraDicas.style.opacity = "1";    // Ajustar a opacidade do botão para 1
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const botaoMostraDicas = document.getElementById("mostra-dicas");
-  if (!botaoMostraDicas) return;
-
-  botaoMostraDicas.addEventListener("click", () => {
-    score -= 2;            // penaliza 2 pontos só quando clicar
-    acrescentaPontuacao();  // atualiza o indicador na tela
-    exibirDica();           // chama a sua função que mostra a dica
-  });
-});
-
 
 function clicarOk4() {
   const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
   mensagemLetraErrada.style.display = 'none'; // Esconde a mensagem-letra-errada
+  const botaoMostraDicas = document.getElementById('mostra-dicas')
+  setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
+    if (!botaoMostraDicas) return; //
+    botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
+  }, 500);
+  if (botaoMostraDicas.disabled) {
+    botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
+  }
+  if (botaoMostraDicas.style.cursor === "none") {
+    botaoMostraDicas.style.cursor = "pointer"; // Alterar o cursor para "pointer" se estiver "none"
+  }
+  botaoMostraDicas.style.opacity = "1";    // Ajustar a opacidade do botão para 1
 }
+
 
 function desabilitarTeclado() {
   const teclas = document.querySelectorAll('.tecla, .tecla-clicada'); // Seleciona todas as teclas, tanto as normais quanto as já clicadas
@@ -203,7 +207,6 @@ function desabilitarTeclado() {
 }
 
 function verificaPalavraSecreta(input) {
-
   verificarInputsVazios();
   const todosInputs = document.querySelectorAll('input[data-letra]');
   const valorCorreto = input.getAttribute("data-letra");
