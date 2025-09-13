@@ -61,7 +61,6 @@ function configurarTeclado() { // Atribui a cada botão de classe "tecla" a letr
         buttonClicado.textContent = letra; // atribui o id do botão ao seu próprio conteúdo
     });
 }
-let contadorDeCliques = 0; // Contador de cliques nas letras
 
 function verificarLetraClicada() {
     const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
