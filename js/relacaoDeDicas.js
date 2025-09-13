@@ -19,5 +19,12 @@ const dicas = {
         "Dica 3: Profetizou que o exílio de Judá duraria 70 anos",
         "Dica 4: Ele é citado em Daniel 9:2",
         "Não há mais dicas disponíveis"
+    ],
+    "Maer-Salal-Has-Baz": [
+        "Dica 1: Foi filho de um profeta",
+        "Dica 2: Seu nome foi escrito numa tábua com letras bem grandes",
+        "Dica 3: Seu nome significa: 'Pressa para o despojo, rápido para a presa'",
+        "Dica 4: Ele é citado em Isaías 8:1-4",
+        "Não há mais dicas disponíveis"
     ]
 };

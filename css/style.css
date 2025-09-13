@@ -16,10 +16,10 @@ html {
 
 #container {
     display: grid;
-    grid-template-rows: 40vh 6vh 14vh 15vh 15vh;
+    grid-template-rows: 47vh 6vh 10vh 15vh 12vh;
     background-color: rgb(21, 21, 42);
-    /* width: 800px;
-    height: 90vh; */
+    width: 1000px;
+    /* height: 90vh; */
     font-family: "Palatino Lynotype";
     font-size: 2.0rem;
     line-height: 1.4em;
@@ -61,7 +61,7 @@ html {
     left: 50%;
     transform: translate(-50%, 50%);
     padding: 0.5em;
-    width: 320%;
+    width: 150%;
     font-size: 3.5rem;
     line-height: 1.1em;
     text-align: center;
@@ -76,24 +76,19 @@ html {
 }
 
 #mostra-dicas {
-    width: 80%;
-    height: 80px;
+    width: 65%;
     background-color: rgb(49, 111, 178);
     border: double 7px rgb(165, 168, 167);
     border-radius: 5px;
-    margin: 0 auto;
-    padding: 4%;
+    margin: auto;
     font-family: "Palatino Lynotype";
     color: white;
     font-style: italic;
-    font-size: 4rem;
-    line-height: 7rem;
-    text-align: center;
+    font-size: 4.5rem;
+    line-height: 10rem;
     display: none;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    grid-area: 1 / 1;
+    grid-area: 3 / 1;
 }
 
 #mostra-dicas:hover {
@@ -138,19 +133,19 @@ p {
 }
 
 #palavra-secreta {
-    margin: 1% auto auto auto;
+    margin: auto;
     grid-area: 2 / 1;
+    width: auto;
 }
 
-.casanula {
-    width: 65px;
-    height: 65px;
-    background-color: transparent;
+td {
+    width: 50px;
+    height: 50px;
 }
 
 .box {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     background-color: gray;
     text-align: center;
     color: transparent;
@@ -163,13 +158,13 @@ p {
 }
 
 .box-editavel {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     background-color: gray;
     text-align: center;
     color: transparent;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 2rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     cursor: text;
     color: black;
@@ -180,19 +175,25 @@ p {
 }
 
 .box-nao-editavel {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     background-color: red;
     text-align: center;
     color: transparent;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 2rem;
+    font-size: 3.8rem;
     text-transform: uppercase;
     cursor: not-allowed;
     user-select: none;
     /* Evita a seleção de texto */
     z-index: 2;
     position: relative;
+}
+
+.casanula {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
 }
 
 input:focus {
@@ -203,6 +204,8 @@ input:focus {
     padding: 0 5%;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    align-items: center;
 }
 
 .tecla {
@@ -219,8 +222,8 @@ input:focus {
 }
 
 .tecla-clicada {
-    width: 38px;
-    height: 38px;
+    width: 65px;
+    height: 65px;
     margin: 5%;
     color: antiquewhite;
     background-color: rgb(158, 157, 157);
@@ -272,7 +275,6 @@ input:focus {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 1%);
 }
 
 #mensagem-game-over-erro {
@@ -284,6 +286,14 @@ input:focus {
     transition: opacity 9s ease;
     /* Transição de 2 segundos */
     opacity: 1;
+}
+
+#imgmens {
+    width: 61%;
+    position: absolute;
+    top: 0;
+    left: -12%;
+    transform: translate(50%, 1%);
 }
 
 #mensagem-game-over-acerto {
@@ -299,40 +309,14 @@ input:focus {
 
 #mensagem-letra-certa {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 1%);
-    opacity: 0;
-    /* Começa invisível */
-    visibility: hidden;
-    /* Garante que não ocupe espaço quando invisível */
-    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
-}
-
-#mensagem-letra-certa.mensagem-letra-certa-show {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+    grid-area: 1 / 1;
+    justify-self: center;   /* centraliza horizontalmente */
 }
 
 #mensagem-letra-errada {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 1%);
-    opacity: 0;
-    /* Começa invisível */
-    visibility: hidden;
-    /* Garante que não ocupe espaço quando invisível */
-    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
-}
-
-#mensagem-letra-errada.mensagem-letra-errada-show {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+    grid-area: 1 / 1;
+    justify-self: center;   /* centraliza horizontalmente */
 }
 
 #ok {

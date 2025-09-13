@@ -1,4 +1,5 @@
-const listaDePersonagens = ["Maria-Madalena", "Jeremias", "Abias"];
+let nomeSorteado;         // ficará visível em todo o arquivo
+const listaDePersonagens = ["Maria-Madalena", "Jeremias", "Abias", "Maer-Salal-Has-Baz"];
 let personagemSecreto = "";
 let score = 100;                // pontuação inicial
 
@@ -24,22 +25,21 @@ function configurarInputsBox(nome) {
             if (letra === "-" || letra === " ") { // Se a letra for um hífen ou espaço, define o valor do inputBox como nulo.
                 inputBox.value = letra;
                 inputBox.style.backgroundColor = "transparent";
-                inputBox.style.border = "none";
+                inputBox.style.border = "none"; // Remove a borda para hífen ou espaço
             }
         } else {
-            inputBox.style.display = "none"; // Esconde os inputs excedentes à quantidade de letras
+            inputBox.closest("td").style.display = "none"; // Esconde os inputs excedentes à quantidade de letras
         }
     }
 }
 
-function iniciarJogo() { // Ao iniciar o jogo, são feitas três coisas:
+function iniciarJogo() {
+    nomeSorteado = sortearPersonagem();
+    // Ao iniciar o jogo, são feitas três coisas:
     // 1. Sorteia e exibe no console
-    const nomeSorteado = sortearPersonagem();
     console.log("Personagem sorteado:", personagemSecreto);
-
     // 2. Exibe a pontuação inicial
     document.getElementById("indicador").textContent = score;
-
     // 3. Configura os inputs
     configurarInputsBox(nomeSorteado);
 }
@@ -63,30 +63,38 @@ function configurarTeclado() { // Atribui a cada botão de classe "tecla" a letr
 }
 
 function verificarLetraClicada() {
-    const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
-    botoesTecla.forEach(buttonClicado => { // Para cada botão, adiciona um listener de evento de clique
-        buttonClicado.addEventListener("click", () => {
-            acionaBotaoDica();
-            contadorDeCliques++;
-            const letra = buttonClicado.id;
-            let acertou = false;
+  const botoesTecla = document.querySelectorAll("button.tecla");
 
-            // Preenche e estiliza inputs que casam com a letra clicada
-            document.querySelectorAll("input.box").forEach(inputBox => { // Seleciona todos os inputs com a classe "box"
-                if (inputBox.dataset.letra === letra) { // Compara o atributo data-letra do inputBox com a letra do botão clicado
-                    inputBox.value = letra; // Se coincidir, preenche o inputBox com a letra
-                    inputBox.style.background = "rgb(186,150,43)";
-                    inputBox.style.border = "outset 3px rgb(252,237,177)";
-                    inputBox.style.color = "black";
-                    inputBox.classList.replace("box", "box-nao-editavel");
-                    acertou = true;
-                }
-            });
+  botoesTecla.forEach(buttonClicado => {
+    buttonClicado.addEventListener("click", () => {
+      acionaBotaoDica();
 
-            acrescentaPontuacao();
-            desabilitarTecla(buttonClicado);
+      let acertou = false;
+      const letra = buttonClicado.id;
+      document.querySelectorAll("input.box").forEach(inputBox => {
+          if (inputBox.dataset.letra === letra) {
+              inputBox.value            = letra;
+              inputBox.style.background = "rgb(186,150,43)";
+              inputBox.style.border     = "outset 3px rgb(252,237,177)";
+              inputBox.style.color      = "black";
+              inputBox.classList.replace("box", "box-nao-editavel");
+              acertou = true;
+              document.getElementById("mensagem-letra-certa").style.display = "block";
+            }
         });
+        // Se não acertou, exibe a mensagem de erro
+        if (!acertou) {
+            document.getElementById("mensagem-letra-errada").style.display = "block";
+        }
+        
+        acrescentaPontuacao();
+        desabilitarTecla(buttonClicado);
+        console.log(
+          `Letra "${letra}" reconhecida como ${
+            acertou ? "certa ✅" : "errada ❌"
+          }`);
     });
+  });
 }
 
 function desabilitarTecla(buttonClicado) {
@@ -97,22 +105,14 @@ function desabilitarTecla(buttonClicado) {
     buttonClicado.classList.add("tecla-clicada");
 }
 
-function exibeMensagens(id, showClass, delay = 1500) {
-    setTimeout(() => {
-        const el = document.getElementById(id);
-        if (!el) return;
-        el.style.display = "block";
-        el.classList.add(showClass);
-    }, delay);
-}
 
 function acrescentaPontuacao() {
-  // só atualiza o <div id="indicador">
-  document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
+    // só atualiza o <div id="indicador">
+    document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
 
 //*******CRONOMETRO********
 const cronometro = new Cronometro()
 setInterval(() => {
-  cronometro.atualizaCronometro()
+    cronometro.atualizaCronometro()
 }, 1000);
