@@ -28,9 +28,15 @@ class Cronometro {
     }
 }
 
+//*******CRONOMETRO********
+const cronometro = new Cronometro()
+setInterval(() => {
+    cronometro.atualizaCronometro()
+}, 1000);
+
 // ORIENTAÇÕES PARA APLICAÇÃO DO CRONOMETRO :
 // 1. Instalar o arquivo cronometro.js
-// 2. escrever o camainho do arquivo no index.htm acima do arquivo scrpt.js (onde estarão as chamadas dos métodos do cronômetro)
+// 2. escrever o caminho do arquivo no index.htm acima do arquivo scrpt.js (onde estarão as chamadas dos métodos do cronômetro)
 // 3. Inserir o código abaixo no arquivo script.js, acima da função que deverá acionar o cronômetro:
 //*******CRONOMETRO********
 // const cronometro = new Cronometro()

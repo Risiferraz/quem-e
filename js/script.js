@@ -105,14 +105,42 @@ function desabilitarTecla(buttonClicado) {
     buttonClicado.classList.add("tecla-clicada");
 }
 
-
 function acrescentaPontuacao() {
     // só atualiza o <div id="indicador">
     document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
 
-//*******CRONOMETRO********
-const cronometro = new Cronometro()
-setInterval(() => {
-    cronometro.atualizaCronometro()
-}, 1000);
+function clicarOk3() {
+  const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
+  mensagemLetraCerta.style.display = 'none'; // Esconde a mensagem-letra-certa
+  const botaoMostraDicas = document.getElementById('mostra-dicas')
+  setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
+    if (!botaoMostraDicas) return; //
+    botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
+  }, 500);
+  if (botaoMostraDicas.disabled) {
+    botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
+  }
+  if (botaoMostraDicas.style.cursor === "none") {
+    botaoMostraDicas.style.cursor = "pointer"; // Alterar o cursor para "pointer" se estiver "none"
+  }
+  botaoMostraDicas.style.opacity = "1";    // Ajustar a opacidade do botão para 1
+}
+
+function clicarOk4() {
+  const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
+  mensagemLetraErrada.style.display = 'none'; // Esconde a mensagem-letra-certa
+  const botaoMostraDicas = document.getElementById('mostra-dicas')
+  setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
+    if (!botaoMostraDicas) return; //
+    botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
+  }, 500);
+  if (botaoMostraDicas.disabled) {
+    botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
+  }
+  if (botaoMostraDicas.style.cursor === "none") {
+    botaoMostraDicas.style.cursor = "pointer"; // Alterar o cursor para "pointer" se estiver "none"
+  }
+  botaoMostraDicas.style.opacity = "1";    // Ajustar a opacidade do botão para 1
+}
+
