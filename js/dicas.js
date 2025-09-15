@@ -9,6 +9,7 @@ const botao = document.getElementById("mostra-dicas");
 botao.addEventListener("click", () => { // Adiciona um evento de clique ao botão "mostra-dicas"
     score -= 2;            // penaliza 2 pontos sempre que o botão for clicado
     acrescentaPontuacao();  // atualiza o indicador na tela
+    exibirDicas(nomeSorteado); // Chama a função para exibir dicas
 });
 
 // variável global para controlar quantas dicas já foram exibidas

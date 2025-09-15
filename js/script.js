@@ -1,6 +1,7 @@
 let nomeSorteado;         // ficará visível em todo o arquivo
 const listaDePersonagens = ["Maria-Madalena", "Jeremias", "Abias", "Maer-Salal-Has-Baz"];
 let personagemSecreto = "";
+let matches = 0; // Variável que armazena a quantidade de letras acertadas
 let score = 100;                // pontuação inicial
 
 // Sorteia o personagem e retorna em maiúsculas
@@ -86,47 +87,48 @@ function liberarTeclas() {
   });
 }
 
-// 3. Função original, agora chamando o bloqueio
 function verificarLetraClicada() {
   const botoesTecla = document.querySelectorAll("button.tecla");
 
   botoesTecla.forEach(buttonClicado => {
     buttonClicado.addEventListener("click", () => {
       acionaBotaoDica();
-
-      // Bloqueia todas as outras teclas (opacidade reduzida)
       bloquearTeclasExceto(buttonClicado);
 
-      let acertou = false;
       const letra = buttonClicado.id;
+      let acertou = false;
+      let countMatches = 0;
 
+      // Preenche todas as caixas que têm a letra clicada
       document.querySelectorAll("input.box").forEach(inputBox => {
         if (inputBox.dataset.letra === letra) {
-          inputBox.value = letra;
+          inputBox.value            = letra;
           inputBox.style.background = "rgb(186,150,43)";
-          inputBox.style.border = "outset 3px rgb(252,237,177)";
-          inputBox.style.color = "black";
+          inputBox.style.border     = "outset 3px rgb(252,237,177)";
+          inputBox.style.color      = "black";
           inputBox.classList.replace("box", "box-nao-editavel");
+
           acertou = true;
-          document.getElementById("mensagem-letra-certa").style.display = "block";
+          countMatches++;
         }
       });
 
-      if (!acertou) {
+      // Mensagens e pontuação
+      if (acertou) {
+        document.getElementById("mensagem-letra-certa").style.display = "block";
+        score -= 1;               // apenas –1 ponto por clique correto
+        matches += countMatches;  // acumula quantas caixas foram preenchidas
+      } else {
         document.getElementById("mensagem-letra-errada").style.display = "block";
+        score -= 2;               // –2 pontos por clique errado
       }
 
-      acrescentaPontuacao();
-
-      // Desabilita e marca apenas a tecla clicada
-      desabilitarTecla(buttonClicado);
-
-      console.log(
-        `Letra "${letra}" reconhecida como ${acertou ? "certa ✅" : "errada ❌"}`
-      );
+      acrescentaPontuacao();      // atualiza placar UMA vez
+      desabilitarTecla(buttonClicado); // desabilita a tecla clicada
     });
   });
 }
+
 
 // 4. Função original sem alterações
 function desabilitarTecla(buttonClicado) {
@@ -145,8 +147,7 @@ function desabilitarTecla(buttonClicado) {
   buttonClicado.classList.add("tecla-clicada");
 }
 
-function acrescentaPontuacao() {
-  // só atualiza o <div id="indicador">
+function acrescentaPontuacao() { // só atualiza o <div id="indicador">
   document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
 
