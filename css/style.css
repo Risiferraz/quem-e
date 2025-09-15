@@ -16,7 +16,7 @@ html {
 
 #container {
     display: grid;
-    grid-template-rows: 47vh 6vh 10vh 15vh 12vh;
+    grid-template-rows: 47vh 10vh 6vh 15vh 12vh;
     background-color: rgb(21, 21, 42);
     width: 1000px;
     /* height: 90vh; */
@@ -32,6 +32,7 @@ html {
 #titulo {
     width: 65%;
     margin: auto;
+    grid-area: 1 / 1;
 }
 
 #orientacoes {
@@ -88,7 +89,7 @@ html {
     line-height: 10rem;
     display: none;
     justify-content: center;
-    grid-area: 3 / 1;
+    grid-area: 2 / 1;
 }
 
 #mostra-dicas:hover {
@@ -134,7 +135,7 @@ p {
 
 #palavra-secreta {
     margin: auto;
-    grid-area: 2 / 1;
+    grid-area: 3 / 1;
     width: auto;
 }
 
@@ -206,6 +207,7 @@ input:focus {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     align-items: center;
+    grid-area: 4 / 1;
 }
 
 .tecla {
@@ -234,6 +236,11 @@ input:focus {
 
 .tecla-clicada:hover {
     cursor: not-allowed;
+}
+
+button.tecla:disabled {
+  pointer-events: auto !important;
+  cursor: not-allowed;
 }
 
 .efeito-letra-errada {
@@ -309,13 +316,13 @@ input:focus {
 
 #mensagem-letra-certa {
     display: none;
-    grid-area: 1 / 1;
+    grid-area: 2 / 1;
     justify-self: center;   /* centraliza horizontalmente */
 }
 
 #mensagem-letra-errada {
     display: none;
-    grid-area: 1 / 1;
+    grid-area: 2 / 1;
     justify-self: center;   /* centraliza horizontalmente */
 }
 
@@ -387,6 +394,8 @@ input:focus {
     border: outset 7px rgb(165, 168, 167);
     border-radius: 5px;
     z-index: 2;
+    bottom: 49%;
+    left: 49%;
 }
 
 #ok3:hover {

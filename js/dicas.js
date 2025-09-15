@@ -1,9 +1,8 @@
 function acionaBotaoDica() {
     document.getElementById('orientacoes').style.display = 'none'; // Ocultar o elemento "orientacoes"
     document.getElementById("titulo").style.display = "none";  //  Ocultar o elemento "título"
-    document.getElementById("mostra-dicas").style.display = "flex"; // Mostrar botão "mostra-dicas"
-    document.getElementById("teclado").style.gridArea = "4 / 1";
-    document.getElementById("dicas").style.gridArea = "1 / 1";
+    // document.getElementById("teclado").style.gridArea = "4 / 1";
+    document.getElementById("dicas").style.gridArea = "1 / 1"; //Posiciona a div "dicas" no grid 1 / 1
 }
 
 const botao = document.getElementById("mostra-dicas");
