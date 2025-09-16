@@ -264,13 +264,8 @@ button.tecla:disabled {
 
 #mensagem-dica {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-    /* Começa invisível */
+    grid-area: 1 / 1 / span 2 / span 1;
+    justify-self: center;   /* centraliza horizontalmente */
 }
 
 .tecla-nula {
@@ -284,6 +279,14 @@ button.tecla:disabled {
     left: 50%;
 }
 
+#imgmens {
+    width: 61%;
+    position: absolute;
+    top: 0;
+    left: -12%;
+    transform: translate(50%, 1%);
+}
+
 #mensagem-game-over-erro {
     display: none;
     position: absolute;
@@ -293,14 +296,6 @@ button.tecla:disabled {
     transition: opacity 9s ease;
     /* Transição de 2 segundos */
     opacity: 1;
-}
-
-#imgmens {
-    width: 61%;
-    position: absolute;
-    top: 0;
-    left: -12%;
-    transform: translate(50%, 1%);
 }
 
 #mensagem-game-over-acerto {

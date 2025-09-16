@@ -129,8 +129,6 @@ function verificarLetraClicada() {
   });
 }
 
-
-// 4. Função original sem alterações
 function desabilitarTecla(buttonClicado) {
   buttonClicado.disabled = true;
   buttonClicado.style.opacity = "0.5";

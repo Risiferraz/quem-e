@@ -1,63 +1,41 @@
 function acionaBotaoDica() {
     document.getElementById('orientacoes').style.display = 'none'; // Ocultar o elemento "orientacoes"
     document.getElementById("titulo").style.display = "none";  //  Ocultar o elemento "título"
-    // document.getElementById("teclado").style.gridArea = "4 / 1";
     document.getElementById("dicas").style.gridArea = "1 / 1"; //Posiciona a div "dicas" no grid 1 / 1
 }
 
-const botao = document.getElementById("mostra-dicas");
-botao.addEventListener("click", () => { // Adiciona um evento de clique ao botão "mostra-dicas"
-    score -= 2;            // penaliza 2 pontos sempre que o botão for clicado
-    acrescentaPontuacao();  // atualiza o indicador na tela
-    exibirDicas(nomeSorteado); // Chama a função para exibir dicas
+const botaoMostraDicas = document.getElementById("mostra-dicas");
+
+botaoMostraDicas.addEventListener("click", () => {
+    score -= 2;
+    acrescentaPontuacao();
+    exibirDicas();
+
+    // aguarda 5 segundos antes de aplicar o style e desabilitar
+    setTimeout(() => {
+        botaoMostraDicas.style.opacity = '0';
+        botaoMostraDicas.style.cursor = 'none';
+        botaoMostraDicas.disabled = true;
+    }, 100);
 });
 
-// variável global para controlar quantas dicas já foram exibidas
+
 let dicaAtual = 0;
+function exibirDicas() {
+    const divDicas = document.getElementById("dicas"); // div onde as dicas serão exibidas
+    const dicasPersonagem = dicas[personagemSecreto];  // pega a lista de dicas do personagem
 
-function exibirDicas(nomeSorteado) {
-    console.log('Exibir dicas chamada com personagem:', nomeSorteado);
+    if (dicaAtual < dicasPersonagem.length && dicaAtual < 5) { // se ainda houver dicas e menos de 5 mostradas
+        divDicas.style.display = 'flex';  // exibe a próxima dica
+        divDicas.innerHTML += `${dicasPersonagem[dicaAtual]}<br/>`; // adiciona a dica atual à div
+        const msgDica = document.getElementById("mensagem-dica");  // Mensagem de dica
+        setTimeout(() => {
+            msgDica.style.display = 'flex'; // Mostra a mensagem de dica
+        }, 5000);
+
+        dicaAtual++;
+    }
 }
-  
-//   // 1. Se não houver um personagem válido, encerra a execução
-//   if (!nomeSorteado) return;
-
-//   // 2. Desabilita e esconde o botão de mostrar dicas, se existir
-//   const botaoMostraDicas = document.getElementById('mostra-dicas');
-//   if (botaoMostraDicas) {
-//     botaoMostraDicas.style.opacity  = '0';
-//     botaoMostraDicas.style.cursor   = 'none';
-//     botaoMostraDicas.disabled        = true;
-//   }
-
-//   // 3. Pega o array de dicas conforme o personagem sorteado
-//   const dicasPersonagem = dicas[nomeSorteado];
-//   if (!dicasPersonagem || dicaAtual >= dicasPersonagem.length) return;
-
-//   // 4. Exibe a próxima dica na tela
-//   const divDicas = document.getElementById('dicas');
-//   divDicas.style.display    = 'flex';
-//   divDicas.innerHTML       += `${dicasPersonagem[dicaAtual]}<br/>`;
-
-//   // 5. Configura a mensagem que aparece com efeito de fade-in
-//   const mensagemDica = document.getElementById('mensagem-dica');
-//   if (mensagemDica && dicaAtual < 5) {
-//     mensagemDica.style.display = 'grid';
-//     mensagemDica.style.opacity = '0';
-
-//     setTimeout(() => {
-//       mensagemDica.style.opacity = '1';
-
-//       // Foca no primeiro input editável vazio
-//       const inputs              = document.querySelectorAll('.box-editavel');
-//       const primeiroInputVazio  = Array.from(inputs).find(i => i.value === '');
-//       if (primeiroInputVazio) primeiroInputVazio.focus();
-//     }, 2500);
-//   }
-
-//   // 6. Prepara para a próxima dica
-//   dicaAtual++;
-// }
 
 
 // Ocultar mensagem de dica
