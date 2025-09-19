@@ -115,11 +115,11 @@ function verificarLetraClicada() {
 
       // Mensagens e pontuação
       if (acertou) {
-        document.getElementById("mensagem-letra-certa").style.display = "block";
+        document.getElementById("mensagem-letra-certa").style.display = "flex";
         score -= 1;               // apenas –1 ponto por clique correto
         matches += countMatches;  // acumula quantas caixas foram preenchidas
       } else {
-        document.getElementById("mensagem-letra-errada").style.display = "block";
+        document.getElementById("mensagem-letra-errada").style.display = "flex";
         score -= 2;               // –2 pontos por clique errado
       }
 

@@ -119,12 +119,14 @@ html {
 }
 
 #dicas {
-    width: 80%;
+    width: 86%;
     background-color: rgb(49, 111, 178);
     border: double 7px rgb(165, 168, 167);
     border-radius: 5px;
     margin: 2% auto auto auto;
     padding: 1% 3%;
+    font-size: 3rem;
+    line-height: 4rem;
     display: none;
 }
 
@@ -262,14 +264,14 @@ button.tecla:disabled {
     }
 }
 
+.tecla-nula {
+    display: none;
+}
+
 #mensagem-dica {
     display: none;
     grid-area: 1 / 1 / span 2 / span 1;
     justify-self: center;   /* centraliza horizontalmente */
-}
-
-.tecla-nula {
-    display: none;
 }
 
 #mensagem-dica2 {
@@ -279,12 +281,32 @@ button.tecla:disabled {
     left: 50%;
 }
 
+#mensagem-letra-certa {
+    display: none;
+    grid-area: 1 / 1 / span 2 / span 1;
+    justify-self: center;   /* centraliza horizontalmente */
+}
+
+#mensagem-letra-errada {
+    display: none;
+    grid-area: 2 / 1;
+    justify-self: center;   /* centraliza horizontalmente */
+}
+
 #imgmens {
-    width: 61%;
-    position: absolute;
-    top: 0;
-    left: -12%;
-    transform: translate(50%, 1%);
+    width: 750%;
+    height: 900px;
+    position: relative;
+    margin: 0 auto;
+    align-self: end;
+}
+
+#imagem-mensagem-dica {
+    width: 750%;
+    height: 900px;
+    position: relative;
+    margin: 0 auto;
+    align-self: end;
 }
 
 #mensagem-game-over-erro {
@@ -309,29 +331,19 @@ button.tecla:disabled {
     opacity: 1;
 }
 
-#mensagem-letra-certa {
-    display: none;
-    grid-area: 2 / 1;
-    justify-self: center;   /* centraliza horizontalmente */
-}
-
-#mensagem-letra-errada {
-    display: none;
-    grid-area: 2 / 1;
-    justify-self: center;   /* centraliza horizontalmente */
-}
-
 #ok {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-color: brown;
     position: absolute;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 2rem;
-    margin: 65% 65%;
+    font-size: 3rem;
+    margin: 19% 12%;
     border: outset 7px rgb(165, 168, 167);
     border-radius: 5px;
     z-index: 2;
+    bottom: 49%;
+    left: 49%;
 }
 
 #ok:hover {
@@ -370,7 +382,7 @@ button.tecla:disabled {
     }
 
     50% {
-        background-color: rgb(182, 4, 4);
+        background-color: rgb(220, 79, 8);
     }
 
     100% {
@@ -385,7 +397,7 @@ button.tecla:disabled {
     position: absolute;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
     font-size: 3rem;
-    margin: 40% 9%;
+    margin: 22% 12%;
     border: outset 7px rgb(165, 168, 167);
     border-radius: 5px;
     z-index: 2;

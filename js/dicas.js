@@ -31,7 +31,7 @@ function exibirDicas() {
         const msgDica = document.getElementById("mensagem-dica");  // Mensagem de dica
         setTimeout(() => {
             msgDica.style.display = 'flex'; // Mostra a mensagem de dica
-        }, 5000);
+        }, 2000);
 
         dicaAtual++;
     }
