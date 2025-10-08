@@ -5,18 +5,18 @@ function acionaBotaoDica() {
 }
 
 const botaoMostraDicas = document.getElementById("mostra-dicas");
-
 botaoMostraDicas.addEventListener("click", () => {
     score -= 2;
     acrescentaPontuacao();
     exibirDicas();
+    bloquearTeclas();
 
     // aguarda 5 segundos antes de aplicar o style e desabilitar
     setTimeout(() => {
         botaoMostraDicas.style.opacity = '0';
         botaoMostraDicas.style.cursor = 'none';
         botaoMostraDicas.disabled = true;
-    }, 100);
+    }, 200);
 });
 
 
@@ -43,6 +43,7 @@ function clicarOk() {
     const mensagemDica = document.getElementById("mensagem-dica");
     mensagemDica.style.display = 'none'; // Esconde a mensagem de dica
     digitarPalavraCerta(); // Chama a função que configura os inputs
+    liberarTeclas(); 
 }
 
 // Ocultar mensagem de dica2

@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
   configurarTeclado();
   iniciarJogo();
   verificarLetraClicada();
+
   //******* CRONÔMETRO ********
   const cronometro = new Cronometro();
   cronometro.iniciaCronometro();
@@ -63,15 +64,27 @@ function configurarTeclado() { // Atribui a cada botão de classe "tecla" a letr
   });
 }
 
-// 1. Função que bloqueia todas as teclas, exceto a ativa ou já clicada
-function bloquearTeclasExceto(teclaAtiva) {
-  document.querySelectorAll("button.tecla").forEach(btn => {
-    if (btn !== teclaAtiva && !btn.classList.contains("tecla-clicada")) {
-      btn.disabled = true;
-      btn.style.opacity = "0.3";
-      btn.style.pointerEvents = "none";
-      btn.style.cursor = "not-allowed";
-    }
+// 1. Função que bloqueia todas as teclas
+function bloquearTeclas() {
+  const botoesTecla = document.querySelectorAll("button.tecla");
+  botoesTecla.forEach(botao => {
+    botao.disabled = true;
+    botao.style.opacity = "0.5";   // opcional, só para dar feedback visual
+    botao.style.cursor = "not-allowed";
+  });
+}
+
+// Configura o teclado
+function configurarTeclado() {
+  const botoesTecla = document.querySelectorAll("button.tecla");
+  botoesTecla.forEach(buttonClicado => {
+    const letra = buttonClicado.id;
+    buttonClicado.textContent = letra;
+
+    // Quando qualquer tecla for clicada → bloquear todas
+    buttonClicado.addEventListener("click", () => {
+      bloquearTeclas();
+    });
   });
 }
 
@@ -86,45 +99,43 @@ function liberarTeclas() {
     }
   });
 }
-
 function verificarLetraClicada() {
-  const botoesTecla = document.querySelectorAll("button.tecla");
+  const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
 
-  botoesTecla.forEach(buttonClicado => {
-    buttonClicado.addEventListener("click", () => {
+  botoesTecla.forEach(buttonClicado => { // Para cada botão, adiciona um listener para o evento de clique
+    buttonClicado.addEventListener("click", () => { // Quando o botão é clicado, executa a função
       acionaBotaoDica();
-      bloquearTeclasExceto(buttonClicado);
-
+      bloquearTeclas();
       const letra = buttonClicado.id;
       let acertou = false;
       let countMatches = 0;
 
-      // Preenche todas as caixas que têm a letra clicada
-      document.querySelectorAll("input.box").forEach(inputBox => {
+      // 🔧 ALTERAÇÃO: antes era "input.box", agora usamos "input[data-letra]"
+      // Isso garante que mesmo após mudar a classe (box → box-editavel), 
+      // os inputs ainda sejam encontrados, pois todos têm o atributo data-letra.
+      document.querySelectorAll("input[data-letra]").forEach(inputBox => {
         if (inputBox.dataset.letra === letra) {
           inputBox.value            = letra;
           inputBox.style.background = "rgb(186,150,43)";
           inputBox.style.border     = "outset 3px rgb(252,237,177)";
           inputBox.style.color      = "black";
           inputBox.classList.replace("box", "box-nao-editavel");
-
-          acertou = true;
-          countMatches++;
+          acertou = true; 
+          countMatches++; 
         }
       });
 
-      // Mensagens e pontuação
       if (acertou) {
         document.getElementById("mensagem-letra-certa").style.display = "flex";
-        score -= 1;               // apenas –1 ponto por clique correto
-        matches += countMatches;  // acumula quantas caixas foram preenchidas
+        score -= 1;               
+        matches += countMatches;  
       } else {
         document.getElementById("mensagem-letra-errada").style.display = "flex";
-        score -= 2;               // –2 pontos por clique errado
+        score -= 2;               
       }
 
-      acrescentaPontuacao();      // atualiza placar UMA vez
-      desabilitarTecla(buttonClicado); // desabilita a tecla clicada
+      acrescentaPontuacao();      
+      desabilitarTecla(buttonClicado);
     });
   });
 }
@@ -169,10 +180,10 @@ function clicarOk3() {
 
 function clicarOk4() {
   const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
-  mensagemLetraErrada.style.display = 'none'; // Esconde a mensagem-letra-certa
+  mensagemLetraErrada.style.display = 'none'; // Esconde a mensagem-letra-errada
   const botaoMostraDicas = document.getElementById('mostra-dicas')
   setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
-    if (!botaoMostraDicas) return; //
+    if (!botaoMostraDicas) return; 
     botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
   }, 500);
   if (botaoMostraDicas.disabled) {
