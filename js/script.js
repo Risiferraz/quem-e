@@ -163,42 +163,32 @@ function acrescentaPontuacao() { // só atualiza a div id="indicador"
 let contadorCliques = 0;
 const botaoMostraDicas = document.getElementById("mostra-dicas");
 
-// function exibirBotaoMostraDicas() {
-//   if (contadorCliques < 5) {
-//     setTimeout(() => {
-//       if (!botaoMostraDicas) return;
-//       botaoMostraDicas.style.display = "flex";
-//     }, 500);
+function exibirBotaoMostraDicas() {
+  console.log("Clique número:", contadorCliques);
+  if (contadorCliques < 5) { // Limita a exibição do botão a 5 vezes
+    contadorCliques++;
+    setTimeout(() => {
+      if (!botaoMostraDicas) return;
+      botaoMostraDicas.style.display = "flex";
+    }, 500);
 
-//     if (botaoMostraDicas.disabled) {
-//       botaoMostraDicas.disabled = false;
-//     }
-//     if (botaoMostraDicas.style.cursor === "none") {
-//       botaoMostraDicas.style.cursor = "pointer";
-//     }
-//     botaoMostraDicas.style.opacity = "1";
-//   }
-// }
+    if (botaoMostraDicas.disabled) {
+      botaoMostraDicas.disabled = false;
+    }
+    if (botaoMostraDicas.style.cursor === "none") {
+      botaoMostraDicas.style.cursor = "pointer";
+    }
+    botaoMostraDicas.style.opacity = "1";
+  }
+}
 
 function clicarOk3() {
   const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
   if (mensagemLetraCerta) { // Verifica se o elemento existe antes de tentar acessá-lo
     mensagemLetraCerta.style.display = "none"; // Esconde a mensagem de letra certa
   }
-    setTimeout(() => { 
-      if (!botaoMostraDicas) return;
-      botaoMostraDicas.style.display = 'flex'; 
-    }, 500);
-
-    if (botaoMostraDicas.disabled) {
-      botaoMostraDicas.disabled = false; 
-    }
-    if (botaoMostraDicas.style.cursor === "none") {
-      botaoMostraDicas.style.cursor = "pointer"; 
-    }
-    botaoMostraDicas.style.opacity = "1"; 
-
-  liberarTeclas(); // 🔹 Sempre liberar as teclas, mesmo após o 5º clique
+  exibirBotaoMostraDicas(); // 🔹 Exibir o botão "mostra-dicas"
+  liberarTeclas(); // 🔹 Liberar as teclas
 }
 
 function clicarOk4() {
@@ -206,20 +196,8 @@ function clicarOk4() {
   if (mensagemLetraErrada) {
     mensagemLetraErrada.style.display = "none";
   }
-  setTimeout(() => { 
-    if (!botaoMostraDicas) return;
-    botaoMostraDicas.style.display = 'flex'; 
-  }, 500);
-
-  if (botaoMostraDicas.disabled) {
-    botaoMostraDicas.disabled = false; 
-  }
-  if (botaoMostraDicas.style.cursor === "none") {
-    botaoMostraDicas.style.cursor = "pointer"; 
-  }
-  botaoMostraDicas.style.opacity = "1"; 
-
-  liberarTeclas(); 
+  exibirBotaoMostraDicas(); // 🔹 Exibir o botão "mostra-dicas"
+  liberarTeclas();
 }
 
 
