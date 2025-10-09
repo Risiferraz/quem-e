@@ -160,35 +160,49 @@ function acrescentaPontuacao() { // só atualiza a div id="indicador"
   document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
 
-let contadorCliques = 0;
+let contadorCliques = 0; // contador de cliques no botão "mostra-dicas"
 const botaoMostraDicas = document.getElementById("mostra-dicas");
 
-function exibirBotaoMostraDicas() {
+botaoMostraDicas.addEventListener("click", () => {
+  contadorCliques++;
   console.log("Clique número:", contadorCliques);
-  if (contadorCliques < 5) { // Limita a exibição do botão a 5 vezes
-    contadorCliques++;
-    setTimeout(() => {
-      if (!botaoMostraDicas) return;
-      botaoMostraDicas.style.display = "flex";
-    }, 500);
 
-    if (botaoMostraDicas.disabled) {
-      botaoMostraDicas.disabled = false;
-    }
-    if (botaoMostraDicas.style.cursor === "none") {
-      botaoMostraDicas.style.cursor = "pointer";
-    }
-    botaoMostraDicas.style.opacity = "1";
+  if (contadorCliques >= 5) {
+    console.log("Limite atingido: o botão não será mais exibido.");
+    botaoMostraDicas.style.display = "none"; // esconde de vez a partir do 5º clique
   }
+});
+
+// 🔹 Função que apenas exibe o botão (sem contar cliques)
+function exibirBotaoMostraDicas() {
+  setTimeout(() => {
+    if (!botaoMostraDicas) return;
+    botaoMostraDicas.style.display = "flex";
+  }, 500);
+
+  if (botaoMostraDicas.disabled) {
+    botaoMostraDicas.disabled = false;
+  }
+  if (botaoMostraDicas.style.cursor === "none") {
+    botaoMostraDicas.style.cursor = "pointer";
+  }
+  botaoMostraDicas.style.opacity = "1";
 }
 
 function clicarOk3() {
   const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
-  if (mensagemLetraCerta) { // Verifica se o elemento existe antes de tentar acessá-lo
-    mensagemLetraCerta.style.display = "none"; // Esconde a mensagem de letra certa
+  if (mensagemLetraCerta) {
+    mensagemLetraCerta.style.display = "none";
   }
-  exibirBotaoMostraDicas(); // 🔹 Exibir o botão "mostra-dicas"
-  liberarTeclas(); // 🔹 Liberar as teclas
+
+  if (contadorCliques < 5) { 
+    console.log("Exibição permitida. Clique atual:", contadorCliques);
+    exibirBotaoMostraDicas();
+  } else {
+    console.log("Limite atingido: botão não será mais exibido.");
+  }
+
+  liberarTeclas();
 }
 
 function clicarOk4() {
@@ -196,7 +210,14 @@ function clicarOk4() {
   if (mensagemLetraErrada) {
     mensagemLetraErrada.style.display = "none";
   }
-  exibirBotaoMostraDicas(); // 🔹 Exibir o botão "mostra-dicas"
+
+  if (contadorCliques < 5) { // mesma lógica de limite
+    console.log("Exibição permitida. Clique atual:", contadorCliques);
+    exibirBotaoMostraDicas();
+  } else {
+    console.log("Limite atingido: botão não será mais exibido.");
+  }
+
   liberarTeclas();
 }
 
