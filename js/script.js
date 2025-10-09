@@ -115,26 +115,26 @@ function verificarLetraClicada() {
       // os inputs ainda sejam encontrados, pois todos têm o atributo data-letra.
       document.querySelectorAll("input[data-letra]").forEach(inputBox => {
         if (inputBox.dataset.letra === letra) {
-          inputBox.value            = letra;
+          inputBox.value = letra;
           inputBox.style.background = "rgb(186,150,43)";
-          inputBox.style.border     = "outset 3px rgb(252,237,177)";
-          inputBox.style.color      = "black";
+          inputBox.style.border = "outset 3px rgb(252,237,177)";
+          inputBox.style.color = "black";
           inputBox.classList.replace("box", "box-nao-editavel");
-          acertou = true; 
-          countMatches++; 
+          acertou = true;
+          countMatches++;
         }
       });
 
       if (acertou) {
         document.getElementById("mensagem-letra-certa").style.display = "flex";
-        score -= 1;               
-        matches += countMatches;  
+        score -= 1;
+        matches += countMatches;
       } else {
         document.getElementById("mensagem-letra-errada").style.display = "flex";
-        score -= 2;               
+        score -= 2;
       }
 
-      acrescentaPontuacao();      
+      acrescentaPontuacao();
       desabilitarTecla(buttonClicado);
     });
   });
@@ -156,43 +156,72 @@ function desabilitarTecla(buttonClicado) {
   buttonClicado.classList.add("tecla-clicada");
 }
 
-function acrescentaPontuacao() { // só atualiza o <div id="indicador">
+function acrescentaPontuacao() { // só atualiza a div id="indicador"
   document.getElementById("indicador").textContent = score; // Atualiza o indicador de pontuação
 }
 
+let contadorCliques = 0;
+const botaoMostraDicas = document.getElementById("mostra-dicas");
+
+// function exibirBotaoMostraDicas() {
+//   if (contadorCliques < 5) {
+//     setTimeout(() => {
+//       if (!botaoMostraDicas) return;
+//       botaoMostraDicas.style.display = "flex";
+//     }, 500);
+
+//     if (botaoMostraDicas.disabled) {
+//       botaoMostraDicas.disabled = false;
+//     }
+//     if (botaoMostraDicas.style.cursor === "none") {
+//       botaoMostraDicas.style.cursor = "pointer";
+//     }
+//     botaoMostraDicas.style.opacity = "1";
+//   }
+// }
+
 function clicarOk3() {
   const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
-  mensagemLetraCerta.style.display = 'none'; // Esconde a mensagem-letra-certa
-  const botaoMostraDicas = document.getElementById('mostra-dicas')
-  setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
-    if (!botaoMostraDicas) return; //
-    botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
-  }, 500);
-  if (botaoMostraDicas.disabled) {
-    botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
+  if (mensagemLetraCerta) { // Verifica se o elemento existe antes de tentar acessá-lo
+    mensagemLetraCerta.style.display = "none"; // Esconde a mensagem de letra certa
   }
-  if (botaoMostraDicas.style.cursor === "none") {
-    botaoMostraDicas.style.cursor = "pointer"; // Alterar o cursor para "pointer" se estiver "none"
-  }
-  botaoMostraDicas.style.opacity = "1";    // Ajustar a opacidade do botão para 1
-  liberarTeclas(); // Restaura todas as teclas não clicadas ao estado habilitado
+    setTimeout(() => { 
+      if (!botaoMostraDicas) return;
+      botaoMostraDicas.style.display = 'flex'; 
+    }, 500);
+
+    if (botaoMostraDicas.disabled) {
+      botaoMostraDicas.disabled = false; 
+    }
+    if (botaoMostraDicas.style.cursor === "none") {
+      botaoMostraDicas.style.cursor = "pointer"; 
+    }
+    botaoMostraDicas.style.opacity = "1"; 
+
+  liberarTeclas(); // 🔹 Sempre liberar as teclas, mesmo após o 5º clique
 }
 
 function clicarOk4() {
   const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
-  mensagemLetraErrada.style.display = 'none'; // Esconde a mensagem-letra-errada
-  const botaoMostraDicas = document.getElementById('mostra-dicas')
-  setTimeout(() => { // Define um tempo de espera de 5 segundos antes de mostrar o botão "mostra-dicas"
-    if (!botaoMostraDicas) return; 
-    botaoMostraDicas.style.display = 'flex'; // Mostra o botão "mostra-dicas"
+  if (mensagemLetraErrada) {
+    mensagemLetraErrada.style.display = "none";
+  }
+  setTimeout(() => { 
+    if (!botaoMostraDicas) return;
+    botaoMostraDicas.style.display = 'flex'; 
   }, 500);
+
   if (botaoMostraDicas.disabled) {
-    botaoMostraDicas.disabled = false; // Habilita o botão "mostra-dicas" se estiver desabilitado
+    botaoMostraDicas.disabled = false; 
   }
   if (botaoMostraDicas.style.cursor === "none") {
-    botaoMostraDicas.style.cursor = "pointer"; // Alterar o cursor para "pointer" se estiver "none"
+    botaoMostraDicas.style.cursor = "pointer"; 
   }
-  botaoMostraDicas.style.opacity = "1";    // Ajustar a opacidade do botão para 1
-  liberarTeclas(); // Restaura todas as teclas não clicadas ao estado habilitado
+  botaoMostraDicas.style.opacity = "1"; 
+
+  liberarTeclas(); 
 }
+
+
+
 

@@ -4,8 +4,8 @@ function acionaBotaoDica() {
     document.getElementById("dicas").style.gridArea = "1 / 1"; //Posiciona a div "dicas" no grid 1 / 1
 }
 
-const botaoMostraDicas = document.getElementById("mostra-dicas");
-botaoMostraDicas.addEventListener("click", () => {
+let botaoExibeDicas = document.getElementById("mostra-dicas");
+botaoExibeDicas.addEventListener("click", () => { // Ao clicar no botão "mostra-dicas" acontece:
     score -= 2;
     acrescentaPontuacao();
     exibirDicas();
@@ -13,9 +13,9 @@ botaoMostraDicas.addEventListener("click", () => {
 
     // aguarda 5 segundos antes de aplicar o style e desabilitar
     setTimeout(() => {
-        botaoMostraDicas.style.opacity = '0';
-        botaoMostraDicas.style.cursor = 'none';
-        botaoMostraDicas.disabled = true;
+        botaoExibeDicas.style.opacity = '0';
+        botaoExibeDicas.style.cursor = 'none';
+        botaoExibeDicas.disabled = true;
     }, 200);
 });
 
