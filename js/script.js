@@ -13,7 +13,7 @@ function sortearPersonagem() {
 
 function configurarInputsBox(nome) {
   const letrasArray = nome.split(""); // Divide o nome sorteado em um array de letras
-  for (let i = 1; i <= 18; i++) { // numera sequencialmente os inputs de 1 a 18 (no máximo) conforme quantidade de letras
+  for (let i = 1; i <= 18; i++) { // numera sequencialmente os digitar de 1 a 18 (no máximo) conforme quantidade de letras
     const inputBox = document.getElementById(`A${i}`); // especifica o inputBox como A1, A2, A3...
     if (!inputBox) continue; //
 
@@ -29,7 +29,7 @@ function configurarInputsBox(nome) {
         inputBox.style.border = "none"; // Remove a borda para hífen ou espaço
       }
     } else {
-      inputBox.closest("td").style.display = "none"; // Esconde os inputs excedentes à quantidade de letras
+      inputBox.closest("td").style.display = "none"; // Esconde os digitar excedentes à quantidade de letras
     }
   }
 }
@@ -41,7 +41,7 @@ function iniciarJogo() {
   console.log("Personagem sorteado:", personagemSecreto);
   // 2. Exibe a pontuação inicial
   document.getElementById("indicador").textContent = score;
-  // 3. Configura os inputs
+  // 3. Configura os digitar
   configurarInputsBox(nomeSorteado);
 }
 
@@ -106,20 +106,20 @@ function verificarLetraClicada() {
     buttonClicado.addEventListener("click", () => { // Quando o botão é clicado, executa a função
       acionaBotaoDica();
       bloquearTeclas();
+
       const letra = buttonClicado.id;
       let acertou = false;
       let countMatches = 0;
 
-      // 🔧 ALTERAÇÃO: antes era "input.box", agora usamos "input[data-letra]"
-      // Isso garante que mesmo após mudar a classe (box → box-editavel), 
-      // os inputs ainda sejam encontrados, pois todos têm o atributo data-letra.
       document.querySelectorAll("input[data-letra]").forEach(inputBox => {
         if (inputBox.dataset.letra === letra) {
           inputBox.value = letra;
           inputBox.style.background = "rgb(186,150,43)";
           inputBox.style.border = "outset 3px rgb(252,237,177)";
           inputBox.style.color = "black";
-          inputBox.classList.replace("box", "box-nao-editavel");
+          inputBox.classList.remove("box", "box-editavel");
+          inputBox.classList.add("box-nao-editavel");
+          inputBox.disabled = true;
           acertou = true;
           countMatches++;
         }
@@ -195,7 +195,7 @@ function clicarOk3() {
     mensagemLetraCerta.style.display = "none";
   }
 
-  if (contadorCliques < 5) { 
+  if (contadorCliques < 5) {
     console.log("Exibição permitida. Clique atual:", contadorCliques);
     exibirBotaoMostraDicas();
   } else {
@@ -203,6 +203,7 @@ function clicarOk3() {
   }
 
   liberarTeclas();
+  digitarPalavraSecreta(); // Chama a função que configura os inputs
 }
 
 function clicarOk4() {
@@ -219,8 +220,52 @@ function clicarOk4() {
   }
 
   liberarTeclas();
+  digitarPalavraSecreta(); // Chama a função que configura os inputs
 }
 
+function digitarPalavraSecreta() {
+  // Seleciona APENAS inputs que ainda estão no estado inicial "box"
+  document.querySelectorAll("input.box").forEach(input => {
+    // Não tocar em quem já é "box-nao-editavel"
+    if (!input.classList.contains("box-nao-editavel")) {
+      input.classList.remove("box", "box-nao-editavel", "box-editavel");
+      input.classList.add("box-editavel");
+      input.disabled = false; // permitir digitação
+    }
+  });
+}
 
+// inputs.forEach((input, index) => { // Adiciona o evento de input para cada input
+//   input.addEventListener("input", () => {
+//     if (input.value.length === 1) { // Verifica se o input tem exatamente um caractere
+//       verificaPalavraSecreta(input);
+
+//       // Procura o próximo input para dar foco
+//       let proximoInput = inputs[index + 1];
+//       let idx = index;
+//       while (proximoInput) {
+//         const backgroundColor = window.getComputedStyle(proximoInput).backgroundColor;
+//         if (
+//           backgroundColor === "gray" ||
+//           backgroundColor === "rgb(128, 128, 128)"
+//         ) {
+//           break;
+//         }
+//         idx++;
+//         proximoInput = inputs[idx + 1];
+//       }
+//       if (proximoInput) {
+//         proximoInput.focus();
+//       }
+//     }
+//   });
+
+//   // Desabilita o uso da tecla Backspace para os inputs
+//   input.addEventListener("keydown", event => {
+//     if (event.key === "Backspace") {
+//       event.preventDefault();
+//     }
+//   });
+// });
 
 

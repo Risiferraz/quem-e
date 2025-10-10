@@ -42,7 +42,6 @@ function exibirDicas() {
 function clicarOk() {
     const mensagemDica = document.getElementById("mensagem-dica");
     mensagemDica.style.display = 'none'; // Esconde a mensagem de dica
-    digitarPalavraCerta(); // Chama a função que configura os inputs
     liberarTeclas(); 
 }
 
@@ -52,55 +51,4 @@ function clicarOk2() {
     mensagemDica.style.display = 'none'; // Esconde a mensagem de dica2
 }
 
-function digitarPalavraCerta() {
-    // Recupera os inputs que representam a palavra (inicialmente com classe "box")
-    const inputs = document.querySelectorAll("input.box");
-    // Para cada input com a classe "box", remova-a e adicione a classe "box-editável"
-    inputs.forEach(input => {
-        input.classList.remove("box");
-        input.classList.add("box-editavel");
-        input.disabled = false; // Comando para desabilitar o input
-    });
-
-    // Foca no primeiro input vazio
-    const primeiroInputVazio = Array.from(inputs).find(
-        input => input.value === ""
-    );
-    if (primeiroInputVazio) {
-        primeiroInputVazio.focus();
-    }
-
-    inputs.forEach((input, index) => { // Adiciona o evento de input para cada input
-        input.addEventListener("input", () => {
-            if (input.value.length === 1) { // Verifica se o input tem exatamente um caractere
-                verificaPalavraSecreta(input);
-
-                // Procura o próximo input para dar foco
-                let proximoInput = inputs[index + 1];
-                let idx = index;
-                while (proximoInput) {
-                    const backgroundColor = window.getComputedStyle(proximoInput).backgroundColor;
-                    if (
-                        backgroundColor === "gray" ||
-                        backgroundColor === "rgb(128, 128, 128)"
-                    ) {
-                        break;
-                    }
-                    idx++;
-                    proximoInput = inputs[idx + 1];
-                }
-                if (proximoInput) {
-                    proximoInput.focus();
-                }
-            }
-        });
-
-        // Desabilita o uso da tecla Backspace para os inputs
-        input.addEventListener("keydown", event => {
-            if (event.key === "Backspace") {
-                event.preventDefault();
-            }
-        });
-    });
-}
 
