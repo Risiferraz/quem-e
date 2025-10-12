@@ -66,11 +66,11 @@ function configurarTeclado() { // Atribui a cada botão de classe "tecla" a letr
 
 // 1. Função que bloqueia todas as teclas
 function bloquearTeclas() {
-  const botoesTecla = document.querySelectorAll("button.tecla");
-  botoesTecla.forEach(botao => {
-    botao.disabled = true;
-    botao.style.opacity = "0.5";   // opcional, só para dar feedback visual
-    botao.style.cursor = "not-allowed";
+  const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
+  botoesTecla.forEach(botao => { // Para cada botão, desabilita e aplica estilos de bloqueio
+    botao.disabled = true; // Desabilita o botão
+    botao.style.opacity = "0.5"; // Aplica opacidade para indicar que está desabilitado
+    botao.style.cursor = "not-allowed"; // Muda o cursor para indicar que não pode ser clicado
   });
 }
 
@@ -81,8 +81,7 @@ function configurarTeclado() {
     const letra = buttonClicado.id;
     buttonClicado.textContent = letra;
 
-    // Quando qualquer tecla for clicada → bloquear todas
-    buttonClicado.addEventListener("click", () => {
+    buttonClicado.addEventListener("click", () => { // Quando qualquer tecla for clicada → bloquear todas as teclas
       bloquearTeclas();
     });
   });
@@ -196,10 +195,8 @@ function clicarOk3() {
   }
 
   if (contadorCliques < 5) {
-    console.log("Exibição permitida. Clique atual:", contadorCliques);
     exibirBotaoMostraDicas();
   } else {
-    console.log("Limite atingido: botão não será mais exibido.");
   }
 
   liberarTeclas();
@@ -213,10 +210,8 @@ function clicarOk4() {
   }
 
   if (contadorCliques < 5) { // mesma lógica de limite
-    console.log("Exibição permitida. Clique atual:", contadorCliques);
     exibirBotaoMostraDicas();
   } else {
-    console.log("Limite atingido: botão não será mais exibido.");
   }
 
   liberarTeclas();
@@ -224,48 +219,52 @@ function clicarOk4() {
 }
 
 function digitarPalavraSecreta() {
-  // Seleciona APENAS inputs que ainda estão no estado inicial "box"
-  document.querySelectorAll("input.box").forEach(input => {
-    // Não tocar em quem já é "box-nao-editavel"
-    if (!input.classList.contains("box-nao-editavel")) {
-      input.classList.remove("box", "box-nao-editavel", "box-editavel");
-      input.classList.add("box-editavel");
+  document.querySelectorAll("input.box").forEach(input => { // Seleciona todos os inputs com a classe "box"
+    if (!input.classList.contains("box-nao-editavel")) { // Se o input não for "box-nao-editavel"
+      input.classList.remove("box", "box-nao-editavel", "box-editavel"); // Remove todas as classes relacionadas
+      input.classList.add("box-editavel"); // Adiciona a classe "box-editavel"
       input.disabled = false; // permitir digitação
+      input.addEventListener("click", () => {
+        bloquearTeclas();
+        validarLetraDigitada(input);
+        const mostraDicas = document.getElementById("mostra-dicas");
+        if (mostraDicas) {
+          mostraDicas.disabled = true;
+          mostraDicas.style.opacity = "0.5";
+          mostraDicas.style.cursor = "not-allowed";
+        }
+      });
     }
   });
 }
 
-// inputs.forEach((input, index) => { // Adiciona o evento de input para cada input
-//   input.addEventListener("input", () => {
-//     if (input.value.length === 1) { // Verifica se o input tem exatamente um caractere
-//       verificaPalavraSecreta(input);
+function validarLetraDigitada(input) {
+  input.addEventListener("input", () => {
+    const letraCorreta = input.getAttribute("data-letra");
+    const valorDigitado = input.value.toUpperCase();
 
-//       // Procura o próximo input para dar foco
-//       let proximoInput = inputs[index + 1];
-//       let idx = index;
-//       while (proximoInput) {
-//         const backgroundColor = window.getComputedStyle(proximoInput).backgroundColor;
-//         if (
-//           backgroundColor === "gray" ||
-//           backgroundColor === "rgb(128, 128, 128)"
-//         ) {
-//           break;
-//         }
-//         idx++;
-//         proximoInput = inputs[idx + 1];
-//       }
-//       if (proximoInput) {
-//         proximoInput.focus();
-//       }
-//     }
-//   });
+    if (valorDigitado === letraCorreta) {
+      // ✅ Acertou
+      input.style.background = "rgb(186,150,43)";
+      input.style.border = "outset 3px rgb(252,237,177)";
+      input.style.color = "black";
+      input.classList.remove("box", "box-editavel");
+      input.classList.add("box-nao-editavel");
+      input.disabled = true;
+    } else {
+      // ❌ Errou
+      input.style.backgroundColor = "red";
+      input.style.color = "white";
+      input.style.border = "none";
+      cronometro.pararCronometro();
 
-//   // Desabilita o uso da tecla Backspace para os inputs
-//   input.addEventListener("keydown", event => {
-//     if (event.key === "Backspace") {
-//       event.preventDefault();
-//     }
-//   });
-// });
-
+      setTimeout(() => {
+        document.getElementById("mensagem-game-over-erro").style.display = "block";
+        // document.getElementById("dicas").style.display = "none";
+        // document.getElementById("palavra-secreta").style.display = "none";
+        // document.getElementById("teclado").style.display = "none";
+      }, 2000);
+    }
+  });
+}
 
