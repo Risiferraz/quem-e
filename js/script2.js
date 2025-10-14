@@ -287,3 +287,52 @@ function pontuacaoFinalAcerto() {
 sortearNome(listaDePersonagens);
 configurarInputsBox();
 configurarTeclado();
+
+
+function validarLetraDigitada(input) {
+  input.addEventListener("input", () => {
+    const letraCorreta = input.getAttribute("data-letra");
+    const valorDigitado = input.value.toUpperCase();
+
+    if (valorDigitado === letraCorreta) {
+      // ✅ Acertou
+      input.style.background = "rgb(186,150,43)";
+      input.style.border = "outset 3px rgb(252,237,177)";
+      input.style.color = "black";
+      input.classList.remove("box", "box-editavel");
+      input.classList.add("box-nao-editavel");
+      input.disabled = true;
+
+      const inputs = Array.from(document.querySelectorAll(".box-editavel"));
+
+      // Descobre o índice do input atual na lista original (mesmo que ele já tenha perdido a classe)
+      const todosInputs = Array.from(document.querySelectorAll("input[data-letra]"));
+      const indexAtual = todosInputs.indexOf(input);
+
+      // Foca no próximo input editável
+      const proximo = todosInputs[indexAtual + 1];
+      if (proximo && proximo.classList.contains("box-editavel")) {
+        proximo.focus();
+      }
+    } else {
+      // ❌ Errou
+      input.style.backgroundColor = "red";
+      input.style.color = "white";
+      input.style.border = "none";
+      cronometro.pararCronometro();
+
+      setTimeout(() => {
+        document.getElementById("mensagem-game-over-erro").style.display = "block";
+        // document.getElementById("dicas").style.display = "none";
+        // document.getElementById("palavra-secreta").style.display = "none";
+        // document.getElementById("teclado").style.display = "none";
+      }, 2000);
+    }
+  });
+}
+// Inicializa a função em todos os inputs editáveis
+document.addEventListener("DOMContentLoaded", () => {
+  const inputs = document.querySelectorAll(".box-editavel");
+  inputs.forEach(inp => validarLetraDigitada(inp));
+});
+

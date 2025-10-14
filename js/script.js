@@ -25,11 +25,11 @@ function configurarInputsBox(nome) {
 
       if (letra === "-" || letra === " ") { // Se a letra for um hífen ou espaço, define o valor do inputBox como nulo.
         inputBox.value = letra;
-        inputBox.style.backgroundColor = "transparent";
-        inputBox.style.border = "none"; // Remove a borda para hífen ou espaço
+        inputBox.classList.add("box-hifen");
+        inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
       }
     } else {
-      inputBox.closest("td").style.display = "none"; // Esconde os digitar excedentes à quantidade de letras
+      inputBox.closest("td").style.display = "none"; // Esconde os inputs excedentes à quantidade de letras
     }
   }
 }
@@ -69,7 +69,7 @@ function bloquearTeclas() {
   const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
   botoesTecla.forEach(botao => { // Para cada botão, desabilita e aplica estilos de bloqueio
     botao.disabled = true; // Desabilita o botão
-    botao.style.opacity = "0.5"; // Aplica opacidade para indicar que está desabilitado
+    botao.style.opacity = "0.2"; // Aplica opacidade para indicar que está desabilitado
     botao.style.cursor = "not-allowed"; // Muda o cursor para indicar que não pode ser clicado
   });
 }
@@ -226,11 +226,11 @@ function digitarPalavraSecreta() {
       input.disabled = false; // permitir digitação
       input.addEventListener("click", () => {
         bloquearTeclas();
-        validarLetraDigitada(input);
+        // validarLetraDigitada(input);
         const mostraDicas = document.getElementById("mostra-dicas");
         if (mostraDicas) {
           mostraDicas.disabled = true;
-          mostraDicas.style.opacity = "0.5";
+          mostraDicas.style.opacity = "0.1";
           mostraDicas.style.cursor = "not-allowed";
         }
       });
@@ -238,12 +238,31 @@ function digitarPalavraSecreta() {
   });
 }
 
-function validarLetraDigitada(input) {
-  input.addEventListener("input", () => {
-    const letraCorreta = input.getAttribute("data-letra");
-    const valorDigitado = input.value.toUpperCase();
+document.addEventListener("DOMContentLoaded", () => {
+  // Opcional: limite cada input a 1 caractere via atributo HTML
+  document.querySelectorAll('input.box-editavel').forEach(inp => {
+    inp.setAttribute('maxlength', '1');
+    inp.autocomplete = 'off';
+    inp.spellcheck = false;
+  });
 
-    if (valorDigitado === letraCorreta) {
+  // Captura teclas para o input atualmente focado
+  document.addEventListener('keydown', (e) => {
+    const input = document.activeElement;
+
+    // Só processa se o foco atual estiver em um input editável do jogo
+    if (!input || !input.classList || !input.classList.contains('box-editavel')) return;
+    if (e.key.length !== 1) return; // ignora teclas de controle (Enter, Tab, etc.)
+
+    e.preventDefault(); // evita inserir mais de 1 caractere por padrão
+
+    const tecla = e.key.toUpperCase();
+    const letraCorreta = (input.getAttribute('data-letra') || '').toUpperCase();
+
+    // Escreve a tecla no campo (garante 1 caractere)
+    input.value = tecla;
+
+    if (tecla === letraCorreta) {
       // ✅ Acertou
       input.style.background = "rgb(186,150,43)";
       input.style.border = "outset 3px rgb(252,237,177)";
@@ -251,6 +270,19 @@ function validarLetraDigitada(input) {
       input.classList.remove("box", "box-editavel");
       input.classList.add("box-nao-editavel");
       input.disabled = true;
+
+      // Vai para o próximo input da sequência
+      const todosInputs = Array.from(document.querySelectorAll('input[data-letra]'));
+      const indexAtual = todosInputs.indexOf(input);
+
+      for (let i = indexAtual + 1; i < todosInputs.length; i++) {
+        const proximo = todosInputs[i];
+        if (proximo.classList.contains('box-editavel') && !proximo.disabled) {
+          proximo.focus();
+          break;
+        }
+      }
+      verificarPalavraPreenchida();
     } else {
       // ❌ Errou
       input.style.backgroundColor = "red";
@@ -260,11 +292,57 @@ function validarLetraDigitada(input) {
 
       setTimeout(() => {
         document.getElementById("mensagem-game-over-erro").style.display = "block";
-        // document.getElementById("dicas").style.display = "none";
-        // document.getElementById("palavra-secreta").style.display = "none";
-        // document.getElementById("teclado").style.display = "none";
       }, 2000);
     }
   });
+
+  // Opcional: impedir colagem (evita múltiplos chars)
+  document.addEventListener('paste', (e) => {
+    const input = document.activeElement;
+    if (input && input.classList && input.classList.contains('box-editavel')) {
+      e.preventDefault();
+    }
+  });
+
+  // Opcional: focar o primeiro editável ao carregar
+  const primeiroEditavel = document.querySelector('input.box-editavel:not([disabled])');
+  if (primeiroEditavel) primeiroEditavel.focus();
+});
+
+function verificarPalavraPreenchida() {
+  const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]"));
+
+  // Verifica se todos os inputs visíveis (não escondidos) já têm valor
+  const todosPreenchidos = inputsDaPalavra.every(inp => {
+    // Se o input está escondido (display:none), ignora
+    if (window.getComputedStyle(inp).display === "none") return true;
+    // Se é hífen ou espaço, também ignora
+    if (inp.classList.contains("box-hifen")) return true;
+    // Caso contrário, precisa estar preenchido
+    return inp.value.trim() !== "";
+  });
+
+  console.log(`[STATUS] Restam ${
+    inputsDaPalavra.filter(inp =>
+      window.getComputedStyle(inp).display !== "none" &&
+      !inp.classList.contains("box-hifen") &&
+      inp.value.trim() === ""
+    ).length
+  } inputs editáveis.`);
+
+  if (todosPreenchidos) {
+    console.log("[STATUS] Todos os inputs visíveis foram preenchidos! Finalizando jogo...");
+    cronometro.pararCronometro();
+
+    setTimeout(() => {
+      document.getElementById("mensagem-game-over-acerto").style.display = "block";
+      document.getElementById("sair").classList.add("flash-effect-tip");
+      document.getElementById("dicas").style.display = "none";
+      document.getElementById("teclado").style.display = "none";
+    }, 1000);
+
+    pontuacaoFinalAcerto();
+  }
 }
+
 

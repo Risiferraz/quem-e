@@ -193,10 +193,12 @@ td {
     position: relative;
 }
 
-.casanula {
+.box-hifen {
     width: 50px;
     height: 50px;
     background-color: transparent;
+    color: transparent;
+    border: none
 }
 
 input:focus {
@@ -241,8 +243,8 @@ input:focus {
 }
 
 button.tecla:disabled {
-  pointer-events: auto !important;
-  cursor: not-allowed;
+    pointer-events: auto !important;
+    cursor: not-allowed;
 }
 
 .efeito-letra-errada {
@@ -271,7 +273,8 @@ button.tecla:disabled {
 #mensagem-dica {
     display: none;
     grid-area: 1 / 1 / span 2 / span 1;
-    justify-self: center;   /* centraliza horizontalmente */
+    justify-self: center;
+    /* centraliza horizontalmente */
 }
 
 #mensagem-dica2 {
@@ -284,13 +287,15 @@ button.tecla:disabled {
 #mensagem-letra-certa {
     display: none;
     grid-area: 1 / 1 / span 2 / span 1;
-    justify-self: center;   /* centraliza horizontalmente */
+    justify-self: center;
+    /* centraliza horizontalmente */
 }
 
 #mensagem-letra-errada {
     display: none;
     grid-area: 2 / 1;
-    justify-self: center;   /* centraliza horizontalmente */
+    justify-self: center;
+    /* centraliza horizontalmente */
 }
 
 #imgmens {
