@@ -111,7 +111,7 @@ function verificarLetraClicada() {
       let countMatches = 0;
 
       document.querySelectorAll("input[data-letra]").forEach(inputBox => {
-        if (inputBox.dataset.letra === letra) {
+        if (inputBox.dataset.letra === letra) { // Compara a letra do botão clicado com o atributo data-letra do inputBox
           inputBox.value = letra;
           inputBox.style.background = "rgb(186,150,43)";
           inputBox.style.border = "outset 3px rgb(252,237,177)";
@@ -124,13 +124,13 @@ function verificarLetraClicada() {
         }
       });
 
-      if (acertou) {
+      if (acertou) { // Se acertou, mostra a mensagem de acerto e atualiza a pontuação
         document.getElementById("mensagem-letra-certa").style.display = "flex";
-        score -= 1;
+        score -= 1; // Deduz 1 ponto por letra certa
         matches += countMatches;
       } else {
         document.getElementById("mensagem-letra-errada").style.display = "flex";
-        score -= 2;
+        score -= 3; // Deduz 3 pontos por letra errada
       }
 
       acrescentaPontuacao();
@@ -164,7 +164,6 @@ const botaoMostraDicas = document.getElementById("mostra-dicas");
 
 botaoMostraDicas.addEventListener("click", () => {
   contadorCliques++;
-  console.log("Clique número:", contadorCliques);
 
   if (contadorCliques >= 5) {
     console.log("Limite atingido: o botão não será mais exibido.");
@@ -230,7 +229,7 @@ function digitarPalavraSecreta() {
         const mostraDicas = document.getElementById("mostra-dicas");
         if (mostraDicas) {
           mostraDicas.disabled = true;
-          mostraDicas.style.opacity = "0.1";
+          mostraDicas.style.opacity = "0";
           mostraDicas.style.cursor = "not-allowed";
         }
       });
@@ -291,12 +290,11 @@ document.addEventListener("DOMContentLoaded", () => {
       cronometro.pararCronometro();
 
       setTimeout(() => {
-        document.getElementById("mensagem-game-over-erro").style.display = "block";
+        document.getElementById("mensagem-game-over-erro").style.display = "grid";
       }, 2000);
     }
   });
 
-  // Opcional: impedir colagem (evita múltiplos chars)
   document.addEventListener('paste', (e) => {
     const input = document.activeElement;
     if (input && input.classList && input.classList.contains('box-editavel')) {
@@ -304,44 +302,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Opcional: focar o primeiro editável ao carregar
-  const primeiroEditavel = document.querySelector('input.box-editavel:not([disabled])');
-  if (primeiroEditavel) primeiroEditavel.focus();
+  const primeiroBoxEditavel = document.querySelector('input.box-editavel:not([disabled])'); // Seleciona o primeiro input editável não desabilitado
+  if (primeiroBoxEditavel) primeiroBoxEditavel.focus(); // coloca foco no primeiro input editável
 });
 
 function verificarPalavraPreenchida() {
   const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]"));
 
-  // Verifica se todos os inputs visíveis (não escondidos) já têm valor
-  const todosPreenchidos = inputsDaPalavra.every(inp => {
-    // Se o input está escondido (display:none), ignora
-    if (window.getComputedStyle(inp).display === "none") return true;
-    // Se é hífen ou espaço, também ignora
-    if (inp.classList.contains("box-hifen")) return true;
-    // Caso contrário, precisa estar preenchido
-    return inp.value.trim() !== "";
-  });
+  const todosPreenchidos = inputsDaPalavra.every(inp => { // Verifica se todos os inputs visíveis (não escondidos) já têm valor
 
-  console.log(`[STATUS] Restam ${
-    inputsDaPalavra.filter(inp =>
-      window.getComputedStyle(inp).display !== "none" &&
-      !inp.classList.contains("box-hifen") &&
-      inp.value.trim() === ""
-    ).length
-  } inputs editáveis.`);
+    if (window.getComputedStyle(inp).display === "none") return true; // Se o input está escondido (display:none), ignora
+    if (inp.classList.contains("box-hifen")) return true;  // Se o conteúdo do input é hífen
+    return inp.value.trim() !== ""; // Verifica se o input tem valor (não vazio)
+  });
 
   if (todosPreenchidos) {
     console.log("[STATUS] Todos os inputs visíveis foram preenchidos! Finalizando jogo...");
     cronometro.pararCronometro();
 
     setTimeout(() => {
-      document.getElementById("mensagem-game-over-acerto").style.display = "block";
+      document.getElementById("mensagem-game-over-acerto").style.display = "grid";
       document.getElementById("sair").classList.add("flash-effect-tip");
       document.getElementById("dicas").style.display = "none";
       document.getElementById("teclado").style.display = "none";
     }, 1000);
 
-    pontuacaoFinalAcerto();
+    // pontuacaoFinalAcerto();
   }
 }
 
