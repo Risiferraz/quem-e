@@ -96,6 +96,7 @@ function liberarTeclas() {
     }
   });
 }
+
 function verificarLetraClicada() {
   const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
 
@@ -122,9 +123,37 @@ function verificarLetraClicada() {
         }
       });
 
-      if (acertou) { // Se acertou, mostra a mensagem de acerto e atualiza a pontuação
-        document.getElementById("mensagem-letra-certa").style.display = "flex";
-        score -= 1; // Deduz 1 ponto por letra certa
+      if (acertou) {
+        const conjuntoInputsVazios = Array.from(document.querySelectorAll("input[data-letra]"))
+          .filter(inp => inp.value.trim() === "");
+
+        const casasVazias = conjuntoInputsVazios.length;
+        const tamanhoPalavra = nomeSorteado.length;
+
+        let limitePermitido = 0;
+
+        if (tamanhoPalavra <= 4) {
+          limitePermitido = 0;
+        } else if (tamanhoPalavra === 5) {
+          limitePermitido = 1;
+        } else if (tamanhoPalavra >= 6 && tamanhoPalavra <= 7) {
+          limitePermitido = 2;
+        } else if (tamanhoPalavra >= 8 && tamanhoPalavra <= 12) {
+          limitePermitido = 3;
+        } else if (tamanhoPalavra > 12) {
+          limitePermitido = 4;
+        }
+
+        if (casasVazias <= limitePermitido) {
+          // 👉 Só dispara quando o jogador já reduziu os vazios ao limite
+          document.getElementById("mensagem-dica2").style.display = "flex";
+          bloquearTeclas();
+        } else {
+          // 👉 Enquanto ainda há mais casas vazias que o limite, mostra acerto normal
+          document.getElementById("mensagem-letra-certa").style.display = "flex";
+        }
+
+        score -= 1;
         matches += countMatches;
       } else {
         document.getElementById("mensagem-letra-errada").style.display = "flex";
@@ -326,7 +355,7 @@ function verificarPalavraPreenchida() {
       document.getElementById("teclado").style.display = "none";
     }, 1000);
 
-    // pontuacaoFinalAcerto();
+    pontuacaoFinalAcerto();
   }
 }
 
@@ -335,21 +364,5 @@ function pontuacaoFinalErro() {
   acrescentaPontuacao();  // Atualiza a exibição da pontuação zerada
 }
 
-function pontuacaoFinalAcerto() {
-  //   verificarInputsVazios();
-  //     const todosInputs = document.querySelectorAll('input[data-letra]');
-  //     const inputsVazios = Array.from(todosInputs)
-  //     const condicaoQCV =
-  //         (letras < 6 && inputsVazios > 2) ||
-  //         (letras >= 6 && inputsVazios >= 3);
-
-  //     if (condicaoQCV) {
-  //         score += 20;
-  //     } else {
-  //         score += 10;
-  //     }
-
-  //     acrescentaPontuacao();
-}
 
 
