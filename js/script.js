@@ -50,8 +50,6 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
   iniciarJogo();
   verificarLetraClicada();
 
-  //******* CRONÔMETRO ********
-  const cronometro = new Cronometro();
   cronometro.iniciaCronometro();
   setInterval(() => cronometro.atualizaCronometro(), 1000); // Atualiza o cronômetro a cada segundo
 });
@@ -288,9 +286,10 @@ document.addEventListener("DOMContentLoaded", () => {
       input.style.color = "white";
       input.style.border = "none";
       cronometro.pararCronometro();
-
+      pontuacaoFinalErro();
       setTimeout(() => {
         document.getElementById("mensagem-game-over-erro").style.display = "grid";
+        document.getElementById("sair").classList.add("flash-effect-tip");
       }, 2000);
     }
   });
@@ -329,6 +328,28 @@ function verificarPalavraPreenchida() {
 
     // pontuacaoFinalAcerto();
   }
+}
+
+function pontuacaoFinalErro() {
+  score *= 0; // Zera a pontuação atual multiplicando por zero
+  acrescentaPontuacao();  // Atualiza a exibição da pontuação zerada
+}
+
+function pontuacaoFinalAcerto() {
+  //   verificarInputsVazios();
+  //     const todosInputs = document.querySelectorAll('input[data-letra]');
+  //     const inputsVazios = Array.from(todosInputs)
+  //     const condicaoQCV =
+  //         (letras < 6 && inputsVazios > 2) ||
+  //         (letras >= 6 && inputsVazios >= 3);
+
+  //     if (condicaoQCV) {
+  //         score += 20;
+  //     } else {
+  //         score += 10;
+  //     }
+
+  //     acrescentaPontuacao();
 }
 
 

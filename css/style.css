@@ -317,10 +317,6 @@ button.tecla:disabled {
 #mensagem-game-over-erro {
     display: none;
     grid-area: 1 / 1 / span 2 / span 1;
-    margin: auto;
-    place-content: center;
-    width: 100%;
-    height: 100%;
 }
 
 #mensagem-game-over-acerto {
