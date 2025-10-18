@@ -4,6 +4,7 @@ const listaDePersonagens = [
   "Abel",
   "Abias",
   "Abiatar",
+  "Abigail",
   "Arao",
   "Jeremias",
   "Maer-Salal-Has-Baz",

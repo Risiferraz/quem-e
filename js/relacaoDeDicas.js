@@ -34,6 +34,13 @@ const dicas = {
         "Dica 4: Junto com Zadoque, levou a Arca da Aliança para Jerusalém",
         "Dica 5: Salomão o destituiu do ofício de sacerdote (1 Reis 2:27)",
     ],
+    "Abigail": [
+        "Dica 1: Era uma mulher sábia e bonita e morava nas imediações do monte Carmelo",
+        "Dica 1: Evitou que toda a sua família fosse destruída por Davi",
+        "Dica 2: Foi esposa de Nabal",
+        "Dica 4: Depois da morte de seu marido, tornou-se esposa de Davi",
+        "Não há mais dicas disponíveis"
+    ],
     "Arao": [
         "Dica 1: Era sumo sacerdote",
         "Dica 2: Morreu e foi sepultado no monte Hor",
