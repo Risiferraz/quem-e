@@ -4,21 +4,9 @@ let matches = 0; // Variável que armazena a quantidade de letras acertadas
 let score = 100;                // pontuação inicial
 
 // Sorteia o personagem e retorna em maiúsculas
-let listaDisponivel = [...listaDePersonagens]; // cópia inicial
-let sorteados = carregarSorteados(); // já recupera ao iniciar
 function sortearPersonagem() {
-  // se a lista auxiliar estiver vazia, recomeça
-  if (listaDisponivel.length === 0) {
-    listaDisponivel = [...listaDePersonagens];
-    // sorteados = [];
-  }
-
-  // sorteia dentro da lista auxiliar
-  const idx = Math.floor(Math.random() * listaDisponivel.length);
-  personagemSecreto = listaDisponivel.splice(idx, 1)[0];
-  sorteados.push(personagemSecreto);
-  salvarSorteados(sorteados); // persiste no localStorage
-  console.log("Já sorteados:", sorteados);
+  const idx = Math.floor(Math.random() * listaDePersonagens.length);
+  personagemSecreto = listaDePersonagens[idx];
   return personagemSecreto.toUpperCase();
 }
 
