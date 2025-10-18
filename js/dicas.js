@@ -37,18 +37,10 @@ function exibirDicas() {
     }
 }
 
-
 // Ocultar mensagem de dica
-function clicarOk() {
+function clicarOk1() {
     const mensagemDica = document.getElementById("mensagem-dica");
     mensagemDica.style.display = 'none'; // Esconde a mensagem de dica
     liberarTeclas(); 
 }
-
-// Ocultar mensagem de dica2
-function clicarOk2() {
-    const mensagemDica = document.getElementById("mensagem-dica2");
-    mensagemDica.style.display = 'none'; // Esconde a mensagem de dica2
-}
-
 

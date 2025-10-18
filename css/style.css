@@ -273,15 +273,19 @@ button.tecla:disabled {
 #mensagem-dica {
     display: none;
     grid-area: 1 / 1 / span 2 / span 1;
-    justify-self: center;
-    /* centraliza horizontalmente */
+    justify-self: center; /* centraliza horizontalmente */
 }
 
 #mensagem-dica2 {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
+    grid-area: 1 / 1 / span 2 / span 1;
+    justify-self: center; /* centraliza horizontalmente */
+}
+
+#imagem-dica {
+    height: 900px;
+    position: relative;
+    margin: 0 auto;
 }
 
 #mensagem-letra-certa {
@@ -353,16 +357,18 @@ button.tecla:disabled {
 }
 
 #ok2 {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     background-color: brown;
     position: absolute;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 2rem;
-    margin: 70% -30%;
+    font-size: 3rem;
+    margin: 22% 12%;
     border: outset 7px rgb(165, 168, 167);
     border-radius: 5px;
     z-index: 2;
+    bottom: 58%;
+    left: 49%;
 }
 
 #ok2:hover {
