@@ -4,22 +4,28 @@ let matches = 0; // Variável que armazena a quantidade de letras acertadas
 let score = 100;                // pontuação inicial
 
 // Sorteia o personagem e retorna em maiúsculas
-let listaDisponivel = [...listaDePersonagens]; // cópia inicial
-let sorteados = carregarSorteados(); // já recupera ao iniciar
+// let listaDisponivel = [...listaDePersonagens];
+// let sorteados = carregarSorteados();
+let sorteados = JSON.parse(localStorage.getItem("sorteados")) || [];
+let listaDisponivel = listaDePersonagens.filter(p => !sorteados.includes(p));
+
 function sortearPersonagem() {
   // se a lista auxiliar estiver vazia, recomeça
   if (listaDisponivel.length === 0) {
     listaDisponivel = [...listaDePersonagens];
-    // sorteados = [];
+    sorteados = [];
   }
+  // O código abaixo sorteia um personagem aleatório de listaDisponivel, remove-o da lista para não ser repetido, guarda-o em sorteados, persiste esse histórico no localStorage,
+  const idx = Math.floor(Math.random() * listaDisponivel.length); // gera um número aleatório entre 0 e 1 (exclusivo).
+  personagemSecreto = listaDisponivel.splice(idx, 1)[0]; // remove um item da lista auxiliar
+  sorteados.push(personagemSecreto); // adiciona à lista de já sorteados
+  salvarSorteados(sorteados); // salva o array sorteados no localStorage do navegador. 👉 Isso garante que, mesmo recarregando a página, os sorteados anteriores não se percam.
+  console.log("Já sorteados:", sorteados); // exibe no console a lista atualizada de sorteados
+  return personagemSecreto.toUpperCase(); // retorna o nome sorteado em maiúsculas
+}
 
-  // sorteia dentro da lista auxiliar
-  const idx = Math.floor(Math.random() * listaDisponivel.length);
-  personagemSecreto = listaDisponivel.splice(idx, 1)[0];
-  sorteados.push(personagemSecreto);
-  salvarSorteados(sorteados); // persiste no localStorage
-  console.log("Já sorteados:", sorteados);
-  return personagemSecreto.toUpperCase();
+function salvarSorteados(lista) {
+  localStorage.setItem("sorteados", JSON.stringify(lista));
 }
 
 function iniciarJogo() {
@@ -76,12 +82,8 @@ function configurarInputsBox(nome) {
     } else {
       inputBox.value = ""; // Limpa para outros caracteres
     }
-
-    // 🪵 Log para depuração
-    console.log(`A${i}: letra="${letra}", valor final="${inputBox.value}"`);
   }
 }
-
 
 document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código
   configurarTeclado();
@@ -316,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
     const tecla = e.key.toUpperCase(); // Converte a tecla pressionada para maiúscula
     const letraCorreta = (input.getAttribute('data-letra') || '').toUpperCase(); // Pega a letra correta do atributo data-letra
 
-    input.value = tecla;
+    input.value = tecla; // Preenche o input com a letra digitada
 
     if (tecla === letraCorreta) { // ✅ Acertou
       const inputsVaziosAntes = document.querySelectorAll("input.box-editavel:not([disabled])").length; // Conta quantos inputs editáveis ainda estão vazios antes de preencher este
@@ -330,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
       const todosInputs = Array.from(document.querySelectorAll('input[data-letra]')); // Seleciona todos os inputs com atributo data-letra
       const indexAtual = todosInputs.indexOf(input); // procura dentro da lista (array) "todosInput", o valor que corresponde ao input atual
 
-      for (let i = indexAtual + 1; i < todosInputs.length; i++) {
+      for (let i = indexAtual + 1; i < todosInputs.length; i++) { // Percorre os inputs a partir do próximo índice
         const proximo = todosInputs[i];
         if (proximo.classList.contains('box-editavel') && !proximo.disabled) { // Se o próximo input for editável e não desabilitado, então ...
           proximo.focus(); // coloca o foco no próximo input editável
