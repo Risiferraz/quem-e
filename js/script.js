@@ -34,25 +34,51 @@ function iniciarJogo() {
 }
 
 function configurarInputsBox(nome) {
-  const letrasArray = nome.split(""); // Divide o nome sorteado em um array de letras
-  for (let i = 1; i <= 18; i++) { // numera sequencialmente os inputs de 1 a 18 (no máximo) conforme quantidade de letras
-    const inputBox = document.getElementById(`A${i}`); // especifica o inputBox como A1, A2, A3...
-    if (!inputBox) continue; //
+  const letrasArray = nome.split("");
 
-    if (i <= letrasArray.length) { // Se o índice for menor ou igual ao número de letras do nome sorteado
-      const letra = letrasArray[i - 1]; // Pega a letra correspondente do array (ajustando o índice)
-      inputBox.setAttribute("data-letra", letra); // Define o atributo data-letra com a letra correspondente
-      inputBox.disabled = true; // Desabilita o inputBox para evitar edição
-      inputBox.value = ""; // Limpa o valor do inputBox, evitando assim efeitos colaterais e garantindo que cada inputBox comece sem sobras de valores anteriores.
+  for (let i = 1; i <= 18; i++) {
+    const inputBox = document.getElementById(`A${i}`);
+    if (!inputBox) continue;
 
-      if (letra === "-" || letra === " ") { // Se a letra for um hífen ou espaço, define o valor do inputBox como nulo.
-        inputBox.value = letra;
-        inputBox.classList.add("box-hifen");
-        inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
-      }
-    } else {
-      inputBox.closest("td").style.display = "none"; // Esconde os inputs excedentes à quantidade de letras
+    // Oculta inputs não utilizados
+    if (i > letrasArray.length) {
+      inputBox.closest("td").style.display = "none";
+      continue;
     }
+
+    const letra = letrasArray[i - 1];
+    inputBox.setAttribute("data-letra", letra);
+    inputBox.disabled = true;
+
+    if (letra === "1") {
+      inputBox.value = "I";
+      inputBox.style.backgroundImage = "url('imagens/um.jpg')";
+      inputBox.style.backgroundRepeat = "no-repeat";
+      inputBox.style.backgroundSize = "cover"; // ou "contain"
+      inputBox.style.backgroundPosition = "center";
+      inputBox.readOnly = true;
+      inputBox.classList.remove("box-editavel");
+      inputBox.classList.add("box-nao-editavel");
+
+    } else if (letra === "2") {
+      inputBox.value = "II";
+      inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
+      inputBox.style.backgroundRepeat = "no-repeat";
+      inputBox.style.backgroundSize = "cover"; // ou "contain"
+      inputBox.style.backgroundPosition = "center";
+      inputBox.readOnly = true;
+      inputBox.classList.remove("box-editavel");
+      inputBox.classList.add("box-nao-editavel");
+    } else if (letra === "-" || letra === " ") {
+      inputBox.value = letra;
+      inputBox.classList.add("box-hifen");
+      inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
+    } else {
+      inputBox.value = ""; // Limpa para outros caracteres
+    }
+
+    // 🪵 Log para depuração
+    console.log(`A${i}: letra="${letra}", valor final="${inputBox.value}"`);
   }
 }
 
@@ -66,11 +92,16 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
   setInterval(() => cronometro.atualizaCronometro(), 1000); // Atualiza o cronômetro a cada segundo
 });
 
-function configurarTeclado() { // Atribui a cada botão de classe "tecla" a letra do seu próprio id
-  const botoesTecla = document.querySelectorAll("button.tecla");
-  botoesTecla.forEach(buttonClicado => {
+// Configura o teclado
+function configurarTeclado() {
+  const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
+  botoesTecla.forEach(buttonClicado => { // Para cada botão, atribui o id como conteúdo do botão
     const letra = buttonClicado.id; // recebe o id do botão
     buttonClicado.textContent = letra; // atribui o id do botão ao seu próprio conteúdo
+
+    buttonClicado.addEventListener("click", () => { // Quando qualquer tecla for clicada → bloquear todas as teclas
+      bloquearTeclas();
+    });
   });
 }
 
@@ -81,19 +112,6 @@ function bloquearTeclas() {
     botao.disabled = true; // Desabilita o botão
     botao.style.opacity = "0.2"; // Aplica opacidade para indicar que está desabilitado
     botao.style.cursor = "not-allowed"; // Muda o cursor para indicar que não pode ser clicado
-  });
-}
-
-// Configura o teclado
-function configurarTeclado() {
-  const botoesTecla = document.querySelectorAll("button.tecla");
-  botoesTecla.forEach(buttonClicado => {
-    const letra = buttonClicado.id;
-    buttonClicado.textContent = letra;
-
-    buttonClicado.addEventListener("click", () => { // Quando qualquer tecla for clicada → bloquear todas as teclas
-      bloquearTeclas();
-    });
   });
 }
 
@@ -114,17 +132,17 @@ function verificarLetraClicada() {
   const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
 
   botoesTecla.forEach(buttonClicado => { // Para cada botão, adiciona um listener para o evento de clique
-    buttonClicado.addEventListener("click", () => { // Quando o botão é clicado, executa a função
+    buttonClicado.addEventListener("click", () => { // Quando o botão é clicado, executa a função:
       acionaBotaoDica();
       bloquearTeclas();
 
-      const letra = buttonClicado.id;
-      let acertou = false;
-      let countMatches = 0;
+      const letra = buttonClicado.id; // obtém a letra do id do botão clicado
+      let acertou = false; // variável para rastrear se houve acerto
+      let countMatches = 0; // contador de correspondências para esta letra
 
-      document.querySelectorAll("input[data-letra]").forEach(inputBox => {
+      document.querySelectorAll("input[data-letra]").forEach(inputBox => { // Seleciona todos os inputs que possuem o atributo data-letra
         if (inputBox.dataset.letra === letra) { // Compara a letra do botão clicado com o atributo data-letra do inputBox
-          inputBox.value = letra;
+          inputBox.value = letra; // Preenche o input com a letra correta
           inputBox.style.background = "rgb(186,150,43)";
           inputBox.style.border = "outset 3px rgb(252,237,177)";
           inputBox.style.color = "black";
@@ -260,7 +278,7 @@ function clicarOk4() {
   digitarPalavraSecreta(); // Chama a função que configura os inputs
 }
 
-function digitarPalavraSecreta() {
+function digitarPalavraSecreta() { // Configura os inputs para permitir digitação
   document.querySelectorAll("input.box").forEach(input => { // Seleciona todos os inputs com a classe "box"
     if (!input.classList.contains("box-nao-editavel")) { // Se o input não for "box-nao-editavel"
       input.classList.remove("box", "box-nao-editavel", "box-editavel"); // Remove todas as classes relacionadas
@@ -280,34 +298,34 @@ function digitarPalavraSecreta() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('input.box-editavel').forEach(inp => {
-    inp.setAttribute('maxlength', '1');
-    inp.autocomplete = 'off';
-    inp.spellcheck = false;
+document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código 
+  document.querySelectorAll('input.box-editavel').forEach(inp => { // Seleciona todos os inputs com a classe "box-editavel"
+    inp.setAttribute('maxlength', '1'); // Limita a 1 caractere
+    inp.autocomplete = 'off'; // Desativa o autocomplete (preventivo)
+    inp.spellcheck = false; // Desativa o corretor ortográfico (preventivo)
   });
 
   document.addEventListener('keydown', (e) => {
-    const input = document.activeElement;
+    const input = document.activeElement; // Obtém o elemento atualmente em foco
 
     if (!input || !input.classList || !input.classList.contains('box-editavel')) return;
     if (e.key.length !== 1) return; // ignora teclas de controle (Enter, Tab, etc.)
 
     e.preventDefault(); // evita inserir mais de 1 caractere por padrão
 
-    const tecla = e.key.toUpperCase();
+    const tecla = e.key.toUpperCase(); // Converte a tecla pressionada para maiúscula
     const letraCorreta = (input.getAttribute('data-letra') || '').toUpperCase(); // Pega a letra correta do atributo data-letra
 
     input.value = tecla;
 
     if (tecla === letraCorreta) { // ✅ Acertou
-      const inputsVaziosAntes = document.querySelectorAll("input.box-editavel:not([disabled])").length;
+      const inputsVaziosAntes = document.querySelectorAll("input.box-editavel:not([disabled])").length; // Conta quantos inputs editáveis ainda estão vazios antes de preencher este
       input.style.background = "rgb(186,150,43)";
       input.style.border = "outset 3px rgb(252,237,177)";
       input.style.color = "black";
       input.classList.remove("box", "box-editavel");
       input.classList.add("box-nao-editavel");
-      input.disabled = true;
+      input.disabled = true; // desabilita o input após acertar
 
       const todosInputs = Array.from(document.querySelectorAll('input[data-letra]')); // Seleciona todos os inputs com atributo data-letra
       const indexAtual = todosInputs.indexOf(input); // procura dentro da lista (array) "todosInput", o valor que corresponde ao input atual
