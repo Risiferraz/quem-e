@@ -163,7 +163,7 @@ function verificarLetraClicada() {
         const casasVazias = conjuntoInputsVazios.length;
         const tamanhoPalavra = nomeSorteado.length;
 
-        let limitePermitido = 0;
+        let limitePermitido = 0; // variável para armazenar o limite de casas vazias permitido
 
         if (tamanhoPalavra <= 4) {
           limitePermitido = 0; // se a palavra tem até 4 letras, só termina quando todas as letras forem preenchidas
@@ -176,10 +176,15 @@ function verificarLetraClicada() {
         }
 
         if (casasVazias <= limitePermitido) {
-          // 👉 Só dispara quando o jogador já reduziu os vazios ao limite
-          document.getElementById("mensagem-dica2").style.display = "grid";
-          botaoMostraDicas.style.display = "none";
-          bloquearTeclas();
+          if (tamanhoPalavra <= 4) {
+            // 👉 Caso especial: palavra curta, chama a verificação final
+            verificarPalavraPreenchida();
+          } else {
+            // 👉 Caso normal: mostra a dica
+            document.getElementById("mensagem-dica2").style.display = "grid";
+            botaoMostraDicas.style.display = "none";
+            bloquearTeclas();
+          }
         } else {
           // 👉 Enquanto ainda há mais casas vazias que o limite, mostra acerto normal
           document.getElementById("mensagem-letra-certa").style.display = "flex";

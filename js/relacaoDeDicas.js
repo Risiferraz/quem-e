@@ -1,5 +1,5 @@
 const dicas = {
-    "Aarao": [
+    "Aarão": [
         "Dica 1: Ele teve dois filhos e uma filha",
         "Dica 2: Sua esposa se chamava Joquebede",
         "Dica 3: Foi pai de Moisés",
@@ -83,21 +83,21 @@ const dicas = {
         "Dica 4: Foi morto por Joabe em vingança pela morte de Asael",
         "Não há mais dicas disponíveis"
     ],
-    "Abraao": [
+    "Abraão": [
         "Dica 1: É conhecido como o 'Pai da Fé'",
         "Dica 2: Seu pai se chamava Terá",
         "Dica 3: Sua terra natal era Ur dos Caldeus",
         "Dica 4: Deus disse a ele que ele teria muitos filhos, tantos quanto as estrelas do céu",
         "Dica 5: Ele é pai de Isaque e Ismael"
     ],
-    "Absalao": [
+    "Absalão": [
         "Dica 1: Era filho de rei e não havia em Israel homem tão belo quanto ele, sem defeito algum",
         "Dica 2: Matou seu próprio irmão",
         "Dica 3: Sua mãe se chamava Maaca e ele era neto de Talmai, rei de Gesur",
         "Dica 4: Tentou matar seu próprio pai e tomar-lhe o trono",
         "Dica 5: Tinha uma irmã, muito formosa, chamada Tamar",
     ],
-    "Aca": [
+    "Acã": [
         "Dica 1: É chamado de 'o perturbador de Israel'(1Cr 2:7)",
         "Dica 2: Foi culpado pela derrota do povo de Deus em Ai",
         "Dica 3: Pegou para si uma capa babilônica, prata e ouro, escondendo-os debaixo de sua tenda",
@@ -188,16 +188,86 @@ const dicas = {
         "Dica 4: O Senhor revelou a ele que o filho de Jeroboão morreria",
         "Dica 5: A história dele está registrada em 1 Reis 11 e 14"
     ],
-    "Aicao": [
+    "Aicão": [
         "Dica 1: Viveu na época do rei Josias, em Judá",
         "Dica 2: Foi mandado pelo rei com outros delegados consultar a profetisa Hulda",
         "Dica 3: Presenciou a descoberta do livro da Lei no templo",
         "Dica 4: Usou da sua influência para livrar da morte o profeta Jeremias(Jr 26.24)",
         "Dica 5: Seu filho Gedalias foi nomeado governador de Judá por Nabucodonosor"
     ],
+    "Aimaas": [
+        "Dica 1: Seu pai era o sacerdote Zadoque",
+        "Dica 2: Serviram de espias para Davi durante a fuga deste de Absalão",
+        "Dica 3: Junto com Jônatas, filho de Abiatar, esconderam-se num poço fugindo de Absalão",
+        "Dica 4: Pediu para correr e levar a Davi a notícia da vitória sobre Absalão",
+        "Dica 5: A história dele está registrada em 2 Samuel 15 e 17"
+    ],
+    "Ainoã": [
+        "Dica 1: Juntamente com Abigail, foi levada cativa pelos amalequitas, quando morava em Ziclague",
+        "Dica 2: Tinha o mesmo nome da esposa de Saul",
+        "Dica 3: Casou-se com Davi antes que ele se tornasse rei",
+        "Dica 4: Foi a mãe do filho mais velho de Davi",
+        "Dica 5: A história dela está registrada em 1 Samuel 25 e 2 Samuel 3"
+    ],
+    "Aitofel": [
+        "Dica 1: Era um excelente estrategista militar. Suas palavras tinham a autoridade de um oráculo divino",
+        "Dica 2: Era um dos conselheiro do rei Davi",
+        "Dica 3: Estava entre os que conspiraram contra Davi, apoiando a rebelião de Absalão",
+        "Dica 4: Quando viu que seu conselho não fora ouvido, caiu em desespero, foi para casa e enforcou-se.",
+        "Não há mais dicas disponíveis"
+    ],
+    "Amasa": [
+        "Dica 1: Era filho da irmã de Davi, chamada Abigail",
+        "Dica 2: Foi nomeado por Absalão como comandante do exército em lugar de Joabe",
+        "Dica 3: Davi o nomeou comandante do seu exército, em lugar de Joabe, quando voltou a Jerusalém",
+        "Dica 4: Foi morto por Joabe, a traição. Com um beijo, Joabe o feriu com uma espada",
+        "Dica 5: A história dele está registrada em 2 Samuel 17 e 20"
+    ],
+    "Amaleque": [
+        "Dica 1: Era filho de Elifaz, neto de Esaú",
+        "Dica 2: Deu origem a um povo nômade que atacou Israel no deserto, quando saíram do Egito",
+        "Dica 3: Deus ordenou a Moisés que destruísse completamente os seus descendentes",
+        "Dica 4: Deus ordenou a Saul que destruísse completamente os seus descendentes",
+        "Dica 5: A história dele está registrada em Gênesis 36:10-12, Êxodo 17:8-16 e 1 Samuel 15:1-35"
+    ],
+    "Amazias": [
+        "Dica 1: Foi um rei de Judá que reinou por 29 anos em Jerusalém",
+        "Dica 2: Filho de Joás e pai de Uzias",
+        "Dica 3: Declarou guerra aos edomitas, derrotou-os no vale do Sal, ao sul do mar Morto, e tomou-lhes a sua capital",
+        "Dica 4: Foi derrotado na batalha de Bete-Semes e preso em Jerusalém por Jeoás, rei de Israel",
+        "Dica 5: Amazias assassinado por conspiradores em Laquis, para onde se tinha fugido de Jerusalém (2 Cr 26.27)."
+    ],
+    "Amnom": [
+        "Dica 1: Sua mãe se chamava Ainoã",
+        "Dica 2: Se apaixonou por sua meia-irmã Tamar e a violentou",
+        "Dica 3: Absalão, seu meio-irmão, mandou seus servos matá-lo em vingança pela desonra de Tamar",
+        "Dica 4: Foi o filho mais velho do rei Davi",
+        "Não há mais dicas disponíveis"
+    ],
+    "Amom": [
+        "Dica 1: Foi um rei de Judá que reinou por apenas dois anos em Jerusalém",
+        "Dica 2: Foi assassinado por seus próprios servos, em conspiração liderada por seu capitão de guarda",
+        "Dica 3: Sua mãe se chamava Mesulemete e seu pai, Manassés",
+        "Dica 4: Foi o pai do rei Josias",
+        "Não há mais dicas disponíveis"
+    ],
+    "Amos": [
+        "Dica 1: Foi um profeta do Antigo Testamento e era criador de ovelhas da cidade de Tecoa",
+        "Dica 2: Exerceu o seu ministério nos reinados de Uzias e Jeroboão II",
+        "Dica 3: Em seus dias, houve um grande terremoto",
+        "Dica 4: Há um livro com seu nome no Antigo Testamento",
+        "Não há mais dicas disponíveis"
+    ],
+    "Ana": [
+        "Dica 1: Era estéril",
+        "Dica 2: Seu marido tinha duas mulheres",
+        "Dica 3: O sacerdote Eli achou que ela estava bêbada quando orava no templo",
+        "Dica 4: Dedicou seu filho Samuel ao Senhor",
+        "Não há mais dicas disponíveis"
+    ],
 
 
-    "Arao": [
+    "Arão": [
         "Dica 1: Era sumo sacerdote",
         "Dica 2: Morreu e foi sepultado no monte Hor",
         "Dica 3: Foi ele quem fez o 'Bezerro de Ouro'",
