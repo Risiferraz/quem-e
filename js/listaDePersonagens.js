@@ -52,7 +52,23 @@ const listaDePersonagens = [
   "Arfaxade",
   "Arioque",
   "Arquelau",
-  "Artaxerxes-1",
+  "Artaxerxes",
+  "Artemis",
+  "Asa",
+  "Asael",
+  "Asafe",
+  "Asenate",
+  "Aser",
+  "Asera",
+  "Assuero",
+  "Astarote",
+  "Atalia",
+  "Azarias33",
+  "Azarias44",
+  "Azarias55",
+
+
+
 
   
 
