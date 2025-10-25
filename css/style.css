@@ -200,6 +200,10 @@ td {
     color: transparent;
     border: none
 }
+/* 
+.box-casa-vazia {
+    display: none;
+} */
 
 input:focus {
     outline: none;

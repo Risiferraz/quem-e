@@ -60,7 +60,7 @@ function configurarInputsBox(nome) {
       inputBox.value = "I";
       inputBox.style.backgroundImage = "url('imagens/um.jpg')";
       inputBox.style.backgroundRepeat = "no-repeat";
-      inputBox.style.backgroundSize = "cover"; // ou "contain"
+      inputBox.style.backgroundSize = "cover";
       inputBox.style.backgroundPosition = "center";
       inputBox.readOnly = true;
       inputBox.classList.remove("box-editavel");
@@ -70,17 +70,39 @@ function configurarInputsBox(nome) {
       inputBox.value = "II";
       inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
       inputBox.style.backgroundRepeat = "no-repeat";
-      inputBox.style.backgroundSize = "cover"; // ou "contain"
+      inputBox.style.backgroundSize = "cover";
       inputBox.style.backgroundPosition = "center";
       inputBox.readOnly = true;
       inputBox.classList.remove("box-editavel");
       inputBox.classList.add("box-nao-editavel");
-    } else if (letra === "-" || letra === " ") {
+    } else if (letra === "2") {
+      inputBox.value = "II";
+      inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
+      inputBox.style.backgroundRepeat = "no-repeat";
+      inputBox.style.backgroundSize = "cover";
+      inputBox.style.backgroundPosition = "center";
+      inputBox.readOnly = true;
+      inputBox.classList.remove("box-editavel");
+      inputBox.classList.add("box-nao-editavel");
+
+    } else if (letra === "-") {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
+
+    } else if (letra === " ") {
+      inputBox.value = letra;
+      inputBox.classList.add("box-hifen");
+      inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
+
+    } else if (["3", "4", "5"].includes(letra)) {
+      inputBox.value = letra;
+      // inputBox.classList.add("box-casa-vazia");
+      inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
+      inputBox.style.display = "none";
+      inputBox.closest("td").style.display = "none";
     } else {
-      inputBox.value = ""; // Limpa para outros caracteres
+      inputBox.value = "";
     }
   }
 }
@@ -133,12 +155,12 @@ const botaoMostraDicas = document.getElementById("mostra-dicas");
 function verificarLetraClicada() {
   const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
 
-  botoesTecla.forEach(buttonClicado => { // Para cada botão, adiciona um listener para o evento de clique
-    buttonClicado.addEventListener("click", () => { // Quando o botão é clicado, executa a função:
+  botoesTecla.forEach(buttonClicado => { // Para cada botão "tecla", adiciona um listener para o evento de clique
+    buttonClicado.addEventListener("click", () => { // Quando qualquer botão "tecla" é clicado, executa a função:
       acionaBotaoDica();
       bloquearTeclas();
 
-      const letra = buttonClicado.id; // obtém a letra do id do botão clicado
+      const letra = buttonClicado.id; // obtém a letra do id do botão "tecla" clicado
       let acertou = false; // variável para rastrear se houve acerto
       let countMatches = 0; // contador de correspondências para esta letra
 
@@ -176,11 +198,13 @@ function verificarLetraClicada() {
         }
 
         if (casasVazias <= limitePermitido) {
-          if (tamanhoPalavra <= 4) {
-            // 👉 Caso especial: palavra curta, chama a verificação final
+          if (tamanhoPalavra <= 4) {   // 👉 Caso especial: se última casa vazia da palavra curta, chama a verificação final
             verificarPalavraPreenchida();
-          } else {
-            // 👉 Caso normal: mostra a dica
+            const mostraDicasVisivel = document.getElementById("mostra-dicas");
+            if (mostraDicasVisivel && getComputedStyle(mostraDicasVisivel).display === "flex") {
+              mostraDicasVisivel.style.display = "none";
+            }
+          } else { // Se não é a última letra de palavra curta, mas atingiu o limite de casas vazias permitidas
             document.getElementById("mensagem-dica2").style.display = "grid";
             botaoMostraDicas.style.display = "none";
             bloquearTeclas();
@@ -371,8 +395,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
 });
 
 function verificarPalavraPreenchida() {
-  const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]"));
-
+  const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]")); // Seleciona todos os inputs que possuem o atributo data-letra
   const todosPreenchidos = inputsDaPalavra.every(inp => { // Verifica se todos os inputs visíveis (não escondidos) já têm valor
 
     if (window.getComputedStyle(inp).display === "none") return true; // Se o input está escondido (display:none), ignora

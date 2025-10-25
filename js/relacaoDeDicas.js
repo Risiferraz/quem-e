@@ -41,21 +41,21 @@ const dicas = {
         "Dica 4: Depois da morte de seu marido, tornou-se esposa de Davi",
         "Não há mais dicas disponíveis"
     ],
-    "Abimeleque": [
+    "Abimeleque-3": [
         "Dica 1: Era rei dos filisteus e morava em Gerar",
         "Dica 2: Viveu na época de Abraão",
         "Dica 3: Quis tomar Sara como esposa",
         "Dica 4: Foi avisado por Deus em sonho para não fazer isso",
         "Dica 5: A história dele está registrada no capítulo 20 de Gênesis"
     ],
-    "Abimeleque": [
+    "Abimeleque-4": [
         "Dica 1: Foi filho de Gideão",
         "Dica 2: Viveu na cidade de Siquém",
         "Dica 3: Matou a todos os seus irmãos para se tornar rei",
         "Dica 4: Reinou por três anos em Siquém",
         "Não há mais dicas disponíveis"
     ],
-    "Abimeleque": [
+    "Abimeleque-5": [
         "Dica 1: Era um sacerdote na cidade de Nobe",
         "Dica 2: Ofereceu a Davi, os 'Pães da Proposição'",
         "Dica 3: Também entregou a Davi a espada de Golias",
@@ -265,8 +265,76 @@ const dicas = {
         "Dica 4: Dedicou seu filho Samuel ao Senhor",
         "Não há mais dicas disponíveis"
     ],
-
-
+    "Ananias-3": [
+        "Dica 1: Sua história está registrada no livro de Atos dos Apóstolos",
+        "Dica 2: Mentiu ao Espírito Santo sobre o valor da venda de um terreno",
+        "Dica 3: Ao ouvir as palavras de Pedro, caiu morto, alguns jovens levaram-no e o sepultaram",
+        "Dica 4: Sua esposa se chamava Safira",
+        "Não há mais dicas disponíveis"
+    ],
+    "Ananias-4": [
+        "Dica 1: Fazia parte da igreja em Damasco",
+        "Dica 2: O Senhor lhe apareceu em visão, dizendo-lhe para ir à casa de Judas e procurar por Saulo",
+        "Dica 3: Ficou com medo de obedecer a ordem do Senhor, mas o Senhor o encorajou",
+        "Dica 4: Impôs as mãos sobre Saulo para que ele recuperasse a visão",
+        "Não há mais dicas disponíveis"
+    ],
+    "Anaque": [
+        "Dica 1: Era filho de Arba, o maior entre os anaquins",
+        "Dica 2: Era um dos gigantes que habitavam a terra de Canaã",
+        "Dica 3: Seus descendentes eram conhecidos como os anaquins, nefilins ou refains",
+        "Dica 4: Seus filhos, Sesai, Aimã e Talmai, foram expulsos de Hebrom por Calebe",
+        "Não há mais dicas disponíveis"
+    ],
+    "Anas": [
+        "Dica 1: Era um sumo sacerdote",
+        "Dica 2: Viveu na época de Pilatos e Herodes",
+        "Dica 3: Jesus foi conduzido a ele após ser preso",
+        "Dica 4: Amarou as mãos de Jeus e o enviou a Caifás",
+        "Não há mais dicas disponíveis"
+    ],
+    "Andre": [
+        "Dica 1: Era pescador de profissão",
+        "Dica 2: Era um dos doze apóstolos de Jesus",
+        "Dica 3: Foi o primeiro discípulo chamado por Jesus",
+        "Dica 4: Era irmão de Simão Pedro",
+        "Dica 5: Disse a seu irmão: 'Achamos o Messias' (João 1:41)"
+    ],
+    "Anrão": [
+        "Dica 1: Filho de Coate e neto de Levi",
+        "Dica 2: Seus irmãos eram Izar, Hebrom e Uziel",
+        "Dica 3: Casou-se com Joquebede, sua tia",
+        "Dica 4: Foi pai de Moisés, Arão e Miriam",
+        "Não há mais dicas disponíveis"
+    ],
+    "Antipas": [
+        "Dica 1: Governanador da província da Galileia e Perea, na época de Jesus",
+        "Dica 2: Era filho de Herodes, o Grande",
+        "Dica 3: Também chamado pelo prenome de Herodes",
+        "Dica 4: João Batista o repreendeu por ter tomado como esposa Herodíades, mulher de seu meio-irmão Felipe",
+        "Dica 5: Foi responsável pela prisão e decapitação de João Batista",
+    ],
+    "Aoliabe": [
+        "Dica 1: Era da tribo de Dã e viveu na época do Êxodo",
+        "Dica 2: Trabalhou na construção do tabernáculo",
+        "Dica 3: Era artesão, mestre em trabalhos de ouro, prata, bronze, lapidação de pedras e entalhe em madeira",
+        "Dica 4: Deus deu a ele habilidades especiais de artesão e sabedoria para ensinar outros",
+        "Não há mais dicas disponíveis",
+    ],
+    "Apolo": [
+        "Dica 1: Era judeu, natural de Alexandria",
+        "Dica 2: Quando Paulo chegou a Éfeso, ele estava em Corinto",
+        "Dica 3: Era pregador eloqüente e poderoso na Escritura",
+        "Dica 4: Priscila e Áquila o conheceram em Éfeso e o explicaram com mais clareza o caminho de Deus",
+        "Dica 5: Conhecia apenas o batismo de João",
+    ],
+    "Aquila": [
+        "Dica 1: Era judeu, natural do Ponto",
+        "Dica 2: Ele e sua esposa foram expulsos de Roma pelo imperador Cláudio",
+        "Dica 3: Paulo morou com eles em Corinto por um ano e meio",
+        "Dica 4: Trabalhava como fabricante de tendas",
+        "Dica 5: Sua esposa se chamava Priscila",
+    ],
     "Arão": [
         "Dica 1: Era sumo sacerdote",
         "Dica 2: Morreu e foi sepultado no monte Hor",
@@ -274,6 +342,44 @@ const dicas = {
         "Dica 4: Foi irmão de Moisés",
         "Não há mais dicas disponíveis"
     ],
+    "Arauna": [
+        "Dica 1: Era jebuseu",
+        "Dica 2: Viveu na época do rei Davi",
+        "Dica 3: Era dono de uma eria de joeirar trigo",
+        "Dica 4: Davi comprou a eria dele para construir um altar ao Senhor",
+        "Não há mais dicas disponíveis"
+    ],
+    "Arfaxade": [
+        "Dica 1: Ele viveu 438 anos",
+        "Dica 2: Quando ele nasceu, seu pai tinha 100 anos",
+        "Dica 3: Era neto de Noé",
+        "Dica 4: Foi o primeiro homem a nascer após o dilúvio",
+        "Não há mais dicas disponíveis"
+    ],
+    "Arioque": [
+        "Dica 1: Era capitão da guarda do rei",
+        "Dica 2: Fazia parte do exército de Nabucodonosor",
+        "Dica 3: Cumprindo as ordens do rei, saiu para matar todos os sábios de Babilônia",
+        "Dica 4: Daniel pediu a ele que o levasse até o rei",
+        "Dica 5: Foi ele quem disse a Nabucodonosor: 'Encontrei um homem que pode interpretar seus sonhos'",
+    ],
+    "Arquelau": [
+        "Dica 1: Foi rei da judeia pouco tempo depois do nascimento de Jesus",
+        "Dica 2: Era filho de Herodes, o Grande",
+        "Dica 3: Seu curto reinado foi marcado por crueldades e por isto foi deposto pelo imperador romano Augusto",
+        "Dica 4: Também era chamado de Herodes",
+        "Dica 5: Quando José soube que ele reinava na Judeia, teve medo de voltar para lá, e foi para a Galileia",
+    ],
+    "Artaxerxes": [
+        "Dica 5: Viveu no tempo do exílio do povo de Israel",
+        "Dica 1: Foi rei da Pérsia",
+        "Dica 2: Era filho de Xerxes I",
+        "Dica 3: Permitiu a Esdras levar um grupo de judeus de volta a Jerusalém para reconstruir o templo",
+        "Dica 4: Permitiu a Neemias voltar a Jerusalém para reconstruir os muros da cidade",
+    ],
+
+
+
     "Jeremias": [
         "Dica 1: Foi um profeta",
         "Dica 2: Era da cidade de Anatote",
