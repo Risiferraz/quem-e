@@ -41,21 +41,21 @@ const dicas = {
         "Dica 4: Depois da morte de seu marido, tornou-se esposa de Davi",
         "Não há mais dicas disponíveis"
     ],
-    "Abimeleque-3": [
+    "Abimeleque33": [
         "Dica 1: Era rei dos filisteus e morava em Gerar",
         "Dica 2: Viveu na época de Abraão",
         "Dica 3: Quis tomar Sara como esposa",
         "Dica 4: Foi avisado por Deus em sonho para não fazer isso",
         "Dica 5: A história dele está registrada no capítulo 20 de Gênesis"
     ],
-    "Abimeleque-4": [
+    "Abimeleque44": [
         "Dica 1: Foi filho de Gideão",
         "Dica 2: Viveu na cidade de Siquém",
         "Dica 3: Matou a todos os seus irmãos para se tornar rei",
         "Dica 4: Reinou por três anos em Siquém",
         "Não há mais dicas disponíveis"
     ],
-    "Abimeleque-5": [
+    "Abimeleque55": [
         "Dica 1: Era um sacerdote na cidade de Nobe",
         "Dica 2: Ofereceu a Davi, os 'Pães da Proposição'",
         "Dica 3: Também entregou a Davi a espada de Golias",
@@ -448,29 +448,157 @@ const dicas = {
         "Dica 5: O sacerdote Joiada, traçou um plano para matá-la e colocar no trono o menino Joás, único sobrevivente da família real",
     ],
     "Azarias33": [
-        "Dica 4: Era um nome bastante comum na Bíblia, havendo vários personagens com esse nome",
-        "Dica 1: Era sumo sacerdote",
-        "Dica 2: Viveu na época do rei Uzias",
-        "Dica 3: Quando Uzias tentou queimar incenso no templo, ele, juntamente com outros 80 sacerdotes, o repreendeu corajosamente",
+        "Dica 1: Era um nome bastante comum na Bíblia, havendo vários personagens com esse nome, reis, sacerdotes e profetas",
+        "Dica 2: Era sumo sacerdote",
+        "Dica 3: Viveu na época do rei Uzias",
+        "Dica 4: Quando Uzias tentou queimar incenso no templo, ele, juntamente com outros 80 sacerdotes, o repreendeu corajosamente",
         "Dica 5: Quando viu que Uzias estava leproso, o expulsou depressa do templo",
     ],
     "Azarias44": [
-        "Dica 4: Era um nome bastante comum na Bíblia, havendo vários personagens com esse nome",
-        "Dica 1: Era filho do sacerdote Joiada",
-        "Dica 2: Viveu na época do rei Joás",
-        "Dica 3: Quando Joás afastou-se do Senhor, ele o repreendeu corajosamente",
-        "Dica 5: Foi apedrejado até a morte por ordem do rei Joás, no átrio do templo",
+        "Dica 1: Foi levado cativo para a Babilônia",
+        "Dica 2: Recebeu o nome babilônico de Abednego",
+        "Dica 3: Foi lançado na fornalha ardente, mas não se queimou",
+        "Dica 4: Era um dos amigos de Daniel",
+        "Não há mais dicas disponíveis"
     ],
-    "Azarias55": [
-        "Dica 4: Era um nome bastante comum na Bíblia, havendo vários personagens com esse nome",
-        "Dica 1: Era filho do sacerdote Joiada",
-        "Dica 2: Viveu na época do rei Joás",
-        "Dica 3: Quando Joás afastou-se do Senhor, ele o repreendeu corajosamente",
-        "Dica 5: Foi apedrejado até a morte por ordem do rei Joás, no átrio do templo",
+    "Baal": [
+        "Dica 1: Deus cananeu da fertilidade, da chuva e das tempestades",
+        "Dica 2: Seu nome significa 'senhor' ou 'marido'",
+        "Dica 3: Sua consorte era a deusa Astarte ou Astarote",
+        "Dica 4: Existem vários nomes compostos com o nome dele, como ...-Zebube, ...-Peor e ...-Hermom",
+        "Dica 5: Gideão destruiu o altar dedicado a ele e ficou conhecido como 'Jerubaal'",
     ],
+    "Baasa": [
+        "Dica 1: Começou a reinar sobre todo Israel em Tirza, no vigésimo sexto ano do reinado de Asa, rei de Judá",
+        "Dica 2: Estabeleceu uma nova dinastia em Israel, após conspirar e matar Nadabe filho de Jeroboão I",
+        "Dica 3: Houve guerra entre ele e Asa, rei de Judá, durante todo o seu reinado",
+        "Dica 4: Um profeta chamado Jeú, profetizou que Deus exterminaria toda a sua descendência",
+        "Não há mais dicas disponíveis",
+    ],
+    "Balaão": [
+        "Dica 1: Era um profeta",
+        "Dica 2: Proferiu profecias gloriosas sobre Israel",
+        "Dica 3: Foi contratado por Balaque, rei de Moabe, para amaldiçoar o povo de Israel",
+        "Dica 4: O Novo Testamento o menciona como exemplo de ganância e pecado (2 Pedro 2:15; Judas 11)",
+        "Dica 5: Ele experimentou a estranha experiência de falar com uma jumenta",
+    ],
+    "Balaque": [
+        "Dica 1: Era um rei de uma nação vizinha a Israel",
+        "Dica 2: Ele e seu povo eram descendentes de Ló, sobrinho de Abraão",
+        "Dica 3: Quando soube que os israelitas estavam acampados na planície de Moabe, ficou com medo",
+        "Dica 4: Mandou uma comitiva de nobres para contratar Balaão, profeta da Mesopotâmia, para amaldiçoar Israel",
+        "Dica 5: Ficou muito nervoso quando Balaão, em vez de amaldiçoar, abençoou Israel",
+    ],
+    "Barjesus": [
+        "Dica 1: Também era conhecido pelo nome de Elimas",
+        "Dica 2: Foi um mago e falso profeta",
+        "Dica 3: Era judeu e estava com Sérgio Paulo, procônsul de Chipre",
+        "Dica 4: Ficou cego por pertubar o procônsul quando este estava ouvindo a pregação de Paulo",
+        "Dica 5: Sua história está registrada em Atos 13:6-12",
+    ],
+    "Barnabe": [
+        "Dica 2: Era levita, natural de Chipre",
+        "Dica 1: Seu nome verdadeiro era José, e recebeu um apelido que significa 'filho da consolação'",
+        "Dica 3: Ele vendeu um campo que possuía e trouxe o dinheiro para os apóstolos",
+        "Dica 4: Ele apresentou Paulo aos apóstolos em Jerusalém, quando todos tinham medo dele",
+        "Dica 5: Foi companheiro de Paulo em sua primeira viagem missionária",
+    ],
+    "Barrabas": [
+        "Dica 1: Seu nome significa 'filho do pai'",
+        "Dica 2: Era um bandido conhecido",
+        "Dica 3: Estava condenado à morte por sedição e assassinato",
+        "Dica 4: Pilatos perguntou à multidão: 'Qual dos dois vocês querem que eu solte?'",
+        "Dica 5: Em conformidade a um antigo costume na Páscoa, foi libertado por Pilatos, em lugar de Jesus",
+    ],
+    "Bartolomeu": [
+        "Dica 1: Era um dos doze apóstolos de Jesus",
+        "Dica 2: A Bíblia não menciona muito sobre ele",
+        "Dica 3: Estudiosos da Bíliba afirmam que ele é também conhecido por Natanael",
+        "Dica 4: Foi apresentado a Jesus por Filipe",
+        "Dica 5: Jesus disse dele: 'Eis um verdadeiro israelita, em quem não há falsidade'",
+    ],
+    "Baruque": [
+        "Dica 1: Era um homem erudito e viveu durante o reinado dos filhos de Josias",
+        "Dica 2: Era amigo e secretário do profeta Jeremias",
+        "Dica 3: Jeremias ditava suas profecias, e Baruque as escrevia num rolo",
+        "Dica 4: Jeremias o mandou ler uma profecia no templo. O rolo foi lido diante do rei Jeoiaquim, que o queimou",
+        "Dica 5: Jeremias comprou uma propriedade, e entregou a escritura para ele para guardar em um porte de barro",
+    ],
+    "Barzilai": [
+        "Dica 1: Era um homem muito rico da cidade de Rogelim, na região montanhosa de Gileade",
+        "Dica 2: Contemporâneo do rei Davi",
+        "Dica 3: Ajudou Davi quando este fugia de Absalão",
+        "Dica 4: O rei Davi o convidou para morar em Jerusalém, mas ele preferiu voltar para sua terra natal",
+        "Dica 5: Ele disse a Davi: 'Já estou velho, eu só seria um peso para o rei'",
+    ],
+    "Basemate": [
+        "Dica 1: Uma das esposas de Esaú",
+        "Dica 2: Era hitita, nativa da terra de Canaã",
+        "Dica 3: Esaú casou-se com ela e com outra mulher cananita chamada Ada quando tinha 40 anos",
+        "Dica 4: Estas mulheres foram causa de muita tristeza para Rebeca e Isaque",
+        "Não há mais dicas disponíveis",
+    ],
+    "Bate-Seba": [
+        "Dica 1: Era uma mulher muito formosa e atraente",
+        "Dica 2: Foi casada com um heteu chamado Urias",
+        "Dica 3: Era neta de Aitofel, conselheiro do rei Davi (2 Sm 23:34)",
+        "Dica 4: Davia a conheceu quando a viu tomando banho no terraço de sua casa",
+        "Dica 5: Tornou-se esposa do rei Davi e mãe do rei Salomão",
+    ],
+    "Belsazar": [
+        "Dica 1: Era filho do rei Nabonido e neto de Nabucodonosor",
+        "Dica 2: Foi co-regente da Babilônia com seu pai",
+        "Dica 3: Durante um banquete, usou os utensílios sagrados do templo de Jerusalém",
+        "Dica 4: Durante o banquete, apareceu uma mão que escreveu na parede",
+        "Dica 5: Apavorado, mandou chamar Daniel para interpretar a escrita",
+    ],
+    "Beltessazar": [
+        "Dica 1: Nome de origem babilônica que significa 'O deus Bel protege o rei'",
+        "Dica 2: Era chefe dos magos e sábios da Babilônia",
+        "Dica 3: Nabucodonosor perguntou a ele: Podes tu saber o sonho que eu tive, e interpretá-lo?'",
+        "Dica 4: Ele permaneceu no governo do império depois que os medos e persas conquistaram a Babilônia",
+        "Dica 5: Nabucodonosor deu esse nome a um dos príncipes judeus levados cativos para a Babilônia",
+    ],
+    "Belzebu": [
+        "Dica 1: Jesus foi chamado por esse nome",
+        "Dica 2: Este nome só aparece no Novo Testamento",
+        "Dica 3: No velho testamento, é considerado uma versão expandida do nome do deus cananeu Baal",
+        "Dica 4: É um dos nomes do príncipe dos demônios",
+        "Não há mais dicas disponíveis"
+    ],
+    "Ben-Ami": [
+        "Dica 2: Seus descendentes se tornaram uma nação, os amonitas",
+        "Dica 3: Seu irmão se chamava Moabe",
+        "Dica 1: Era filho de seu avô",
+        "Dica 4: Seu pai era sobrinho de Abraão",
+        "Dica 5: Foi filho da filha de Ló",
+    ],
+    "Ben-Hadade-1": [
+        "Dica 1: Rei da Síria, filho de Tabrimom",
+        "Dica 2: Ele fez aliança com o rei Baasa para atacar o reino de Judá",
+        "Dica 3: O rei Asa, tomou prata e ouro do templo de Jerusalém e do prórprio tesouro e enviou a ele.",
+        "Dica 4: O rei Asa fez uma aliança com ele para que ele atacasse o seu reino",
+        "Dica 5: Ao invés de atacar Judá, ele atacou o rei Baasa de Israel",
+    ],
+    "Ben-Hadade-2": [
+        "Dica 1: Rei da Síria, suscessor de seu pai que tinha o mesmo nome",
+        "Dica 2: Com seu exército, sitiou Samaria, nos dias do rei Acabe",
+        "Dica 3: Ele mandou mensagem dizendo a Acabe: Tudo o que você tem em sua casa é meu'",
+        "Dica 4: O rei Asa fez uma aliança com ele para que ele atacasse o seu reino",
+        "Dica 5: Depois da primeira derrota, ele voltou a atacar um ano depois, mas foi derrotado novamente",
+    ],
+    "Ben-Hadade-3": [
+        "Dica 1: Rei da Síria",
+        "Dica 2: O profeta Eliseu foi visitá-lo em Damasco, pois soube que ele estava doente",
+        "Dica 3: Mandou Hazael levar um presente a Eliseu e perguntar-lhe se iria se curar",
+        "Dica 4: Eliseu respondeu que ele iria se curar, mesmo sabendo que na verdade ele iria morrer",
+        "Dica 5: Ele foi assassinado por Hazael, que se tornou rei da Síria em seu lugar",
+    ],
+    
 
-
-
+    
+    
+    
     "Jeremias": [
         "Dica 1: Foi um profeta",
         "Dica 2: Era da cidade de Anatote",
@@ -491,5 +619,12 @@ const dicas = {
         "Dica 3: Foi a primeira pessoa a ver Jesus após sua ressurreição",
         "Dica 4: A história dela está registrada em: Marcos 16:9 e João 20:1-18",
         "Não há mais dicas disponíveis"
+    ],
+    "Zacaria33": [
+        "Dica 1: Era filho do sacerdote Joiada",
+        "Dica 2: Viveu na época do rei Joás",
+        "Dica 3: Quando Joás afastou-se do Senhor, ele o repreendeu corajosamente",
+        "Dica 4: Foi apedrejado até a morte por ordem do rei Joás, no átrio do templo",
+        "Dica 5: Jesus citou esse personagem quando condenou os fariseus e os escribas (Mateus 23:35)",
     ],
 };

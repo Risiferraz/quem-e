@@ -41,7 +41,7 @@ const listaDePersonagens = [
   "Ananias44",
   "Anaque",
   "Anas",
-  "André",
+  "Andre",
   "Anrão",
   "Antipas",
   "Aoliabe",
@@ -65,7 +65,29 @@ const listaDePersonagens = [
   "Atalia",
   "Azarias33",
   "Azarias44",
-  "Azarias55",
+  "Baal",
+  "Baasa",
+  "Balaão",
+  "Balaque",
+  "Barjesus",
+  "Barnabe",
+  "Barrabas",
+  "Bartolomeu",
+  "Baruque",
+  "Barzilai",
+  "Basemate",
+  "Bate-Seba",
+  "Belsazar",
+  "Beltessazar",
+  "Belzebu",
+  "Ben-Ami",
+  "Ben-Hadade-1",
+  "Ben-Hadade-2",
+  "Ben-Hadade-3",
+
+
+
+
 
 
 
@@ -75,4 +97,5 @@ const listaDePersonagens = [
   // "Jeremias",
   // "Maer-Salal-Has-Baz",
   // "Maria-Madalena"
+  // "Zacarias33",
 ];
