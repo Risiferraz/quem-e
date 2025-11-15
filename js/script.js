@@ -65,7 +65,6 @@ function configurarInputsBox(nome) {
       inputBox.readOnly = true;
       inputBox.classList.remove("box-editavel");
       inputBox.classList.add("box-nao-editavel");
-
     } else if (letra === "2") {
       inputBox.value = "II";
       inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
@@ -75,24 +74,24 @@ function configurarInputsBox(nome) {
       inputBox.readOnly = true;
       inputBox.classList.remove("box-editavel");
       inputBox.classList.add("box-nao-editavel");
-    } else if (letra === "2") {
-      inputBox.value = "II";
-      inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
-      inputBox.style.backgroundRepeat = "no-repeat";
-      inputBox.style.backgroundSize = "cover";
-      inputBox.style.backgroundPosition = "center";
-      inputBox.readOnly = true;
-      inputBox.classList.remove("box-editavel");
-      inputBox.classList.add("box-nao-editavel");
-    } else if (letra === "3") {
-      inputBox.value = "III";
-      inputBox.style.backgroundImage = "url('imagens/tres.jpg')";
-      inputBox.style.backgroundRepeat = "no-repeat";
-      inputBox.style.backgroundSize = "cover";
-      inputBox.style.backgroundPosition = "center";
-      inputBox.readOnly = true;
-      inputBox.classList.remove("box-editavel");
-      inputBox.classList.add("box-nao-editavel");
+    // } else if (letra === "2") {
+    //   inputBox.value = "II";
+    //   inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
+    //   inputBox.style.backgroundRepeat = "no-repeat";
+    //   inputBox.style.backgroundSize = "cover";
+    //   inputBox.style.backgroundPosition = "center";
+    //   inputBox.readOnly = true;
+    //   inputBox.classList.remove("box-editavel");
+    //   inputBox.classList.add("box-nao-editavel");
+    // } else if (letra === "3") {
+    //   inputBox.value = "III";
+    //   inputBox.style.backgroundImage = "url('imagens/tres.jpg')";
+    //   inputBox.style.backgroundRepeat = "no-repeat";
+    //   inputBox.style.backgroundSize = "cover";
+    //   inputBox.style.backgroundPosition = "center";
+    //   inputBox.readOnly = true;
+    //   inputBox.classList.remove("box-editavel");
+    //   inputBox.classList.add("box-nao-editavel");
     } else if (letra === "-") {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
@@ -195,14 +194,14 @@ function verificarLetraClicada() {
 
         let limitePermitido = 0; // variável para armazenar o limite de casas vazias permitido
 
-        if (tamanhoPalavra <= 4) {
-          limitePermitido = 0; // se a palavra tem até 4 letras, só termina quando todas as letras forem preenchidas
-        } else if (tamanhoPalavra === 5) {
-          limitePermitido = 1; // se a palavra tem 5 letras, termina quando restar 1 letra vazia
-        } else if (tamanhoPalavra >= 6 && tamanhoPalavra <= 8) {
-          limitePermitido = 2; // se a palavra tem entre 6 a 8 letras, termina quando restarem 2 letras vazias
-        } else if (tamanhoPalavra > 8) {
-          limitePermitido = 3; // se a palavra tem mais de 9 letras ou mais, termina quando restarem 3 letras vazias
+        if (tamanhoPalavra <= 5) {
+          limitePermitido = 0; // se a palavra tem até 5 letras, só termina quando todas as letras forem preenchidas
+        } else if (tamanhoPalavra === 6) {
+          limitePermitido = 1; // se a palavra tem 6 letras, termina quando restar 1 letra vazia
+        } else if (tamanhoPalavra >= 7 && tamanhoPalavra <= 9) {
+          limitePermitido = 2; // se a palavra tem entre 7 a 9 letras, termina quando restarem 2 letras vazias
+        } else if (tamanhoPalavra > 9) {
+          limitePermitido = 3; // se a palavra tem mais de 10 letras ou mais, termina quando restarem 3 letras vazias
         }
 
         if (casasVazias <= limitePermitido) {
