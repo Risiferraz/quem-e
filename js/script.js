@@ -102,7 +102,7 @@ function configurarInputsBox(nome) {
       inputBox.classList.add("box-hifen");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
 
-    } else if (["3", "4", "5"].includes(letra)) {
+    } else if (["3", "4", "5", "6"].includes(letra)) {
       inputBox.value = letra;
       // inputBox.classList.add("box-casa-vazia");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
