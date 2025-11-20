@@ -83,6 +83,13 @@ const dicas = {
         "Dica 4: Juntamente com Joabe, matou o comandante dos exércitos de Saul, Abner",
         "Não há mais dicas disponíveis"
     ],
+    "Abiu": [
+        "Dica 1: Era filho de Arão",
+        "Dica 2: Seus irmãos eram: Nadabe, Eleazar e Itamar",
+        "Dica 3: Subiu ao monte Sinai e junto com outros, viram o Deus de Israel, sob cujos pés havia um chão de safira",
+        "Dica 4: Ele e seu irmão Nadabe trouxeram 'fogo estranho' perante o Senhor",
+        "Dica 5: Por conta disto, saiu fogo de diante do Senhor e foram mortos, ele e seu irmão, ali mesmo diante do Senhor",
+    ],
     "Abner": [
         "Dica 1: Era tio de Saul, e comandante do seu exército",
         "Dica 2: Constituiu Isbosete rei de Israel após a morte de Saul",
@@ -522,7 +529,7 @@ const dicas = {
         "Dica 2: Era amigo e secretário do profeta Jeremias",
         "Dica 3: Jeremias ditava suas profecias para que ele as escrevesse num rolo",
         "Dica 4: Jeremias o mandou ler uma profecia no templo. O rolo foi lido diante do rei Jeoiaquim, que o queimou",
-        "Dica 5: Jeremias comprou uma propriedade, e entregou-lhe a escritura para que ele a guardasse em um porte de barro",
+        "Dica 5: Foi acusado por Azarias e Joanã de estar planejando entregá-los aos caldeus para serem escravos na Babilônia",
     ],
     "Barzilai": [
         "Dica 1: Era um homem muito rico da cidade de Rogelim, na região montanhosa de Gileade",
@@ -939,7 +946,7 @@ const dicas = {
     ],
     "Eliseba": [
         "Dica 1: Mulher da tribo de Levi",
-        "Dica 2: Seu pai se chamava Aminadabe e seu irmão Nasom",
+        "Dica 2: Seu pai se chamava Aminadabe e seu irmão Naassom",
         "Dica 3: Foi a mãe de Nadabe, Abiú, Elezar e Itamar",
         "Dica 4: Foi esposa de Arão",
         "Não há mais dicas disponíveis"
@@ -1322,11 +1329,18 @@ const dicas = {
         "Dica 4: Um dos maiores inimigos dos judeus",
         "Dica 5: Tentou matar Mardoqueu, mas acabou enforcado na forca que ele mesmo preparou"
     ],
-    "Hanani": [
+    "Hanani33": [
         "Dica 1: Foi um profeta",
         "Dica 2: Viveu nos dias do rei Asa",
         "Dica 3: Disse ao rei Asa: 'procedeste loucamente, pois desde agora haverá guerras contra ti'",
         "Dica 4: O rei Asa ficou enfurecido contra ele, colocando-o na prisão",
+        "Não há mais dicas disponíveis"
+    ],
+    "Hanani44": [
+        "Dica 1: Viveu no período pós exílio",
+        "Dica 2: Ele havia chegado a Susã, capital do império Persa, vindo de Jerusalém",
+        "Dica 3: Parente de Neemias",
+        "Dica 4: Ele relatou a Neemias o estado de miséria e opróbrio em que se encontravam os que restaram em Jerusalém",
         "Não há mais dicas disponíveis"
     ],
     "Hananias": [
@@ -2547,14 +2561,183 @@ const dicas = {
         "Dica 4: Hamã o odiava, e arquitetou um plano para matar não somente ele, mas também todos os demais judeus",
         "Dica 5: Mardoqueu é outra forma de seu nome, usada em algumas versões",
     ],
+    "Naama": [
+        "Dica 1: Sua mãe se chamava Zilá",
+        "Dica 2: Era irmã de Tubal-Caim",
+        "Dica 3: Seu pai teve duas esposas",
+        "Dica 4: Foi filha de Lameque",
+        "Não há mais dicas disponíveis"
+    ],
+    "Naamã": [
+        "Dica 1: Era o chefe do exército do rei da Síria",
+        "Dica 2: Ele disse: 'Agora reconheço que em toda a terra não há Deus, a não ser em Israel.'",
+        "Dica 3: Ele pediu a Eliseu terra de seu quintal para fazer um altar ao Deus de Israel em sua casa'",
+        "Dica 4: Uma escrava israelita disse a sua esposa que havia em Israel um profeta que poderia curá-lo",
+        "Dica 5: Eliseu disse a ele: 'Vá e lave-se sete vezes no Jordão, e você ficará limpo da lepra'",
+    ],
+    "Naas": [
+        "Dica 1: Rei de Amom",
+        "Dica 2: Ele foi derrotado por Saul",
+        "Dica 3: Ele cercou a cidade de Jabes-Gileade e queria escravizar seus habitantes",
+        "Dica 4: Para não escravizá-los ele propôs a condição de que todos arrancassem o seu olho direito",
+        "Dica 5: Saul ficou muito indignado e convocou o povo de Israel para a guerra contra ele",
+    ],
+    "Naassom": [
+        "Dica 1: Era filho de Aminadabe",
+        "Dica 2: Era príncipe da tribo de Judá",
+        "Dica 3: Era irmão de Eliseba, esposa de Arão",
+        "Dica 4: Foi avô de Boaz e Boaz foi bisavô de Davi",
+        "Não há mais dicas disponíveis"
+    ],
+    "Nabal": [
+        "Dica 1: Era um homem grosseiro e mau em tudo o que fazia. Era descendente de Calebe",
+        "Dica 2: Homem muito rico e poderoso que morava nas proximidades do monte Carmelo",
+        "Dica 3: Davi pediu a ele que lhe mandasse provisões em troca da proteção dada aos seus pastores",
+        "Dica 4: Ele disse a Davi: 'Vocês acham que eu vou pegar o meu sustento, e dar a homens que eu não sei de onde vêm?",
+        "Dica 5: Sua esposa Abigail impediu Davi de derramar sangue e de me vingar com as minhas próprias mãos.",
+    ],
+    "Nabote": [
+        "Dica 1: Era um israelita da cidade de Jezreel",
+        "Dica 2: Ele tinha uma bela vinha perto do palácio real de Acabe e Jezabel",
+        "Dica 3: Acabe quis comprar a sua propriedade, mas ele não quis vendê-la por ser herança de seus pais",
+        "Dica 4: Acabe ficou tão desgostoso com sua recusa que até adoeceu",
+        "Dica 5: Jezabel arquitetou um plano maligno para encriminá-lo com falsas testemunhas e ele foi apedrejado.",
+    ],
+    "Nabucodonosor": [
+        "Dica 1: Fundador do império babilônico",
+        "Dica 2: Seu exército cercou a cidade de Jerusalém por dois anos e depois a destruiu",
+        "Dica 3: Levou todos os tesouros do Templo e os colocou em seu templo na Babilônia",
+        "Dica 4: Ele teve um sonho e exigiu que os sábios, não apenas o interpretasse, mas também o revelasse qual era",
+        "Dica 5: Ele fez uma estátua de ouro e exigiu que todos a adorassem",
+    ],
+    "Nadabe": [
+        "Dica 1: Era filho de Arão",
+        "Dica 2: Seus irmãos eram: Abiú, Eleazar e Itamar",
+        "Dica 3: Subiu ao monte Sinai e junto com outros, viram o Deus de Israel, sob cujos pés havia um chão de safira",
+        "Dica 4: Ele e seu irmão Abiú trouxeram 'fogo estranho' perante o Senhor",
+        "Dica 5: Por conta disto, saiu fogo de diante do Senhor e foram mortos, ele e seu irmão, ali mesmo diante do Senhor",
+    ],
+    "Naftali": [
+        "Dica 1: Na bênção final de seu pai, foi dito dele: 'Ele é leve e elegante como uma gazela solta nos campos.",
+        "Dica 2: A porção da terra de Canaã, que coube a seus descendentes, ficava junto ao mar da Galileia, onde nosso Salvador viveu",
+        "Dica 3: Dã foi seu irmão, de mesmo pai e mesma mãe",
+        "Dica 4: Era filho de Bila",
+        "Dica 5: Seu pai teve quatro esposas",
+    ],
+    "Naor": [
+        "Dica 1: Nasceu a cerca de 190 anos depois do dilúvio",
+        "Dica 2: Ele teve um neto com o mesmo nome",
+        "Dica 3: Filho de Serugue e pai de Terá",
+        "Dica 4: Foi avô de Abrão",
+        "Não há mais dicas disponíveis"
+    ],
+    "Natã": [
+        "Dica 1: Foi um profeta",
+        "Dica 2: Certa vez, Davi disse a ele: Estou morando num palácio, mas a arca de Deus se encontra numa tenda.",
+        "Dica 5: A mando de Davi, ele, o sacerdote Zadoque e Benaías, constituiram Salomão, rei de Israel",
+        "Dica 3: A ele coube a difícil missão de denunciar o grave pecado de Davi",
+        "Dica 4: Depois de contar uma parábola ao rei Davi, corajosamente disse a ele: 'Tu és este homem'",
+    ],
+    "Natanael": [
+        "Dica 1: Estudiosos da Bíblia afirmam que ele é também conhecido por Bartolomeu, sendo um dos doze apóstolos de Jesus",
+        "Dica 2: Felipe o encontrou e disse: 'Achamos aquele de quem Moisés escreveu na lei e a quem se referiram os profetas",
+        "Dica 3: Ao que ele respondeu: De Nazaré pode sair algo de bom?",
+        "Dica 4: Jesus disse a seu respeito: 'Eis um verdadeiro israelita, em quem não há dolo'",
+        "Não há mais dicas disponíveis"
+    ],
+    "Naum": [
+        "Dica 1: Ele foi enviado para pregar à Nínive",
+        "Dica 2: Nome que ocorre uma só vez no Antigo Testamento",
+        "Dica 3: Há uma cidade por onde Jesus passou, cujo nome agrega o nome deste profeta, como: aldeia de ...",
+        "Dica 4: Provavelmente ele profetizou durante o reinado de Ezequias, depois que as dez tribos foram levadas cativas",
+        "Dica 5: Há um livro da Bíblia com o seu nome",
+    ],
+    "Nebaiote": [
+        "Dica 1: Neto de Abraão",
+        "Dica 2: Sua irmã Maalate (ou Basemate) casou-se com Esaú, filho de Isaque",
+        "Dica 3: Seus descendentes são mencionados em uma profecia de Isaías sobre sacrifícios no altar de Deus.",
+        "Dica 4: É considerado fundador de uma tribo árabe nômade, provavelmente viviam como beduínos, mudando-se com seus rebanhos",
+        "Dica 5: O filho mais velho de Ismael",
+    ],
+    "Nebuzaradã": [
+        "Dica 1: Era capitão da guarda, oficial do rei da Babilônia",
+        "Dica 2: Ele disse a Jeremias: 'Foi Yahweh, o teu Deus, que determinou esta catástrofe contra este lugar'",
+        "Dica 3: Nabucodonosor ordenou-lhe que tratasse bem a Jeremias",
+        "Dica 4: Pôs fogo no templo e no palácio do rei Zedequias, e derrubou os muros em redor de Jerusalém",
+        "Dica 5: Levou os nobres em cativeiro, mas deixou na terra de Judá os pobres",
+    ],
+    "Neemias": [
+        "Dica 1: Sambalate e Tobias eram seus grandes inimigos e também do povo judeu",
+        "Dica 2: O rei o constituiu governador da Judeia",
+        "Dica 3: Hanani, seu parente, descreveu-lhe a deplorável condição dos seus compatriotas, o que o deixou bastante consternado",
+        "Dica 4: Quando o rei perguntou a ele por que ele estava triste, ele ficou com muito medo.",
+        "Dica 5: Exercia o cargo de copeiro de Artaxerxes Longímano (445 a.C.)",
+    ],
+    "Nergal-Sarezer": [
+        "Dica 1: Príncipe da Babilônia, que tomou o título de 'chefe dos magos' ou 'adivinhos'",
+        "Dica 2: Acompanhou Nabucodonosor na sua última expedição contra Jerusalém,",
+        "Dica 3: Por ordem do rei Nabucodonosor, libertou Jeremias da prisão (Jr 39.3, 13)",
+        "Dica 4: Sabemos, pelos monumentos, que ele mais tarde foi rei com o nome de Neriglissar",
+        "Dica 5: Casou com uma filha do rei da Babilônia, assassinou Evil-Merodaque, o filho de Nabucodonosor, sucedendo-lhe no trono.",
+    ],
+    "Neustã": [
+        "Dica 1: Virou tradição em Israel queimar-lhe incenso, havendo se tornado objeto de culto",
+        "Dica 2: Ezequias a despedaçou junto com outros elementos de adoração idólatra",
+        "Dica 3: No período em que o povo de Israel peregrinava no deserto, Deus mandou que Moisés a fizesse",
+        "Dica 4: Nome dado à haste com um artefato de bronze em forma de serpente",
+        "Dica 5: Sucedia que, tendo uma serpente mordido a alguém, quando este olhava para ela, ficava curado",
+    ],
+    "Nicodemos": [
+        "Dica 1: Era um fariseu, um dos principais dos judeus",
+        "Dica 2: Ele e José de Arimateia tomaram, o corpo de Jesus e o envolveram em lençóis com os óleos aromáticos, preparando-o para o sepultamento.",
+        "Dica 3: Jesus disse a ele: Você é mestre em Israel e não compreende estas coisas?",
+        "Dica 4: Ele disse a Jesus: Rabi, sabemos que o senhor é Mestre vindo da parte de Deus ...",
+        "Dica 5: Ele perguntou a Jesus: Como pode um homem nascer, sendo velho?",
+    ],
+    "Nicolau": [
+        "Dica 1: Seu nome significa literalmente 'conquistador do povo'",
+        "Dica 2: A Bíblia diz que ele era um homem de boa reputação e cheio do Espírito Santo e de sabedoria",
+        "Dica 3: Era um prosélito, ou seja, um gentio que se converteu ao judaísmo na cidade de Antioquia",
+        "Dica 4: Foi escolhido como um dos sete diáconos para 'servir às mesas'",
+        "Dica 5: Escritores cristãos antigos, como Irineu de Lyon e Hipólito, afirmaram que ele teria fundado a seita dos nicolaítas,",
+    ],
+    "Ninrode": [
+        "Dica 1: Era filho de Cuxe, que era filho de Cão, o filho de Noé",
+        "Dica 2: Em Miquéias 5.6 'a terra da Assíria', e 'as terras de seu domínio' estão colocadas em paralelo.",
+        "Dica 3: Estabeleceu um império em Sinar (Babilônia)",
+        "Dica 4: Reinou nas cidades de Babel, Ereque, Acade, e Calné e fundou um segundo grupo de capitais, Nínive, Reobote, Calá e Resen",
+        "Dica 5: Ele é descrito como 'poderoso caçador diante do Senhor' (Gn 10.9).",
+    ],
+    "Noa": [
+        "Dica 1: Mulher da tribo de Manassés que viveu por ocasião da repartição da terra em herança",
+        "Dica 2: Uma das filhas de Zelofeade",
+        "Dica 3: Seu pai não tinha filhos homens, só mulheres",
+        "Dica 4: Ela e suas irmãs pedem a Moisés para terem direito à herança, que só era dada a homens",
+        "Dica 5: Por orientação de Moisés, ela e suas irmãs se casaram com homens da mesma tribo",
+    ],
+    "Nodias": [
+        "Dica 1: Era profetiza",
+        "Dica 2: Viveu nos tempos pós exílio",
+        "Dica 3: Ela profetizou sobre a vida de Neemias",
+        "Dica 4: Estava entre as pessoas que tentavam desestimular Neemias na construção dos muros de Jerusalém",
+        "Não há mais dicas disponíveis"
+    ],
+    "Noe": [
+        "Dica 1: Ele achou graça aos olhos do Senhor, pois era um homem justo e perfeito e andava com Deus.",
+        "Dica 2: Seu pai lhe deu este nome dizendo: 'Este nos consolará acerca das nossas obras e do trabalho de nossas mãos'",
+        "Dica 3: Todas as pessoas que vivem hoje, são descendentes dele",
+        "Dica 4: Seus três filhos foram gerados depois que ele já tinha quinhentos anos",
+        "Dica 5: Do mesmo jeito que foi em seus dias, também será na vinda do Filho do homem, assim disse Jesus"
+    ],
+    "Noemi": [
+        "Dica 1: Esposa de Elimeleque",
+        "Dica 2: Seus filhos chamavam, Malom e Quiliom",
+        "Dica 3: Por causa da fome, sua família foi morar na terra de Moabe",
+        "Dica 4: Seu marido e seus dois filhos morreram então ela resolveu voltar para sua cidade natal",
+        "Dica 5: Chegando a Belém, ela disse: Chamem-me de 'Mara' porque o Senhor me encheu de amargura"
+    ],
 
-    // "Noa": [
-    //     "Dica 1: Mulher da tribo de Manassés que viveu por ocasião da repartição da terra em herança",
-    //     "Dica 2: Uma das filhas de Zelofeade",
-    //     "Dica 3: Seu pai não tinha filhos homens, só mulheres",
-    //     "Dica 4: Ela e suas irmãs pedem a Moisés para terem direito à herança, que só era dada a homens",
-    //     "Dica 5: Por orientação de Moisés, ela e suas irmãs se casaram com homens da mesma tribo",
-    // ],
+
     // "Queren-Hapuque": [
     //     "Dica 1: Uma das filhas de Jó",
     //     "Dica 2: Tinha duas irmãs, Jemima e Quézia",
