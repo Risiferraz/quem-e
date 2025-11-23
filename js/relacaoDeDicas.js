@@ -273,10 +273,10 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Ananias33": [
-        "Dica 1: Sua história está registrada no livro de Atos dos Apóstolos",
-        "Dica 2: Mentiu ao Espírito Santo sobre o valor da venda de um terreno",
+        "Dica 1: Sua esposa se chamava Safira",
+        "Dica 2: Sua história está registrada no livro de Atos dos Apóstolos",
         "Dica 3: Ao ouvir as palavras de Pedro, caiu morto, alguns jovens levaram-no e o sepultaram",
-        "Dica 4: Sua esposa se chamava Safira",
+        "Dica 4: Mentiu ao Espírito Santo sobre o valor da venda de um terreno",
         "Não há mais dicas disponíveis"
     ],
     "Ananias44": [
@@ -324,9 +324,9 @@ const dicas = {
     "Apolo": [
         "Dica 1: Era judeu, natural de Alexandria",
         "Dica 2: Quando Paulo chegou a Éfeso, ele estava em Corinto",
-        "Dica 3: Era pregador eloqüente e poderoso na Escritura",
+        "Dica 3: Conhecia apenas o batismo de João",
         "Dica 4: Priscila e Áquila o conheceram em Éfeso e o explicaram com mais clareza o caminho de Deus",
-        "Dica 5: Conhecia apenas o batismo de João",
+        "Dica 5: Era pregador eloqüente e poderoso na Escritura",
     ],
     "Aquila": [
         "Dica 1: Era judeu, natural do Ponto",
@@ -468,6 +468,13 @@ const dicas = {
         "Dica 4: Existem vários nomes compostos com o nome dele, como ...-Zebube, ...-Peor e ...-Hermom",
         "Dica 5: Gideão destruiu o altar dedicado a ele e ficou conhecido como 'Jerubaal'",
     ],
+    "Baana": [
+        "Dica 1: Seu nome é mencionado junto ao de Recabe, seu colega de trabalho",
+        "Dica 2: Era capitão de tropa do rei Is-Bosete",
+        "Dica 3: Ao meio dia, quando Is-Bosete cochilava, ele e Recabe entraram sorrateiramente e esfaquearam o rei no ventre",
+        "Dica 4: Ele e Recabe, cortaram a cabeça de Is-Bosete, fugiram e levaram-na para Davi",
+        "Dica 5: Davi, bastante indignado, mandou seus homens os executarem",
+    ],
     "Baasa": [
         "Dica 1: Começou a reinar sobre todo Israel em Tirza, no vigésimo sexto ano do reinado de Asa, rei de Judá",
         "Dica 2: Estabeleceu uma nova dinastia em Israel, após conspirar e matar Nadabe filho de Jeroboão I",
@@ -582,16 +589,16 @@ const dicas = {
     ],
     "Ben-Hadade-1": [
         "Dica 1: Rei da Síria, filho de Tabrimom",
-        "Dica 2: Ele fez aliança com o rei Baasa para atacar o reino de Judá",
         "Dica 3: O rei Asa, tomou prata e ouro do templo de Jerusalém e do prórprio tesouro e enviou a ele.",
-        "Dica 4: O rei Asa fez uma aliança com ele para que ele atacasse o seu reino",
-        "Dica 5: Ao invés de atacar Judá, ele atacou o rei Baasa de Israel",
+        "Dica 4: O rei Asa fez uma aliança com ele para que ele desfizesse a aliança com Baasa, rei de Israel",
+        "Dica 5: Ele deu ouvidos ao rei Asa e, ao invés de atacar Judá, ele atacou o rei Baasa de Israel",
+        "Não há mais dicas disponíveis"
     ],
     "Ben-Hadade-2": [
         "Dica 1: Rei da Síria, suscessor de seu pai que tinha o mesmo nome",
-        "Dica 2: Com seu exército, sitiou Samaria, nos dias do rei Acabe",
         "Dica 3: Ele mandou mensagem dizendo a Acabe: Tudo o que você tem em sua casa é meu'",
-        "Dica 4: O rei Asa fez uma aliança com ele para que ele atacasse o seu reino",
+        "Dica 2: Com seu exército, sitiou Samaria, nos dias do rei Acabe",
+        "Dica 4: Diante de suas ameaças, o rei de Israel lhe disse: 'Quem se veste para a batalha não deve se gabar como aquele que está se despindo depois da vitória'",
         "Dica 5: Depois da primeira derrota, ele voltou a atacar um ano depois, mas foi derrotado novamente",
     ],
     "Ben-Hadade-3": [
@@ -909,12 +916,33 @@ const dicas = {
         "Dica 4: Ele, Sebna e Joá voltaram ao rei Ezequias com as vestes rasgadas em razão da mensagem de Rabsaqué",
         "Não há mais dicas disponíveis"
     ],
-    "Eliezer": [
+    "Elias": [
+        "Dica 1: Um profeta",
+        "Dica 2: Ao vê-lo, Acabe lhe disse: És tu, perturbador de Israel?",
+        "Dica 4: Ele disse aos profetas de Baal: 'Gritem mais alto, porque pode ser que esteja meditando, atendendo a necessidades ou dormindo",
+        "Dica 5: Ele ficou com medo de Jezabel, levantou-se e, para salvar a vida, se foi para o deserto",
+        "Dica 3: Foi um das poucas pessoas que não morreram",
+    ],
+    "Eliasibe": [
+        "Dica 1: Ele era encarregado das câmaras da casa de Deus",
+        "Dica 2: Ele e outros sacerdotes, edificaram a porta das ovelhas, a qual consagraram até a torre dos cem",
+        "Dica 3: Um sumo sacerdote que viveu nos tempos de Neemias e Esdras",
+        "Dica 4: Ele era parente próximo de Tobias, um gentio amonita",
+        "Dica 5: Permitiu que seu neto se casasse com a filha de Sambalate, inimigo declarado do povo de Deus",
+    ],
+    "Eliezer33": [
         "Dica 1: Foi um profeta, filho de Dodavaú",
         "Dica 2: Viveu nos dias de Josafá e de Acazias",
         "Dica 3: Profetizou contra Josafá dizendo: 'Porquanto te aliaste com Acazias, o Senhor destruiu as suas obras'",
         "Dica 4: Segundo a sua profecia, os navios que Josafá e Acazias estavam constuindo para ir à Társis, se quebraram",
         "Não há mais dicas disponíveis"
+    ],
+    "Eliezer44": [
+        "Dica 1: Era o mordomo de Abraão",
+        "Dica 2: Abrão disse a Deus acerca dele: 'Uma vez que não me deste filhos, este meu servo herdará toda a minha riqueza'",
+        "Dica 3: Quando Abraão estava bem velho chamou a ele e o fez jurar que não deixaria Isaque se casar com mulheres cananitas",
+        "Dica 4: Abraão ordenou-lhe que fosse buscar uma esposa para Isaque em Harã",
+        "Dica 5: Ele orou: A mulher que eu disser: 'Dê-me de beber' e ela responder: 'Sim, beba. Também darei água a seus camelos ...'",
     ],
     "Elifaz33": [
         "Dica 1: Sua mãe se chamava Ada",
@@ -1118,13 +1146,6 @@ const dicas = {
         "Dica 3: Deus mandou que ele cozinhasse sua comida usando uma mistura de palha e fezes humanas",
         "Dica 4: Foi levado cativo para a Babilônia",
         "Dica 5: Em uma de suas visões, ele viu um grande vale cheio de ossos secos",
-    ],
-    "Faltiel": [
-        "Dica 1: Homem que morava em Galin, na tribo de Benjamim, nos tempos do rei Davi",
-        "Dica 2: Quando Davi fugiu de Saul, Mical, esposa de Davi e filha de Saul, foi dada a ele como esposa",
-        "Dica 3: Isbosete mandou tirar Mical dele e devolvê-la a Davi",
-        "Dica 4: No dia da partida de Mical, ele a seguiu chorando até Baurim",
-        "Dica 5: Seu nome é mencionado na Bíblia também como 'Falti' ou 'Palti'",
     ],
     "Farao-Neco": [
         "Dica 1: Era rei do Egito",
@@ -1858,8 +1879,8 @@ const dicas = {
         "Dica 1: Um sacerdote de Midiã que tinha sete filhas",
         "Dica 2: Uma de suas filhas se chamava Zípora",
         "Dica 3: Ele disse a Moisés: 'Bendito seja o Senhor, que vos livrou da mão dos egípcios por amor de Israel'",
-        "Dica 4: Também conhecido como Reuel",
-        "Dica 5: Se tornou sogro de Moisés",
+        "Dica 4: Moisés apascentava os rebanhos dele quando Deus lhe apareceu numa sarça ardente",
+        "Dica 5: Também conhecido como Reuel",
     ],
     "Jeu33": [
         "Dica 1: Era um profeta, filho de Hanâni",
@@ -1881,6 +1902,13 @@ const dicas = {
         "Dica 3: Instituiu, em Israel, o culto a Baal e sustentava os profetas de Asera",
         "Dica 4: Ocasionou a morte de Nabote, fazendo com que seu marido se apoderasse das cobiçadas terras do assassinado",
         "Dica 5: Sua morte foi trágica, sendo jogada da janela de seu palácio por seus servos e seu corpo comido por cães"
+    ],
+    "Jizreel": [
+        "Dica 1: Sua mãe se chamava Gômer",
+        "Dica 2: Seu pai era um profeta",
+        "Dica 3: O Senhor mandou que Oseias lhe desse este nome como um sinal de que Ele quebraria o arco de Israel",
+        "Dica 4: Sua mãe era uma prostituta",
+        "Não há mais dicas disponíveis"
     ],
     "Jo": [
         "Dica 1: Era um homem íntegro, reto, e temente a Deus que vivia na terra de Uz",
@@ -2010,7 +2038,7 @@ const dicas = {
     ],
     "Jonatas55": [
         "Dica 1: Era filho do sacerdote Abiatar",
-        "Dica 2: Junto com Aimaás filho de Zadoque, serviram de espias para Davi durante a fuga deste de Absalão",
+        "Dica 2: Junto com Aimaás filho de Zadoque, serviram de espias para Davi durante a fuga de Absalão",
         "Dica 3: Junto com Aimaás filho de Zadoque, esconderam-se num poço fugindo de Absalão",
         "Dica 4: Foi ele quem avisou a Adonias e seu grupo que Salomão acabara de ser coroado rei de Israel",
         "Não há mais dicas disponíveis"
@@ -2224,6 +2252,20 @@ const dicas = {
         "Dica 3: Abrão disse a ele: 'É melhor nos separamos. Se você escolher ir para a esquerda, irei para direita",
         "Dica 4: Ele escolheu para si toda a campina do Jordão, e armou as suas tendas até Sodoma",
         "Dica 5: Na destruição de Sodoma e Gomorra, sua esposa virou uma estátua de sal",
+    ],
+    "Lo-Ami": [
+        "Dica 1: Sua mãe se chamava Gômer",
+        "Dica 2: Seu pai era um profeta",
+        "Dica 3: O Senhor mandou que Oseias lhe desse este nome dizendo que Israel não era mais seu povo, nem Ele era mais seu Deus",
+        "Dica 4: Sua mãe era uma prostituta",
+        "Não há mais dicas disponíveis"
+    ],
+    "Lo-Ruama": [
+        "Dica 1: Sua mãe se chamava Gômer",
+        "Dica 2: Seu pai era um profeta",
+        "Dica 3: O Senhor mandou que Oseias lhe desse este nome dizendo que Ele não mais ia se compadecer da casa de Israel",
+        "Dica 4: Sua mãe era uma prostituta",
+        "Não há mais dicas disponíveis"
     ],
     "Loide": [
         "Dica 1: Personagem feminino do Novo Testamento",
@@ -2496,7 +2538,14 @@ const dicas = {
         "Dica 2: A mais nova das duas filhas de Saul",
         "Dica 3: Ela amava Davi, então Saul, numa tentativa de matá-lo, pediu como dote, cem prepúcios de filisteus",
         "Dica 4: Quando Saul mandou seus soldados matarem Davi, ela o ajudou a fugir",
-        "Dica 5: Depois que Davi virou um fugitivo, ela foi dada em casamento a outro homem chamado Paltiel",
+        "Dica 5: Depois que Davi virou um fugitivo, ela foi dada em casamento a outro homem chamado Palti ou Paltiel",
+    ],
+    "Midiã": [
+        "Dica 1: Sua mãe se chamava Quetura",
+        "Dica 2: Filho de Abraão",
+        "Dica 3: Ele deu origem a um povo nômade que muitas vezes se mistura com os ismaelitas e medanitas ",
+        "Dica 4: Seus descendentes aparecem em oposição aos israelitas em várias ocasiões, como no período dos Juízes",
+        "Não há mais dicas disponíveis"
     ],
     "Miguel": [
         "Dica 1: É chamado de 'Príncipe do povo de Deus'",
@@ -2539,6 +2588,13 @@ const dicas = {
         "Dica 3: Foi lançado na fornalha ardente, mas não se queimou",
         "Dica 4: Era um dos amigos de Daniel",
         "Não há mais dicas disponíveis"
+    ],
+    "Mizraim": [
+        "Dica 1: Filho de Cão",
+        "Dica 2: Cuxe, Pute, e Canaã foram seus irmãos",
+        "Dica 3: Neto de Noé",
+        "Dica 4: É tradicionalmente reconhecido como o ancestral dos egípcios. Na Bíblia, seu nome tornou-se sinônimo de Egito",
+        "Não há mais dicas disponíveis",
     ],
     "Moabe": [
         "Dica 2: Seus descendentes se tornaram uma nação, os moabitas",
@@ -2736,28 +2792,440 @@ const dicas = {
         "Dica 4: Seu marido e seus dois filhos morreram então ela resolveu voltar para sua cidade natal",
         "Dica 5: Chegando a Belém, ela disse: Chamem-me de 'Mara' porque o Senhor me encheu de amargura"
     ],
+    "Obadias33": [
+        "Dica 1: Era o intendente responsável pelo palácio de Acabe",
+        "Dica 2: A Bíblia diz que ele temia muito ao Senhor desde de sua mocidade",
+        "Dica 3: Escondeu e sustentou cem profetas do Senhor no período em que Jezabel estava os perseguindo",
+        "Dica 4: Ele falou a Acabe que Elias queria vê-lo",
+        "Não há mais dicas disponíveis"
+    ],
+    "Obadias44": [
+        "Dica 1: Era um profeta",
+        "Dica 2: Nada se sabe a respeito da sua vida",
+        "Dica 3: Sua pregação está relaçionada com a época da tomada de Jerusalém",
+        "Dica 4: Sua profecia é direcionada aos idumeus (descendentes de Edom)",
+        "Dica 5: As suas predições com respeito a Edom foram completamente cumpridas."
+    ],
+    "Obede": [
+        "Dica 1: Viveu no tempo dos juízes",
+        "Dica 2: Um dos antepassados de Jesus Cristo",
+        "Dica 3: Sua mãe era uma moabita",
+        "Dica 4: Foi pai de Jessé, avô do rei Davi",
+        "Dica 5: Filho de Boaz e de Rute",
+    ],
+    "Ogue": [
+        "Dica 1: Rei de Basã",
+        "Dica 2: Ao se aproximar, o povo de Israel, de seu território, marchou para enfrentá-lo",
+        "Dica 3: Suas terras foram dadas às tribos de Gade e de Rúben, aquém do Jordão",
+        "Dica 4: Sua cama era de ferro e media mais de quatro metros de comprimento por dois de largura",
+        "Dica 5: Era um gigante",
+    ],
+    "Onesimo": [
+        "Dica 1: Morava na cidade de Colossos",
+        "Dica 2: Foi convertido ao cristianismo por Paulo",
+        "Dica 3: Era um escravo",
+        "Dica 4: Fugiu da casa de seu senhor, que era cristão, indo para Roma",
+        "Dica 5: Paulo escreve uma carta a Filemom, seu dono, pedindo a ele que o recebesse de volta, como um irmão",
+    ],
+    "Onri": [
+        "Dica 1: Rei de israel, das tribos do norte",
+        "Dica 2: Instaurou a segunda disnastia de reis em Israel, e transferiu a capital de Tirza para Samaria",
+        "Dica 3: Era comandante chefe, sob o governo do rei Elá, filho de Baasa",
+        "Dica 4: Sendo Elá assassinado por Zinri, ele foi proclamado rei pelos seus soldados",
+        "Dica 5: Tibni e Jorão não aceitaram a supremacia dele, seguindo-se uma guerra civil, que durou quatro anos.",
+    ],
+    "Oola": [
+        "Dica 1: Era uma prostituta no Egito",
+        "Dica 2: Tinha uma irmã mais nova chamada Ooliba",
+        "Dica 3: Ela foi morta a espada",
+        "Dica 4: Nome dado a uma personagem fictícia contada pelo profeta Ezequiel",
+        "Dica 5: Na história ela representa Samaria",
+    ],
+    "Ooliba": [
+        "Dica 1: Era uma prostituta no Egito",
+        "Dica 2: Tinha uma irmã mais nova chamada Oola",
+        "Dica 3: Ela viu tudo o que aconteceu a sua irmã e não se arrenpendeu e seguiu pelo mesmo caminho, ainda mais pervertida",
+        "Dica 4: Nome dado a uma personagem fictícia contada pelo profeta Ezequiel",
+        "Dica 5: Na história ela representa Jerusalém",
+    ],
+    "Orfa": [
+        "Dica 1: Seu esposo se chamava Quiliom",
+        "Dica 2: Ela era moabita",
+        "Dica 3: Sua sogra se chamava Noemi",
+        "Dica 4: Depois da morte do sogro, do marido e do seu cunhado, Noemi resolveu voltar para sua terra natal",
+        "Dica 5: Noemi despediu-se dela e a mandou voltar para a casa de seus parentes"
+    ],
+    "Oseias33": [
+        "Dica 1: Profeta de Israel e primeiro na ordem dos chamados Profetas Menores",
+        "Dica 2: Profetizou nos dias do rei Uzias, Jotão, Acaz e Ezequias, reis de Judá e nos dias de Jeroboão II, rei de Israel",
+        "Dica 3: Teve três filhos: Jizreel, Lo-Ruama, e Lo-Ami",
+        "Dica 4: Em sua pregação denunciou a infidelidade e idolatria do povo de Deus",
+        "Dica 5: Deus mandou que ele tomasse por mulher a Gômer, filha de Diblaim, que era prostituta",
+    ],
+    "Oseias44": [
+        "Dica 1: O último rei de Israel",
+        "Dica 2: Conspirou contra Peca e o matou",
+        "Dica 3: Salmanasar, rei da Assíria, subiu contra ele, e ele passou a ser um rei vassalo",
+        "Dica 4: Conspirou contra o rei da Assíria pedindo auxílio de Sô, rei do Egito",
+        "Dica 5: O rei da Assíria sitiou Samaria por três anos, até que por fim, ele foi capturado",
+    ],
+    "Otniel": [
+        "Dica 1: Era filho de Quenaz",
+        "Dica 2: Sobrinho de Calebe",
+        "Dica 3: Recebeu Acsa, como esposa por ter conquistado a cidade de Quiriate-Sefer",
+        "Dica 4: Acsa o persuadiu a pedir um campo ao pai dela",
+        "Dica 5: Derrotou Cusã-Risataim, rei da Mesopotâmia"
+    ],
+    "Palti": [
+        "Dica 1: Homem que morava em Galin, na tribo de Benjamim, nos tempos do rei Davi",
+        "Dica 2: Quando Davi fugiu de Saul, Mical, esposa de Davi e filha de Saul, foi dada a ele como esposa",
+        "Dica 3: Isbosete mandou tirar Mical dele e devolvê-la a Davi",
+        "Dica 4: No dia da partida de Mical, ele a seguiu chorando até Baurim",
+        "Dica 5: Seu nome é mencionado na Bíblia também como 'Falti' ou 'Paltiel'",
+    ],
+    "Pasur": [
+        "Dica 1: Era filho do sacerdote Imer",
+        "Dica 2: Seu pai era superintendente da casa do Senhor",
+        "Dica 3: Ao ouvir Jeremias profetizar, mandou espancá-lo e prendê-lo no tronco até o dia seguinte",
+        "Dica 4: Jeremias lhe disse: 'De agora em diante, você será chamado Magor-Missabibe (Terror por todos os lados)",
+        "Dica 5: Ele e toda a sua casa e amigos foram levados cativos para a Babilônia onde morreram",
+    ],
+    "Peca": [
+        "Dica 1: Era chefe das tropas do rei Pecaías",
+        "Dica 2: Ele com mais cinquenta homens matou Pecaías e reinou em seu lugar",
+        "Dica 3: Juntou-se ao rei Rezim, de Damasco (2 Rs 15.37), com o fim de espoliar o reino de Judá",
+        "Dica 4: Tiglate-Pileser, rei da Assíria tomou de Israel vasto território",
+        "Dica 5: Reinou vinte anos sobre Israel, até que Oseias o matou e reinou em seu lugar",
+    ],
+    "Pecaias": [
+        "Dica 1: Filho do rei Menaém",
+        "Dica 2: Reinou apenas dois anos em Israel",
+        "Dica 3: Peca, o seu chefe de tropas, conspirou contra ele",
+        "Dica 4: Peca, levando consigo cinquenta homens, entrou na cidadela do palácio real, e o matou",
+        "Não há mais dicas disponíveis"
+    ],
+    "Pedro": [
+        "Dica 1: Diante da pesca milagrosa, ele disse a Jesus: 'Afasta te de mim, Senhor, porque sou um pecador'",
+        "Dica 2: Era um pescador de Betsaida, na Galiléia",
+        "Dica 3: O apóstolo de sobrenome 'Barjonas', ou seja, filho de Jonas",
+        "Dica 4: Jesus disse a ele: 'Arreda, Satanás! Tu és para mim pedra de tropeço ...'",
+        "Dica 5: Jesus mudou-lhe o nome, que antes era 'Simão'",
+    ],
+    "Pelegue": [
+        "Dica 1: Nasceu aproximadamente cem anos depois do dilúvio",
+        "Dica 2: Seu irmão foi Joctã",
+        "Dica 3: Filho de Eber",
+        "Dica 4: Em seus dias se repartiu a terra",
+        "Não há mais dicas disponíveis"
+    ],
+    "Penina": [
+        "Dica 1: Ela tinha muitos filhos",
+        "Dica 2: Ela era a segunda mulher de seu marido",
+        "Dica 3: Seu marido se chamava Elcana",
+        "Dica 4: Ela humilhava Ana por ela não poder ter filhos",
+        "Não há mais dicas disponíveis"
+    ],
+    "Perez": [
+        "Dica 1: Está na genealogia de Jesus",
+        "Dica 2: Tinha um irmão gêmeo",
+        "Dica 3: Jacó foi seu avô",
+        "Dica 4: Filho de Judá e de Tamar, sua nora",
+        "Não há mais dicas disponíveis"
+    ],
+    "Poncio-Pilatos": [
+        "Dica 1: Viveu nos tempos de Jesus",
+        "Dica 2: Ele perguntou a Jesus: 'Que é a verdade?'",
+        "Dica 3: A esposa dele lhe enviou a mensagem: 'Não faças nada contra este homem inocente pois sonhei com ele",
+        "Dica 4: Governador romano da Judeia",
+        "Dica 5: Mandou trazer água, lavou as mãos diante da multidão.",
+    ],
+    "Potifar": [
+        "Dica 1: Era oficial de Faraó, o capitão da guarda",
+        "Dica 2: Fez de José o mordomo de sua casa",
+        "Dica 3: A esposa dele disse a José: 'Deita-te comigo'",
+        "Dica 4: Os midianitas (ou ismaelitas) venderam José como escravo para ele",
+        "Não há mais dicas disponíveis"
+    ],
+    "Potifera": [
+        "Dica 1: Era sacerdote de Om",
+        "Dica 2: Pai de Asenate",
+        "Dica 3: Manassés e Efraim eram seus netos",
+        "Dica 4: Sogro de José",
+        "Não há mais dicas disponíveis"
+    ],
+    "Priscila": [
+        "Dica 1: Em Éfeso, ela e seu marido, expuseram a Apolo, com mais precisão o caminho de Deus",
+        "Dica 2: Ela e sua marido foram expulsos de Roma pelo imperador Cláudio",
+        "Dica 3: Paulo morou com eles em Corinto por um ano e meio",
+        "Dica 4: Trabalhava como fabricante de tendas",
+        "Dica 5: Seu esposo se chamava Áquila",
+    ],
+    "Publio": [
+        "Dica 1: Era o homem principal da ilha de Malta, onde Paulo naufragou",
+        "Dica 2: Tratou com bondade e hospedou os náufragos, entre eles, Paulo",
+        "Dica 3: O pai dele estava doente e com febre",
+        "Dica 4: Paulo impôs as mãos e orou pelo pai dele e ele foi curado",
+        "Não há mais dicas disponíveis"
+    ],
+    "Pua": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Era parteira",
+        "Dica 3: Faraó ordenou-lhe que matasse todo bebê do sexo masculino das hebréias",
+        "Dica 4: Ela temeu a Deus e não obedeceu à ordem do rei",
+        "Dica 5: Quando indagada, respondeu: 'É que as mulheres hebreias dão à luz antes que a parteira chegue.",
+    ],
+    "Pul": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Rei da Assíria (2 Rs 15.19)",
+        "Dica 3: É o nome babilônico de Tiglate-Pileser",
+        "Dica 4: Veio contra Menaém, rei de israel, por este não ter querido pagar o tributo como seu vassalo",
+        "Dica 5: Marchou sobre a Palestina, conseguindo Menaém evitar a destruição de Israel pelo pagamento de cem talentos de ouro",
+    ],
+    "Pute": [
+        "Dica 1: Seus descendentes são geralmente associados a povos do norte da África, especialmente os líbios",
+        "Dica 2: Em Jeremias 46:9 e Ezequiel 30:5, seu nome aparece como povo conhecido como guerreiros africanos.",
+        "Dica 3: Filho de Cão",
+        "Dica 4: Cuxe, Mizraim, e Canaã foram seus irmãos",
+        "Dica 5: Neto de Noé",
+    ],
+    "Quedorlaomer": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Rei de Elão",
+        "Dica 3: Fez parte de uma confederação de reis que guerrearam contra cidades próximas ao mar morto",
+        "Dica 4: Tomou os habitantes de Sodoma como escravos, incluindo Ló",
+        "Dica 5: Abrão lutou contra ele e venceu, libertando Ló e os demais prisioneiros",
+    ],
+    "Queren-Hapuque": [
+        "Dica 1: Uma das filhas de Jó",
+        "Dica 2: Tinha duas irmãs, Jemima e Quézia",
+        "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
+        "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Não há mais dicas disponíveis"
+    ],
+    "Quetura": [
+        "Dica 1: Seu nome significa 'incenso' ou 'fragrância'",
+        "Dica 2: Foi mãe de Zinrã, Jocsã, Medã, Midiã, Isbaque e Suá",
+        "Dica 3: Ela contribuiu para a multiplicação da descendência de Abraão, cumprindo a promessa de que ele seria 'pai de muitas nações'",
+        "Dica 4: Uma das esposas de Abraão",
+        "Não há mais dicas disponíveis"
+    ],
+    "Quezia": [
+        "Dica 1: Uma das filhas de Jó",
+        "Dica 2: Tinha duas irmãs, Jemima e Quéren-Hapuque",
+        "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
+        "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Não há mais dicas disponíveis"
+    ],
+    "Quiliom": [
+        "Dica 1: Tinha um irmão chamado Malom",
+        "Dica 2: Morreu quando morava no país de Moabe",
+        "Dica 3: Sua esposa era uma moabita chamada Orfa",
+        "Dica 4: Seu pai se chamava Elimeleque e sua mãe, Noemi",
+        "Não há mais dicas disponíveis"
+    ],
+    "Quis": [
+        "Dica 1: Era da tribo de Benjamim",
+        "Dica 2: A Bíblia diz que ele era um homem forte e corajoso",
+        "Dica 3: Ele tinha um filho que se destacava em beleza e em altura",
+        "Dica 4: Pai do primeiro rei de Israel",
+        "Não há mais dicas disponíveis"
+    ],
+    "Raabe": [
+        "Dica 1: O nome dela é citado no Novo Testamento como exemplo de fé verdadeira",
+        "Dica 2: Ela disse: 'Dai-me um sinal seguro, de que conservareis com vida a mim e a minha família",
+        "Dica 3: Era uma prostituta",
+        "Dica 4: Ocultou os espias que tinham sido mandados por Josué para reconhecer o território de guerra",
+        "Dica 5: Morava na cidade de Jericó",
+    ],
+    "Rabsaque": [
+        "Dica 3: Oficial do exército assírio",
+        "Dica 2: Foi enviado por Senaqueribe, rei da Assíria, a Jerusalém com o fim de persuadir o povo a entregar-se,",
+        "Dica 3: Pronunciou o seu discurso em hebraico a fim de assustar o povo comum e pressionar Ezequias a se render",
+        "Dica 4: Ele disse: O Deus de vocês não poderá livrá-los das nossas mãos, assim como os deuses das outras nações não puderam fazê-lo",
+        "Dica 5: Isaías disse ao rei Ezequias: Não temas as palavras dele",
+    ],
+    "Raquel": [
+        "Dica 1: Roubou os 'ídolos do lar' de seu pai quando toda família partiu de Harã, onde moravam",
+        "Dica 2: Filha mais nova de Labão",
+        "Dica 3: Morreu durante o parto de seu segundo filho",
+        "Dica 4: Foi mãe de José e Benjamim.",
+        "Dica 5: Jacó serviu seu sogro Labão por sete anos a fim de casar-se com ela, e lhe pareceu poucos dias, pelo muito que a amava",
+    ],
+    "Rebeca": [
+        "Dica 1: Seu marido orou por vinte anos para que ela tivesse filhos",
+        "Dica 2: Filha de Betuel (sobrinho de Abraão) e irmã de Labão, e morava em Padã-Arã",
+        "Dica 3: O Senhor lhe disse: 'Duas nações há no teu ventre ... e seu filho mais velho servirá a seu filho mais novo'",
+        "Dica 4: Deu água para beber ao servo de Abraão e também aos seus camelos",
+        "Dica 5: Ela amava mais o seu filho mais novo, e induziu-o a enganar o pai",
+    ],
+    "Recabe33": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Descendente dos queneus (1 Cr 2:55)",
+        "Dica 3: Pai de Jonadabe (2 Rs 10.15,23 - Jr 35.6 a 19)",
+        "Dica 4: Em Jeremias capítulo 35 conta um episódio marcante de seus descendentes que eram nômades e não bebiam vinho",
+        "Dica 5: Seus descendentes eram chamados de 'recabitas'",
+    ],
+    "Recabe44": [
+        "Dica 1: Seu nome é mencionado junto ao de Baaná, seu colega de trabalho",
+        "Dica 2: Era capitão de tropa do rei Is-Bosete",
+        "Dica 3: Ao meio dia, quando Is-Bosete cochilava, ele e Baaná entraram sorrateiramente e esfaquearam o rei no ventre",
+        "Dica 4: Ele e Baaná, cortaram a cabeça de Is-Bosete, fugiram e levaram-na para Davi",
+        "Dica 5: Davi, bastante indignado, mandou seus homens os executarem",
+    ],
+    "Reuel": [
+        "Dica 1: Um sacerdote de Midiã que tinha sete filhas",
+        "Dica 2: Uma de suas filhas se chamava Zípora",
+        "Dica 3: Ele disse a Moisés: 'Bendito seja o Senhor, que vos livrou da mão dos egípcios por amor de Israel'",
+        "Dica 4: Também conhecido como Jetro",
+        "Dica 5: Se tornou sogro de Moisés",
+    ],
+    "Rezim": [
+        "Dica 1: Personagem gentio do Velho Testamento, rei de Damasco",
+        "Dica 2: Fez aliança com Peca, rei de Israel, para atacar Jotão e Acaz, sucessivos reis de Judá.",
+        "Dica 3: Ele e seu exército aliado, cercaram Jerusalém sob o reinado de Acaz, mas não puderam vencer",
+        "Dica 4: Ele foi morto quanto Acaz fez aliança com o rei da Assíria, e a seu pedido ele atacou Damasco e deportou seus habitantes",
+        "Não há mais dicas disponíveis"
+    ],
+    "Rezom": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Foi rei da Síria e viveu nos dias de Salomão",
+        "Dica 3: Um dos três inimigos que Deus levantou contra Salomão por causa de sua apostasia",
+        "Dica 4: Ele fugira de seu senhor Hadadézer, e se fez capitão de uma tropa e foram para Damasco, onde foi feito rei",
+        "Dica 5: Ele era inimigo declarado de Israel e durante todo o reinado de Salomão lhe foi contrário"
+    ],
+    "Rispa": [
+        "Dica 1: Concubina do rei Saul",
+        "Dica 2: Is-Bosete acusou Abner de querer possuir a comcubina de seu pai e, quem sabe, tentar apoderar-se do trono",
+        "Dica 3: Seus filhos foram entregues aos gibeonitas para serem mortos como compensação das mortes de gibeonitas executadas por Saul ",
+        "Dica 4: Ela acampou no local onde os corpos de seus filhos estavam expostos para espantar as aves de rapina que vinham devorá-los",
+        "Não há mais dicas disponíveis"
+    ],
+    "Roboão": [
+        "Dica 1: Em seus dias Sisaque, rei do Egito, subiu contra Jerusalém e levou os tesouros da casa do Senhor, e os escudos de ouro",
+        "Dica 2: Ele amava a Maaca, filha de Absalão, mais do que todas as suas outras mulheres",
+        "Dica 3: Quando lhe foram pedir que diminuísse os impostos, ele recusou, respondendo altivamente aos representantes do povo",
+        "Dica 4: Preferiu dar ouvidos aos conselheiros jovens, em detrimento do conselho dos anciãos",
+        "Dica 5: Foi o filho e sucessor de Salomão",
+    ],
+    "Ruben": [
+        "Dica 1: Foi ele quem achou mandrágoras no campo e as trouxe a Lia, sua mãe",
+        "Dica 2: Não há indicação alguma de que qualquer juiz, profeta ou herói tivesse pertencido à tribo que leva o seu nome",
+        "Dica 3: Em resultado do seu mau procedimento, ao deitar-se com Bila, esposa de seu pai, perdeu o direito de primogênito",
+        "Dica 4: Quando seus irmãos intentaram matar José, ele fez de tudo para livrá-lo",
+        "Dica 5: Filho primogênito de Jacó",
+    ],
+    "Sadraque": [
+        "Dica 1: Foi levado cativo para a Babilônia",
+        "Dica 2: Seu nome hebraico era Hananias, mas recebeu um nome babilônico",
+        "Dica 3: Foi lançado na fornalha ardente, mas não se queimou",
+        "Dica 4: Era um dos amigos de Daniel",
+        "Não há mais dicas disponíveis"
+    ],
+    "Safã": [
+        "Dica 1: Filho de Azalias e pai de Aicão (2 Rs 22.3,12)",
+        "Dica 2: Foi avô de Gedalias que fora nomeado por Nabucodonosor para governar o povo de Judá",
+        "Dica 3: Foi secretário e o principal oficial do rei Josias",
+        "Dica 4: O exemplar da Lei, achado por Hilquias, foi levado a Josias por ele",
+        "Não há mais dicas disponíveis"
+    ],
+    "Safira": [
+        "Dica 1: Sua história está registrada no livro de Atos dos Apóstolos",
+        "Dica 2: Seu marido se chamava Ananias",
+        "Dica 3: Ela caiu morta diante de Pedro e alguns moços a levaram e sepultaram-na junto com seu marido",
+        "Dica 4: Pedro perguntou a ela: 'Dize-me, vendeste por tanto aquele terreno?",
+        "Dica 5: Junto com seu marido mentiu ao Espírito Santo sobre o valor da venda de um terreno",
+    ],
+    "Salmanasar": [
+        "Dica 1: Rei da Assíria, sucedeu a Tiglate-Pileser, reinando pelo espaço de cinco anos",
+        "Dica 2: Ele invadiu Israel e o rei Oseias ficou como seu rei vassalo e lhe pagava tributos",
+        "Dica 3: Na segunda invasão ele sitiou Samaria por três anos",
+        "Dica 4: Depois de sua morte, Sargom, tomou Samaria e levou todos em cativeiro",
+        "Não há mais dicas disponíveis"
+    ],
+    "Salmuna": [
+        "Dica 1: Seu nome está ligado a Zeba, ambos reis midianitas",
+        "Dica 2: Gideão derrotou o exército deles, os perseguiu e os capturou",
+        "Dica 3: Ele ordenou a seu filho mais velho que o matasse, ele porém teve medo porque era muito jovem",
+        "Dica 4: Gideão matou ele e seu companheiro Zeba, e tirou os enfeites de seus camelos",
+        "Não há mais dicas disponíveis"
+    ],
+    "Salomão": [
+        "Dica 1: Na sua velhice, suas muitas mulheres estrangeiras o induziram à idolatria",
+        "Dica 2: Em sonhos, o Senhor apareceu a ele e disse-lhe: 'Pede o que queres que eu te dê'",
+        "Dica 3: Sua mãe se chamava Bate-Seba",
+        "Dica 4: Construiu o templo de Jerusalém",
+        "Dica 5: É conhecido mundialmente por sua sabedoria e riqueza",
+    ],
+    "Salome": [
+        "Dica 1: Sua mãe se chamava Herodias",
+        "Dica 2: No aniversário de Herodes Antipas, dançou para ele",
+        "Dica 3: Herodes Antipas ficou tão encantado com sua dança que lhe prometeu qualquer coisa, até a metade de seu reino",
+        "Dica 4: Sob influência de sua mãe, pediu a cabeça de João Batista numa bandeja",
+        "Não há mais dicas disponíveis"
+    ],
+    "Salum33": [
+        "Dica 1: Rei de Israel",
+        "Dica 2: Reinou em Samaria por apenas um mês (2 Reis 15:13)",
+        "Dica 3: Conspirou contra Zacarias, filho de Jeroboão II, matou-o diante do povo e se tornou seu sucessor",
+        "Dica 4: Ele cumpriu a profecia feita a Jeú: 'Seus descendentes serão reis de Israel até a quarta geração'",
+        "Dica 5: Menaém, filho de Gadi, veio de Tirza a Samaria, e o matou, e se tornou seu sucessor",
+    ],
+    "Salum44": [
+        "Dica 1: Morava num bairro novo, na parte baixa da cidade de Jerusalém",
+        "Dica 2: Era a pessoa responsável pelo guarda-roupa e as vestes sagradas do templo",
+        "Dica 3: Viveu nos dias do rei Josias",
+        "Dica 4: Sua esposa era profetiza",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sambalate": [
+        "Dica 1: Ele tinha influência política dentro do império persa",
+        "Dica 2: Foi um governador da Samaria na época do retorno do exílio babilônico",
+        "Dica 3: A filha dele era casada com um dos descendentes do sumo sacerdote Eliasibe",
+        "Dica 4: Quando ouviu Neemias dizer de seus planos para reconstruir Jerusalém, zombou dele",
+        "Dica 5: Um dos principais opositores de Neemias durante a reconstrução dos muros de Jerusalém",
+    ],
+    "Samuel": [
+        "Dica 1: Ele ungiu dois reis em Israel",
+        "Dica 2: Seu pai tinha duas esposas",
+        "Dica 3: Sua mãe era estéril",
+        "Dica 4: Saul tentou falar com ele depois que já estava morto",
+        "Dica 5: É muito conhecido pela frase: 'Fala Senhor, porque o teu servo ouve'",
+    ],
+    "Sangar": [
+        "Dica 1: Foi juiz em Israel",
+        "Dica 2: Matou seiscentos filisteus com uma aguilhada de bois e libertou Israel",
+        "Dica 3: Há muito pouca informação sobre sua vida. Há, ainda, outra referência a ele no cântico de Débora (Jz 5.6)",
+        "Dica 4: Ele era filho de Anate, que era uma deusa pagã, já tem sido conjeturado que teria sido um heteu",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sansão": [
+        "Dica 1: Era um nazireu",
+        "Dica 2: Foi juiz em Israel",
+        "Dica 3: Matou mil filisteus com uma queixada de um jumento",
+        "Dica 4: Morreu cego debaixo de escombros",
+        "Dica 5: Muito conhecido por causa de Dalila",
+    ],
 
-
-    // "Queren-Hapuque": [
-    //     "Dica 1: Uma das filhas de Jó",
-    //     "Dica 2: Tinha duas irmãs, Jemima e Quézia",
-    //     "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
-    //     "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+    // "Sealtiel": [
+    //     "Dica 1: Faz parte da genealogia de Jesus Cristo",
+    //     "Dica 2: É mencionado como filho de Jeconias (rei Joaquim) em 1 Crônicas 3:17",
+    //     "Dica 3: Foi pai de Zorobabel, governador de Judá após o exílio babilônico, que liderou a reconstrução do Templo em Jerusalém",
+    //     "Dica 4: Não há registro bíblico sobre a vida ou morte de Sealtiel durante o exílio, nem evidência de que tenha retornado a Jerusalém",
     //     "Não há mais dicas disponíveis"
     // ],
-    // "Quezia": [
-    //     "Dica 1: Uma das filhas de Jó",
-    //     "Dica 2: Tinha duas irmãs, Jemima e Quéren-Hapuque",
-    //     "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
-    //     "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
-    //     "Não há mais dicas disponíveis"
+    // "Sifra": [
+    //     "Dica 1: Personagem gentio do Velho Testamento",
+    //     "Dica 2: Era parteira",
+    //     "Dica 3: Faraó ordenou-lhe que matasse todo bebê do sexo masculino das hebréias",
+    //     "Dica 4: Ela temeu a Deus e não obedeceu à ordem do rei",
+    //     "Dica 5: Quando indagada, respondeu: 'É que as mulheres hebreias dão à luz antes que a parteira chegue.",
     // ],
-    // "Quiliom": [
-    //     "Dica 1: Tinha um irmão chamado Malom",
-    //     "Dica 2: Morreu quando morava no país de Moabe",
-    //     "Dica 3: Sua esposa era uma moabita chamada Orfa",
-    //     "Dica 4: Seu pai se chamava Elimeleque e sua mãe, Noemi",
-    //     "Não há mais dicas disponíveis"
+    // "Sisaque": [
+    //     "Dica 4: Personagem gentio do Velho Testamento",
+    //     "Dica 5: Rei do Egito nos dias de Salomão e Roboão",
+    //     "Dica 1: Jeroboão, fugindo de Salomão se refugiou em seu reinado",
+    //     "Dica 2: Guerreou contra Israel no quinto ano de seu reinado",
+    //     "Dica 3: Deu grande prejuízo a Israel, pois levou os tesouros da casa do Senhor, do palácio do rei e até os escudos de ouro",
     // ],
     // "Sofonias": [
     //     "Dica 1: O rei Zedequias mandou que ele e Jucal fossem dizer a Jeremias: 'Interceda por nós ao Senhor",
@@ -2779,6 +3247,13 @@ const dicas = {
     //     "Dica 3: Quando Joás afastou-se do Senhor, ele o repreendeu corajosamente",
     //     "Dica 4: Foi apedrejado até a morte por ordem do rei Joás, no átrio do templo",
     //     "Dica 5: Jesus citou esse personagem quando condenou os fariseus e os escribas (Mateus 23:35)",
+    // ],
+    //     "Zeba": [
+    //     "Dica 1: Seu nome está ligado a Salmuna, ambos reis midianitas",
+    //     "Dica 2: Gideão derrotou o exército deles, os perseguiu e os capturou",
+    //     "Dica 3: Ele ordenou a seu filho mais velho que o matasse, ele porém teve medo porque era muito jovem",
+    //     "Dica 4: Gideão matou ele e seu companheiro Salmuna, e tirou os enfeites de seus camelos",
+    //     "Não há mais dicas disponíveis"
     // ],
     //     "Zedequias": [
     //     "Dica 1: Filho de Josias e último rei de Judá",

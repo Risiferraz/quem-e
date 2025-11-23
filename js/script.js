@@ -74,24 +74,6 @@ function configurarInputsBox(nome) {
       inputBox.readOnly = true;
       inputBox.classList.remove("box-editavel");
       inputBox.classList.add("box-nao-editavel");
-    // } else if (letra === "2") {
-    //   inputBox.value = "II";
-    //   inputBox.style.backgroundImage = "url('imagens/dois.jpg')";
-    //   inputBox.style.backgroundRepeat = "no-repeat";
-    //   inputBox.style.backgroundSize = "cover";
-    //   inputBox.style.backgroundPosition = "center";
-    //   inputBox.readOnly = true;
-    //   inputBox.classList.remove("box-editavel");
-    //   inputBox.classList.add("box-nao-editavel");
-    // } else if (letra === "3") {
-    //   inputBox.value = "III";
-    //   inputBox.style.backgroundImage = "url('imagens/tres.jpg')";
-    //   inputBox.style.backgroundRepeat = "no-repeat";
-    //   inputBox.style.backgroundSize = "cover";
-    //   inputBox.style.backgroundPosition = "center";
-    //   inputBox.readOnly = true;
-    //   inputBox.classList.remove("box-editavel");
-    //   inputBox.classList.add("box-nao-editavel");
     } else if (letra === "-") {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
