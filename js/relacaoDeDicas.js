@@ -76,6 +76,13 @@ const dicas = {
         "Dica 4: Seus descendentes transportaram a Arca para Jerusalém",
         "Dica 5: A história dele está registrada em 1 Samuel 7 e 2 Samuel 6"
     ],
+    "Abirão": [
+        "Dica 1: Era da cidade de Betel e viveu nos dias de Acabe, rei de Israel",
+        "Dica 2: Seu pai se chamava Hiel e reedificou a cidade de Jericó",
+        "Dica 3: Quando foram colocadas as portas da cidade, morreu seu irmão mais novo chamado Segube",
+        "Dica 4: Ele morreu quando foram lançados os alicerces da reconstrução da cidade",
+        "Dica 5: Nele se cumpriu a maldição conforme a palavra do Senhor pronunciada por intermédio de Josué",
+    ],
     "Abisai": [
         "Dica 1: Era um dos valentes de Davi",
         "Dica 2: Era irmão de Joabe e Asael, todos filhos de Zeruia, irmã de Davi",
@@ -151,6 +158,13 @@ const dicas = {
         "Dica 2: Com o apoio de Joabe e Abiatar, tentou usurpar o trono de seu pai",
         "Dica 3: Salomão mandou o comandante Benaia matá-lo, quando ele segurava as pontas do altar",
         "Dica 4: Nunca fora contrariado por seu pai, o rei Davi",
+        "Não há mais dicas disponíveis"
+    ],
+    "Adrameleque": [
+        "Dica 1: É uma personagem gentio do Velho Testamento",
+        "Dica 2: Foi um príncipe assírio, irmão de Sarezer",
+        "Dica 3: Filho de Senaqueribe, rei da Assíria",
+        "Dica 4: Junto com seu irmão, matou o pai enquanto ele adorava no templo de Nínive, e depois fugiram para a terra de Ararate",
         "Não há mais dicas disponíveis"
     ],
     "Adoni-Bezeque": [
@@ -692,11 +706,25 @@ const dicas = {
         "Dica 4: Depois de sua morte, quem o suscedeu foi Tibério, seu enteado",
         "Não há mais dicas disponíveis",
     ],
+    "Ciro": [
+        "Dica 1: É mencionado na Bíblia, como “ungido” (messias) de Deus (Isaías 45:1)",
+        "Dica 2: Personagem gentio citado no Velho Testamento",
+        "Dica 3: Foi o fundador do império Aquemênida e um dos maiores conquistadores da antiguidade",
+        "Dica 4: Decretou a libertação dos judeus que estavam exilados na Babilônia",
+        "Dica 5: Permitiu que os judeus voltassem a Jerusalém para reconstruir o templo",
+    ],
     "Claudio": [
         "Dica 1: Em seus dias, houve uma grande fome, predita pelo profeta Ágabo (At 11.28).",
         "Dica 2: Foi o quarto imperador de Roma.",
         "Dica 3: No ano 49 de seu reinado, publicou um decreto, pelo qual todos os judeus seriam expulsos de Roma (At 18.2).",
         "Dica 4: Por causa dele, Priscila e Áquila deixaram a Itália e foram para Corinto",
+        "Não há mais dicas disponíveis",
+    ],
+    "Clemente": [
+        "Dica 1: Cooperador do evangelho",
+        "Dica 2: Ele é citado apenas uma vez na Bíblia, onde diz que o nome dele está no 'Livro da Vida'",
+        "Dica 3: Foi contemporâneo de Paulo",
+        "Dica 4: Paulo o saúda na carta aos Filipenses",
         "Não há mais dicas disponíveis",
     ],
     "Cloe": [
@@ -843,7 +871,7 @@ const dicas = {
         "Dica 1: Seu nome hebraico era Tabita",
         "Dica 2: Gostava de dar esmolas e era cheia de boas obras",
         "Dica 3: Ela morava em Jope e havia morrido e estava sendo velada num cenáculo",
-        "Dica 4: Quando Pedro chegou ali, as viúvas estavem chorando e mostrando as vestes que ela fizera em vida",
+        "Dica 4: Quando Pedro chegou ali, as viúvas estavam chorando e mostrando as vestes que ela fizera em vida",
         "Dica 5: Foi ressuscitada por Pedro."
     ],
     "Ebede-Meleque": [
@@ -1073,7 +1101,7 @@ const dicas = {
     "Esdras": [
         "Dica 1: Era sacerdote",
         "Dica 2: Orou a Deus confessando o pecado da nação",
-        "Dica 3: Era escriba versado na Lei de Moisés",
+        "Dica 3: Era escriba conhecedor da Lei de Moisés",
         "Dica 4: No reinado de Artaxerxes, rei da Pérsia recebeu permissão de voltar à terra de seus pais",
         "Dica 5: Preparou seu coração para ensinar a lei do Senhor em Israel",
     ],
@@ -1124,6 +1152,13 @@ const dicas = {
         "Dica 2: Ela disse: Alcancei do Senhor um homem",
         "Dica 3: Morava em um belo jardim",
         "Dica 4: Foi enganada pelo diabo",
+        "Não há mais dicas disponíveis",
+    ],
+    "Evodia": [
+        "Dica 1: É uma personagem do Novo Testamento",
+        "Dica 2: Ela é citada apenas uma vez, na carta de Paulo aos Filipenses",
+        "Dica 3: Seu nome está atrelado ao de Síntique",
+        "Dica 4: Paulo exorta ambas a pensarem igual no Senhor, ou seja, a resolverem suas diferenças",
         "Não há mais dicas disponíveis",
     ],
     "Evil-Merodaque": [
@@ -1568,11 +1603,11 @@ const dicas = {
         "Dica 5: Foi a mãe de João Batista",
     ],
     "Isaias": [
-        "Dica 1: Era casado, e sua mulher foi por ele apelidada de 'a profetisa'",
-        "Dica 2: Profetizou durante os reinados de Uzias, Jotão, Acaz e Ezequias",
-        "Dica 3: É chamado de 'o mais ilustre dos profetas'",
-        "Dica 4: Ele é o profeta mais citado no Novo Testamento",
-        "Dica 5: Segundo a tradição judaica, este profeta foi condenado à morte e serrado ao meio",
+        "Dica 1: Deus mandou que ele andasse nu e descalço por três anos como sinal contra o Egito e a Etiópia",
+        "Dica 2: Era casado, e sua mulher foi por ele apelidada de 'a profetisa'",
+        "Dica 3: Profetizou durante os reinados de Uzias, Jotão, Acaz e Ezequias",
+        "Dica 4: Segundo a tradição judaica, este profeta foi condenado à morte e serrado ao meio",
+        "Dica 5: Ele é o profeta mais citado no Novo Testamento",
     ],
     "Isaque": [
         "Dica 1: Orou durante vinte anos para que sua esposa engravidasse, e quando aconteceu, eram gêmeos",
@@ -2890,6 +2925,13 @@ const dicas = {
         "Dica 4: Jeremias lhe disse: 'De agora em diante, você será chamado Magor-Missabibe (Terror por todos os lados)",
         "Dica 5: Ele e toda a sua casa e amigos foram levados cativos para a Babilônia onde morreram",
     ],
+    "Paulo": [
+        "Dica 1: Deus disse dele: 'Ele é meu instrumento escolhido para levar o meu nome diante dos gentios e dos reis'",
+        "Dica 2: Participou de diversas viagens missionárias",
+        "Dica 3: Ele disse: 'Eu plantei, Apolo regou; mas Deus deu o crescimento'",
+        "Dica 4: A fim de evitar que fosse entregue aos judeus, apelou para César",
+        "Dica 5: Conhecido como apóstolo dos gentios",
+    ],
     "Peca": [
         "Dica 1: Era chefe das tropas do rei Pecaías",
         "Dica 2: Ele com mais cinquenta homens matou Pecaías e reinou em seu lugar",
@@ -2905,9 +2947,9 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Pedro": [
-        "Dica 1: Diante da pesca milagrosa, ele disse a Jesus: 'Afasta te de mim, Senhor, porque sou um pecador'",
-        "Dica 2: Era um pescador de Betsaida, na Galiléia",
-        "Dica 3: O apóstolo de sobrenome 'Barjonas', ou seja, filho de Jonas",
+        "Dica 1: Jesus disse a ele e a seu irmão: Vinde após mim, e eu vos farei pescadores de homens.",
+        "Dica 2: Operou vários milagres em nome de Jesus",
+        "Dica 3: Diante da pesca milagrosa, ele disse a Jesus: 'Afasta te de mim, Senhor, porque sou um pecador'",
         "Dica 4: Jesus disse a ele: 'Arreda, Satanás! Tu és para mim pedra de tropeço ...'",
         "Dica 5: Jesus mudou-lhe o nome, que antes era 'Simão'",
     ],
@@ -3205,35 +3247,259 @@ const dicas = {
         "Dica 4: Morreu cego debaixo de escombros",
         "Dica 5: Muito conhecido por causa de Dalila",
     ],
+    "Sara": [
+        "Dica 1: Era estéril",
+        "Dica 2: Teve seu nome trocado por Deus",
+        "Dica 3: Foi uma das pessoas que saiu de Ur dos Caldeus, seguindo a Abraão",
+        "Dica 4: Seu marido pediu que ela dissesse que era sua irmã",
+        "Dica 5: Ela, pela fé, embora estéril e idosa, creu que Deus era fiel para cumprir sua promessa",
+    ],
+    "Sarezer33": [
+        "Dica 1: Sua história é contada por um profeta pós-exílico, Zacarias",
+        "Dica 2: Ele, Regem-Meleque e seus companheiros, estavam entre os judeus que retornaram do exílio babilônico",
+        "Dica 3: Foi enviado pelo povo de Betel para suplicar o favor do Senhor",
+        "Dica 4: Ele perguntou aos sacerdotes: 'Continuaremos nós a jejuar no 5º mês, como temos feito por tantos anos?'",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sarezer44": [
+        "Dica 1: É um personagem gentio do Velho Testamento",
+        "Dica 2: Foi um príncipe assírio, irmão de Adrameleque",
+        "Dica 3: Filho de Senaqueribe, rei da Assíria",
+        "Dica 4: Junto com seu irmão, matou o pai enquanto ele adorava no templo de Nínive, e depois fugiram para a terra de Ararate",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sargom": [
+        "Dica 1: É um personagem gentio do Velho Testamento",
+        "Dica 2: Foi um rei assírio que morreu em batalha",
+        "Dica 3: Pai de Senaqueribe, que reinou depois dele",
+        "Dica 4: Citado na Bíblia uma única vez em Isaías 37:38",
+        "Não há mais dicas disponíveis"
+    ],
+    "Saul": [
+        "Dica 1: Ele se destacava em beleza e em altura",
+        "Dica 2: O Espírito de Deus se apoderou dele e ele profetizou no meio de um grupo de profetas",
+        "Dica 3: Quando percebeu que a guerra estava perdida, tirou a própria vida, jogando-se sobre a sua espada",
+        "Dica 4: Deus disse a ele através do profeta: 'Hoje o Senhor rasgou de você o reino de Israel e o entregou a outro",
+        "Dica 5: O primeiro rei de Israel, da tribo de Benjamim, filho de Quis",
+    ],
+    "Saulo": [
+        "Dica 1: Fora instruído aos pés de Gamaliel, conforme a precisão da lei",
+        "Dica 2: Era cidadão romano por direito de nascimento, o que lhe deu certos privilégios legais",
+        "Dica 3: Foi circuncidado ao oitavo dia, da linhagem de Israel, da tribo de Benjamim, fariseu, irrepreensível quanto à lei",
+        "Dica 4: Testemunhou a morte de Estevão e aprovou sua execução",
+        "Dica 5: Jesus lhe apareceu no caminho de Damasco e disse: 'Por que você está me perseguindo?'",
+    ],
+    "Sealtiel": [
+        "Dica 1: Faz parte da genealogia de Jesus Cristo",
+        "Dica 2: É mencionado como filho de Jeconias (rei Joaquim) em 1 Crônicas 3:17",
+        "Dica 3: Foi pai de Zorobabel, governador de Judá após o exílio babilônico, que liderou a reconstrução do Templo em Jerusalém",
+        "Dica 4: Não há registro bíblico sobre a vida ou morte de Sealtiel durante o exílio, nem evidência de que tenha retornado a Jerusalém",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sear-Jasube": [
+        "Dica 1: Foi filho de um profeta",
+        "Dica 3: Seu nome significa: 'Um resto voltará'",
+        "Dica 2: Deus disse a seu pai, Isaías que fosse na companhia dele encontrar-se com Acaz, rei de Judá'",
+        "Dica 4: Ele é citado no capítulo 7 de Isaías",
+        "Não há mais dicas disponíveis"
+    ],
+    "Seba": [
+        "Dica 3: Depois da tentativa de Absalão de usurpar o trono de seu pai, ele liderou uma rebelião contra o rei Davi",
+        "Dica 1: Ele tocou a trombeta e gritou: 'Abaixo a dinastia de Davi! O filho de Jessé nada tem a nos oferecer!'",
+        "Dica 2: Davi disse dele: 'Ele vai nos prejudicar mais que Absalão. Persiga-o antes que ele entre numa cidade fortificada, onde não possamos alcançá-lo",
+        "Dica 4: Ele se refugiou nacidade de Abel-Bete-Maaca, mas os moradores cortaram-lhe a cabeça e jogaram-na a Joabe",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sebna": [
+        "Dica 1: Deus disse a ele: 'Quem você pensa que é? Eu o expulsarei de seu cargo, eu o removerei de sua posição'",
+        "Dica 2: Um dos oficiais da corte de Ezequias, e administrador geral da casa real",
+        "Dica 3: Fez parte da delegação enviada por Ezequias para interagir com Rabsaqué, oficial do exército assírio",
+        "Dica 4: Ele, Eliaquim e Joá voltaram ao rei Ezequias com as vestes rasgadas em razão da mensagem de Rabsaqué",
+        "Não há mais dicas disponíveis"
+    ],
+    "Segube": [
+        "Dica 1: Era da cidade de Betel e viveu nos dias de Acabe, rei de Israel",
+        "Dica 2: Seu pai se chamava Hiel e reedificou a cidade de Jericó",
+        "Dica 3: Quando foram lançados os alicerces, morreu seu irmão mais velho chamado Abirão",
+        "Dica 4: Ele morreu quando foram colocadas as portas da cidade",
+        "Dica 5: Nele se cumpriu a maldição conforme a palavra do Senhor pronunciada por intermédio de Josué",
+    ],
+    "Sem": [
+        "Dica 1: Ele tinha dois irmãos",
+        "Dica 2: Quando nasceu, seu pai já tinha mais de 500 anos",
+        "Dica 3: Foi uma das oito pessoas que sobreviveram ao dilúvio",
+        "Dica 4: Foi o filho primogênito de Noé",
+        "Dica 5: Dele descenderam os povos semitas, dentre os quais estão, Abraão, Moisés, Davi e Jesus",
+    ],
+    "Semaias": [
+        "Dica 1: Foi um profeta",
+        "Dica 2: Viveu nos dias de Roboão, rei de Judá",
+        "Dica 3: Ele registrou todos os acontecimentos do reinado de Roboão em um livro",
+        "Dica 4: Deus o enviou para advertir Roboão a não lutar contra as tribos do norte que se rebelaram contra ele",
+        "Dica 5: Em outra ocasião, ele falou pelo Senhor: 'Vocês me abandonaram, por isso agora eu os abandonei, entregando-os nas mãos de Sisaque'",
+    ],
+    "Senaqueribe": [
+        "Dica 1: Rei da Assíria, filho e sucessor de Sargom",
+        "Dica 2: Era fraco, arrogante e cruel. Foi obrigado a dominar uma insurreição, na qual Merodaque-Baladã se tinha apoderado da Babilônia.",
+        "Dica 3: Enviou seu oficial Rabsaqué a Jerusalém para persuadir o povo a entregar-se",
+        "Dica 4: Seu exército cercou Jerusalém durante o reinado de Ezequias",
+        "Dica 5: Foi morto por seus próprios filhos, Sarezer e Adrameleque, enquanto adorava no templo de Nínive",
+    ],
+    "Seraias": [
+        "Dica 1: Era o sumo sacerdote",
+        "Dica 2: Viveu nos dias da tomada de Jerusalém pelos babilônios",
+        "Dica 3: Esdras era seu descendente próximo",
+        "Dica 4: Nebuzaradã, capitão da guarda de Nabucodonosor, levou-o ao rei da Babilônia, em Ribla, onde foi executado.",
+        "Não há mais dicas disponíveis"
+    ],
+    "Serugue": [
+        "Dica 1: Viveu duzentos e trinta anos",
+        "Dica 2: Nasceu, aproximadamente, cento e sessenta anos após o dilúvio",
+        "Dica 3: Seu filho se chamava Naor",
+        "Dica 4: Foi bisavô de Abraão",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sesbazar": [
+        "Dica 1: Personagem que viveu no período pós-exílico",
+        "Dica 2: Foi nomeado por Ciro, rei da Pérsia, como governador de Judá",
+        "Dica 3: Ciro ordenou que lhe fosse entregue os utensílios do templo que Nabucodonosor havia levado para a Babilônia",
+        "Dica 4: O rei disse-lhe: coloque os utensílios de volta em seu lugar, em antigo local, em Jerusalém",
+        "Dica 5: Liderou o primeiro retorno dos exilados judeus à terra de Israel, sendo possível que ele seja Zorobabel."
+    ],
+    "Setar-Bozenai": [
+        "Dica 1: Foi um oficial persa durante o reinado de Dario I, mencionado no livro de Esdras",
+        "Dica 2: Ele atuava como secretário ou administrador associado a Tatenai, o governador da região além do rio",
+        "Dica 3: Ele e Tatenai foram a Jerusalém questionar os judeus sobre a reconstrução do Templo, que havia sido proibida por Artaxerxes.",
+        "Dica 4: Junto com outros oficiais, enviou uma carta a Dario relatando que os judeus afirmavam ter autorização de Ciro para reconstruir o Templo",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sete": [
+        "Dica 1: Personagem que viveu nos primórdios da humanidade",
+        "Dica 2: Sua mãe lhe deu este nome dizendo: 'Deus me concedeu outro filho ... '",
+        "Dica 3: Foi pai de Enos",
+        "Dica 4: Está na genealogia de Jesus Cristo, conforme o evangelho de Lucas",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sibecai": [
+        "Dica 1: Era comandante da oitava divisão de 24 mil homens",
+        "Dica 2: Viveu nos dias de Davi",
+        "Dica 3: Era um dos 'valentes de Davi'",
+        "Dica 4: Numa batalha contra os filisteus, matou Safe, um dos gigantes descendentes de Refaim",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sifra": [
+        "Dica 1: Personagem gentia do Velho Testamento",
+        "Dica 2: Era parteira",
+        "Dica 3: Faraó ordenou-lhe que matasse todo bebê do sexo masculino das hebréias",
+        "Dica 4: Ela temeu a Deus e não obedeceu à ordem do rei",
+        "Dica 5: Quando indagada, respondeu: 'É que as mulheres hebreias dão à luz antes que a parteira chegue.",
+    ],
+    "Silas": [
+        "Dica 1: Era homem influente na igreja de Jerusalém",
+        "Dica 2: Arriscou a própria vida por causa do evangelho de Cristo",
+        "Dica 3: Foi companheiro de Paulo em suas viagens missionárias",
+        "Dica 4: Pareceu bem aos apostolos envia-lo, juntamente com outros, para Antioquia com Paulo e Barnabé",
+        "Dica 5: Ele e Paulo foram presos em Filipos, onde cantaram hinos a Deus na prisão. Foram libertados por um milagre",
+    ],
+    "Silvano": [
+        "Dica 1: Companheiro de Paulo em suas viagens missionárias",
+        "Dica 2: Seu nome aparece sempre junto com o de Paulo e Timóteo em diversas cartas do Novo Testamento",
+        "Dica 3: Também conhecido como Silas, que é uma contração do seu nome, em sua forma latinizada",
+        "Dica 4: Provavelmente foi o portador da primeira epístola de Pedro, como mencionado em 1 Pedro 5.12.",
+        "Não há mais dicas disponíveis"
+    ],
+    "Simão33": [
+        "Dica 1: Nome bastante comum nos dias de Jesus",
+        "Dica 2: O apóstolo de sobrenome 'Barjonas', ou seja, filho de Jonas",
+        "Dica 3: Era irmão de André",
+        "Dica 4: Era um pescador de Betsaida, na Galiléia",
+        "Dica 5: Jesus o chamou de 'Cefas', que significa 'pedra'",
+    ],
+    "Simão44": [
+        "Dica 1: Era um dos doze apóstolos de Jesus",
+        "Dica 2: Nada sabemos dos seus atos como apóstolo de Jesus",
+        "Dica 3: Fazia parte de um grupo revolucionário que lutava contra o domínio romano",
+        "Dica 4: Era chamado de 'o Zelote'",
+        "Não há mais dicas disponíveis"
+    ],
+    "Simão55": [
+        "Dica 1: Era um denominado 'o leproso'",
+        "Dica 2: Jesus foi almoçar em sua casa em Betânia",
+        "Dica 3: Lá, uma mulher derramou um vaso de alabastro com perfume sobre a cabeça de Jesus",
+        "Dica 4: Há outro relato semelhante, mas que se passa na casa de um fariseu de mesmo nome",
+        "Dica 5: Ali Jesus disse a ele: 'E, não tendo eles com que pagar, perdoou-lhes a ambos. Qual deles o amará mais?",
+    ],
+    "Simão66": [
+        "Dica 1: O povo de Samaria o chamava de 'o grande poder de Deus'",
+        "Dica 2: Pela pregação de Filipe, ele creu e foi batizado",
+        "Dica 3: Era famoso por praticar artes mágicas por muitos anos",
+        "Dica 4: Quando ele viu que as pessoas recebendo poder do Espírito, ofereceu dinheiro aos apóstolos",
+        "Dica 5: Pedro lhe disse: 'O teu dinheiro seja contigo para perdição, pois cuidaste que o dom de Deus se alcança por dinheiro'",
+    ],
+    "Simeão": [
+        "Dica 1: Sua mãe se chamava Lia",
+        "Dica 2: José o manteve preso como garantia de que seus irmãos voltariam com Benjamim ao Egito",
+        "Dica 3: Ele e seu irmão Levi foram repreendidos por causa da sua crueldade para com os siquemitas, no caso de Diná",
+        "Dica 4: Por causa disto, Jacó predisse que eles não teriam porção determinada na Terra Prometida",
+        "Dica 5: Uma das doze tribos de Israel leva o seu nome",
+    ],
+    "Simei": [
+        "Dica 1: Era parente do rei Saul",
+        "Dica 2: Quando Davi fugia de Absalão, ele atirava pedras e o insultava",
+        "Dica 3: Oa oficiais de Davi queriam matá-lo, mas o rei os impediu",
+        "Dica 4: No retorno de Davi a Jerusalém, ele o recebeu com humildade e arrependimento",
+        "Dica 5: Ele se prostrou e disse: 'Por favor, perdoe-me e esqueça as coisas terríveis que seu servo disse ...",
+    ],
+    "Sintique": [
+        "Dica 1: É uma personagem do Novo Testamento",
+        "Dica 2: Ela é citada apenas uma vez, na carta de Paulo aos Filipenses",
+        "Dica 3: Seu nome está atrelado ao de Evódia",
+        "Dica 4: Paulo exorta ambas a pensarem igual no Senhor, ou seja, a resolverem suas diferenças",
+        "Não há mais dicas disponíveis",
+    ],
+    "Sisaque": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Rei do Egito nos dias de Salomão e Roboão",
+        "Dica 3: Jeroboão, fugindo de Salomão se refugiou em seu reinado",
+        "Dica 4: Guerreou contra Israel no quinto ano do reinado de Roboão",
+        "Dica 5: Deu grande prejuízo a Israel, pois levou os tesouros da casa do Senhor, do palácio do rei e até os escudos de ouro",
+    ],
+    "Sisera": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: General do exército de Jabim, rei de Canaã",
+        "Dica 3: Ele foi morto com uma estaca de tenda cravada em sua cabeça enquanto dormia",
+        "Dica 4: Morreu pelas mãos de Jael, uma mulher, no tempo em que isto era uma grande humilhação para um guerreiro",
+        "Dica 5: Foi derrotado por Débora e Baraque",
+    ],
+    "So": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Rei egípcio, de descendência etiópica, cujo nome por extenso era Sabaku (como pensa alguns estudiosos)",
+        "Dica 3: O rei Oséias desejando livrar-se do jugo da Assíria, procurou o seu auxilio fazendo com ele aliança",
+        "Dica 4: A aliança foi um fracasso, a Assíria sitiou Samaria e tomou a cidade, levando todo o povo em cativeiro",
+        "Dica 5: Sua identidade é incerta. Na Bíblia, aparece apenas em 2 Reis 17:4",
+    ],
+    "Sofonias33": [
+        "Dica 1: Foi um profeta do Antigo Testamento",
+        "Dica 2: Exerceu seu ministério durante o reinado de Josias, rei de Judá, certamente antes deste rei ter empreendido a reforma",
+        "Dica 3: Tem um livro do Antigo Testamento que leva seu nome",
+        "Dica 4: Quis alertar ao povo de Judá sobre a aproximação do julgamento de Deus e a necessidade do arrependimento",
+        "Dica 5: Anunciou julgamento sobre Judá, Filistia, Moabe, Amom, Etiópia e Assíria",
+    ],
+    "Sofonias44": [
+        "Dica 1: O rei Zedequias mandou que ele e Jucal fossem dizer a Jeremias: 'Interceda por nós ao Senhor",
+        "Dica 2: Junto com outros, ao ouvir as palavras de Jeremias que a cidade não resistiria, pediu a morte de Jeremias",
+        "Dica 3: O grupo de nobres dos quais ele fazia parte, lançaram Jeremias na cisterna de Malquias",
+        "Dica 4: Quando a cidade foi tomada, ele foi preso, e com outros levado a Ribla, onde todos foram mortos (2 Rs 25.18)",
+        "Não há mais dicas disponíveis"
+    ],
+    "Sostenes": [
+        "Dica 1: Personagem do Novo Testamento",
+        "Dica 2: Era chefe da Sinagoga",
+        "Dica 3: Morava na cidade de Corinto",
+        "Dica 4: Foi espancado pelos judeus quando Paulo foi levado ao tribunal romano",
+        "Dica 5: Seu nome é mencionado no primeiro versículo da carta de Paulo aos Coríntios, sendo chamado de 'irmão'",
+    ],
 
-    // "Sealtiel": [
-    //     "Dica 1: Faz parte da genealogia de Jesus Cristo",
-    //     "Dica 2: É mencionado como filho de Jeconias (rei Joaquim) em 1 Crônicas 3:17",
-    //     "Dica 3: Foi pai de Zorobabel, governador de Judá após o exílio babilônico, que liderou a reconstrução do Templo em Jerusalém",
-    //     "Dica 4: Não há registro bíblico sobre a vida ou morte de Sealtiel durante o exílio, nem evidência de que tenha retornado a Jerusalém",
-    //     "Não há mais dicas disponíveis"
-    // ],
-    // "Sifra": [
-    //     "Dica 1: Personagem gentio do Velho Testamento",
-    //     "Dica 2: Era parteira",
-    //     "Dica 3: Faraó ordenou-lhe que matasse todo bebê do sexo masculino das hebréias",
-    //     "Dica 4: Ela temeu a Deus e não obedeceu à ordem do rei",
-    //     "Dica 5: Quando indagada, respondeu: 'É que as mulheres hebreias dão à luz antes que a parteira chegue.",
-    // ],
-    // "Sisaque": [
-    //     "Dica 4: Personagem gentio do Velho Testamento",
-    //     "Dica 5: Rei do Egito nos dias de Salomão e Roboão",
-    //     "Dica 1: Jeroboão, fugindo de Salomão se refugiou em seu reinado",
-    //     "Dica 2: Guerreou contra Israel no quinto ano de seu reinado",
-    //     "Dica 3: Deu grande prejuízo a Israel, pois levou os tesouros da casa do Senhor, do palácio do rei e até os escudos de ouro",
-    // ],
-    // "Sofonias": [
-    //     "Dica 1: O rei Zedequias mandou que ele e Jucal fossem dizer a Jeremias: 'Interceda por nós ao Senhor",
-    //     "Dica 2: Junto com outros, ao ouvir as palavras de Jeremias que a cidade não resistiria, pediu a morte de Jeremias",
-    //     "Dica 3: O grupo de nobres dos quais ele fazia parte, lançaram Jeremias na cisterna de Malquias",
-    //     "Dica 4: Zedequias entregou Jeremias nas mãos deste grupo de nobres, dentre os quais ele fazia parte",
-    //     "Não há mais dicas disponíveis"
-    // ],
     // "Tirza": [
     //     "Dica 1: Mulher da tribo de Manassés que viveu por ocasião da repartição da terra em herança",
     //     "Dica 2: Uma das filhas de Zelofeade",
