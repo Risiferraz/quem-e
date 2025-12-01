@@ -497,10 +497,35 @@ const listaDePersonagens = [
   "Sofonias33",
   "Sofonias44",
   "Sostenes",
+  "Tadeu",
+  "Tafnes",
+  "Tamar33",
+  "Tamar44",
+  "Tatenai",
+  "Teofilo",
+  "Tera",
+  "Tertulo",
+  "Tiago33",
+  "Tiago44",
+  "Tiago55",
+  "Tiberio-Cesar",
+  "Tibni",
+  "Tiglate-Pileser",
+  "Timoteo",
+  "Tiraca",
+  "Tirano",
+  "Tito",
+  "Tirza",
+  "Tobias",
+  "Togarma",
+  "Toi",
+  "Tome",
+  "Trofimo",
+  "Tubal",
+  "Tubal-Caim",
+  "Urias",
   
-
-
-
+  
   // "Zacarias33",
   // "Zedequias",
 ];

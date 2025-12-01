@@ -2207,8 +2207,8 @@ const dicas = {
     "Judas44": [
         "Dica 1: Um dos doze apóstolos",
         "Dica 2: Também chamado de Tadeu, ou Lebeu (Mateus 10:3, Marcos 3:18 e João 14:22)",
-        "Dica 3: Diz a tradição que ele viajou até à Assíria, sendo, na sua volta às terras ocidentais, condenado à morte na Fenícia",
-        "Dica 4: Era irmão de Tiago e filho de Alfeu",
+        "Dica 3: Diz a tradição que ele viajou até à Assíria, sendo, na sua volta, condenado à morte na Fenícia",
+        "Dica 4: Ele é identificado como 'filho' de Tiago (Lc 6:16 e At 1:13). Mas ele próprio se apresenta como 'irmão' de Tiago",
         "Dica 5: Ele é tradicionalmente identificado como o autor de uma epístola do Novo Testamento",
     ],
     "Judas-Iscariotes": [
@@ -3499,14 +3499,211 @@ const dicas = {
         "Dica 4: Foi espancado pelos judeus quando Paulo foi levado ao tribunal romano",
         "Dica 5: Seu nome é mencionado no primeiro versículo da carta de Paulo aos Coríntios, sendo chamado de 'irmão'",
     ],
+    "Tadeu": [
+        "Dica 1: Um dos doze apóstolos",
+        "Dica 2: Também chamado de Judas, ou Lebeu (em algumas versões de Mateus 10:3)",
+        "Dica 3: Diz a tradição que ele viajou até à Assíria, sendo, na sua volta, condenado à morte na Fenícia",
+        "Dica 4: Ele é identificado como 'filho' de Tiago (Lc 6:16 e At 1:13). Mas ele próprio se apresenta como 'irmão' de Tiago",
+        "Dica 5: Ele é tradicionalmente identificado como o autor de uma epístola do Novo Testamento",
+    ],
+    "Tafnes": [
+        "Dica 1: Uma personagem gentia do Velho Testamento",
+        "Dica 2: Rainha do Egito, esposa de Faraó",
+        "Dica 3: Viveu na época de Salomão",
+        "Dica 4: A irmã dela foi dada em casamento a Hadade, príncipe edomita, que fugira para o Egito",
+        "Dica 5: Deste casamento nasceu Genubate, que foi criado por ela entre os filhos de Faraó",
+    ],
+    "Tamar33": [
+        "Dica 1: Teve três maridos, sucessivamente, todos da mesma família",
+        "Dica 3: Quando seu primeiro marido, 'Er' morreu, foi prometida a seu irmão Onã, conforme a lei do levirato",
+        "Dica 4: O segundo marido, Onã, também morreu, e ela foi prometida ao terceiro irmão, Selá, porém a promessa não foi cumprida",
+        "Dica 2: Enganou seu sogro Judá, fazendo-se passar por prostituta",
+        "Dica 5: Ela ficou grávida de seu sogro Judá, e deu à luz gêmeos, Perez e Zerá",
+    ],
+    "Tamar44": [
+        "Dica 1: Era uma princesa muito formosa, filha de Davi e irmã de Absalão",
+        "Dica 2: Seu meio-irmão Amnom se apaixonou por ela perdidamente",
+        "Dica 3: Amnom, com ajuda de seu primo Jonadabe, armou um plano para ficar a sós com ela, e a violentou",
+        "Dica 4: Absalão, seu irmão, vingou-a matando Amnom, anos mais tarde",
+        "Dica 5: Absalão colocou o mesmo nome em sua filha, que nasceu depois deste acontecimento",
+    ],
+    "Tamar44": [
+        "Dica 1: Era uma princesa muito formosa, filha de Davi e irmã de Absalão",
+        "Dica 2: Seu meio-irmão Amnom se apaixonou por ela perdidamente",
+        "Dica 3: Amnom, com ajuda de seu primo Jonadabe, armou um plano para ficar a sós com ela, e a violentou",
+        "Dica 4: Absalão, seu irmão, vingou-a matando Amnom, anos mais tarde",
+        "Dica 5: Absalão colocou o mesmo nome em sua filha, que nasceu depois deste acontecimento",
+    ],
+    "Tatenai": [
+        "Dica 1: Foi um governador persa durante o reinado de Dario I, mencionado no livro de Esdras",
+        "Dica 2: Ele atuava associado a Setar-Bozenai, oficial do governo persa",
+        "Dica 3: Eles foram a Jerusalém questionar os judeus sobre a reconstrução do Templo, dizendo que havia sido proibida por Artaxerxes",
+        "Dica 4: Junto com outros oficiais, enviou uma carta a Dario relatando que os judeus afirmavam ter autorização de Ciro para reconstruir o Templo",
+        "Não há mais dicas disponíveis"
+    ],
+    "Teofilo": [
+        "Dica 1: É citado em dois livros do Novo Testamento",
+        "Dica 2: É chamado de 'excelentíssimo' que é, provavelmente, um título",
+        "Dica 3: Nada se sabe sobre ele além da simples menção de seu nome em Lucas 1:3 e Atos 1:1",
+        "Dica 4: Lucas escreveu para ele tanto o seu evangelho quanto o livro de Atos dos Apóstolos",
+        "Não há mais dicas disponíveis"
+    ],
+    "Tera": [
+        "Dica 1: Pai de Abrão, Naor e Harã",
+        "Dica 2: Ele tomou Abrão, seu filho, e sua nora Sarai, e saiu com eles de Ur dos Caldeus para ir à terra de Canaã",
+        "Dica 3: A comitiva que partiu de Ur dos Caldeus parou em Harã, onde ele morreu aos 205 anos de idade",
+        "Dica 4: Abrão só partiu de Harâ depois da morte dele",
+        "Não há mais dicas disponíveis"
+    ],
+    "Tertulo": [
+        "Dica 1: Personagem romano citado no Novo Testamento",
+        "Dica 2: Ele é citado quando Paulo foi levado a Cesareia para ser julgado perante o governador Félix.",
+        "Dica 3: Foi um advogado romano contratado pelos judeus para acusar o apóstolo Paulo diante do governador Félix",
+        "Dica 4: Ele acusou Paulo era de profanar o templo e ser perturbador da ordem pública, causando tumultos entre os judeus",
+        "Não há mais dicas disponíveis"
+    ],
+    "Tiago33": [
+        "Dica 1: Ele e seu irmão João, eram chamados por Jesus de 'Boanerges' que significa: 'Filhos do Trovão'",
+        "Dica 2: Ele e seu irmão pediram a Jesus para assentar, um a sua direita e outro a sua esquerda",
+        "Dica 3: Era pescador antes de seguir a Jesus",
+        "Dica 4: Foi o primeiro apóstolo a ser martirizado, morto à espada por ordem de Herodes Agripa I",
+        "Dica 5: Foi um dos três apóstolos mais próximos de Jesus, e junto com Pedro e João, esteve presente em momentos importantes",
+    ],
+    "Tiago44": [
+        "Dica 1: Foi um dos doze apóstolos de Jesus",
+        "Dica 2: É um dos apóstolos menos mencionados, sem relatos de falas ou ações específicas",
+        "Dica 3: Ele era denominado 'filho de Alfeu' para distingui-lo de outros de mesmo nome mencionados no Novo Testamento",
+        "Dica 4: Muitos estudiosos crêem que ele era irmão de Mateus, cujo pai também se chamava Alfeu",
+        "Dica 5: Diz as lendas que ele pregou na Pérsia e aí foi crucificado, mas não há informações concretas sobre sua vida ou morte",
+    ],
+    "Tiago55": [
+        "Dica 1: Não foi um dos doze apóstolos de Jesus",
+        "Dica 2: Durante a vida de Jesus, ele não creu nele como o Messias, mas depois da ressurreição, tornou-se um crente fervoroso",
+        "Dica 3: É chamado por Paulo 'o irmão do Senhor' e conseguinte, filho de José e Maria (Gálatas l:19)",
+        "Dica 4: Ele se tornou líder da igreja em Jerusalém após a ascensão de Jesus",
+        "Dica 5: É considerado por muitos autor de uma epístola do Novo Testamento",
+    ],
+    "Tiberio-Cesar": [
+        "Dica 1: É um personagem gentio do Novo Testamento",
+        "Dica 2: Em seus dias, Pilatos foi governador da Judeia e Herodes Antipas tetrarca da Galiléia",
+        "Dica 3: Foi o segundo imperador romano, sucessor de César Augusto",
+        "Dica 4: Era imperador romano durante o ministério de Jesus",
+        "Dica 5: Herodes Antipas fundou a cidade de Tiberíades em sua homenagem",
+    ],
+    "Tibni": [
+        "Dica 1: Personagem do Velho Testamento que viveu nos dias em que a dinastia de Baasa foi eliminada",
+        "Dica 2: Ele estava acampado junto ao exército de Israel, quando ouviu dizer que Zinri havia matado o rei Elá",
+        "Dica 3: O exército de Israel sitiou Tirza onde estava Zinri e ele se suicidou",
+        "Dica 4: O povo de Israel se dividiu em dois partidos: um o apoiava para o fazer rei, e a outra metade seguia Onri",
+        "Dica 5: O povo que seguia Onri prevaleceu e ele acabou morrendo",
+    ],
+    "Tiglate-Pileser": [
+        "Dica 1: Personagem gentio do Velho Testamento, rei da Assíria",
+        "Dica 2: Pul é a contração do seu nome",
+        "Dica 3: Veio contra Menaém, rei de Israel, por este não ter querido pagar o tributo como seu vassalo",
+        "Dica 4: Ele tomou de Israel vasto território nos dias do rei de Israel chamado 'Peca'",
+        "Dica 5: Grande parte de Israel ficou pertencendo ao império da Assíria, e o reino de Judá ficou reduzido à condição de reino vassalo",
+    ],
+    "Timoteo": [
+        "Dica 1: Foi escolhido por Paulo para ajudá-lo nos seus trabalhos",
+        "Dica 2: Ele ajudou o Apóstolo na fundação das igrejas de Filipos e de Tessalônica (At 17.14)",
+        "Dica 3: Paulo o considerava como seu filho na fé",
+        "Dica 4: Seu pai era grego, mas, sendo a sua mãe e a sua avó piedosas judias",
+        "Dica 5: Paulo escreveu duas cartas a ele, que fazem parte do Novo Testamento",
+    ],
+    "Tiraca": [
+        "Dica 1: Personagem gentio que reinou na Etiópia (Cuxe)",
+        "Dica 2: Foi contemporâneo de Ezequias, rei de Judá e de Senaqueribe, rei da Assíria",
+        "Dica 3: Ele saiu a fazer guerra contra Senaqueribe, enquanto este cercava Jerusalém",
+        "Dica 4: A notícia de seu avanço fez com que Senaqueribe enviasse uma carta ameaçadora a Ezequias, forçando-o a render-se",
+        "Não há mais dicas disponíveis"
+    ],
+    "Tirano": [
+        "Dica 1: Personagem gentio do Novo Testamento",
+        "Dica 2: Há apenas uma menção a ele na Bíblia, em Atos 19:9",
+        "Dica 3: Supõe-se que era gentio e mestre de filosofia. Pode, também, ter sido um cristão, ou, pelo menos, inclinado para as novas doutrinas",
+        "Dica 4: Ele tinha uma escola em Éfeso",
+        "Dica 5: Por causa da oposição de alguns judeus, Paulo se retirou da sinagoga onde pregava e passou a ensinar na escola dele",
+    ],
+    "Tito": [
+        "Dica 1: Paulo o considerava seu 'verdadeiro filho, segundo a fé comum'",
+        "Dica 2: Era grego de nascimento, mas nada se sabe com respeito à sua família ou à sua terra natal.",
+        "Dica 3: Paulo deixou-o em Creta para que organizasse as igrejas locais",
+        "Dica 4: Separou-se de Paulo ir à Dalmácia (2 Tm 4.10). Nada se sabe com relação à sua vida posterior",
+        "Dica 5: Paulo escreveu uma cartas a ele, que faz parte do Novo Testamento",
+    ],
+    "Tirza": [
+        "Dica 1: Mulher da tribo de Manassés que viveu por ocasião da repartição da terra em herança",
+        "Dica 2: Uma das filhas de Zelofeade",
+        "Dica 3: Seu pai não tinha filhos homens, só mulheres",
+        "Dica 4: Ela e suas irmãs pedem a Moisés para terem direito à herança, que só era dada a homens",
+        "Dica 5: Por orientação de Moisés, ela e suas irmãs se casaram com homens da mesma tribo",
+    ],
+    "Tobias": [
+        "Dica 1: Personagem gentio (amonita) do Velho Testamento",
+        "Dica 2: Ele manteve correspondência com nobres judeus com quem tinha laços de parentesco, e escrevia cartas tentando intimidar Neemias",
+        "Dica 3: Durante a ausência de Neemias, o sumo sacerdote Eliasibe preparou para ele aposentos dentro do templo. Ao retornar, Neemias o expulsou",
+        "Dica 4: Ele, Sambalate e Gesem zombaram dos judeus dizendo: 'O que vocês estão querendo fazer? Querem se rebelar contra o rei?'",
+        "Dica 5: Ele disse: 'Mesmo que vocês reconstruam estes muros, até uma raposa, os derrubará facilmente!'",
+    ],
+    "Togarma": [
+        "Dica 1: Era irmão de Asquenaz e Rifate",
+        "Dica 2: Neto de Jafé, filho de Gomer",
+        "Dica 3: Seu nome está associado a povos que habitaram a região da Armênia ou Ásia Menor",
+        "Dica 4: É mencionado em Ezequiel 27:14 como fornecedor de cavalos e guerreiros para o comércio de Tiro",
+        "Dica 5: É citado em Ezequiel 38:6 como aliado de Gogue, líder de Magogue, em uma futura batalha",
+    ],
+    "Toi": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Rei de Hamate, na Síria",
+        "Dica 3: Quando soube da vitória de Davi sobre o exército de Hadadezer, enviou-lhe presentes através de seu filho Jorão",
+        "Dica 4: Ele elogiou Davi por ter combatido e derrotado um inimigo seu, e talvez quisesse desviar de si, por aquele meio a hostilidade de Davi.",
+        "Não há mais dicas disponíveis"
+    ],
+    "Tome": [
+        "Dica 1: Um dos doze apóstolo",
+        "Dica 2: Quando Pedro disse: 'Vou pescar!' Ele e outros discípulos que ali estavam, disseram: 'Nós também vamos contigo",
+        "Dica 3: Ao ver que Jesus iria para Jersusalém mesmo correndo risco de vida disse: 'Vamos nós também para morrermos com ele'",
+        "Dica 4: Também chamado 'Dídimo'",
+        "Dica 5: Jesus disse a ele: 'Ponha aqui o seu dedo e veja as minhas mãos. Estenda também a sua mão e ponha no meu lado. Não seja incrédulo, mas crente",
+    ],
+    "Trofimo": [
+        "Dica 1: Personagem gentio do Novo Testamento",
+        "Dica 2: Ele era da cidade de Éfeso e viajou junto com o grupo que acompanhou Paulo a Jerusalem",
+        "Dica 3: Ele foi deixado doente na cidade de Mileto por Paulo",
+        "Dica 4: Os judeus de Jerusalém pensaram que Paulo tinha introduzido a ele no Templo, e isto causou uma grande confusão e a prisão de Paulo",
+        "Não há mais dicas disponíveis"
+    ],
+    "Trofimo": [
+        "Dica 1: Personagem gentio do Novo Testamento",
+        "Dica 2: Ele era da cidade de Éfeso e viajou junto com o grupo que acompanhou Paulo a Jerusalem",
+        "Dica 3: Ele foi deixado doente na cidade de Mileto por Paulo",
+        "Dica 4: Os judeus de Jerusalém pensaram que Paulo tinha introduzido a ele no Templo, e isto causou uma grande confusão e a prisão de Paulo",
+        "Não há mais dicas disponíveis"
+    ],
+    "Tubal": [
+        "Dica 1: Filho de Jafé",
+        "Dica 2: Neto de Noé",
+        "Dica 3: Seus descendentes são frequentemente associados à região do Cáucaso e da Ásia Menor.",
+        "Dica 4: Em Isaías 66:9 seus descendentes aparecem como uma das nações distantes que receberão o testemunho da glória de Deus.",
+        "Dica 5: Em Ezequiel 27:13, ele é citado junto com Javã e Meseque como mercadores de Tiro, envolvido em comércio internacional, inclusive de escravos."
+    ],
+    "Tubal-Caim": [
+        "Dica 1: Seu pai tinha duas esposas",
+        "Dica 2: Personagem antediluviano",
+        "Dica 3: Sua mãe se chamava Zila",
+        "Dica 4: Ele foi artífice de todo instrumento cortante, de bronze e de ferro",
+        "Não há mais dicas disponíveis"
+    ],
+    "Urias": [
+        "Dica 1: Personagem gentio do Velho Testamento, um heteu",
+        "Dica 2: Fazia parte do exército de Davi",
+        "Dica 3: Ele disse: Como poderia eu ir para casa, comer e beber e me deitar com a minha mulher? Juro pela vida do rei que não faria tal coisa",
+        "Dica 4: Davi mandou esta mensagem a Joabe: 'Ponham Urias na linha de frente, onde o combate for mais intenso, para que morra",
+        "Dica 5: Sua esposa se chamava Bate-Seba",
+    ],
 
-    // "Tirza": [
-    //     "Dica 1: Mulher da tribo de Manassés que viveu por ocasião da repartição da terra em herança",
-    //     "Dica 2: Uma das filhas de Zelofeade",
-    //     "Dica 3: Seu pai não tinha filhos homens, só mulheres",
-    //     "Dica 4: Ela e suas irmãs pedem a Moisés para terem direito à herança, que só era dada a homens",
-    //     "Dica 5: Por orientação de Moisés, ela e suas irmãs se casaram com homens da mesma tribo",
-    // ],
+
     // "Zacaria33": [
     //     "Dica 1: Era filho do sacerdote Joiada",
     //     "Dica 2: Viveu na época do rei Joás",
