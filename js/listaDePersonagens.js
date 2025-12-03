@@ -1,5 +1,4 @@
 const listaDePersonagens = [
-  "Aarão",
   "Abednego",
   "Abel",
   "Abias33",
@@ -449,6 +448,7 @@ const listaDePersonagens = [
   "Rispa",
   "Roboão",
   "Ruben",
+  "Rute",
   "Sadraque",
   "Safã",
   "Safira",

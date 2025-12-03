@@ -1,11 +1,4 @@
 const dicas = {
-    "Aarão": [
-        "Dica 1: Ele teve dois filhos e uma filha",
-        "Dica 2: Sua esposa se chamava Joquebede",
-        "Dica 3: Foi pai de Moisés",
-        "Dica 3: Sua história está registrada no capítulo 6 de Êxodo",
-        "Não há mais dicas disponíveis"
-    ],
     "Abednego": [
         "Dica 1: Foi levado cativo para a Babilônia",
         "Dica 2: Seu nome hebraico era Azarias, mas recebeu um nome babilônico",
@@ -1701,11 +1694,11 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Jaco": [
-        "Dica 5: Casou-se com duas mulheres de uma só vez",
-        "Dica 3: Tinha um irmão gêmeo",
-        "Dica 1: Seu nome significa 'suplantador'",
+        "Dica 1: Tinha um irmão gêmeo",
         "Dica 2: Foi um dos patriarcas",
-        "Dica 4: Certa vez, ele disse a seu irmão: Dê-me teu direito de primogenitura que eu te dou este prato de sopa",
+        "Dica 3: Seu nome significa 'suplantador'",
+        "Dica 4: Casou-se com duas mulheres de uma só vez",
+        "Dica 5: Certa vez, ele disse a seu irmão: Dê-me teu direito de primogenitura que eu te dou este prato de sopa",
     ],
     "Jael": [
         "Dica 1: Ficou famosa por sua coragem",
@@ -1941,7 +1934,7 @@ const dicas = {
     "Jezabel": [
         "Dica 1: Era filha de Etbaal, rei dos sidônios",
         "Dica 2: Perseguiu os profetas do Senhor e matou a muitos deles",
-        "Dica 3: Instituiu, em Israel, o culto a Baal e sustentava os profetas de Asera",
+        "Dica 3: Instituiu, em Israel, o culto a Baal e sustentava os profetas de Aserá",
         "Dica 4: Ocasionou a morte de Nabote, fazendo com que seu marido se apoderasse das cobiçadas terras do assassinado",
         "Dica 5: Sua morte foi trágica, sendo jogada da janela de seu palácio por seus servos e seu corpo comido por cães"
     ],
@@ -3163,6 +3156,13 @@ const dicas = {
         "Dica 4: Quando seus irmãos intentaram matar José, ele fez de tudo para livrá-lo",
         "Dica 5: Filho primogênito de Jacó",
     ],
+    "Rute": [
+        "Dica 1: Seu nome aparece na genealogia de Jesus (Mateus 1:5)",
+        "Dica 2: É dela a famosa frase: '... onde quer que tu fores irei eu, ... o teu povo é o meu povo, o teu Deus é o meu Deus",
+        "Dica 3: Era uma moabita",
+        "Dica 4: Se apegou a sua sogra Noemi, e não quis voltar para sua família, preferindo seguir sua sogra no retorno a Israel",
+        "Dica 5: Casou-se com Boaz",
+    ],
     "Sadraque": [
         "Dica 1: Foi levado cativo para a Babilônia",
         "Dica 2: Seu nome hebraico era Hananias, mas recebeu um nome babilônico",
@@ -3578,7 +3578,7 @@ const dicas = {
     ],
     "Tiago44": [
         "Dica 1: Foi um dos doze apóstolos de Jesus",
-        "Dica 2: É um dos apóstolos menos mencionados, sem relatos de falas ou ações específicas",
+        "Dica 2: É um dos apóstolos menos mencionado, sem relatos de falas ou ações específicas",
         "Dica 3: Ele era denominado 'filho de Alfeu' para distingui-lo de outros de mesmo nome mencionados no Novo Testamento",
         "Dica 4: Muitos estudiosos crêem que ele era irmão de Mateus, cujo pai também se chamava Alfeu",
         "Dica 5: Diz as lendas que ele pregou na Pérsia e aí foi crucificado, mas não há informações concretas sobre sua vida ou morte",
