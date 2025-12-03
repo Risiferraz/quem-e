@@ -190,10 +190,10 @@ const dicas = {
     ],
     "Ageu": [
         "Dica 1: Era um profeta que tem um livro com seu nome no Antigo Testamento",
-        "Dica 2: Foi contemporâneo de Zorobabel e viveu na época da reconstrução do templo",
-        "Dica 3: Repreendeu o povo por ter deixado a obra do templo parada por muito tempo",
-        "Dica 4: Ele profetizou que a glória do segundo templo seria maior que a do primeiro",
-        "Não há mais dicas disponíveis"
+        "Dica 2: Foi parceiro do profeta Zacarias",
+        "Dica 3: Foi contemporâneo de Zorobabel e viveu na época da reconstrução do templo",
+        "Dica 4: Repreendeu o povo por ter deixado a obra do templo parada por muito tempo",
+        "Dica 5: Ele profetizou que a glória do segundo templo seria maior que a do primeiro",
     ],
     "Aias": [
         "Dica 1: Foi um profeta que viveu na época da divisão do reino de Israel",
@@ -466,7 +466,7 @@ const dicas = {
         "Dica 2: Era sumo sacerdote",
         "Dica 3: Viveu na época do rei Uzias",
         "Dica 4: Quando Uzias tentou queimar incenso no templo, ele, juntamente com outros 80 sacerdotes, o repreendeu corajosamente",
-        "Dica 5: Quando viu que Uzias estava leproso, o expulsou depressa do templo",
+        "Dica 5: Quando viu que Uzias estava leproso, ele o expulsou depressa do templo",
     ],
     "Azarias44": [
         "Dica 1: Foi levado cativo para a Babilônia",
@@ -635,6 +635,13 @@ const dicas = {
         "Dica 3: José ordenou a seu servo que pusesse a sua taça de prata no saco de cereais de seu irmão mais novo",
         "Dica 4: Seu pai era muito apegado a ele, porque era o único filho que lhe restava de sua amada esposa Raquel",
         "Dica 5: Foi o filho mais novo de Jacó",
+    ],
+    "Bigtã": [
+        "Dica 1: Morreu enforcado",
+        "Dica 2: Era um guarda da porta do rei Assuero (Xerxes)",
+        "Dica 3: Seu nome é citado junto ao de seu companheiro 'Teres'",
+        "Dica 4: Ele e seu companheiro Teles armaram um plano para matar o rei",
+        "Dica 5: Mardoqueu descobriu o plano e os denunciou",
     ],
     "Bila": [
         "Dica 1: Teve dois filhos: Dã e Naftali",
@@ -3184,13 +3191,6 @@ const dicas = {
         "Dica 4: Depois de sua morte, Sargom, tomou Samaria e levou todos em cativeiro",
         "Não há mais dicas disponíveis"
     ],
-    "Salmuna": [
-        "Dica 1: Seu nome está ligado a Zeba, ambos reis midianitas",
-        "Dica 2: Gideão derrotou o exército deles, os perseguiu e os capturou",
-        "Dica 3: Ele ordenou a seu filho mais velho que o matasse, ele porém teve medo porque era muito jovem",
-        "Dica 4: Gideão matou ele e seu companheiro Zeba, e tirou os enfeites de seus camelos",
-        "Não há mais dicas disponíveis"
-    ],
     "Salomão": [
         "Dica 1: Na sua velhice, suas muitas mulheres estrangeiras o induziram à idolatria",
         "Dica 2: Em sonhos, o Senhor apareceu a ele e disse-lhe: 'Pede o que queres que eu te dê'",
@@ -3555,6 +3555,13 @@ const dicas = {
         "Dica 4: Abrão só partiu de Harâ depois da morte dele",
         "Não há mais dicas disponíveis"
     ],
+    "Teres": [
+        "Dica 1: Morreu enforcado",
+        "Dica 2: Era um guarda da porta do rei Assuero (Xerxes)",
+        "Dica 3: Seu nome é citado junto ao de seu companheiro 'Bigtã'",
+        "Dica 4: Ele e seu companheiro Bigtã armaram um plano para matar o rei",
+        "Dica 5: Mardoqueu descobriu o plano e os denunciou",
+    ],
     "Tertulo": [
         "Dica 1: Personagem romano citado no Novo Testamento",
         "Dica 2: Ele é citado quando Paulo foi levado a Cesareia para ser julgado perante o governador Félix.",
@@ -3695,34 +3702,179 @@ const dicas = {
         "Dica 4: Ele foi artífice de todo instrumento cortante, de bronze e de ferro",
         "Não há mais dicas disponíveis"
     ],
-    "Urias": [
+    "Urias33": [
         "Dica 1: Personagem gentio do Velho Testamento, um heteu",
         "Dica 2: Fazia parte do exército de Davi",
-        "Dica 3: Ele disse: Como poderia eu ir para casa, comer e beber e me deitar com a minha mulher? Juro pela vida do rei que não faria tal coisa",
+        "Dica 3: Era homem de alto caráter, que se vê pelo ato de ele recusar o conforto da sua casa, estando os seus camaradas sofrendo as durezas da guerra",
         "Dica 4: Davi mandou esta mensagem a Joabe: 'Ponham Urias na linha de frente, onde o combate for mais intenso, para que morra",
         "Dica 5: Sua esposa se chamava Bate-Seba",
     ],
-
-
-    // "Zacaria33": [
-    //     "Dica 1: Era filho do sacerdote Joiada",
-    //     "Dica 2: Viveu na época do rei Joás",
-    //     "Dica 3: Quando Joás afastou-se do Senhor, ele o repreendeu corajosamente",
-    //     "Dica 4: Foi apedrejado até a morte por ordem do rei Joás, no átrio do templo",
-    //     "Dica 5: Jesus citou esse personagem quando condenou os fariseus e os escribas (Mateus 23:35)",
-    // ],
-    //     "Zeba": [
-    //     "Dica 1: Seu nome está ligado a Salmuna, ambos reis midianitas",
-    //     "Dica 2: Gideão derrotou o exército deles, os perseguiu e os capturou",
-    //     "Dica 3: Ele ordenou a seu filho mais velho que o matasse, ele porém teve medo porque era muito jovem",
-    //     "Dica 4: Gideão matou ele e seu companheiro Salmuna, e tirou os enfeites de seus camelos",
-    //     "Não há mais dicas disponíveis"
-    // ],
-    //     "Zedequias": [
-    //     "Dica 1: Filho de Josias e último rei de Judá",
-    //     "Dica 2: Foi constituido rei por Nabucodonosor que mudou o seu nome que dantes era Matatias",
-    //     "Dica 3: Fez o que era mau aos olhos do Senhor, segundo tudo o que Jeoaquim, que reinou antes dele, havia feito.",
-    //     "Dica 4: Em seus dias, a cidade de Jerusalém foi cercada por dois anos",
-    //     "Dica 5: Ele tentou fugir do cerco, mas foi capturado, mataram seus filhos diante dele, furaram-lhe os olhos e o levaram para Babilônia"
-    // ],
+    "Urias44": [
+        "Dica 1: Era um sumo sacerdote",
+        "Dica 2: Foi contemporâneo do rei Acaz de Judá",
+        "Dica 3: Acaz visitou Damasco e viu um altar pagão, então Acaz enviou a ele um modelo detalhado desse altar.",
+        "Dica 4: Ele construiu o altar em Jerusalém, substituindo o altar original do templo.",
+        "Dica 5: Ele fez tudo como o rei Acaz lhe havia ordenado.",
+    ],
+    "Urias55": [
+        "Dica 1: Foi um profeta",
+        "Dica 2: Profetizou contra Jerusalém e contra Judá",
+        "Dica 3: Profetizou nos dias do rei Jeoaquim",
+        "Dica 4: Ao ouvir suas palavras proféticas, Jeoaquim quiz matá-lo",
+        "Dica 5: Ele fugiu para o Egito, mas foi perseguido, capturado, entregue a Jeoaquim e morto à espada e sepultado como um indigente",
+    ],
+    "Uzias": [
+        "Dica 1: Foi rei de Judá e começou a reinar com 16 anos, e teve um dos mais longos reinados",
+        "Dica 2: Também chamado de Azarias",
+        "Dica 3: Fez o que era reto aos olhos do Senhor, buscou o Senhor e Deus o fez prosperar, ele se tornou poderoso e famoso.",
+        "Dica 4: Ficou leproso",
+        "Dica 5: Ele quis queimar incenso sobre o altar de Deus, ato que somente o sumo sacerdote podia praticar, e por isso ficou leproso",
+    ],
+    "Vasti": [
+        "Dica 1: Era uma mulher extraordinariamente bonita",
+        "Dica 2: Foi rainha do império persa",
+        "Dica 3: Casada com o rei Assuero (Xerxes)",
+        "Dica 4: Recusou-se a atender a ordem do rei de ir desfilar para os seus convidados, um banquete composto apenas por homens",
+        "Dica 5: Foi destituída de seus direitos de rainha, sendo substituída, posteriormente por Ester",
+    ],
+    "Xerxes": [
+        "Dica 1: Personagem gentio do Velho Testamento",
+        "Dica 2: Decretou uma lei para que o povo judeu fosse morto",
+        "Dica 3: Mordecai salvou a vida dele ao desvendar um plano para assassiná-lo",
+        "Dica 4: Rei do império persa",
+        "Dica 5: Forma grega do nome hebraico Assuero",
+    ],
+    "Zacarias33": [
+        "Dica 1: Era filho do sacerdote Joiada",
+        "Dica 2: Viveu na época do rei Joás",
+        "Dica 3: Ele repreendeu corajosamente o rei Joás quando este se afastou do Senhor, ",
+        "Dica 4: Foi apedrejado até a morte por ordem do rei Joás, no átrio do templo",
+        "Dica 5: Jesus citou esse personagem quando condenou os fariseus e os escribas (Mateus 23:35)",
+    ],
+    "Zacarias44": [
+        "Dica 1: Foi rei de Israel",
+        "Dica 2: Reinou por apenas seis meses",
+        "Dica 3: Salum conspirou contra ele, o matou e reinou em seu lugar",
+        "Dica 4: Foi o último rei da dinastia de Jeú",
+        "Dica 5: Nele se cumpriu a profecia dada a Jeú: Os seus filhos se assentarão no trono de Israel somente até a quarta geração",
+    ],
+    "Zacarias55": [
+        "Dica 1: Foi um profeta que tem um livro do Velho Testamento com seu nome",
+        "Dica 2: É dele a famosa visão do sacerdote Josué com as vestes sujas",
+        "Dica 3: Trabalhou em parceria com o profeta Ageu",
+        "Dica 4: Ele veio da Babilônia para Jerusalém, ainda jovem, com Zorobabel e Josué",
+        "Dica 5: Profetizou nos dias de Esdras e Neemias",
+    ],
+    "Zadoque": [
+        "Dica 1: Era sacerdote nos tempos de Davi, juntamente com Abiatar, e depois, no reinado de Salomão, se tornou sumo sacerdote",
+        "Dica 2: Quando Absalão se revoltou, ele e os levitas acompanharam o seu rei em sua fulga, levando a arca",
+        "Dica 3: Ele estava entre aqueles que persuadiram os anciãos de Judá a que convidassem Davi a voltar depois da derrota e morte de Absalão",
+        "Dica 4: Ele e o profeta Natã, ajudaram Bate-seba a interceder junto ao rei Davi para que Adonias não assumisse o trono e sim, Salomão",
+        "Dica 5: Ele e o profeta Natã ungiram rei a Salomão, na fonte de Giom",
+    ],
+    "Zafenate-Paneia": [
+        "Dica 1: Era governador do Egito",
+        "Dica 2: Faraó o fez subir na sua segunda carruagem, e os egipcios clamavam diante dele: 'Inclinem-se todos!'",
+        "Dica 3: Casou-se com Asenate, filha de Potífera, sacerdote de Om.",
+        "Dica 4: Com Asenate, teve dois filhos, Manassés e Efraim",
+        "Dica 5: Este nome foi dado a ele por Faraó, seu nome hebraico era José",
+    ],
+    "Zalmuna": [
+        "Dica 1: Seu nome está ligado a Zeba, ambos reis midianitas",
+        "Dica 2: Gideão derrotou o exército deles, os perseguiu e os capturou",
+        "Dica 3: Ele ordenou a seu filho mais velho que o matasse, ele porém teve medo porque era muito jovem",
+        "Dica 4: Gideão o matou, e também seu companheiro Zeba, e tirou os enfeites de seus camelos",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zaqueu": [
+        "Dica 1: Era um homem muito rico",
+        "Dica 2: Era um publicano",
+        "Dica 3: Era de baixa estatura",
+        "Dica 4: Por causa da multidão, subiu numa árvore para poder ver a Jesus",
+        "Dica 5: Jesus disse a ele: 'Desça depressa, porque hoje vou ficar na sua casa.",
+    ],
+    "Zeba": [
+        "Dica 1: Seu nome está ligado a Zalmuna, ambos reis midianitas",
+        "Dica 2: Gideão derrotou o exército deles, os perseguiu e os capturou",
+        "Dica 3: Ele ordenou a seu filho mais velho que o matasse, ele porém teve medo porque era muito jovem",
+        "Dica 4: Gideão o matou, e também seu companheiro Zalmuna, e tirou os enfeites de seus camelos",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zebedeu": [
+        "Dica 1: Personagem do Novo Testamento",
+        "Dica 2: Ele tinha um negócio de pesca no mar da Galiléia, com alguns empregados, e Simão era sócio dele",
+        "Dica 3: Tinha dois filhos, um se chamava, Tiago e o outro, João",
+        "Dica 4: Ele estava num barco, consertando as redes, quando Jesus passou e chamou seus dois filhos para seguí-lo",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zebulom": [
+        "Dica 1: Personagem do Antigo Testamento",
+        "Dica 2: Sua mãe se chamava Lia",
+        "Dica 3: Ao nascer, sua mãe disse: 'Deus me concedeu excelente dádiva. Agora meu marido vai permanecer comigo, porque lhe dei seis filhos",
+        "Dica 4: Uma das tribos de Israel tem o seu nome",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zedequias": [
+        "Dica 1: Filho de Josias e último rei de Judá",
+        "Dica 2: Foi constituido rei por Nabucodonosor que mudou o seu nome que dantes era Matatias",
+        "Dica 3: Fez o que era mau aos olhos do Senhor, segundo tudo o que Jeoaquim, que reinou antes dele, havia feito.",
+        "Dica 4: Em seus dias, a cidade de Jerusalém foi cercada por dois anos",
+        "Dica 5: Ele tentou fugir do cerco, mas foi capturado, mataram seus filhos diante dele, furaram-lhe os olhos e o levaram para Babilônia"
+    ],
+    "Zelofeade": [
+        "Dica 1: Personagem do Antigo Testamento, era da tribo de Manassés",
+        "Dica 2: Viveu nos dias em que Josué, e Moisés iria dividir a terra entre as tribos e os filhos de Israel",
+        "Dica 3: Ele tinha cinco filhas, mas nem um homem para ter direito à herança",
+        "Dica 4: Sua filhas então, foram pedir a Moisés para terem direito à herança, que só era dada a homens",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zeruia": [
+        "Dica 1: Era irmã de Davi",
+        "Dica 2: Era mãe dos três mais eminentes guerreiros do exército de Davi",
+        "Dica 3: Por algum motivo desconhecido, somente o nome dela é mencionado e nada se sabe sobre o seu marido",
+        "Dica 4: Mãe de Abisai, Joabe e Asael",
+        "Não há mais dicas disponíveis"
+    ],
+    "Ziba": [
+        "Dica 1: Quando o rei Davi quis saber sobre a sobreviventes de Saul, ele foi chamado à presença do rei",
+        "Dica 2: Ele respondeu ao rei: 'Ainda existe um filho de Jônatas, aleijado de ambos os pés.'",
+        "Dica 3: Quando Davi fugia de Absalão, ele deu ao rei suprimentos para a viagem",
+        "Dica 4: Ele acusou falsamente Mefibosete de traição para com Davi, por ocasião da revolta de Absalão, e assim alcançou metade da herança",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zilpa": [
+        "Dica 1: Era serva de Lia",
+        "Dica 2: Ela foi dada a Jacó por Lia, para que esta tivesse filhos por meio dela, como era costume da época",
+        "Dica 3: Gade e Aser são filhos dela",
+        "Dica 4: Uma das esposas de Jacó",
+        "Não há mais dicas disponíveis"
+    ],
+    "Zinri33": [
+        "Dica 3: Era comandante da metade dos carros de guerra de Israel",
+        "Dica 2: Reinou apenas sete dias em Tirza, a capital de Israel na época",
+        "Dica 1: O rei Elá, filho de Baasa, estava em Tirza, festejando e embriagando-se, quando ele entrou e o matou",
+        "Dica 4: Tão logo começou a reinar, ele matou todos os descendentes de Baasa, cumprindo a palavra do Senhor, anunciada por meio do profeta Jeú",
+        "Dica 5: Onri sitiou Tirza, e quando ele viu que a cidade havia sido tomada, foi para a fortaleza do palácio real, pôs fogo ali e morreu"
+    ],
+    "Zinri44": [
+        "Dica 1: Era prícipe da tribo de Simeão",
+        "Dica 2: Seu nome está ligado ao de uma mulher midianita chamada 'Cosbi'",
+        "Dica 3: Sua história aconteceu em Baal-Peor, nas campinas de Moabe",
+        "Dica 4: Fineias, filho de Arão atravesou com uma lança o ventre dele e da mulher que estava com ele",
+        "Dica 5: Assim que ele foi morto, a praga cessou",
+    ],
+    "Zipora": [
+        "Dica 1: Seu pai era sacerdote de Midiã",
+        "Dica 2: Teve dois filhos, Gérson e Eliézer",
+        "Dica 3: Ela disse a seu marido: 'Tu és para mim um esposo sanguinário'",
+        "Dica 4: Ela circuncidou seu filho com uma faca de pedra para salvar a vida de Moisés",
+        "Dica 5: Casou-se com Moisés",
+    ],
+    "Zorobabel": [
+        "Dica 1: Descendente da linhagem real de Davi",
+        "Dica 2: Foi nomeado governador da província de Judá.",
+        "Dica 3: Viveu no período pós-exílio babilônico",
+        "Dica 4: Era filho de Salatiel (ou Pedaías, conforme algumas tradições) e neto do rei Joaquim de Judá",
+        "Dica 5: Junto com o sacerdote Josué, teve papel fundamental na reconstrução do Templo",
+    ],
 };
