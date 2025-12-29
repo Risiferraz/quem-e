@@ -58,11 +58,11 @@ html {
     z-index: 3;
     visibility: hidden;
     position: absolute;
-    top: -80px;
+    top: -260px;
     left: 50%;
     transform: translate(-50%, 50%);
     padding: 0.5em;
-    width: 150%;
+    width: 180%;
     font-size: 3.5rem;
     line-height: 1.1em;
     text-align: center;

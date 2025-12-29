@@ -1177,9 +1177,9 @@ const dicas = {
     ],
     "Ezequiel": [
         "Dica 1: Era sacerdote",
-        "Dica 2: Um dos quatro grandes profetas",
-        "Dica 3: Deus mandou que ele cozinhasse sua comida usando uma mistura de palha e fezes humanas",
-        "Dica 4: Foi levado cativo para a Babilônia",
+        "Dica 2: Deus mandou que ele cozinhasse sua comida usando uma mistura de palha e fezes humanas",
+        "Dica 3: Foi levado cativo para a Babilônia",
+        "Dica 4: Um dos quatro grandes profetas",
         "Dica 5: Em uma de suas visões, ele viu um grande vale cheio de ossos secos",
     ],
     "Farao-Neco": [
@@ -1493,7 +1493,7 @@ const dicas = {
     "Herodes-O-Grande": [
         "Dica 1: Era idumeu, ou seja, descendente dos antigos edomitas, descendente de Esaú",
         "Dica 2: É chamado na Bíblia de rei da Judeia (Lucas 1:5)",
-        "Dica 3: Mandou matar todos os menino menores de dois anos que havia em Belém",
+        "Dica 3: Mandou matar todos os meninos menores de dois anos que havia em Belém",
         "Dica 4: Jesus nasceu nos dias de seu reinado",
         "Dica 5: Recebeu a visita dos magos do oriente, que perguntavam: 'Onde está o recém-nascido Rei dos judeus?'",
     ],
@@ -3436,12 +3436,19 @@ const dicas = {
         "Dica 4: Quando ele viu que as pessoas recebendo poder do Espírito, ofereceu dinheiro aos apóstolos",
         "Dica 5: Pedro lhe disse: 'O teu dinheiro seja contigo para perdição, pois cuidaste que o dom de Deus se alcança por dinheiro'",
     ],
-    "Simeão": [
+    "Simeão33": [
         "Dica 1: Sua mãe se chamava Lia",
         "Dica 2: José o manteve preso como garantia de que seus irmãos voltariam com Benjamim ao Egito",
         "Dica 3: Ele e seu irmão Levi foram repreendidos por causa da sua crueldade para com os siquemitas, no caso de Diná",
         "Dica 4: Por causa disto, Jacó predisse que eles não teriam porção determinada na Terra Prometida",
         "Dica 5: Uma das doze tribos de Israel leva o seu nome",
+    ],
+    "Simeão44": [
+        "Dica 1: Era justo e temente a Deus, e o Espírito Santo estava sobre ele.",
+        "Dica 2: Personagem do Novo Testamento",
+        "Dica 3: Fora-lhe revelado, pelo Espírito Santo, que ele não morreria antes de ter visto o Cristo do Senhor ",
+        "Dica 4: Estava no templo, quando os pais trouxeram o menino Jesus, para  circuncidá-lo",
+        "Dica 5: Ele tomou Jesus em seus braços, e disse a Deus: Despedes em paz o teu servo, pois já os meus olhos viram a tua salvação",
     ],
     "Simei": [
         "Dica 1: Era parente do rei Saul",
@@ -3668,10 +3675,10 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Tome": [
-        "Dica 1: Um dos doze apóstolo",
+        "Dica 1: Um dos doze apóstolos",
         "Dica 2: Quando Pedro disse: 'Vou pescar!' Ele e outros discípulos que ali estavam, disseram: 'Nós também vamos contigo",
-        "Dica 3: Ao ver que Jesus iria para Jersusalém mesmo correndo risco de vida disse: 'Vamos nós também para morrermos com ele'",
-        "Dica 4: Também chamado 'Dídimo'",
+        "Dica 3: Ao ver que Jesus iria para Jersusalém mesmo correndo risco de vida, disse: 'Vamos nós também para morrermos com ele'",
+        "Dica 4: Também chamado: 'Dídimo'",
         "Dica 5: Jesus disse a ele: 'Ponha aqui o seu dedo e veja as minhas mãos. Estenda também a sua mão e ponha no meu lado. Não seja incrédulo, mas crente",
     ],
     "Trofimo": [

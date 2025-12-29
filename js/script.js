@@ -168,15 +168,15 @@ function verificarLetraClicada() {
       });
 
       if (acertou) {
-        const conjuntoInputsVazios = Array.from(document.querySelectorAll("input[data-letra]"))
-          .filter(inp => inp.value.trim() === "");
+        const conjuntoInputsVazios = Array.from(document.querySelectorAll("input[data-letra]")) // Seleciona todos os inputs que possuem o atributo data-letra
+          .filter(inp => inp.value.trim() === "");  // Filtra apenas os inputs que estão vazios
 
-        const casasVazias = conjuntoInputsVazios.length;
-        const tamanhoPalavra = nomeSorteado.length;
+        const casasVazias = conjuntoInputsVazios.length; // Conta quantos inputs ainda estão vazios
+        const tamanhoPalavra = nomeSorteado.length; // Armazena a quantidade total de letras da palavra sorteada
 
         let limitePermitido = 0; // variável para armazenar o limite de casas vazias permitido
 
-        if (tamanhoPalavra <= 5) {
+        if (tamanhoPalavra <= 5) { // Se a quantidade total de letras da palavra sorteada for até 5
           limitePermitido = 0; // se a palavra tem até 5 letras, só termina quando todas as letras forem preenchidas
         } else if (tamanhoPalavra === 6) {
           limitePermitido = 1; // se a palavra tem 6 letras, termina quando restar 1 letra vazia
@@ -186,20 +186,27 @@ function verificarLetraClicada() {
           limitePermitido = 3; // se a palavra tem mais de 10 letras ou mais, termina quando restarem 3 letras vazias
         }
 
-        if (casasVazias <= limitePermitido) {
-          if (tamanhoPalavra <= 4) {   // 👉 Caso especial: se última casa vazia da palavra curta, chama a verificação final
+        if (casasVazias === 0) {
+          verificarPalavraPreenchida();
+          const mostraDicasVisivel = document.getElementById("mostra-dicas");
+          if (mostraDicasVisivel && getComputedStyle(mostraDicasVisivel).display === "flex") {
+            mostraDicasVisivel.style.display = "none";
+          }
+        } else if (casasVazias <= limitePermitido) {
+          if (tamanhoPalavra <= 4) {
             verificarPalavraPreenchida();
             const mostraDicasVisivel = document.getElementById("mostra-dicas");
             if (mostraDicasVisivel && getComputedStyle(mostraDicasVisivel).display === "flex") {
               mostraDicasVisivel.style.display = "none";
             }
-          } else { // Se não é a última letra de palavra curta, mas atingiu o limite de casas vazias permitidas
-            document.getElementById("mensagem-dica2").style.display = "grid";
-            botaoMostraDicas.style.display = "none";
-            bloquearTeclas();
+          } else { // só mostrar mensagem-dica2 se houver pelo menos 1 casa vazia
+            if (casasVazias >= 1) {
+              document.getElementById("mensagem-dica2").style.display = "grid";
+              botaoMostraDicas.style.display = "none";
+              bloquearTeclas();
+            }
           }
         } else {
-          // 👉 Enquanto ainda há mais casas vazias que o limite, mostra acerto normal
           document.getElementById("mensagem-letra-certa").style.display = "flex";
         }
 
@@ -384,17 +391,18 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
 });
 
 function verificarPalavraPreenchida() {
-  const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]")); // Seleciona todos os inputs que possuem o atributo data-letra
-  const todosPreenchidos = inputsDaPalavra.every(inp => { // Verifica se todos os inputs visíveis (não escondidos) já têm valor
+  const inputsDaPalavra = Array.from(document.querySelectorAll("input[data-letra]")); // Seleciona todos os inputs que possuem o atributo data-letra e transforma o resultado em um array
+  const todosPreenchidos = inputsDaPalavra.every(inp => { // Verifica se todos os inputs visíveis (não escondidos) já têm valor (se já foram preenchidos)
 
     if (window.getComputedStyle(inp).display === "none") return true; // Se o input está escondido (display:none), ignora
-    if (inp.classList.contains("box-hifen")) return true;  // Se o conteúdo do input é hífen
-    return inp.value.trim() !== ""; // Verifica se o input tem valor (não vazio)
+    if (inp.classList.contains("box-hifen")) return true;  // Se o conteúdo do input é hífen, ignora.
+    return inp.value.trim() !== ""; // Evita falsos positivos: sem trim(), um campo contendo apenas espaços " " seria considerado preenchido;
   });
 
-  if (todosPreenchidos) {
+  if (todosPreenchidos) { // Se todos os inputs visíveis foram preenchidos
     console.log("[STATUS] Todos os inputs visíveis foram preenchidos! Finalizando jogo...");
     cronometro.pararCronometro();
+    pontuacaoFinal();
 
     setTimeout(() => {
       document.getElementById("mensagem-game-over-acerto").style.display = "grid";
@@ -408,6 +416,35 @@ function verificarPalavraPreenchida() {
 function pontuacaoFinalErro() {
   score *= 0; // Zera a pontuação atual multiplicando por zero
   acrescentaPontuacao();  // Atualiza a exibição da pontuação zerada
+}
+
+function pontuacaoFinal() {
+  const indicadorEl = document.getElementById('indicador');
+  const cronometroEl = document.getElementById('cronometro');
+
+  if (!indicadorEl || !cronometroEl) {
+    console.error('Elemento indicador ou cronometro não encontrado.');
+    return;
+  }
+  const rawIndicador = indicadorEl.textContent.trim();
+  const indicadorNum = Number(rawIndicador.replace(',', '.')); // aceita vírgula como decimal
+  if (Number.isNaN(indicadorNum)) {
+    console.error('Valor do indicador não é um número válido:', rawIndicador);
+    return;
+  }
+
+  const valorMultiplicado = indicadorNum * 1000; // Multiplica o valor do indicador por 1000
+  const rawCrono = cronometroEl.textContent.trim();  // Remove tudo que não for dígito e converte para inteiro
+  const cronometroDigits = rawCrono.replace(/\D/g, ''); // extrai apenas os dígitos
+  if (cronometroDigits === '') {
+    console.error('Cronômetro não contém dígitos válidos:', rawCrono);
+    return;
+  }
+  const cronometroNum = parseInt(cronometroDigits, 10);  // Calcula: (valorMultiplicado - cronometroNum) / 100
+  const resultado = (valorMultiplicado - cronometroNum) / 100;  // Formata o resultado (opcional: duas casas decimais)
+  const resultadoFormatado = Number.isInteger(resultado) ? String(resultado) : resultado.toFixed(2);
+
+  indicadorEl.textContent = resultadoFormatado;  // Atualiza o elemento indicador com o novo resultado
 }
 
 
