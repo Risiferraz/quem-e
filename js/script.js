@@ -416,6 +416,12 @@ function verificarPalavraPreenchida() {
 function pontuacaoFinalErro() {
   score *= 0; // Zera a pontuação atual multiplicando por zero
   acrescentaPontuacao();  // Atualiza a exibição da pontuação zerada
+  const inputs = document.querySelectorAll('input'); // Define background vermelho e desabilita cada input
+  inputs.forEach(input => {
+    input.style.backgroundColor = 'red';
+    botao.style.cursor = "not-allowed"; // Muda o cursor para indicar que não pode ser clicado
+    input.disabled = true;
+  });
 }
 
 function pontuacaoFinal() {
