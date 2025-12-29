@@ -433,7 +433,7 @@ function pontuacaoFinal() {
     return;
   }
 
-  const valorMultiplicado = indicadorNum * 1000; // Multiplica o valor do indicador por 1000
+  const valorMultiplicado = indicadorNum * 100; // Multiplica o valor do indicador por 100
   const rawCrono = cronometroEl.textContent.trim();  // Remove tudo que não for dígito e converte para inteiro
   const cronometroDigits = rawCrono.replace(/\D/g, ''); // extrai apenas os dígitos
   if (cronometroDigits === '') {

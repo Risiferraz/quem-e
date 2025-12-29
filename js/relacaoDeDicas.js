@@ -889,10 +889,10 @@ const dicas = {
         "Dica 5: Trocou seu direito de primogenitura por um prato de sopa",
     ],
     "Efraim": [
-        "Dica 1: Deu nome a uma das mais importantes tribos de Israel",
-        "Dica 2: Filho de uma egípcia",
-        "Dica 3: Seu irmão mais velho se chamava Manassés",
-        "Dica 4: Neto de Jacó",
+        "Dica 1: Filho de uma egípcia",
+        "Dica 2: Seu irmão mais velho se chamava Manassés",
+        "Dica 3: Neto de Jacó",
+        "Dica 4: Deu nome a uma das mais importantes tribos de Israel",
         "Dica 5: Filho de José do Egito",
     ],
     "Eglom": [
@@ -1806,10 +1806,10 @@ const dicas = {
         "Dica 5: Fez o voto de oferecer a Deus em holocausto a primeira criatura que viesse ao seu encontro após a vitória",
     ],
     "Jemima": [
-        "Dica 1: Uma das filhas de Jó",
-        "Dica 2: Tinha duas irmãs, Quézia e Quéren-Hapuque",
-        "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
-        "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Dica 1: Tinha duas irmãs, Quézia e Quéren-Hapuque",
+        "Dica 2: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
+        "Dica 3: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Dica 4: Uma das filhas de Jó",
         "Não há mais dicas disponíveis"
     ],
     "Jeoacaz33": [
@@ -2979,7 +2979,7 @@ const dicas = {
         "Dica 2: Ele perguntou a Jesus: 'Que é a verdade?'",
         "Dica 3: A esposa dele lhe enviou a mensagem: 'Não faças nada contra este homem inocente pois sonhei com ele",
         "Dica 4: Governador romano da Judeia",
-        "Dica 5: Mandou trazer água, lavou as mãos diante da multidão.",
+        "Dica 5: Mandou trazer água e lavou as mãos diante da multidão",
     ],
     "Potifar": [
         "Dica 1: Era oficial de Faraó, o capitão da guarda",
@@ -3038,10 +3038,10 @@ const dicas = {
         "Dica 5: Abrão lutou contra ele e venceu, libertando Ló e os demais prisioneiros",
     ],
     "Queren-Hapuque": [
-        "Dica 1: Uma das filhas de Jó",
-        "Dica 2: Tinha duas irmãs, Jemima e Quézia",
-        "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
-        "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Dica 1: Tinha duas irmãs, Jemima e Quézia",
+        "Dica 2: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
+        "Dica 3: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Dica 4: Uma das filhas de Jó",
         "Não há mais dicas disponíveis"
     ],
     "Quetura": [
@@ -3052,10 +3052,10 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Quezia": [
-        "Dica 1: Uma das filhas de Jó",
-        "Dica 2: Tinha duas irmãs, Jemima e Quéren-Hapuque",
-        "Dica 3: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
-        "Dica 4: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Dica 1: Tinha duas irmãs, Jemima e Quéren-Hapuque",
+        "Dica 2: Seus irmãos e irmãs foram todos mortos num só dia, quando a casa onde estavam desmoronou",
+        "Dica 3: Seu pai é muito conhecido por sua paciência (Tiago 5:11)",
+        "Dica 4: Uma das filhas de Jó",
         "Não há mais dicas disponíveis"
     ],
     "Quiliom": [
