@@ -1078,10 +1078,10 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Er": [
-        "Dica 1: Sua mãe se chamava 'Suá'",
-        "Dica 2: Tinha um irmão chamado Onã e outro mais novo chamado Selá",
-        "Dica 3: Seu pai, Judá, lhe deu uma esposa chamada Tamar",
-        "Dica 4: Ele era mau aos olhos do Senhor, por isto o Senhor o fez morrer sem filhos",
+        "Dica 1: Ele era mau aos olhos do Senhor, por isto o Senhor o fez morrer sem filhos",
+        "Dica 2: Sua mãe se chamava 'Suá'",
+        "Dica 3: Tinha um irmão chamado Onã e outro mais novo chamado Selá",
+        "Dica 4: Seu pai, Judá, lhe deu uma esposa chamada Tamar",
         "Não há mais dicas disponíveis"
     ],
     "Esar-Hadom": [
