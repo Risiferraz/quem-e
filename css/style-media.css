@@ -13,9 +13,9 @@
 
 @media screen and (max-height: 744px) {
 
-    #container {
-        /* background-color: rgb(233, 14, 14); */
-    }
+    /* #container {
+        background-color: rgb(233, 14, 14);
+    } */
 
     #titulo {
         width: 48%;
