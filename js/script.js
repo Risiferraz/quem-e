@@ -48,7 +48,7 @@ function configurarInputsBox(nome) {
 
     // Oculta inputs não utilizados
     if (i > letrasArray.length) {
-      inputBox.closest("td").style.display = "none";
+      inputBox.closest("td").style.display = "none"; // Esconde a célula inteira (td) para evitar espaços vazios
       continue;
     }
 
@@ -78,11 +78,17 @@ function configurarInputsBox(nome) {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
+      const tdHifen = inputBox.closest("td");
+      tdHifen.style.width = (tdHifen.offsetWidth / 2) + "px";
+      inputBox.style.width = (inputBox.offsetWidth / 2) + "px";
 
     } else if (letra === " ") {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
+      const tdEspaco = inputBox.closest("td");
+      tdEspaco.style.width = (tdEspaco.offsetWidth / 2) + "px";
+      inputBox.style.width = (inputBox.offsetWidth / 2) + "px";
 
     } else if (["3", "4", "5", "6"].includes(letra)) {
       inputBox.value = letra;
@@ -249,7 +255,6 @@ botaoMostraDicas.addEventListener("click", () => {
   contadorCliques++;
 
   if (contadorCliques >= 5) {
-    console.log("Limite atingido: o botão não será mais exibido.");
     botaoMostraDicas.style.display = "none"; // esconde de vez a partir do 5º clique
   }
 });
@@ -342,10 +347,11 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
 
     const tecla = e.key.toUpperCase(); // Converte a tecla pressionada para maiúscula
     const letraCorreta = (input.getAttribute('data-letra') || '').toUpperCase(); // Pega a letra correta do atributo data-letra
+    const letraExibida = (tecla === "A" && letraCorreta === "Ã") ? "Ã" : tecla;
 
-    input.value = tecla; // Preenche o input com a letra digitada
+    input.value = letraExibida; // Preenche o input com a letra digitada (ou Ã quando aplicável)
 
-    if (tecla === letraCorreta) { // ✅ Acertou
+    if (tecla === letraCorreta || (tecla === "A" && letraCorreta === "Ã")) { // ✅ Acertou
       const inputsVaziosAntes = document.querySelectorAll("input.box-editavel:not([disabled])").length; // Conta quantos inputs editáveis ainda estão vazios antes de preencher este
       input.style.background = "rgb(186,150,43)";
       input.style.border = "outset 3px rgb(252,237,177)";
@@ -375,7 +381,10 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
       setTimeout(() => {
         document.getElementById("mensagem-game-over-erro").style.display = "grid";
         document.getElementById("sair").classList.add("flash-effect-tip");
-      }, 2000);
+        document.getElementById("dicas").style.display = "none";
+        document.getElementById("teclado").style.display = "none";
+        document.getElementById("palavra-secreta").style.display = "none";
+      }, 5000);
     }
   });
 
@@ -409,6 +418,7 @@ function verificarPalavraPreenchida() {
       document.getElementById("sair").classList.add("flash-effect-tip");
       document.getElementById("dicas").style.display = "none";
       document.getElementById("teclado").style.display = "none";
+      document.getElementById("palavra-secreta").style.gridArea = "1 / 1";
     }, 1000);
   }
 }
@@ -419,7 +429,7 @@ function pontuacaoFinalErro() {
   const inputs = document.querySelectorAll('input'); // Define background vermelho e desabilita cada input
   inputs.forEach(input => {
     input.style.backgroundColor = 'red';
-    botao.style.cursor = "not-allowed"; // Muda o cursor para indicar que não pode ser clicado
+    input.style.cursor = "not-allowed"; // Muda o cursor para indicar que não pode ser clicado
     input.disabled = true;
   });
 }

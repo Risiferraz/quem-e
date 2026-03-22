@@ -1,0 +1,404 @@
+/* 1) - COR VERDE - TELAS COM ALTURA MENOR OU IGUAL A 950PX */
+
+@media screen and (min-height: 950px) {
+
+    #container {
+        /* background-color: green; */
+        grid-template-rows: 38% 11% 10% 25% 16%;
+        height: 950px;
+    }
+}
+
+/* 2) - COR VERMELHA - TELAS COM ALTURA MENOR OU IGUAL A 744PX */
+
+@media screen and (max-height: 744px) {
+
+    #container {
+        /* background-color: rgb(233, 14, 14); */
+    }
+
+    #titulo {
+        width: 48%;
+    }
+
+    .tecla {
+        width: 50px;
+        height: 50px;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    #marcatempo {
+        width: 11%;
+    }
+
+    #marcapontuacao {
+        width: 11%;
+    }
+
+    #sair {
+        width: 11%;
+        font-size: 2.9rem;
+    }
+}
+
+/* 3) - COR AZUL - TELAS COM LARGURA DE 415 A 799PX */
+
+@media screen and (max-width: 799px) {
+
+    #container {
+        /* background-color: rgb(14, 14, 233); */
+        width: 700px;
+    }
+
+    td {
+        width: 38px;
+    }
+
+    .box {
+        width: 38px;
+    }
+
+    .box-editavel {
+        width: 38px;
+    }
+
+    .box-nao-editavel {
+        width: 38px;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+    #marcatempo {
+        width: 12%;
+    }
+
+    #marcapontuacao {
+        width: 12%;
+    }
+
+    #sair {
+        width: 12%;
+        font-size: 2.9rem;
+    }
+}
+
+
+/* 4) - COR AMARELA - TELAS COM LARGURA DE 402 A 414px */
+
+@media screen and (max-width: 414px) {
+
+    #container {
+        /* background-color: rgb(233, 193, 14); */
+        grid-template-rows: 40vh 11vh 12vh 21vh 15vh;
+        width: 100%;
+    }
+
+    #titulo {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    #orientacoes {
+        width: 80%;
+        height: 70%;
+        font-size: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tooltip .tooltip1 {
+        padding: 7% 2%;
+        width: 150%;
+        font-size: 2rem;
+    }
+
+    #mostra-dicas {
+        font-size: 2.2rem;
+        line-height: 6rem;
+    }
+
+    #dicas {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+        margin-top: 5%;
+    }
+
+    td {
+        width: 23px;
+    }
+
+    .box {
+        width: 23px;
+        height: 30px;
+    }
+
+    .box-editavel {
+        width: 23px;
+        height: 30px;
+        font-size: 1.8rem;
+        line-height: normal;
+    }
+
+    .box-nao-editavel {
+        width: 23px;
+        height: 30px;
+        font-size: 1.8rem;
+        line-height: normal;
+    }
+
+    .box-hifen {
+        width: 11px;
+        height: 30px;
+    }
+
+    .tecla {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    #teclado {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tecla {
+        width: 36px;
+        height: 40px;
+    }
+
+    #marcatempo {
+        width: 20%;
+    }
+
+    #marcapontuacao {
+        width: 20%;
+    }
+
+    #sair {
+        width: 20%;
+        font-size: 2.6rem;
+    }
+
+    #mensagem-dica {
+        bottom: 4%;
+    }
+
+    #imagem-mensagem-dica {
+        width: 95%;
+        height: auto;
+    }
+
+    #ok {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        left: 49%;
+    }
+
+    #mensagem-letra-certa {
+        top: 3%;
+    }
+
+    #imgmens {
+        width: 77%;
+        height: auto;
+        align-self: start;
+    }
+
+    #ok2 {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        left: 57%;
+        top: 47%;
+    }
+
+    #ok3 {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+        left: 49%;
+        top: 25%;
+    }
+
+    #mensagem-letra-errada {
+        top: 3%;
+    }
+
+    #mensagem-game-over-acerto {
+        width: 100%;
+        position: absolute;
+        bottom: 16%;
+    }
+
+    #imagem-over {
+        width: 100%;
+    }
+
+    #imagem-dica {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* 5) - COR ROSYBROWN - TELAS COM LARGURA ATÉ 401px */
+
+@media screen and (max-width: 401px) {
+
+    #container {
+        /* background-color: rosybrown; */
+        grid-template-rows: 40vh 11vh 12vh 21vh 15vh;
+        width: 100%;
+    }
+
+    #orientacoes {
+        font-size: 2.5rem;
+    }
+
+    .tooltip .tooltip1 {
+        width: 157%;
+        font-size: 1.7rem;
+        top: -179px;
+    }
+
+    #mostra-dicas {
+        font-size: 2rem;
+        line-height: 5rem;
+    }
+
+    #dicas {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 3%;
+        width: 90%;
+    }
+
+    #palavra-secreta {
+        position: relative;
+        top: -10%;
+    }
+
+    .tecla {
+        width: 32px;
+        height: 37px;
+    }
+
+    .box {
+        width: 20px;
+        height: 26px;
+    }
+
+    .box-editavel {
+        width: 20px;
+        height: 26px;
+    }
+
+    .box-nao-editavel {
+        width: 20px;
+        height: 26px;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+        line-height: 2.3rem;
+    }
+
+    #marcatempo {
+        padding-top: 0px;
+    }
+
+    #marcapontuacao {
+        padding-top: 0px;
+    }
+}
+
+/* -----------------------------------------------------------------------------*/
+/* MENSAGEM DE ORIENTAÇÃO LANDSCAPE - Oculta por padrão */
+/* #region */
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+
+    #landscape-warning {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #landscape-warning-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        color: white;
+        max-width: 90%;
+        width: fit-content;
+        margin: auto;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    #landscape-warning-content h2 {
+        margin: 0 0 15px 0;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    #landscape-warning-content p {
+        margin: 15px 0;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    #rotate-icon {
+        font-size: 48px;
+        margin-top: 20px;
+        animation: rotateAnimation 2s infinite;
+    }
+
+    @keyframes rotateAnimation {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -2822,10 +2822,10 @@ const dicas = {
     ],
     "Noemi": [
         "Dica 1: Esposa de Elimeleque",
-        "Dica 2: Seus filhos chamavam, Malom e Quiliom",
-        "Dica 3: Por causa da fome, sua família foi morar na terra de Moabe",
-        "Dica 4: Seu marido e seus dois filhos morreram então ela resolveu voltar para sua cidade natal",
-        "Dica 5: Chegando a Belém, ela disse: Chamem-me de 'Mara' porque o Senhor me encheu de amargura"
+        "Dica 2: Ela mudou o seu próprio nome.",
+        "Dica 3: Seus filhos chamavam, Malom e Quiliom",
+        "Dica 4: Por causa da fome, sua família foi morar na terra de Moabe",
+        "Dica 5: Seu marido e seus dois filhos morreram então ela resolveu voltar para sua cidade natal",
     ],
     "Obadias33": [
         "Dica 1: Era o intendente responsável pelo palácio de Acabe",
