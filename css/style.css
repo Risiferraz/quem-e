@@ -14,6 +14,17 @@ html {
     font-size: 62.5%;
 }
 
+.stage {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    overflow: hidden;
+    height: 100vh;
+    max-height: 100vh;
+}
+
 #container {
     display: grid;
     grid-template-rows: 38vh 11vh 10vh 25vh 16vh;

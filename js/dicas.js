@@ -1,7 +1,12 @@
+function atualizarEscalaDinamica() {
+    window.dispatchEvent(new Event("escala-dinamica:atualizar"));
+}
+
 function acionaBotaoDica() {
     document.getElementById('orientacoes').style.display = 'none'; // Ocultar o elemento "orientacoes"
     document.getElementById("titulo").style.display = "none";  //  Ocultar o elemento "título"
     document.getElementById("dicas").style.gridArea = "1 / 1"; //Posiciona a div "dicas" no grid 1 / 1
+    atualizarEscalaDinamica();
 }
 
 let botaoExibeDicas = document.getElementById("mostra-dicas");
@@ -16,6 +21,7 @@ botaoExibeDicas.addEventListener("click", () => { // Ao clicar no botão "mostra
         botaoExibeDicas.style.opacity = '0';
         botaoExibeDicas.style.cursor = 'none';
         botaoExibeDicas.disabled = true;
+        atualizarEscalaDinamica();
     }, 200);
 });
 
@@ -28,9 +34,11 @@ function exibirDicas() {
     if (dicaAtual < dicasPersonagem.length && dicaAtual < 5) { // se ainda houver dicas e menos de 5 mostradas
         divDicas.style.display = 'flex';  // exibe a próxima dica
         divDicas.innerHTML += `${dicasPersonagem[dicaAtual]}<br/>`; // adiciona a dica atual à div
+        atualizarEscalaDinamica();
         const msgDica = document.getElementById("mensagem-dica");  // Mensagem de dica
         setTimeout(() => {
             msgDica.style.display = 'flex'; // Mostra a mensagem de dica
+            atualizarEscalaDinamica();
         }, 2000);
 
         dicaAtual++;
@@ -41,6 +49,7 @@ function exibirDicas() {
 function clicarOk1() {
     const mensagemDica = document.getElementById("mensagem-dica");
     mensagemDica.style.display = 'none'; // Esconde a mensagem de dica
-    liberarTeclas(); 
+    liberarTeclas();
+    atualizarEscalaDinamica();
 }
 

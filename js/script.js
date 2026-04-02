@@ -3,6 +3,10 @@ let personagemSecreto = "";
 let matches = 0; // Variável que armazena a quantidade de letras acertadas
 let score = 100;                // pontuação inicial
 
+function atualizarEscalaDinamica() {
+  window.dispatchEvent(new Event("escala-dinamica:atualizar"));
+}
+
 // Sorteia o personagem e retorna em maiúsculas
 // let listaDisponivel = [...listaDePersonagens];
 // let sorteados = carregarSorteados();
@@ -100,6 +104,8 @@ function configurarInputsBox(nome) {
       inputBox.value = "";
     }
   }
+
+  atualizarEscalaDinamica();
 }
 
 document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código
@@ -278,6 +284,7 @@ function exibirBotaoMostraDicas() {
 function clicarOk2() { // Ocultar mensagem de dica2
   const mensagemDica = document.getElementById("mensagem-dica2");
   mensagemDica.style.display = 'none'; // Esconde a mensagem de dica2
+  atualizarEscalaDinamica();
 }
 
 function clicarOk3() {
@@ -293,6 +300,7 @@ function clicarOk3() {
 
   liberarTeclas();
   digitarPalavraSecreta(); // Chama a função que configura os inputs
+  atualizarEscalaDinamica();
 }
 
 function clicarOk4() {
@@ -308,6 +316,7 @@ function clicarOk4() {
 
   liberarTeclas();
   digitarPalavraSecreta(); // Chama a função que configura os inputs
+  atualizarEscalaDinamica();
 }
 
 function digitarPalavraSecreta() { // Configura os inputs para permitir digitação
@@ -328,6 +337,8 @@ function digitarPalavraSecreta() { // Configura os inputs para permitir digitaç
       });
     }
   });
+
+  atualizarEscalaDinamica();
 }
 
 document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código 
@@ -384,6 +395,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
         document.getElementById("dicas").style.display = "none";
         document.getElementById("teclado").style.display = "none";
         document.getElementById("palavra-secreta").style.display = "none";
+        atualizarEscalaDinamica();
       }, 5000);
     }
   });
@@ -419,6 +431,7 @@ function verificarPalavraPreenchida() {
       document.getElementById("dicas").style.display = "none";
       document.getElementById("teclado").style.display = "none";
       document.getElementById("palavra-secreta").style.gridArea = "1 / 1";
+      atualizarEscalaDinamica();
     }, 1000);
   }
 }
