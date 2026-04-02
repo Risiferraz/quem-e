@@ -94,7 +94,7 @@ function configurarInputsBox(nome) {
       tdEspaco.style.width = (tdEspaco.offsetWidth / 2) + "px";
       inputBox.style.width = (inputBox.offsetWidth / 2) + "px";
 
-    } else if (["3", "4", "5", "6"].includes(letra)) {
+    } else if (["3", "4", "5", "6", "7"].includes(letra)) {
       inputBox.value = letra;
       // inputBox.classList.add("box-casa-vazia");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");

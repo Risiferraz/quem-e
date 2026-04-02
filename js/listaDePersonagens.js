@@ -488,6 +488,7 @@ const listaDePersonagens = [
   "Simão44",
   "Simão55",
   "Simão66",
+  "Simão77",
   "Simeão33",
   "Simeão44",
   "Simei",

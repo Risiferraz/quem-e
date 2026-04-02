@@ -1,32 +1,14 @@
-/* 1) - COR VERDE - TELAS COM ALTURA MENOR OU IGUAL A 950PX */
+/* 1) - COR VERDE - TELAS COM ORIENTAÇÃO LANDSCAPE E ALTURA MENOR OU IGUAL A 799PX */
 
-/* @media screen and (min-height: 950px) {
+@media screen and (orientation: landscape) and (max-height: 799px) {
 
     #container {
-        background-color: green;
+        /* background-color: green; */
         grid-template-rows: 38% 11% 10% 25% 16%;
-        height: 950px;
-    }
-} */
-
-/* 2) - COR VERMELHA - TELAS COM ALTURA MENOR OU IGUAL A 744PX */
-
-@media screen and (max-width: 799px) and (max-height: 744px) {
-
-    #container {
-        background-color: rgb(233, 14, 14);
-        height: 100vh;
     }
 
     #titulo {
         width: 50%;
-    }
-
-    #orientacoes {
-        width: 70%;
-        height: 90%;
-        font-size: 2.3rem;
-        line-height: 3rem;
     }
 
     .tecla {
@@ -34,79 +16,79 @@
         height: 50px;
     }
 
-    h2 {
-        font-size: 2.8rem;
-        line-height: 3rem;
-    }
-
-    h5 {
-        font-size: 1.2rem;
-    }
-
     #marcatempo {
-        width: 15%;
+        width: 10%;
     }
 
     #marcapontuacao {
-        width: 15%;
+        width: 10%;
     }
 
     #sair {
-        width: 15%;
-        font-size: 2.9rem;
+        width: 10%;
+        font-size: 2.5rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
     }
 }
 
-/* 3) - COR AZUL - TELAS COM LARGURA DE 415 A 799PX */
+/* 2) - COR VERMELHA - TELAS COM ALTURA MENOR OU IGUAL A 740PX */
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 999px) and (max-height: 740px) {
 
     #container {
-        /* background-color: rgb(14, 14, 233); */
-        width: 700px;
+        /* background-color: rgb(233, 14, 14); */
+        height: 100vh;
     }
 
-    td {
-        width: 38px;
+    #titulo {
+        width: 40%;
     }
 
-    .box {
-        width: 38px;
-    }
-
-    .box-editavel {
-        width: 38px;
-    }
-
-    .box-nao-editavel {
-        width: 38px;
-    }
-
-    h2 {
-        font-size: 2.8rem;
+    #orientacoes {
+        width: 35%;
+        height: 85%;
+        font-size: 2.3rem;
         line-height: 3rem;
     }
 
+    .tecla {
+        width: 40px;
+        height: 40px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
     h5 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     #marcatempo {
-        width: 12%;
+        width: 10%;
     }
 
     #marcapontuacao {
-        width: 12%;
+        width: 10%;
     }
 
     #sair {
-        width: 12%;
-        font-size: 2.9rem;
+        width: 10%;
+        font-size: 2.5rem;
     }
 }
 
 
-/* 4) - COR AMARELA - TELAS COM LARGURA DE 402 A 414px */
+/* 3) - COR AMARELA - TELAS COM LARGURA DE 402 A 414px */
 
 @media screen and (max-width: 414px) {
 
@@ -132,9 +114,8 @@
     }
 
     .tooltip .tooltip1 {
-        padding: 7% 2%;
-        width: 150%;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
     }
 
     #mostra-dicas {
@@ -275,7 +256,7 @@
     }
 }
 
-/* 5) - COR ROSYBROWN - TELAS COM LARGURA ATÉ 401px */
+/* 4) - COR ROSYBROWN - TELAS COM LARGURA ATÉ 401px */
 
 @media screen and (max-width: 401px) {
 
@@ -287,12 +268,6 @@
 
     #orientacoes {
         font-size: 2.5rem;
-    }
-
-    .tooltip .tooltip1 {
-        width: 157%;
-        font-size: 1.7rem;
-        top: -179px;
     }
 
     #mostra-dicas {
@@ -347,9 +322,9 @@
 }
 
 /* -----------------------------------------------------------------------------*/
-/* TELAS COM ORIENTAÇÃO LANDSCAPE E ALTURA MÁXIMA DE 600px e LARGURA MÁXIMA DE 480px */
+/* TELAS COM ORIENTAÇÃO LANDSCAPE E ALTURA MÁXIMA DE 544px */
 
-@media screen and (orientation: landscape) and (max-height: 480px) {
+@media screen and (orientation: landscape) and (max-height: 544px) {
 
     #landscape-warning {
         display: flex !important;

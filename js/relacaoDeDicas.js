@@ -3436,6 +3436,13 @@ const dicas = {
         "Dica 4: Quando ele viu que as pessoas recebendo poder do Espírito, ofereceu dinheiro aos apóstolos",
         "Dica 5: Pedro lhe disse: 'O teu dinheiro seja contigo para perdição, pois cuidaste que o dom de Deus se alcança por dinheiro'",
     ],
+    "Simão77": [
+        "Dica 1: Viveu nos dias de Jesus",
+        "Dica 2: Ele era pai de Alexandre e Rufo, este é mencionado por Paulo em Romanos 16:13",
+        "Dica 3: Ele era oriundo de uma cidade chamada Cirene, por isto é conhecido como 'o cireneu'",
+        "Dica 4: Ele foi forçado a carregar a cruz de Jesus quando este estava a caminho do Calvário",
+        "Dica 5: Não há mais dicas disponíveis",
+    ],
     "Simeão33": [
         "Dica 1: Sua mãe se chamava Lia",
         "Dica 2: José o manteve preso como garantia de que seus irmãos voltariam com Benjamim ao Egito",
