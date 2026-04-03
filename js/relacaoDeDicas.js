@@ -3045,7 +3045,7 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Quetura": [
-        "Dica 1: Seu nome significa 'incenso' ou 'fragrância'",
+        "Dica 1: Quando ela se casou, seu marido já era bastante idoso",
         "Dica 2: Foi mãe de Zinrã, Jocsã, Medã, Midiã, Isbaque e Suá",
         "Dica 3: Ela contribuiu para a multiplicação da descendência de Abraão, cumprindo a promessa de que ele seria 'pai de muitas nações'",
         "Dica 4: Uma das esposas de Abraão",
