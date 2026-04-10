@@ -727,6 +727,13 @@ const dicas = {
         "Dica 4: Paulo o saúda na carta aos Filipenses",
         "Não há mais dicas disponíveis",
     ],
+    "Cleopas": [
+        "Dica 1: É um personagem do novo testamento, e esteve com Jesus",
+        "Dica 2: Jesus o chamou de néscio e tardo de coração",
+        "Dica 3: Jesus apareceu para ele depois de sua ressurreição",
+        "Dica 4: Ele disse a Jesus: 'Fica conosco, pois já é tarde e o dia está quase acabando'",
+        "Dica 5: Ele e seu companheiro de viagem, estavam a caminho de Emaús",
+    ],
     "Cloe": [
         "Dica 1: Foi contemporâneo de Paulo",
         "Dica 2: Era um cristão gentio",

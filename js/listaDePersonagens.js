@@ -103,6 +103,7 @@ const listaDePersonagens = [
   "Ciro",
   "Claudio",
   "Clemente",
+  "Cleopas",
   "Cloe",
   "Coate",
   "Core",
