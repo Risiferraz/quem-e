@@ -1,3 +1,3 @@
     function clicarSair() {
-      window.location.href = "home.html";
+      window.location.href = "https://www.jogosbiblicosonline.com.br/jogos.html";
     }

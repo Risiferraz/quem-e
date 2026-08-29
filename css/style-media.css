@@ -3,7 +3,7 @@
 @media screen and (orientation: landscape) and (max-height: 799px) {
 
     #container {
-        /* background-color: green; */
+        background-color: green;
         grid-template-rows: 38% 11% 10% 25% 16%;
     }
 

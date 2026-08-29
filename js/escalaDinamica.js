@@ -3,15 +3,15 @@
 // em outro lugar (ou arquivo).
 // Ela usa apenas APIs nativas do DOM (getElementById, window.addEventListener).
 (function escalaDinamicaPagina() {
-  const MAX_VISUAL_WIDTH = 800;
-  const MOBILE_BREAKPOINT = 414;
+  const MAX_VISUAL_WIDTH = 800; // A função só funciona corretamente até esta largura máxima
+  const MOBILE_BREAKPOINT = 414; // A função não funciona corretamente em larguras menores que este valor 
   const STAGE_SELECTOR = '.stage';
   const CONTAINER_ID = 'container';
   let frameDeEscala = null;
 
-  function limpaTransformacao(elemento) {
-    elemento.style.transform = '';
-    elemento.style.transformOrigin = '';
+  function limpaTransformacao(elemento) { // Remove qualquer transformação CSS aplicada ao elemento
+    elemento.style.transform = ''; // Limpa a transformação CSS aplicada
+    elemento.style.transformOrigin = ''; // Limpa a origem da transformação CSS aplicada
   }
 
   function aplicaEscala(elemento, larguraDisponivel, alturaDisponivel) {

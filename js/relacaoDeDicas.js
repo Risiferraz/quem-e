@@ -1918,11 +1918,11 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Jetro": [
-        "Dica 1: Um sacerdote de Midiã que tinha sete filhas",
-        "Dica 2: Uma de suas filhas se chamava Zípora",
-        "Dica 3: Ele disse a Moisés: 'Bendito seja o Senhor, que vos livrou da mão dos egípcios por amor de Israel'",
-        "Dica 4: Moisés apascentava os rebanhos dele quando Deus lhe apareceu numa sarça ardente",
-        "Dica 5: Também conhecido como Reuel",
+        "Dica 1: Também conhecido como Reuel",
+        "Dica 2: Ele disse a Moisés: 'Bendito seja o Senhor, que vos livrou da mão dos egípcios por amor de Israel'",
+        "Dica 3: Um sacerdote de Midiã que tinha sete filhas",
+        "Dica 4: Uma de suas filhas se chamava Zípora",
+        "Dica 5: Moisés apascentava os rebanhos dele quando Deus lhe apareceu numa sarça ardente",
     ],
     "Jeu33": [
         "Dica 1: Era um profeta, filho de Hanâni",

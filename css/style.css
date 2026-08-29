@@ -318,7 +318,6 @@ button.tecla:disabled {
 
 #imgmens {
     width: 750%;
-    height: 900px;
     position: relative;
     margin: 0 auto;
     align-self: end;
@@ -326,7 +325,6 @@ button.tecla:disabled {
 
 #imagem-mensagem-dica {
     width: 750%;
-    height: 900px;
     position: relative;
     margin: 0 auto;
     align-self: end;
