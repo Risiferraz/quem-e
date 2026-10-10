@@ -28,7 +28,8 @@ html {
 #container {
     display: grid;
     grid-template-rows: 38vh 11vh 10vh 25vh 16vh;
-    background-color: rgb(21, 21, 42);
+    background-color: rgba(151, 101, 151, 0.896);
+    /* background-color: rgb(21, 21, 42); */
     width: 800px;
     height: 100vh;
     font-family: "Palatino Lynotype";
