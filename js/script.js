@@ -32,6 +32,25 @@ function salvarSorteados(lista) {
   localStorage.setItem("sorteados", JSON.stringify(lista));
 }
 
+function ajustarBoxQuadrada() {
+  const palavraCurta = typeof nomeSorteado === "string" && nomeSorteado.length <= 12;
+  const mobile = window.innerWidth <= 414;
+
+  document.querySelectorAll("input.box, input.box-editavel, input.box-nao-editavel").forEach(input => {
+    if (mobile && palavraCurta) {
+      const larguraBase = parseFloat(getComputedStyle(input).width) || 23;
+      const larguraAjustada = larguraBase * 1.25;
+      input.classList.add("box-quadrada");
+      input.style.width = `${larguraAjustada}px`;
+      input.style.height = `${larguraAjustada}px`;
+    } else {
+      input.classList.remove("box-quadrada");
+      input.style.width = "";
+      input.style.height = "";
+    }
+  });
+}
+
 function iniciarJogo() {
   nomeSorteado = sortearPersonagem();
   // Ao iniciar o jogo, são feitas três coisas:
@@ -41,6 +60,7 @@ function iniciarJogo() {
   document.getElementById("indicador").textContent = score;
   // 3. Configura os inputs
   configurarInputsBox(nomeSorteado);
+  ajustarBoxQuadrada();
 }
 
 function configurarInputsBox(nome) {
@@ -112,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
   configurarTeclado();
   iniciarJogo();
   verificarLetraClicada();
+  window.addEventListener("resize", ajustarBoxQuadrada);
 
   cronometro.iniciaCronometro();
   setInterval(() => cronometro.atualizaCronometro(), 1000); // Atualiza o cronômetro a cada segundo

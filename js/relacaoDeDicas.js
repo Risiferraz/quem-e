@@ -1604,8 +1604,8 @@ const dicas = {
     ],
     "Isabel": [
         "Dica 1: A Bíblia diz que ela e seu marido, eram justos e irrepreensíveis diante de Deus",
-        "Dica 2: Viveu nos dias do rei Herodes",
-        "Dica 3: Era estéril",
+        "Dica 2: Era estéril",
+        "Dica 3: Viveu nos dias do rei Herodes",
         "Dica 4: Era casada com o sacerdote Zacarias",
         "Dica 5: Foi a mãe de João Batista",
     ],
@@ -2219,11 +2219,11 @@ const dicas = {
         "Dica 5: Ele é tradicionalmente identificado como o autor de uma epístola do Novo Testamento",
     ],
     "Judas-Iscariotes": [
-        "Dica 1: Um dos doze apóstolos",
-        "Dica 2: Ele era o administrador dos recursos financeiros do grupo dos discípulos",
-        "Dica 3: Certa vez ele disse: Este perfume valia muito dinheiro. Deveria ter sido vendido, e o dinheiro, dado aos pobres",
+        "Dica 1: Certa vez ele disse: Este perfume valia muito dinheiro. Deveria ter sido vendido, e o dinheiro, dado aos pobres",
+        "Dica 2: A Bíblia afirma que Satanás entrou nele. Foi também chamado 'o filho da perdição' (Jo 17.12)",
+        "Dica 3: Ele era o administrador dos recursos financeiros do grupo dos discípulos",
         "Dica 4: Durante a última ceia, Jesus disse a ele: 'O que pretendes fazer, faze-o depressa",
-        "Dica 5: A Bíblia afirma que Satanás entrou nele. Foi também chamado 'o filho da perdição' (Jo 17.12)",
+        "Dica 5: Um dos doze apóstolos",
     ],
     "Julio": [
         "Dica 1: Era um centurião romano",
@@ -3781,10 +3781,17 @@ const dicas = {
     ],
     "Zacarias55": [
         "Dica 1: Foi um profeta que tem um livro do Velho Testamento com seu nome",
-        "Dica 2: É dele a famosa visão do sacerdote Josué com as vestes sujas",
-        "Dica 3: Trabalhou em parceria com o profeta Ageu",
+        "Dica 2: Trabalhou em parceria com o profeta Ageu",
+        "Dica 3: É dele a famosa visão do sacerdote Josué com as vestes sujas",
         "Dica 4: Ele veio da Babilônia para Jerusalém, ainda jovem, com Zorobabel e Josué",
         "Dica 5: Profetizou nos dias de Esdras e Neemias",
+    ],
+    "Zacarias66": [
+        "Dica 1: Foi um sacerdote e viveu nos dias do rei Herodes",
+        "Dica 2: Sua mulher era uma das filhas de Arão e se chamava Isabel",
+        "Dica 3: Um anjo lhe apareceu e disse que sua esposa Isabel daria à luz um filho, mas ele duvidou porque ele e sua mulher eram idosos",
+        "Dica 4: Ele ficou mudo e escreveu numa tabuinha o nome que deveria ser dado a seu filho",
+        "Dica 5: Seu filho seria conhecido como João Batista",
     ],
     "Zadoque": [
         "Dica 1: Era sacerdote nos tempos de Davi, juntamente com Abiatar, e depois, no reinado de Salomão, se tornou sumo sacerdote",
