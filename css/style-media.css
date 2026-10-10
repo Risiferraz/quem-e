@@ -100,6 +100,7 @@
     }
 
     #palavra-secreta tr {
+        --box-gap: 3px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -277,21 +278,21 @@
         width: 32px;
         height: 37px;
     }
-/* 
+    
     .box {
-        width: 20px;
-        height: 26px;
+        max-width: 36px;
+        max-height: 36px;
     }
 
     .box-editavel {
-        width: 20px;
-        height: 26px;
+        max-width: 36px;
+        max-height: 36px;
     }
 
     .box-nao-editavel {
-        width: 20px;
-        height: 26px;
-    } */
+        max-width: 36px;
+        max-height: 36px;
+    } 
 
     h2 {
         font-size: 2.3rem;

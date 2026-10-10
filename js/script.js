@@ -34,10 +34,12 @@ function salvarSorteados(lista) {
 
 function ajustarBoxQuadrada() {
   const nomeAtual = typeof nomeSorteado === "string" ? nomeSorteado : "";
-  const palavraCurta = nomeAtual.length <= 12;
-  const palavraLonga = nomeAtual.length > 12;
+  const nomeAtualSemNumeros = nomeAtual.replace(/\d/g, "");
+  const palavraCurta = nomeAtualSemNumeros.length <= 8;
+  const palavraLonga = nomeAtualSemNumeros.length > 8;
   const mobile = window.innerWidth <= 414;
   const tabela = document.getElementById("palavra-secreta");
+  const linha = tabela ? tabela.querySelector("tr") : null;
   const inputs = Array.from(document.querySelectorAll("input.box, input.box-editavel, input.box-nao-editavel"));
 
   if (!tabela || !mobile) {
@@ -58,9 +60,13 @@ function ajustarBoxQuadrada() {
     return;
   }
 
+  if (linha) {
+    linha.style.gap = "";
+  }
+
   if (palavraCurta) {
     inputs.forEach(input => {
-      const larguraBase = parseFloat(getComputedStyle(input).width) || 23;
+      const larguraBase = parseFloat(getComputedStyle(input).width) || 23; // largura base do input, usada para calcular a largura ajustada
       const larguraAjustada = larguraBase * 1.25;
       input.classList.add("box-quadrada");
       input.style.width = `${larguraAjustada}px`;
@@ -77,10 +83,8 @@ function ajustarBoxQuadrada() {
     tabela.style.paddingRight = "0px";
     return;
   }
-
   if (palavraLonga) {
-    const linha = tabela.querySelector("tr");
-    const gap = 2;
+    const gap = 2; // gap entre as caixas na tabela
     const espacamentoLateralMinimo = 15;
     const caixasVisiveis = inputs.filter(input => {
       const td = input.closest("td");
@@ -558,6 +562,3 @@ function pontuacaoFinal() {
 
   indicadorEl.textContent = resultadoFormatado;  // Atualiza o elemento indicador com o novo resultado
 }
-
-
-
