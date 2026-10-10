@@ -33,22 +33,84 @@ function salvarSorteados(lista) {
 }
 
 function ajustarBoxQuadrada() {
-  const palavraCurta = typeof nomeSorteado === "string" && nomeSorteado.length <= 12;
+  const nomeAtual = typeof nomeSorteado === "string" ? nomeSorteado : "";
+  const palavraCurta = nomeAtual.length <= 12;
+  const palavraLonga = nomeAtual.length > 12;
   const mobile = window.innerWidth <= 414;
+  const tabela = document.getElementById("palavra-secreta");
+  const inputs = Array.from(document.querySelectorAll("input.box, input.box-editavel, input.box-nao-editavel"));
 
-  document.querySelectorAll("input.box, input.box-editavel, input.box-nao-editavel").forEach(input => {
-    if (mobile && palavraCurta) {
+  if (!tabela || !mobile) {
+    inputs.forEach(input => {
+      input.classList.remove("box-quadrada");
+      input.style.width = "";
+      input.style.height = "";
+
+      const td = input.closest("td");
+      if (td) {
+        td.style.width = "";
+        td.style.height = "";
+      }
+    });
+
+    tabela.style.paddingLeft = "";
+    tabela.style.paddingRight = "";
+    return;
+  }
+
+  if (palavraCurta) {
+    inputs.forEach(input => {
       const larguraBase = parseFloat(getComputedStyle(input).width) || 23;
       const larguraAjustada = larguraBase * 1.25;
       input.classList.add("box-quadrada");
       input.style.width = `${larguraAjustada}px`;
       input.style.height = `${larguraAjustada}px`;
-    } else {
-      input.classList.remove("box-quadrada");
-      input.style.width = "";
-      input.style.height = "";
+
+      const td = input.closest("td");
+      if (td) {
+        td.style.width = `${larguraAjustada}px`;
+        td.style.height = `${larguraAjustada}px`;
+      }
+    });
+
+    tabela.style.paddingLeft = "0px";
+    tabela.style.paddingRight = "0px";
+    return;
+  }
+
+  if (palavraLonga) {
+    const linha = tabela.querySelector("tr");
+    const gap = 2;
+    const espacamentoLateralMinimo = 15;
+    const caixasVisiveis = inputs.filter(input => {
+      const td = input.closest("td");
+      return !!td && getComputedStyle(td).display !== "none";
+    });
+    const quantidadeCaixas = Math.max(caixasVisiveis.length, 1);
+    const larguraTabela = tabela.clientWidth || tabela.offsetWidth || 0;
+    const larguraDisponivel = Math.max(larguraTabela - (espacamentoLateralMinimo * 2), 0);
+    const larguraCaixa = Math.max(0, (larguraDisponivel - (gap * (quantidadeCaixas - 1))) / quantidadeCaixas);
+
+    tabela.style.paddingLeft = `${espacamentoLateralMinimo}px`;
+    tabela.style.paddingRight = `${espacamentoLateralMinimo}px`;
+    tabela.style.boxSizing = "border-box";
+
+    if (linha) {
+      linha.style.gap = `${gap}px`;
     }
-  });
+
+    inputs.forEach(input => {
+      const td = input.closest("td");
+      if (!td || getComputedStyle(td).display === "none") return;
+
+      input.classList.remove("box-quadrada");
+      input.style.width = `${larguraCaixa}px`;
+      input.style.height = `${larguraCaixa}px`;
+
+      td.style.width = `${larguraCaixa}px`;
+      td.style.height = `${larguraCaixa}px`;
+    });
+  }
 }
 
 function iniciarJogo() {

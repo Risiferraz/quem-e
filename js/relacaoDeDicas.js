@@ -1948,8 +1948,8 @@ const dicas = {
     "Jizreel": [
         "Dica 1: Sua mãe se chamava Gômer",
         "Dica 2: Seu pai era um profeta",
-        "Dica 3: O Senhor mandou que Oseias lhe desse este nome como um sinal de que Ele quebraria o arco de Israel",
-        "Dica 4: Sua mãe era uma prostituta",
+        "Dica 3: Sua mãe era uma prostituta",
+        "Dica 4: O Senhor mandou que Oseias lhe desse este nome como um sinal de que Ele quebraria o arco de Israel",
         "Não há mais dicas disponíveis"
     ],
     "Jo": [
