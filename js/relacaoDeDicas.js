@@ -1161,18 +1161,18 @@ const dicas = {
         "Dica 4: Foi enganada pelo diabo",
         "Não há mais dicas disponíveis",
     ],
-    "Evodia": [
-        "Dica 1: É uma personagem do Novo Testamento",
-        "Dica 2: Ela é citada apenas uma vez, na carta de Paulo aos Filipenses",
-        "Dica 3: Seu nome está atrelado ao de Síntique",
-        "Dica 4: Paulo exorta ambas a pensarem igual no Senhor, ou seja, a resolverem suas diferenças",
-        "Não há mais dicas disponíveis",
-    ],
     "Evil-Merodaque": [
         "Dica 1: É um rei gentio",
         "Dica 2: Filho e sucessor de Nabucodonosor, rei da Babilônia",
         "Dica 3: No ano em que começou a reinar, libertou Joaquim da prisão",
         "Dica 4: Ele deu a Joaquim um lugar de honra, e o sutentou até a sua morte",
+        "Não há mais dicas disponíveis",
+    ],
+    "Evodia": [
+        "Dica 1: É uma personagem do Novo Testamento",
+        "Dica 2: Ela é citada apenas uma vez, na carta de Paulo aos Filipenses",
+        "Dica 3: Seu nome está atrelado ao de Síntique",
+        "Dica 4: Paulo exorta ambas a pensarem igual no Senhor, ou seja, a resolverem suas diferenças",
         "Não há mais dicas disponíveis",
     ],
     "Ezequias": [
@@ -3548,13 +3548,6 @@ const dicas = {
         "Dica 4: Absalão, seu irmão, vingou-a matando Amnom, anos mais tarde",
         "Dica 5: Absalão colocou o mesmo nome em sua filha, que nasceu depois deste acontecimento",
     ],
-    "Tamar44": [
-        "Dica 1: Era uma princesa muito formosa, filha de Davi e irmã de Absalão",
-        "Dica 2: Seu meio-irmão Amnom se apaixonou por ela perdidamente",
-        "Dica 3: Amnom, com ajuda de seu primo Jonadabe, armou um plano para ficar a sós com ela, e a violentou",
-        "Dica 4: Absalão, seu irmão, vingou-a matando Amnom, anos mais tarde",
-        "Dica 5: Absalão colocou o mesmo nome em sua filha, que nasceu depois deste acontecimento",
-    ],
     "Tatenai": [
         "Dica 1: Foi um governador persa durante o reinado de Dario I, mencionado no livro de Esdras",
         "Dica 2: Ele atuava associado a Setar-Bozenai, oficial do governo persa",
@@ -3694,13 +3687,6 @@ const dicas = {
         "Dica 3: Ao ver que Jesus iria para Jersusalém mesmo correndo risco de vida, disse: 'Vamos nós também para morrermos com ele'",
         "Dica 4: Também chamado: 'Dídimo'",
         "Dica 5: Jesus disse a ele: 'Ponha aqui o seu dedo e veja as minhas mãos. Estenda também a sua mão e ponha no meu lado. Não seja incrédulo, mas crente",
-    ],
-    "Trofimo": [
-        "Dica 1: Personagem gentio do Novo Testamento",
-        "Dica 2: Ele era da cidade de Éfeso e viajou junto com o grupo que acompanhou Paulo a Jerusalem",
-        "Dica 3: Ele foi deixado doente na cidade de Mileto por Paulo",
-        "Dica 4: Os judeus de Jerusalém pensaram que Paulo tinha introduzido a ele no Templo, e isto causou uma grande confusão e a prisão de Paulo",
-        "Não há mais dicas disponíveis"
     ],
     "Trofimo": [
         "Dica 1: Personagem gentio do Novo Testamento",
