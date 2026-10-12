@@ -54,7 +54,7 @@
 
     #container {
         background-color: rgb(233, 193, 14);
-        grid-template-rows: 40vh 11vh 12vh 21vh 15vh;
+        grid-template-rows: 40dvh 11dvh 12dvh 21dvh 15dvh;
         width: 100%;
     }
 
