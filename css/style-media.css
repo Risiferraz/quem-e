@@ -54,7 +54,7 @@
 
     #container {
         background-color: rgb(233, 193, 14);
-        grid-template-rows: 40dvh 11dvh 12dvh 21dvh 15dvh;
+        grid-template-rows: 30dvh 11dvh 12dvh 21dvh 16dvh;
         width: 100%;
     }
 
@@ -71,6 +71,7 @@
         font-size: 3rem;
         margin-left: auto;
         margin-right: auto;
+        color: black;
     }
 
     .tooltip .tooltip1 {
