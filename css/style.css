@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +16,7 @@ body {
 html {
     font-size: 62.5%;
 }
-
+/* 
 .stage {
     position: fixed;
     inset: 0;
@@ -23,15 +26,16 @@ html {
     overflow: hidden;
     height: 100vh;
     max-height: 100vh;
-}
+    aspect-ratio: 9/16;
+} */
 
 #container {
     display: grid;
     grid-template-rows: 38vh 11vh 10vh 25vh 16vh;
     background-color: rgb(21, 21, 42);
-    width: 800px;
+    max-width: 800px;
     height: 100vh;
-    font-family: "Palatino Lynotype";
+    font-family: "Cormorant Garamond", serif;
     font-size: 2.0rem;
     line-height: 1.4em;
     font-style: italic;
@@ -93,10 +97,10 @@ html {
     border: double 7px rgb(165, 168, 167);
     border-radius: 5px;
     margin: auto;
-    font-family: "Palatino Lynotype";
+    font-family: "Cormorant Garamond", serif;
     color: white;
     font-style: italic;
-    font-size: 3.8rem;
+    font-size: 5.2vw;
     line-height: 8rem;
     display: none;
     justify-content: center;
@@ -146,62 +150,89 @@ p {
 
 #palavra-secreta {
     margin: auto;
+    width: 95%;
     max-width: 95%;
+    border-spacing: 0;
+    table-layout: fixed;
+    --box-size: min(42px, calc(100% / 19.7));
+    --box-gap: calc(var(--box-size) * 0.1);
     grid-area: 3;
 }
 
-td {
-    width: 42px;
-    height: 42px;
+#palavra-secreta tbody {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#palavra-secreta tr {
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    margin: 0 auto;
+    gap: var(--box-gap);
+}
+
+#palavra-secreta td {
+    width: var(--box-size);
+    flex: 0 0 var(--box-size);
+    height: auto;
+    padding: 0;
 }
 
 .box {
-    width: 42px;
-    height: 42px;
     background-color: gray;
     text-align: center;
     color: transparent;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 2rem;
     text-transform: uppercase;
     cursor: not-allowed;
     user-select: none;
+    aspect-ratio: 1 / 1.1;
 }
 
 .box-editavel {
-    width: 42px;
-    height: 42px;
     background-color: gray;
     text-align: center;
     color: transparent;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     cursor: text;
     color: black;
+    aspect-ratio: 1 / 1.1;
 }
 
 .box-nao-editavel {
-    width: 42px;
-    height: 42px;
     background-color: red;
     text-align: center;
     color: transparent;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     cursor: not-allowed;
     user-select: none;
     z-index: 2;
     position: relative;
+    aspect-ratio: 1 / 1.1;
 }
 
 .box-hifen {
-    width: 42px;
-    height: 42px;
     background-color: transparent;
     color: transparent;
-    border: none
+    border: none;
+    aspect-ratio: 1 / 1.1;
+}
+
+#palavra-secreta .box,
+#palavra-secreta .box-editavel,
+#palavra-secreta .box-nao-editavel,
+#palavra-secreta .box-hifen {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1.1;
+    /* max-width: 42px; */
 }
 
 /* 
@@ -353,7 +384,7 @@ button.tecla:disabled {
     height: 70px;
     background-color: brown;
     position: absolute;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 3rem;
     margin: 19% 12%;
     border: outset 7px rgb(165, 168, 167);
@@ -373,7 +404,7 @@ button.tecla:disabled {
     height: 70px;
     background-color: brown;
     position: absolute;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 3rem;
     margin: -5% 13%;
     border: outset 7px rgb(165, 168, 167);
@@ -414,7 +445,7 @@ button.tecla:disabled {
     height: 70px;
     background-color: brown;
     position: absolute;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 3rem;
     margin: -5% 13%;
     border: outset 7px rgb(165, 168, 167);
@@ -438,7 +469,7 @@ button.tecla:disabled {
 
 #marcatempo {
     background-color: rgb(49, 111, 178);
-    width: 13%;
+    width: clamp(87px, 13.5vw, 108px);
     aspect-ratio: 1;
     text-align: center;
     border-radius: 8px;
@@ -450,7 +481,7 @@ button.tecla:disabled {
 
 #marcapontuacao {
     background-color: rgb(49, 111, 178);
-    width: 13%;
+    width: clamp(87px, 13.5vw, 108px);
     aspect-ratio: 1;
     text-align: center;
     border-radius: 8px;
@@ -462,27 +493,27 @@ button.tecla:disabled {
 
 #sair {
     background: rgb(49, 111, 178);
-    width: 13%;
+    width: clamp(87px, 13.5vw, 108px);
     aspect-ratio: 1;
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 3.5rem;
+    font-family: "Anton", "Arial Narrow", sans-serif;
+    font-size: 4.3vw;
     line-height: 4rem;
     margin: 0 2%;
     align-self: center;
 }
 
 h5 {
-    font-size: 1.5rem;
+    font-size: 1.8vw;
     font-family: "Palatino Linotype";
     color: black;
 }
 
 h2 {
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     color: black;
-    font-size: 3.5rem;
+    font-size: 4.3vw;
     font-style: normal;
     line-height: 5rem;
 }

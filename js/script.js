@@ -3,10 +3,6 @@ let personagemSecreto = "";
 let matches = 0; // Variável que armazena a quantidade de letras acertadas
 let score = 100;                // pontuação inicial
 
-function atualizarEscalaDinamica() {
-  window.dispatchEvent(new Event("escala-dinamica:atualizar"));
-}
-
 // Sorteia o personagem e retorna em maiúsculas
 // let listaDisponivel = [...listaDePersonagens];
 // let sorteados = carregarSorteados();
@@ -33,88 +29,87 @@ function salvarSorteados(lista) {
 }
 
 function ajustarBoxQuadrada() {
-  const nomeAtual = typeof nomeSorteado === "string" ? nomeSorteado : "";
-  const nomeAtualSemNumeros = nomeAtual.replace(/\d/g, "");
-  const palavraCurta = nomeAtualSemNumeros.length <= 8;
-  const palavraLonga = nomeAtualSemNumeros.length > 8;
-  const mobile = window.innerWidth <= 414;
   const tabela = document.getElementById("palavra-secreta");
-  const linha = tabela ? tabela.querySelector("tr") : null;
+  if (!tabela) return;
+
+  const linha = tabela.querySelector("tr");
   const inputs = Array.from(document.querySelectorAll("input.box, input.box-editavel, input.box-nao-editavel"));
 
-  if (!tabela || !mobile) {
-    inputs.forEach(input => {
-      input.classList.remove("box-quadrada");
-      input.style.width = "";
-      input.style.height = "";
+  inputs.forEach((input) => {
+    input.classList.remove("box-quadrada");
+    input.style.width = "";
+    input.style.height = "";
 
-      const td = input.closest("td");
-      if (td) {
-        td.style.width = "";
-        td.style.height = "";
-      }
-    });
+    const td = input.closest("td");
+    if (td) {
+      td.style.width = "";
+      td.style.height = "";
+    }
+  });
 
-    tabela.style.paddingLeft = "";
-    tabela.style.paddingRight = "";
-    return;
-  }
+  tabela.style.paddingLeft = "";
+  tabela.style.paddingRight = "";
+  tabela.style.boxSizing = "";
 
   if (linha) {
     linha.style.gap = "";
   }
 
-  if (palavraCurta) {
-    inputs.forEach(input => {
-      const larguraBase = parseFloat(getComputedStyle(input).width) || 23; // largura base do input, usada para calcular a largura ajustada
-      const larguraAjustada = larguraBase * 1.25;
-      input.classList.add("box-quadrada");
-      input.style.width = `${larguraAjustada}px`;
-      input.style.height = `${larguraAjustada}px`;
+  medidaDoBoxEmPalavrasPequenas();
+}
 
-      const td = input.closest("td");
-      if (td) {
-        td.style.width = `${larguraAjustada}px`;
-        td.style.height = `${larguraAjustada}px`;
-      }
-    });
+function medidaDoBoxEmPalavrasPequenas() {
+  const tabela = document.getElementById("palavra-secreta");
+  if (!tabela) return;
 
-    tabela.style.paddingLeft = "0px";
-    tabela.style.paddingRight = "0px";
-    return;
+  const boxes = Array.from(document.querySelectorAll(
+    "#palavra-secreta td, #palavra-secreta .box, #palavra-secreta .box-editavel, #palavra-secreta .box-nao-editavel, #palavra-secreta .box-hifen"
+  ));
+
+  const boxesVisiveis = boxes.filter((box) => {
+    const td = box.matches("td") ? box : box.closest("td");
+    if (!td) return false;
+    return getComputedStyle(td).display !== "none" && getComputedStyle(box).display !== "none";
+  });
+
+  const tdsVisiveis = Array.from(new Set(
+    boxesVisiveis
+      .map((box) => (box.matches("td") ? box : box.closest("td")))
+      .filter(Boolean)
+  ));
+
+  const quantidadeBoxes = tdsVisiveis.length;
+
+  if (!quantidadeBoxes) return;
+
+  const tamanhoMinimo = 42;
+  const larguraTabela = tabela.clientWidth || tabela.offsetWidth || 0;
+  const limiteMaximoPalavraCurta = Math.floor(larguraTabela / 15);
+  const limiteMaximoPalavraLonga = Math.floor(larguraTabela / 18);
+  let tamanhoDoBox = tamanhoMinimo;
+  const linha = tabela.querySelector("tr");
+  const estiloLinha = linha ? getComputedStyle(linha) : null;
+  const gap = estiloLinha ? (parseFloat(estiloLinha.columnGap || estiloLinha.gap || "0") || 0) : 0;
+  const larguraDisponivel = Math.max(0, larguraTabela - (gap * Math.max(quantidadeBoxes - 1, 0)));
+
+  if (quantidadeBoxes < 15) {
+    const tamanhoPorQuantidade = Math.floor(larguraDisponivel / quantidadeBoxes);
+    const tetoDeAumento = Math.max(tamanhoMinimo, limiteMaximoPalavraCurta);
+
+    tamanhoDoBox = Math.max(tamanhoMinimo, Math.min(tamanhoPorQuantidade, tetoDeAumento));
+  } else {
+    const tamanhoPorQuantidade = Math.floor(larguraDisponivel / quantidadeBoxes);
+    const tetoDeAumento = Math.max(1, limiteMaximoPalavraLonga);
+    tamanhoDoBox = Math.max(1, Math.min(tamanhoPorQuantidade, tetoDeAumento));
   }
-  if (palavraLonga) {
-    const gap = 2; // gap entre as caixas na tabela
-    const espacamentoLateralMinimo = 15;
-    const caixasVisiveis = inputs.filter(input => {
-      const td = input.closest("td");
-      return !!td && getComputedStyle(td).display !== "none";
-    });
-    const quantidadeCaixas = Math.max(caixasVisiveis.length, 1);
-    const larguraTabela = tabela.clientWidth || tabela.offsetWidth || 0;
-    const larguraDisponivel = Math.max(larguraTabela - (espacamentoLateralMinimo * 2), 0);
-    const larguraCaixa = Math.max(0, (larguraDisponivel - (gap * (quantidadeCaixas - 1))) / quantidadeCaixas);
 
-    tabela.style.paddingLeft = `${espacamentoLateralMinimo}px`;
-    tabela.style.paddingRight = `${espacamentoLateralMinimo}px`;
-    tabela.style.boxSizing = "border-box";
+  tabela.style.setProperty("--box-size", `${tamanhoDoBox}px`);
 
-    if (linha) {
-      linha.style.gap = `${gap}px`;
+  boxesVisiveis.forEach((box) => {
+    if (!box.matches("td")) {
+      box.style.maxWidth = `${tamanhoDoBox}px`;
     }
-
-    inputs.forEach(input => {
-      const td = input.closest("td");
-      if (!td || getComputedStyle(td).display === "none") return;
-
-      input.classList.remove("box-quadrada");
-      input.style.width = `${larguraCaixa}px`;
-      input.style.height = `${larguraCaixa}px`;
-
-      td.style.width = `${larguraCaixa}px`;
-      td.style.height = `${larguraCaixa}px`;
-    });
-  }
+  });
 }
 
 function iniciarJogo() {
@@ -168,17 +163,11 @@ function configurarInputsBox(nome) {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
-      const tdHifen = inputBox.closest("td");
-      tdHifen.style.width = (tdHifen.offsetWidth / 2) + "px";
-      inputBox.style.width = (inputBox.offsetWidth / 2) + "px";
 
     } else if (letra === " ") {
       inputBox.value = letra;
       inputBox.classList.add("box-hifen");
       inputBox.classList.remove("box", "box-editavel", "box-nao-editavel");
-      const tdEspaco = inputBox.closest("td");
-      tdEspaco.style.width = (tdEspaco.offsetWidth / 2) + "px";
-      inputBox.style.width = (inputBox.offsetWidth / 2) + "px";
 
     } else if (["3", "4", "5", "6", "7"].includes(letra)) {
       inputBox.value = letra;
@@ -191,7 +180,7 @@ function configurarInputsBox(nome) {
     }
   }
 
-  atualizarEscalaDinamica();
+  ajustarBoxQuadrada();
 }
 
 document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código
@@ -371,7 +360,7 @@ function exibirBotaoMostraDicas() {
 function clicarOk2() { // Ocultar mensagem de dica2
   const mensagemDica = document.getElementById("mensagem-dica2");
   mensagemDica.style.display = 'none'; // Esconde a mensagem de dica2
-  atualizarEscalaDinamica();
+  ajustarBoxQuadrada();
 }
 
 function clicarOk3() {
@@ -387,7 +376,7 @@ function clicarOk3() {
 
   liberarTeclas();
   digitarPalavraSecreta(); // Chama a função que configura os inputs
-  atualizarEscalaDinamica();
+  ajustarBoxQuadrada();
 }
 
 function clicarOk4() {
@@ -403,7 +392,7 @@ function clicarOk4() {
 
   liberarTeclas();
   digitarPalavraSecreta(); // Chama a função que configura os inputs
-  atualizarEscalaDinamica();
+  ajustarBoxQuadrada();
 }
 
 function digitarPalavraSecreta() { // Configura os inputs para permitir digitação
@@ -425,7 +414,7 @@ function digitarPalavraSecreta() { // Configura os inputs para permitir digitaç
     }
   });
 
-  atualizarEscalaDinamica();
+  ajustarBoxQuadrada();
 }
 
 document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento completo do DOM antes de executar o código 
@@ -482,7 +471,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
         document.getElementById("dicas").style.display = "none";
         document.getElementById("teclado").style.display = "none";
         document.getElementById("palavra-secreta").style.display = "none";
-        atualizarEscalaDinamica();
+        ajustarBoxQuadrada();
       }, 5000);
     }
   });
@@ -518,7 +507,7 @@ function verificarPalavraPreenchida() {
       document.getElementById("dicas").style.display = "none";
       document.getElementById("teclado").style.display = "none";
       document.getElementById("palavra-secreta").style.gridArea = "1 / 1";
-      atualizarEscalaDinamica();
+      ajustarBoxQuadrada();
     }, 1000);
   }
 }

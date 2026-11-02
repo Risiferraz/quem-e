@@ -323,9 +323,9 @@ const dicas = {
     ],
     "Aoliabe": [
         "Dica 1: Era da tribo de Dã e viveu na época do Êxodo",
-        "Dica 2: Trabalhou na construção do tabernáculo",
-        "Dica 3: Era artesão, mestre em trabalhos de ouro, prata, bronze, lapidação de pedras e entalhe em madeira",
-        "Dica 4: Deus deu a ele habilidades especiais de artesão e sabedoria para ensinar outros",
+        "Dica 2: Era artesão, mestre em trabalhos de ouro, prata, bronze, lapidação de pedras e entalhe em madeira",
+        "Dica 3: Deus deu a ele habilidades especiais de artesão e sabedoria para ensinar outros",
+        "Dica 4: Trabalhou na construção do tabernáculo",
         "Não há mais dicas disponíveis",
     ],
     "Apolo": [
@@ -2276,8 +2276,8 @@ const dicas = {
     ],
     "Lidia": [
         "Dica 1: Era da cidade de Tiatira",
-        "Dica 2: Era vendedora de púrpura",
-        "Dica 3: Ficou conhecendo Paulo de Tarso em Filipos",
+        "Dica 2: Ficou conhecendo Paulo de Tarso em Filipos",
+        "Dica 3: Era vendedora de púrpura",
         "Dica 4: Costumava se reunir para orar com outras mulheres, à beira de um rio",
         "Dica 5: Converteu-se pela pregação de Paulo e foi batizada, ela e sua família",
     ],
