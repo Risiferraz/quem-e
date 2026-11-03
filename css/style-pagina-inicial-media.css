@@ -7,18 +7,6 @@
     }
 }
 
-@media (max-width: 576px) {
-    #titulo {
-        width: 65%;
-    }
-
-    #principiante,
-    #avancado {
-        width: 30%;
-        font-size: 3rem;
-    }
-}
-
 @media (max-width: 700px) and (max-height: 700px) {
 
     #pagina-inicial {
@@ -38,8 +26,15 @@
     #principiante,
     #avancado {
         width: 20%;
-        font-size: 2.3rem;
+        font-size: 170% !important;
     }
+}
+
+@media (max-width: 576px) {
+    #titulo {
+        width: 65%;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -83,7 +78,7 @@
 /* -----------------------------------------------------------------------------*/
 /* TELAS COM ORIENTAÇÃO LANDSCAPE E ALTURA MÁXIMA DE 700px */
 
-@media screen and (max-width: 576px) and (orientation: landscape) {
+@media screen and (orientation: landscape) and (hover: none) and (pointer: coarse) {
 
     #landscape-warning {
         display: flex !important;
@@ -102,6 +97,7 @@
     }
 
     #landscape-warning-content {
+        display: block;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 30px;
         border-radius: 15px;

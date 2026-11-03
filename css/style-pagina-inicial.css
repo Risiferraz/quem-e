@@ -115,3 +115,7 @@ h3 {
     transform: translateY(1px) scale(0.98);
     filter: brightness(0.92);
 }
+
+#landscape-warning-content {
+    display: none;
+}
