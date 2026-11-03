@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/imagens/fundo-azul.jpg);
+    background-size: 100%;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#pagina-inicial {
+    display: grid;
+    grid-template-rows: 58vh 14vh 28vh;
+    background-color: rgb(21, 21, 42);
+    max-width: 800px;
+    height: 100vh;
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(248, 238, 210);
+    margin: 0 auto;
+    position: relative;
+}
+
+#titulo {
+    width: 55%;
+    margin: auto;
+}
+
+#orientacoes {
+    display: flex;
+    width: 70%;
+    height: 80%;
+    background-color: rgb(49, 111, 178);
+    border: double 7px rgb(165, 168, 167);
+    border-radius: 5px;
+    margin: auto;
+    font-size: 4rem;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+}
+
+.tooltip {
+    display: inline-block;
+}
+
+.tooltip .tooltip1 {
+    z-index: 3;
+    visibility: hidden;
+    position: absolute;
+    bottom: 1%;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2% 4%;
+    width: 90%;
+    font-size: 2.2rem;
+    line-height: 1.1em;
+    text-align: center;
+    color: brown;
+    box-shadow: 5px 10px brown;
+    border: 1px solid brown;
+    background-color: LightGrey;
+}
+
+.tooltip:hover .tooltip1 {
+    visibility: visible;
+}
+
+h3 {
+    stroke-width: 10px;
+}
+
+#opcoes-de-jogo {
+    display: flex;
+    justify-content: center;
+    margin: 2% 0;
+}
+
+#principiante,
+#avancado {
+    background: rgb(49, 111, 178);
+    width: 30%;
+    aspect-ratio: 2/1;
+    border-radius: 8px;
+    border: outset 5px rgb(252, 237, 177);
+    font-family: "Anton", "Arial Narrow", sans-serif;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin: 0 2%;
+    align-self: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1);
+}
+
+#principiante:hover,
+#avancado:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    filter: brightness(1.2);
+    box-shadow: 0 0 10px #4CAF50,
+        0 0 20px #4CAF50;
+}
+
+#principiante:active,
+#avancado:active {
+    transform: translateY(1px) scale(0.98);
+    filter: brightness(0.92);
+}

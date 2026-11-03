@@ -16,21 +16,9 @@ body {
 html {
     font-size: 62.5%;
 }
-/* 
-.stage {
-    position: fixed;
-    inset: 0;
-    display: grid;
-    align-items: start;
-    justify-items: start;
-    overflow: hidden;
-    height: 100vh;
-    max-height: 100vh;
-    aspect-ratio: 9/16;
-} */
 
 #container {
-    display: grid;
+    display: none;
     grid-template-rows: 38vh 11vh 10vh 25vh 16vh;
     background-color: rgb(21, 21, 42);
     max-width: 800px;
@@ -42,53 +30,6 @@ html {
     color: rgb(248, 238, 210);
     margin: 0 auto;
     position: relative;
-}
-
-#titulo {
-    width: 55%;
-    margin: auto;
-}
-
-#orientacoes {
-    width: 70%;
-    height: 80%;
-    background-color: rgb(49, 111, 178);
-    border: double 7px rgb(165, 168, 167);
-    border-radius: 5px;
-    margin: auto;
-    font-size: 4rem;
-    line-height: 10rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tooltip {
-    display: inline-block;
-}
-
-.tooltip .tooltip1 {
-    z-index: 3;
-    visibility: hidden;
-    position: absolute;
-    bottom: 1%;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 2% 4%;
-    width: 90%;
-    font-size: 2.2rem;
-    line-height: 1.1em;
-    text-align: center;
-    color: brown;
-    box-shadow: 5px 10px brown;
-    border: 1px solid brown;
-    background-color: LightGrey;
-}
-
-.tooltip:hover .tooltip1 {
-    visibility: visible;
 }
 
 #mostra-dicas {
