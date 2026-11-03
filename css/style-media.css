@@ -1,0 +1,49 @@
+@media screen and (max-width: 576px) {
+    #teclado {
+        display: table;
+        width: 100%;
+        padding: 0 5vw;
+        box-sizing: border-box;
+        table-layout: fixed;
+        border-spacing: 1px;
+        border-collapse: separate;
+    }
+
+    #teclado td {
+        width: calc(100% / 9);
+        padding: 0;
+        text-align: center;
+    }
+
+    .tecla,
+    .tecla-clicada {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 0;
+        box-sizing: border-box;
+        /* font-size: clamp(1rem, 4.2vw, 1.6rem); */
+    }
+}
+
+@media screen and (max-width: 576px) and (max-height: 760px) {
+
+    #container {
+        height: auto;
+        grid-template-rows: repeat(5 auto);
+    }
+
+    #titulo {
+        width: 50vw;
+    }
+
+    #orientacoes {
+        width: 50vw;
+        aspect-ratio: 3/10;
+        font-size: 5vw;
+    }
+
+    #teclado {
+        width: 81%;
+    }
+}
