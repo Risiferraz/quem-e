@@ -20,14 +20,14 @@ if (botaoAvancado) {
     });
 }
 
-if (botaoOrientacoes && tooltip) {
-    botaoOrientacoes.addEventListener("click", () => {
-        tooltip.classList.add("tooltip-visivel");
+if (botaoOrientacoes && tooltip) { 
+    botaoOrientacoes.addEventListener("click", () => { // ao clicar no botão "orientacoes"...
+        tooltip.classList.add("tooltip-visivel"); // exibe o tooltip
     });
 }
 
 if (botaoFecharTooltip && tooltip) {
-    botaoFecharTooltip.addEventListener("click", () => {
-        tooltip.classList.remove("tooltip-visivel");
+    botaoFecharTooltip.addEventListener("click", () => { // ao clicar no botão "fechar-tooltip"...
+        tooltip.classList.remove("tooltip-visivel"); // oculta o tooltip
     });
 }
