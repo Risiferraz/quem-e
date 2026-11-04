@@ -10,7 +10,7 @@
 @media (max-width: 700px) and (max-height: 700px) {
 
     #pagina-inicial {
-        grid-template-rows: 50% 20% 30%;
+        grid-template-rows: 50dvh 20dvh 30dvh;
     }
 
     #titulo {
@@ -40,7 +40,7 @@
 @media (max-width: 500px) {
 
     #pagina-inicial {
-        grid-template-rows: 35% 20% auto;
+        grid-template-rows: 35dvh 20dvh auto;
     }
 
     #orientacoes {
@@ -66,6 +66,13 @@
 
     #orientacoes {
         font-size: 2.7rem;
+    }
+
+    .tooltip .tooltip1 {
+        font-size: 16pt;
+        line-height: 18pt;
+        padding: 4% 2%;
+        width: 94%;
     }
 
     #principiante,
