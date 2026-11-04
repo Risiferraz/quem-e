@@ -3,7 +3,6 @@
     #principiante,
     #avancado {
         width: 30%;
-        font-size: 3.5rem;
     }
 }
 
@@ -26,7 +25,7 @@
     #principiante,
     #avancado {
         width: 20%;
-        font-size: 170% !important;
+        font-size: calc(min(20vw, 160px) * 0.167);
     }
 }
 
@@ -49,10 +48,6 @@
         padding: 2%;
     }
 
-    #principiante,
-    #avancado {
-        font-size: 2.5rem;
-    }
 }
 
 @media (max-width: 375px) {
@@ -68,7 +63,7 @@
         font-size: 2.7rem;
     }
 
-    .tooltip .tooltip1 {
+    #tooltip {
         font-size: 16pt;
         line-height: 18pt;
         padding: 4% 2%;
@@ -78,7 +73,6 @@
     #principiante,
     #avancado {
         width: 30%;
-        font-size: 2.2rem;
     }
 }
 

@@ -10,7 +10,6 @@
 body {
     background-image: url(/imagens/fundo-azul.jpg);
     background-size: 100%;
-
 }
 
 html {
@@ -42,28 +41,25 @@ html {
     border: double 7px rgb(165, 168, 167);
     border-radius: 5px;
     margin: auto;
+    font-family: "Anton", "Arial Narrow", sans-serif;
     font-size: 4rem;
-    font-style: italic;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.tooltip {
-    display: inline-block;
-}
-
-.tooltip .tooltip1 {
+#tooltip {
+    display: none;
     z-index: 3;
-    visibility: hidden;
     position: absolute;
-    bottom: 1%;
+    /* bottom: 1%;
     top: auto;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
     padding: 2% 4%;
     width: 90%;
-    font-size: 2.2rem;
-    line-height: 1.1em;
+    font-size: 20pt;
+    line-height: 22pt;
     text-align: center;
     color: brown;
     box-shadow: 5px 10px brown;
@@ -71,13 +67,13 @@ html {
     background-color: LightGrey;
 }
 
-.tooltip:hover .tooltip1 {
-    visibility: visible;
+#tooltip.tooltip-visivel {
+    display: block;
 }
 
 h3 {
-    stroke-width: 12px;
-    padding: 2% 4%;
+    stroke-width: 18px;
+    padding: 2% 4% 5% 4%;
     font-size: 22pt;
     line-height: 25pt;
 }
@@ -96,8 +92,8 @@ h3 {
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     font-family: "Anton", "Arial Narrow", sans-serif;
-    font-size: 4rem;
-    line-height: 5rem;
+    font-size: calc(min(30vw, 240px) * 0.167);
+    line-height: 1.1;
     margin: 0 2%;
     align-self: center;
     transition: all 0.3s ease;
