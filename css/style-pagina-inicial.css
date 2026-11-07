@@ -50,14 +50,18 @@ html {
 
 #tooltip {
     display: none;
+}
+
+#tooltip.tooltip-visivel {
+    display: block;
     z-index: 3;
     position: absolute;
     top: 2%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 2% 4%;
+    padding: 2%;
     width: 90%;
-    font-size: 20pt;
+    font-size: 17pt;
     line-height: 22pt;
     text-align: center;
     color: brown;
@@ -66,30 +70,26 @@ html {
     background-color: LightGrey;
 }
 
-#tooltip.tooltip-visivel {
-    display: block;
-}
-
 h3 {
-    stroke-width: 18px;
-    padding: 2% 4% 5% 4%;
-    font-size: 22pt;
+    padding: 1% 4% 3% 4%;
+    font-size: 20pt;
     line-height: 25pt;
+    stroke-width: 18px;
 }
 
 #fechar-tooltip {
-    position: absolute;
-    bottom: -10%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: static;
+    display: block;
     cursor: pointer;
     background-color: brown;
     color: lightGrey;
     border: 2px solid lightGrey;
     border-radius: 10px;
-    box-shadow: 3px 3px 6px lightgrey;
+    box-shadow: 3px 3px 6px black;
     width: 7%;
     aspect-ratio: 1;
+    margin: 16px auto 0;
+    transform: none;
 }
 
 #opcoes-de-jogo {

@@ -23,11 +23,17 @@ if (botaoAvancado) {
 if (botaoOrientacoes && tooltip) { 
     botaoOrientacoes.addEventListener("click", () => { // ao clicar no botão "orientacoes"...
         tooltip.classList.add("tooltip-visivel"); // exibe o tooltip
+        [botaoOrientacoes, botaoPrincipiante, botaoAvancado].forEach(botao => {
+            if (botao) botao.style.display = "none";
+        });
     });
 }
 
 if (botaoFecharTooltip && tooltip) {
     botaoFecharTooltip.addEventListener("click", () => { // ao clicar no botão "fechar-tooltip"...
         tooltip.classList.remove("tooltip-visivel"); // oculta o tooltip
+        [botaoOrientacoes, botaoPrincipiante, botaoAvancado].forEach(botao => {
+            if (botao) botao.style.removeProperty("display");
+        });
     });
 }
