@@ -18,8 +18,8 @@ html {
 }
 
 #container {
-    display: none;
-    grid-template-rows: 38vh 11vh 10vh 25vh 16vh;
+    display: grid;
+    grid-template-rows: 18vh 12vh 20vh 15vh auto;
     background-color: rgb(21, 21, 42);
     max-width: 800px;
     height: 100vh;
@@ -32,61 +32,9 @@ html {
     position: relative;
 }
 
-#mostra-dicas {
-    width: 80%;
-    background-color: rgb(49, 111, 178);
-    border: double 7px rgb(165, 168, 167);
-    border-radius: 5px;
+#titulo {
+    width: 25%;
     margin: auto;
-    font-family: "Cormorant Garamond", serif;
-    color: white;
-    font-style: italic;
-    font-size: 5.2vw;
-    line-height: 8rem;
-    display: none;
-    justify-content: center;
-}
-
-#mostra-dicas:hover {
-    cursor: pointer;
-}
-
-.flash-effect-tip {
-    animation-name: flash-effect-tip;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    background-color: 1s ease;
-}
-
-@keyframes flash-effect-tip {
-    0% {
-        background-color: rgb(50, 150, 160);
-    }
-
-    50% {
-        background-color: rgb(49, 111, 178);
-    }
-
-    100% {
-        background-color: rgb(50, 150, 160);
-    }
-}
-
-#dicas {
-    width: 86%;
-    background-color: rgb(49, 111, 178);
-    border: double 7px rgb(165, 168, 167);
-    border-radius: 5px;
-    margin: 2% auto auto auto;
-    padding: 1% 3%;
-    font-size: 2rem;
-    line-height: 3rem;
-    display: none;
-}
-
-p {
-    font-size: 2rem;
-    text-align: start;
 }
 
 #palavra-secreta {
@@ -97,7 +45,7 @@ p {
     table-layout: fixed;
     --box-size: min(42px, calc(100% / 19.7));
     --box-gap: calc(var(--box-size) * 0.1);
-    grid-area: 3;
+    grid-area: 2;
 }
 
 #palavra-secreta tbody {
@@ -176,11 +124,6 @@ p {
     /* max-width: 42px; */
 }
 
-/* 
-.box-casa-vazia {
-    display: none;
-} */
-
 input:focus {
     outline: none;
 }
@@ -191,7 +134,7 @@ input:focus {
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     align-items: center;
-    grid-area: 4;
+    grid-area: 3;
 }
 
 .tecla {
@@ -247,6 +190,103 @@ button.tecla:disabled {
 }
 
 .tecla-nula {
+    display: none;
+}
+
+
+#rodape {
+    display: flex;
+    justify-content: center;
+    margin: auto 0;
+    grid-area: 4;
+}
+
+#marcatempo {
+    background-color: rgb(49, 111, 178);
+    width: clamp(87px, 13.5vw, 108px);
+    aspect-ratio: 1;
+    text-align: center;
+    border-radius: 8px;
+    border: outset 5px rgb(252, 237, 177);
+    padding-top: 0.5%;
+    margin: 0 2%;
+    align-self: center;
+}
+
+#marcapontuacao {
+    background-color: rgb(49, 111, 178);
+    width: clamp(87px, 13.5vw, 108px);
+    aspect-ratio: 1;
+    text-align: center;
+    border-radius: 8px;
+    border: outset 5px rgb(252, 237, 177);
+    padding-top: 0.5%;
+    margin: 0 2%;
+    align-self: center;
+}
+
+#sair {
+    background: rgb(49, 111, 178);
+    width: clamp(87px, 13.5vw, 108px);
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: outset 5px rgb(252, 237, 177);
+    font-family: "Anton", "Arial Narrow", sans-serif;
+    font-size: 4.3vw;
+    line-height: 4rem;
+    margin: 0 2%;
+    align-self: center;
+}
+
+#mostra-dicas {
+    width: 80%;
+    background-color: rgb(49, 111, 178);
+    border: double 7px rgb(165, 168, 167);
+    border-radius: 5px;
+    margin: auto;
+    font-family: "Cormorant Garamond", serif;
+    color: white;
+    font-style: italic;
+    font-size: 5.2vw;
+    line-height: 8rem;
+    display: none;
+    justify-content: center;
+}
+
+#mostra-dicas:hover {
+    cursor: pointer;
+}
+
+.flash-effect-tip {
+    animation-name: flash-effect-tip;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    background-color: 1s ease;
+}
+
+@keyframes flash-effect-tip {
+    0% {
+        background-color: rgb(50, 150, 160);
+    }
+
+    50% {
+        background-color: rgb(49, 111, 178);
+    }
+
+    100% {
+        background-color: rgb(50, 150, 160);
+    }
+}
+
+#dicas {
+    width: 86%;
+    background-color: rgb(49, 111, 178);
+    border: double 7px rgb(165, 168, 167);
+    border-radius: 5px;
+    margin: 2% auto auto auto;
+    padding: 1% 3%;
+    font-size: 2rem;
+    line-height: 3rem;
     display: none;
 }
 
@@ -401,50 +441,6 @@ button.tecla:disabled {
     cursor: pointer;
 }
 
-#rodape {
-    display: flex;
-    justify-content: center;
-    margin: auto 0;
-    grid-area: 5 / 1;
-}
-
-#marcatempo {
-    background-color: rgb(49, 111, 178);
-    width: clamp(87px, 13.5vw, 108px);
-    aspect-ratio: 1;
-    text-align: center;
-    border-radius: 8px;
-    border: outset 5px rgb(252, 237, 177);
-    padding-top: 0.5%;
-    margin: 0 2%;
-    align-self: center;
-}
-
-#marcapontuacao {
-    background-color: rgb(49, 111, 178);
-    width: clamp(87px, 13.5vw, 108px);
-    aspect-ratio: 1;
-    text-align: center;
-    border-radius: 8px;
-    border: outset 5px rgb(252, 237, 177);
-    padding-top: 0.5%;
-    margin: 0 2%;
-    align-self: center;
-}
-
-#sair {
-    background: rgb(49, 111, 178);
-    width: clamp(87px, 13.5vw, 108px);
-    aspect-ratio: 1;
-    border-radius: 8px;
-    border: outset 5px rgb(252, 237, 177);
-    font-family: "Anton", "Arial Narrow", sans-serif;
-    font-size: 4.3vw;
-    line-height: 4rem;
-    margin: 0 2%;
-    align-self: center;
-}
-
 h5 {
     font-size: 1.8vw;
     font-family: "Palatino Linotype";
@@ -461,4 +457,9 @@ h2 {
 
 #landscape-warning {
     display: none;
+}
+
+p {
+    font-size: 2rem;
+    text-align: start;
 }
