@@ -30,6 +30,9 @@
 }
 
 @media (max-width: 576px) {
+    body {
+        background-position: bottom;
+    }
     #titulo {
         width: 65%;
     }
@@ -40,11 +43,12 @@
 
     #pagina-inicial {
         grid-template-rows: 35dvh 20dvh auto;
+        height: 77dvh;
     }
 
     #orientacoes {
         height: auto;
-        font-size: 3rem;
+        font-size: 16pt;
         padding: 2%;
     }
 
