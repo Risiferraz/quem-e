@@ -18,7 +18,7 @@ html {
 
 #pagina-inicial {
     display: grid;
-    grid-template-rows: 58vh 14vh 28vh;
+    grid-template-rows: 58dvh 14dvh 28dvh;
     background-color: rgb(21, 21, 42);
     max-width: 800px;
     height: 100vh;
