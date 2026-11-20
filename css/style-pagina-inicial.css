@@ -61,7 +61,7 @@ html {
     transform: translateX(-50%);
     padding: 2%;
     width: 90%;
-    font-size: clamp(18pt, 4vw, 25pt);
+    font-size: clamp(18pt, 5vw, 25pt);
     line-height: 26pt;
     text-align: center;
     color: brown;
