@@ -62,10 +62,9 @@ html {
     padding: 2%;
     width: 90%;
     font-size: clamp(18pt, 4vw, 25pt);
-    line-height: 22pt;
+    line-height: 26pt;
     text-align: center;
-    color: rgb(11, 37, 238);
-    /* color: brown; */
+    color: brown;
     box-shadow: 5px 10px brown;
     border: 1px solid brown;
     background-color: LightGrey;
@@ -73,7 +72,7 @@ html {
 
 h3 {
     padding: 1% 4% 3% 4%;
-    font-size: 20pt;
+    font-size: clamp(20pt, 5vw, 28pt);
     line-height: 25pt;
     stroke-width: 18px;
 }
