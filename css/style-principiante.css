@@ -340,6 +340,7 @@ h2 {
     /* bottom: 0; */
     justify-self: center;
     z-index: 2;
+    width: 75%;
 }
 
 .imgmens {
