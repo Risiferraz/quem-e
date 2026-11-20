@@ -123,10 +123,10 @@ html {
     aspect-ratio: 1 / 1.1;
     /* max-width: 42px; */
 }
-
+/* 
 input:focus {
     outline: none;
-}
+} */
 
 #teclado {
     padding: 0 5%;
@@ -225,6 +225,20 @@ button.tecla:disabled {
     align-self: center;
 }
 
+h5 {
+    font-size: clamp(1rem, 1.8vw, 15px);
+    font-family: "Palatino Linotype";
+    color: black;
+}
+
+h2 {
+    font-family: "Anton", "Arial Narrow", sans-serif;
+    color: black;
+    font-size: clamp(1rem, 4.3vw, 35px);
+    font-style: normal;
+    line-height: 5rem;
+}
+
 #sair {
     background: rgb(49, 111, 178);
     width: clamp(87px, 13.5vw, 108px);
@@ -232,7 +246,7 @@ button.tecla:disabled {
     border-radius: 8px;
     border: outset 5px rgb(252, 237, 177);
     font-family: "Anton", "Arial Narrow", sans-serif;
-    font-size: 4.3vw;
+    font-size: clamp(1rem, 4.3vw, 35px);
     line-height: 4rem;
     margin: 0 2%;
     align-self: center;
@@ -293,7 +307,7 @@ button.tecla:disabled {
 #mensagem-dica {
     display: none;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     justify-self: center;
     z-index: 2;
 }
@@ -301,7 +315,7 @@ button.tecla:disabled {
 #mensagem-dica2 {
     display: none;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     justify-self: center;
     z-index: 2;
 }
@@ -315,7 +329,7 @@ button.tecla:disabled {
 #mensagem-letra-certa {
     display: none;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     justify-self: center;
     z-index: 2;
 }
@@ -323,7 +337,7 @@ button.tecla:disabled {
 #mensagem-letra-errada {
     display: none;
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     justify-self: center;
     z-index: 2;
 }
@@ -439,20 +453,6 @@ button.tecla:disabled {
 #ok3:hover {
     transform: scale(120%);
     cursor: pointer;
-}
-
-h5 {
-    font-size: 1.8vw;
-    font-family: "Palatino Linotype";
-    color: black;
-}
-
-h2 {
-    font-family: "Anton", "Arial Narrow", sans-serif;
-    color: black;
-    font-size: 4.3vw;
-    font-style: normal;
-    line-height: 5rem;
 }
 
 #landscape-warning {
