@@ -326,27 +326,17 @@ h2 {
     margin: 0 auto;
 }
 
-#mensagem-letra-certa {
-    display: none;
-    position: absolute;
-    /* bottom: 0; */
-    justify-self: center;
-    z-index: 2;
-}
-
+#mensagem-letra-certa,
 #mensagem-letra-errada {
     display: none;
     position: absolute;
-    /* bottom: 0; */
     justify-self: center;
     z-index: 2;
 }
 
-#imgmens {
-    width: 750%;
-    position: relative;
-    margin: 0 auto;
-    align-self: end;
+.imgmens {
+    width: min(550px, 96vw);
+    height: auto;
 }
 
 #imagem-mensagem-dica {
