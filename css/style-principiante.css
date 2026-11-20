@@ -19,7 +19,7 @@ html {
 
 #container {
     display: grid;
-    grid-template-rows: 18vh 12vh 20vh 15vh auto;
+    grid-template-rows: 18dvh 12dvh 20dvh 15dvh auto;
     background-color: rgb(21, 21, 42);
     max-width: 800px;
     height: 100vh;
