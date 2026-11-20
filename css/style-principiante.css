@@ -326,21 +326,31 @@ h2 {
     margin: 0 auto;
 }
 
-#mensagem-letra-certa,
+#mensagem-letra-certa {
+    display: none;
+    position: absolute;
+    /* bottom: 0; */
+    justify-self: center;
+    z-index: 2;
+}
+
 #mensagem-letra-errada {
     display: none;
     position: absolute;
+    /* bottom: 0; */
     justify-self: center;
     z-index: 2;
 }
 
 .imgmens {
-    width: min(550px, 96vw);
-    height: auto;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    align-self: end;
 }
 
 #imagem-mensagem-dica {
-    width: 750%;
+    width: 75%;
     position: relative;
     margin: 0 auto;
     align-self: end;
