@@ -61,10 +61,10 @@ html {
     transform: translateX(-50%);
     padding: 2%;
     width: 90%;
-    font-size: clamp(18pt, 22pt, 25pt);
+    font-size: clamp(18pt, 24pt, 25pt);
     line-height: 22pt;
     text-align: center;
-    color: rgb(235, 224, 12);
+    color: rgb(130, 5, 132);
     /* color: brown; */
     box-shadow: 5px 10px brown;
     border: 1px solid brown;
