@@ -123,6 +123,7 @@ html {
     aspect-ratio: 1 / 1.1;
     /* max-width: 42px; */
 }
+
 /* 
 input:focus {
     outline: none;
@@ -256,7 +257,7 @@ h2 {
     display: none;
     width: 80%;
     height: 10dvh;
-    margin: 2%auto;
+    margin: 2% auto;
     background-color: rgb(49, 111, 178);
     border: double 7px rgb(165, 168, 167);
     border-radius: 5px;
@@ -264,7 +265,8 @@ h2 {
     color: white;
     font-style: italic;
     font-size: 5.2vw;
-    line-height: 8rem;
+    line-height: normal;
+    align-items: center;
     justify-content: center;
 }
 
