@@ -334,15 +334,16 @@ h2 {
 #mensagem-letra-certa {
     display: none;
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
     justify-self: center;
     z-index: 2;
+    width: 85%;
 }
 
 #mensagem-letra-errada {
     display: none;
     position: absolute;
-    /* bottom: 0; */
+    bottom: 0;
     justify-self: center;
     z-index: 2;
     width: 85%;
