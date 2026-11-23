@@ -296,8 +296,8 @@ const dicas = {
     "Arauna": [
         "Dica 1: Era jebuseu",
         "Dica 2: Viveu na época do rei Davi",
-        "Dica 3: Era dono de uma eria de joeirar trigo",
-        "Dica 4: Davi comprou a eria dele para construir um altar ao Senhor",
+        "Dica 3: Era dono de uma eira de joeirar trigo",
+        "Dica 4: Davi comprou a eira dele para construir um altar ao Senhor",
         "Não há mais dicas disponíveis"
     ],
     "Arfaxade": [
@@ -1463,7 +1463,7 @@ const dicas = {
         "Não há mais dicas disponíveis"
     ],
     "Lucifer": [
-        "Dica 1: Epíteto aplicado ao rei da Babilônia",
+        "Dica 1: Epíteto (nome) aplicado ao rei da Babilônia",
         "Dica 2: Este nome aparece apenas uma vez na Bíblia no livro de Isaías",
         "Dica 3: Nome usado para significar o anjo que caiu do céu.",
         "Dica 4: Outro nome dado a Satanás",

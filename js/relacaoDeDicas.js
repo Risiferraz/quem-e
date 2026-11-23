@@ -352,8 +352,8 @@ const dicas = {
     "Arauna": [
         "Dica 1: Era jebuseu",
         "Dica 2: Viveu na época do rei Davi",
-        "Dica 3: Era dono de uma eria de joeirar trigo",
-        "Dica 4: Davi comprou a eria dele para construir um altar ao Senhor",
+        "Dica 3: Era dono de uma eira de joeirar trigo",
+        "Dica 4: Davi comprou a eira dele para construir um altar ao Senhor",
         "Não há mais dicas disponíveis"
     ],
     "Arfaxade": [
@@ -875,11 +875,11 @@ const dicas = {
         "Dica 5: Como os soldados não quiseram matá-los, ele o fez"
     ],
     "Dorcas": [
-        "Dica 1: Seu nome hebraico era Tabita",
-        "Dica 2: Gostava de dar esmolas e era cheia de boas obras",
-        "Dica 3: Ela morava em Jope e havia morrido e estava sendo velada num cenáculo",
-        "Dica 4: Quando Pedro chegou ali, as viúvas estavam chorando e mostrando as vestes que ela fizera em vida",
-        "Dica 5: Foi ressuscitada por Pedro."
+        "Dica 1: Gostava de dar esmolas e era cheia de boas obras",
+        "Dica 2: Ela morava em Jope e havia morrido e estava sendo velada num cenáculo",
+        "Dica 3: Quando Pedro chegou ali, as viúvas estavam chorando e mostrando as vestes que ela fizera em vida",
+        "Dica 4: Foi ressuscitada por Pedro.",
+        "Dica 5: Seu nome hebraico era Tabita"
     ],
     "Ebede-Meleque": [
         "Dica 1: Era um eunuco etíope",

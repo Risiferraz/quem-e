@@ -17,6 +17,11 @@
 }
 
 @media screen and (max-width: 576px) {
+
+    #container {
+        grid-template-rows: 18dvh 12dvh 23dvh 15dvh 32dvh;
+    }
+
     #mensagem-dica,
     #mensagem-dica2,
     #mensagem-letra-certa,
