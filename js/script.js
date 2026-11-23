@@ -345,6 +345,7 @@ botaoMostraDicas.addEventListener("click", () => {
 function exibirBotaoMostraDicas() {
   setTimeout(() => {
     if (!botaoMostraDicas) return;
+    botaoMostraDicas.style.gridArea = "5 / 1";
     botaoMostraDicas.style.display = "flex";
   }, 500);
 
@@ -364,6 +365,7 @@ function clicarOk2() { // Ocultar mensagem de dica2
 }
 
 function clicarOk3() {
+  document.getElementById("dicas").style.display = "none";
   const mensagemLetraCerta = document.getElementById("mensagem-letra-certa");
   if (mensagemLetraCerta) {
     mensagemLetraCerta.style.display = "none";
@@ -380,6 +382,7 @@ function clicarOk3() {
 }
 
 function clicarOk4() {
+  document.getElementById("dicas").style.display = "none";
   const mensagemLetraErrada = document.getElementById("mensagem-letra-errada");
   if (mensagemLetraErrada) {
     mensagemLetraErrada.style.display = "none";

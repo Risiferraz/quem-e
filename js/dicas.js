@@ -13,6 +13,7 @@ botaoExibeDicas.addEventListener("click", () => { // Ao clicar no botão "mostra
     acrescentaPontuacao();
     exibirDicas();
     bloquearTeclas();
+    botaoExibeDicas.style.display = 'none';
 
     // aguarda 5 segundos antes de aplicar o style e desabilitar
     setTimeout(() => {
