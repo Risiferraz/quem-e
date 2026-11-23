@@ -19,7 +19,7 @@ html {
 
 #container {
     display: grid;
-    grid-template-rows: 20% 11% 26% 15% 28%;
+    grid-template-rows: 18dvh 12dvh 23dvh 15dvh 32dvh;
     background-color: rgb(21, 21, 42);
     max-width: 800px;
     height: 100vh;
