@@ -229,7 +229,7 @@ function liberarTeclas() {
 }
 
 const botaoMostraDicas = document.getElementById("mostra-dicas");
-function verificarLetraClicada() {
+function verificarLetraClicada() { // Função que verifica se a letra clicada está correta e atualiza o estado do jogo
   const botoesTecla = document.querySelectorAll("button.tecla"); // Seleciona todos os botões com a classe "tecla"
 
   botoesTecla.forEach(buttonClicado => { // Para cada botão "tecla", adiciona um listener para o evento de clique
@@ -277,8 +277,8 @@ function verificarLetraClicada() {
         if (casasVazias === 0) {
           verificarPalavraPreenchida();
           const mostraDicasVisivel = document.getElementById("mostra-dicas");
-          if (mostraDicasVisivel && getComputedStyle(mostraDicasVisivel).display === "flex") {
-            mostraDicasVisivel.style.display = "none";
+          if (mostraDicasVisivel && getComputedStyle(mostraDicasVisivel).display === "flex") { // Se o botão de mostrar dicas estiver visível, esconde-o
+            mostraDicasVisivel.style.display = "none"; // Esconde o botão de mostrar dicas
           }
         } else if (casasVazias <= limitePermitido) {
           if (tamanhoPalavra <= 4) {
@@ -344,9 +344,9 @@ botaoMostraDicas.addEventListener("click", () => {
 // 🔹 Função que apenas exibe o botão (sem contar cliques)
 function exibirBotaoMostraDicas() {
   setTimeout(() => {
-    if (!botaoMostraDicas) return;
+    if (!botaoMostraDicas) return; // Se o botão não existir, sai da função
     botaoMostraDicas.style.gridArea = "5 / 1";
-    botaoMostraDicas.style.display = "flex";
+    botaoMostraDicas.style.display = "flex"; // Exibe o botão de mostrar dicas novamente
   }, 500);
 
   if (botaoMostraDicas.disabled) {
@@ -504,12 +504,12 @@ function verificarPalavraPreenchida() {
     cronometro.pararCronometro();
     pontuacaoFinal();
 
-    setTimeout(() => {
-      document.getElementById("mensagem-game-over-acerto").style.display = "grid";
-      document.getElementById("sair").classList.add("flash-effect-tip");
-      document.getElementById("dicas").style.display = "none";
-      document.getElementById("teclado").style.display = "none";
-      document.getElementById("palavra-secreta").style.gridArea = "1 / 1";
+    setTimeout(() => { // Mostra a mensagem de acerto após 1 segundo
+      document.getElementById("mensagem-game-over-acerto").style.display = "grid"; // Exibe a mensagem de acerto
+      document.getElementById("sair").classList.add("flash-effect-tip"); // Adiciona efeito de flash ao botão sair
+      document.getElementById("dicas").style.display = "none"; // Esconde as dicas
+      document.getElementById("teclado").style.display = "none"; // Esconde o teclado
+      document.getElementById("palavra-secreta").style.gridArea = "1 / 1"; // Ajusta a área da palavra secreta no grid
       ajustarBoxQuadrada();
     }, 1000);
   }

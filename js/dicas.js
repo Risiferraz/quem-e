@@ -2,7 +2,7 @@ function acionaBotaoDica() {
     const divDicas = document.getElementById("dicas");
 
     if (divDicas) {
-        divDicas.style.gridArea = "5 / 1";
+        divDicas.style.gridArea = "5 / 1"; // Ajusta a área do grid para exibir as dicas na posição correta
     }
 
 }
@@ -13,7 +13,6 @@ botaoExibeDicas.addEventListener("click", () => { // Ao clicar no botão "mostra
     acrescentaPontuacao();
     exibirDicas();
     bloquearTeclas();
-    botaoExibeDicas.style.display = 'none';
 
     // aguarda 5 segundos antes de aplicar o style e desabilitar
     setTimeout(() => {
@@ -26,7 +25,7 @@ botaoExibeDicas.addEventListener("click", () => { // Ao clicar no botão "mostra
 
 let dicaAtual = 0;
 function exibirDicas() {
-    const divDicas = document.getElementById("dicas"); // div onde as dicas serão exibidas
+    const divDicas = document.getElementById("dicas"); // seleciona a div onde as dicas serão exibidas
     const dicasPersonagem = dicas[personagemSecreto];  // pega a lista de dicas do personagem
 
     if (dicaAtual < dicasPersonagem.length && dicaAtual < 5) { // se ainda houver dicas e menos de 5 mostradas
