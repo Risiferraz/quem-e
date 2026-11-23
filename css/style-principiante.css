@@ -312,17 +312,19 @@ h2 {
 #mensagem-dica {
     display: none;
     position: absolute;
-    /* bottom: 0; */
+    top: 18dvh;
     justify-self: center;
     z-index: 2;
+    width: 90%;
 }
 
 #mensagem-dica2 {
     display: none;
     position: absolute;
-    /* bottom: 0; */
+    top: 18dvh;
     justify-self: center;
     z-index: 2;
+    width: 90%;
 }
 
 #imagem-dica {
@@ -334,19 +336,19 @@ h2 {
 #mensagem-letra-certa {
     display: none;
     position: absolute;
-    bottom: 0;
+    top: 18dvh;
     justify-self: center;
     z-index: 2;
-    width: 85%;
+    width: 90%;
 }
 
 #mensagem-letra-errada {
     display: none;
     position: absolute;
-    bottom: 0;
+    top: 18dvh;
     justify-self: center;
     z-index: 2;
-    width: 85%;
+    width: 90%;
 }
 
 .imgmens {
