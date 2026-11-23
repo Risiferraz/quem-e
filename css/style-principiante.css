@@ -19,7 +19,7 @@ html {
 
 #container {
     display: grid;
-    grid-template-rows: 18dvh 12dvh 20dvh 15dvh auto;
+    grid-template-rows: 18dvh 12dvh minmax(20dvh, max-content) 15dvh auto;
     background-color: rgb(21, 21, 42);
     max-width: 800px;
     height: 100vh;
@@ -33,7 +33,7 @@ html {
 }
 
 #titulo {
-    width: 25%;
+    width: 35%;
     margin: auto;
 }
 
@@ -130,21 +130,26 @@ input:focus {
 } */
 
 #teclado {
-    padding: 0 5%;
     margin: auto;
+    width: 90%;
     font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    align-items: center;
+    table-layout: fixed;
+    border-spacing: 1px;
     grid-area: 3;
 }
 
+.tecla,
+.tecla-clicada {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
 .tecla {
-    width: 55px;
-    height: 55px;
-    margin: 5%;
     background-color: rgb(243, 242, 242);
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 135%;
 }
 
 .tecla:hover {
@@ -152,9 +157,6 @@ input:focus {
 }
 
 .tecla-clicada {
-    width: 55px;
-    height: 55px;
-    margin: 5%;
     color: antiquewhite;
     background-color: rgb(158, 157, 157);
     opacity: 30%;
