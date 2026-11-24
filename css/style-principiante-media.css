@@ -3,7 +3,7 @@
     #container {
         height: auto;
         grid-template-rows: 23dvh 10dvh 31dvh 14dvh 22dvh;
-        background-color: #f0f0f0;
+        /* background-color: #f0f0f0; */
     }
 }
 

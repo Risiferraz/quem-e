@@ -305,7 +305,7 @@ h2 {
     border-radius: 5px;
     margin: 2% auto auto auto;
     padding: 1% 3%;
-    font-size: clamp(18pt, 4vw, 25pt);
+    font-size: clamp(18pt, 5vw, 25pt);
     line-height: 4.5rem;
 }
 

@@ -13,13 +13,6 @@ const dicas = {
         "Dica 4: A história dele está registrada no livro de Gênesis",
         "Não há mais dicas disponíveis"
     ],
-    "Abias33": [
-        "Dica 1: Foi um rei de Judá",
-        "Dica 2: Foi neto de Salomão e também de Absalão",
-        "Dica 3: Foi pai de Asa",
-        "Dica 4: A história dele está registrada no capítulo 15 de 1 Reis",
-        "Não há mais dicas disponíveis"
-    ],
     "Abiatar": [
         "Dica 1: Era um sacerdote",
         "Dica 2: Era descendente de Eli",
@@ -40,13 +33,6 @@ const dicas = {
         "Dica 3: Quis tomar Sara como esposa",
         "Dica 4: Foi avisado por Deus em sonho para não fazer isso",
         "Dica 5: A história dele está registrada no capítulo 20 de Gênesis"
-    ],
-    "Abisai": [
-        "Dica 1: Era um dos valentes de Davi",
-        "Dica 2: Era irmão de Joabe e Asael, todos filhos de Zeruia, irmã de Davi",
-        "Dica 3: Salvou a vida de Davi matando Ishbi-Benobe, filho de um gigante",
-        "Dica 4: Juntamente com Joabe, matou o comandante dos exércitos de Saul, Abner",
-        "Não há mais dicas disponíveis"
     ],
     "Abiu": [
         "Dica 1: Era filho de Arão",
@@ -90,20 +76,6 @@ const dicas = {
         "Dica 4: Casou-se com Jezabel, filha do rei Etbaal, de Tiro",
         "Dica 5: Foi personagem do famoso confronto no monte Carmelo, entre Elias e os profetas de Baal",
     ],
-    "Acaz": [
-        "Dica 1: Foi um mau rei em Judá",
-        "Dica 2: Queimou seu filho como sacrifício aos ídolos",
-        "Dica 3: O Senhor Deus mandou o profeta Isaías dizer-lhe para pedir um sinal a Ele",
-        "Dica 4: Copiou o modelo do altar de Damasco e fez um igual no templo de Jerusalém",
-        "Dica 5: Foi pai do rei Ezequias"
-    ],
-    "Acazias": [
-        "Dica 1: Era filho de Jezabel",
-        "Dica 2: Caiu de uma janela do palácio e enviou mensageiros para consultar Baal-Zebube, deus de Ecrom",
-        "Dica 3: Deus mandou o profeta Elias dizer-lhe que ele morreria por causa disso",
-        "Dica 4: Morreu sem deixar filhos",
-        "Dica 5: Começou a reinar depois que seu pai Acabe morreu",
-    ],
     "Acsa": [
         "Dica 1: Filha de Calebe",
         "Dica 2: Seu pai ofereceu-lhe em casamento ao homem que conquistasse a cidade de Quiriate-Sefer",
@@ -138,34 +110,6 @@ const dicas = {
         "Dica 3: Foi contemporâneo de Zorobabel e viveu na época da reconstrução do templo",
         "Dica 4: Repreendeu o povo por ter deixado a obra do templo parada por muito tempo",
         "Dica 5: Ele profetizou que a glória do segundo templo seria maior que a do primeiro",
-    ],
-    "Aias": [
-        "Dica 1: Foi um profeta que viveu na época da divisão do reino de Israel",
-        "Dica 2: Rasgou seu manto em doze pedaços, e deu dez deles a Jeroboão",
-        "Dica 3: Jeroboão mandou sua esposa disfarçada consultá-lo sobre o destino de seu filho",
-        "Dica 4: O Senhor revelou a ele que o filho de Jeroboão morreria",
-        "Dica 5: A história dele está registrada em 1 Reis 11 e 14"
-    ],
-    "Aicão": [
-        "Dica 1: Viveu na época do rei Josias, em Judá",
-        "Dica 2: Foi mandado pelo rei com outros delegados consultar a profetisa Hulda",
-        "Dica 3: Presenciou a descoberta do livro da Lei no templo",
-        "Dica 4: Usou da sua influência para livrar da morte o profeta Jeremias(Jr 26.24)",
-        "Dica 5: Seu filho Gedalias foi nomeado governador de Judá por Nabucodonosor"
-    ],
-    "Aimaas": [
-        "Dica 1: Seu pai era o sacerdote Zadoque",
-        "Dica 2: Junto com Jônatas, serviram de espias para Davi durante a fuga deste de Absalão",
-        "Dica 3: Junto com Jônatas, filho de Abiatar, esconderam-se num poço fugindo de Absalão",
-        "Dica 4: Pediu para correr e levar a Davi a notícia da vitória sobre Absalão",
-        "Dica 5: A história dele está registrada em 2 Samuel 15 e 17"
-    ],
-    "Ainoã": [
-        "Dica 1: Juntamente com Abigail, foi levada cativa pelos amalequitas, quando morava em Ziclague",
-        "Dica 2: Tinha o mesmo nome da esposa de Saul",
-        "Dica 3: Casou-se com Davi antes que ele se tornasse rei",
-        "Dica 4: Foi a mãe do filho mais velho de Davi",
-        "Dica 5: A história dela está registrada em 1 Samuel 25 e 2 Samuel 3"
     ],
     "Aitofel": [
         "Dica 1: Era um excelente estrategista militar. Suas palavras tinham a autoridade de um oráculo divino",
@@ -489,7 +433,7 @@ const dicas = {
         "Dica 4: Ele foi 'o resgatador' de sua sogra Noemi, casando-se com Rute",
         "Não há mais dicas disponíveis",
     ],
-    "Caifás": [
+    "Caifas": [
         "Dica 1: Era sumo sacerdote",
         "Dica 2: Profetizou que Jesus havia de morrer pela nação",
         "Dica 3: Os guardas dos judeus levaram Jesus a Anás, seu sogro e também a ele",
@@ -641,13 +585,6 @@ const dicas = {
         "Dica 2: Era um homem muito gordo",
         "Dica 3: Eúde disse a ele: 'Eu tenho uma mensagem de Deus para ti, ó rei'",
         "Dica 4: Foi morto com uma faca enfiada em sua barriga gorda",
-        "Não há mais dicas disponíveis"
-    ],
-    "Ela": [
-        "Dica 1: Um rei de Israel",
-        "Dica 2: Filho de Baasa",
-        "Dica 3: Seu reinado foi curto, apenas dois anos",
-        "Dica 4: Zinri invadiu o palácio dele durante uma festa e o matou",
         "Não há mais dicas disponíveis"
     ],
     "Eleazar33": [
@@ -1098,13 +1035,6 @@ const dicas = {
         "Dica 4: Ao regressar a sua casa, sua única filha foi a primeira pessoa que saiu de casa para o abraçar",
         "Dica 5: Fez o voto de oferecer a Deus em holocausto a primeira criatura que viesse ao seu encontro após a vitória",
     ],
-    "Jeoacaz33": [
-        "Dica 1: Filho do rei de Israel chamado Jeú",
-        "Dica 2: Fez o que era mau aos olhos do Senhor porque persistiu nos pecados de Jeroboão I",
-        "Dica 3: Quando ele morreu, Jeoás, seu filho reinou em seu lugar",
-        "Dica 4: Hazael, rei da Síria, reduziu consideravelmente as suas forças militares e o obrigou a lhe pagar tributo",
-        "Não há mais dicas disponíveis"
-    ],
     "Jeoacaz44": [
         "Dica 1: Também chamado 'Salum'",
         "Dica 2: Tinha apenas 23 anos de idade quando começou a reinar, e reinou apenas três meses em Jerusalém",
@@ -1118,13 +1048,6 @@ const dicas = {
         "Dica 3: Aliou-se ao Faraó Neco, revoltando contra Nabucodonosor",
         "Dica 4: Irmão e sucessor de Jeoacaz, rei de Judá",
         "Não há mais dicas disponíveis"
-    ],
-    "Jeoas": [
-        "Dica 1: Filho de Jeoacaz, rei de Israel, e pai de Jeroboão II",
-        "Dica 2: Visitou Eliseu em seu leito de morte",
-        "Dica 3: Eliseu mandou que ele golpeasse a terra com as flechas, o que ele fez apenas três vezes",
-        "Dica 4: Lutou contra Ben-Hadade, filho de Hazael e recuperou várias cidades de Israel do poder dos sírios",
-        "Dica 5: Ele venceu Amazias, rei de Judá, e o aprisionou, levou também cativos para Samaria, muitos judeus"
     ],
     "Jeorão": [
         "Dica 1: Depois que fora coroado, matou a todos os seus irmãos",
@@ -1245,13 +1168,6 @@ const dicas = {
         "Dica 4: Em Babilônia esteve preso com todo o rigor pelo espaço de trinta e seis anos",
         "Dica 5: Evil-Merodaque, que sucedeu a Nabucodonosor, o pôs em liberdade, colocando-o num lugar de honra entre os demais reis cativos",
     ],
-    "Joas44": [
-        "Dica 1: Sua vida terminou tragicamente, sendo assassinado por conspiradores",
-        "Dica 2: Foi o rei de Judá que começou a reinar em mais tenra idade",
-        "Dica 3: Em seu jovem reinado, foi guiado pelo sacerdote Joiada e promoveu reformas religiosas muito importantes",
-        "Dica 4: Foi o único dos filhos de Acazias e descendente do rei Davi que escapou ao massacre, que Atalia ordenara",
-        "Dica 5: Após a morte de Joiada, afastou-se de Deus a ponto de ordenar a morte de Zacarias, filho do sacerdote Joiada",
-    ],
     "Joel33": [
         "Dica 1: Foi um profeta, filho de Petuel",
         "Dica 2: As freqüentes referências a Jerusalém e a Judá fazem-nos supor que ele era profeta do Reino do Sul, tendo vivido em Jerusalém.",
@@ -1272,13 +1188,6 @@ const dicas = {
         "Dica 3: Liderou a reforma do templo nos durante o reinado de Joás",
         "Dica 4: Sua esposa, chamada Jeoseba, escondeu o menino Joás para não ser morto por Atalia",
         "Dica 5: Ele traçou um plano para matar Atalia e coroar Joás com apenas seis anos de idade",
-    ],
-    "Jonadabe33": [
-        "Dica 1: A Bíblia diz que ele era um homem muito sagaz e astuto",
-        "Dica 2: Sobrinho de Davi, que tinha acesso a sua corte",
-        "Dica 3: Amigo íntimo de Amnom, primogênito de Davi",
-        "Dica 4: Amnom lhe confessou que estava apaixonado por sua meia irmã Tamar",
-        "Dica 5: Ele traçou um plano para que Amnom pudesse se aproximar dela",
     ],
     "Jonadabe44": [
         "Dica 1: Filho de Recabe. Sua família era conhecida como os 'recabitas', e eram descendentes de queneus",
@@ -1364,26 +1273,12 @@ const dicas = {
         "Dica 4: Participou da reconstrução do altar, mesmo antes da reconstrução completa do templo",
         "Dica 5: Voltou do exílio na Babilônia para Jerusalém juntamente com Zorobabel e Neemias",
     ],
-    "Jotão44": [
-        "Dica 1: Foi rei de Judá e o seu reinado foi próspero porque dirigiu os seus caminhos na presença do Senhor",
-        "Dica 2: Foi contemporâneo do profeta Isaías",
-        "Dica 3: Fez o que era reto aos olhos do Senhor, embora não tivesse abolido os lugares altos da idolatria.",
-        "Dica 4: Guerreou contra os amonitas e os forçou a pagar tributos",
-        "Dica 5: Seu pai ficou leproso por causa disto, ele governou, como regente, durante vinte e cinco anos",
-    ],
     "Juda": [
         "Dica 1: Quarto filho de Jacó e Lia",
         "Dica 2: À exceção de José, ele figura mais vezes na história de Israel do que qualquer dos seus irmãos",
         "Dica 3: Foi ele que aconselhou a venda de José aos mercadores ismaelitas, querendo evitar a sua morte",
         "Dica 4: Teve filhos gêmeos com Tamar, sua nora",
         "Dica 5: Filho de Jacó, do qual é descendente Jesus Cristo",
-    ],
-    "Judas33": [
-        "Dica 1: Este nome é a forma grega da nome hebraico Judá",
-        "Dica 2: Era líder entre os irmãos da igreja em Jerusalém",
-        "Dica 3: Foi escolhido juntamente com Silas para acompanhar Paulo e Barnabé aos irmãos gentios",
-        "Dica 4: Levaram a carta que informarem aos crentes cristãos gentios sobre a resolução dos Apóstolos em Jerusalém",
-        "Dica 5: A carta dizia: 'Soubemos que alguns homens, que daqui saíram sem nossa autorização, têm perturbado vocês com seu ensino.",
     ],
     "Judas44": [
         "Dica 1: Um dos doze apóstolos",
@@ -1728,13 +1623,6 @@ const dicas = {
         "Dica 4: Por causa da fome, sua família foi morar na terra de Moabe",
         "Dica 5: Seu marido e seus dois filhos morreram então ela resolveu voltar para sua cidade natal",
     ],
-    "Obadias33": [
-        "Dica 1: Era o intendente responsável pelo palácio de Acabe",
-        "Dica 2: A Bíblia diz que ele temia muito ao Senhor desde de sua mocidade",
-        "Dica 3: Escondeu e sustentou cem profetas do Senhor no período em que Jezabel estava os perseguindo",
-        "Dica 4: Ele falou a Acabe que Elias queria vê-lo",
-        "Não há mais dicas disponíveis"
-    ],
     "Obadias44": [
         "Dica 1: Era um profeta",
         "Dica 2: Nada se sabe a respeito da sua vida",
@@ -1762,13 +1650,6 @@ const dicas = {
         "Dica 3: Era um escravo",
         "Dica 4: Fugiu da casa de seu senhor, que era cristão, indo para Roma",
         "Dica 5: Paulo escreve uma carta a Filemom, seu dono, pedindo a ele que o recebesse de volta, como um irmão",
-    ],
-    "Onri": [
-        "Dica 1: Rei de israel, das tribos do norte",
-        "Dica 2: Instaurou a segunda disnastia de reis em Israel, e transferiu a capital de Tirza para Samaria",
-        "Dica 3: Era comandante chefe, sob o governo do rei Elá, filho de Baasa",
-        "Dica 4: Sendo Elá assassinado por Zinri, ele foi proclamado rei pelos seus soldados",
-        "Dica 5: Tibni e Jorão não aceitaram a supremacia dele, seguindo-se uma guerra civil, que durou quatro anos.",
     ],
     "Oseias33": [
         "Dica 1: Profeta de Israel e primeiro na ordem dos chamados Profetas Menores",
