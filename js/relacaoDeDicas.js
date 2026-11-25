@@ -759,7 +759,7 @@ const dicas = {
         "Dica 1: Era um centurião romano",
         "Dica 2: Morava em Cesareia e era piedoso e temente a Deus",
         "Dica 3: Teve uma visão de um anjo de Deus dizendo que fosse procurar Simão Pedro em Jope.",
-        "Dica 4: Quando Pedro falava com ele, o Espírito Santo caiu sobre todos os que, com ele, ouviam a Palavra de Deus",
+        "Dica 4: Enquanto Pedro falava com ele, o Espírito Santo caiu sobre todos os que, com ele, ouviam a Palavra de Deus",
         "Dica 5: Pedro disse a ele: 'Você sabe que é proibido a um judeu ajuntar-se com gentios",
     ],
     "Crispo": [
@@ -2268,7 +2268,7 @@ const dicas = {
         "Dica 5: Sua mãe se chamava Lia",
     ],
     "Lia": [
-        "Dica 1: Ela tinha olhos meigos, mas dem brilho",
+        "Dica 1: Ela tinha olhos meigos, mas sem brilho",
         "Dica 2: Seu marido serviu a seu pai por seis anos para poder casar com ela",
         "Dica 3: Lutava com sua irmã pelo amor de seu marido",
         "Dica 4: Deu seis filhos a Jacó e uma filha",
