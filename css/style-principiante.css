@@ -369,14 +369,16 @@ h2 {
     display: none;
     width: 100%;
     position: absolute;
-    bottom: 16%;
+    bottom: -10%;
+    grid-area: 2 / 1 / span 3 / span 1;
 }
 
 #mensagem-game-over-acerto {
     display: none;
     width: 100%;
     position: absolute;
-    bottom: 16%;
+    bottom: -10%;
+    grid-area: 2 / 1 / span 3 / span 1;
 }
 
 #imagem-over {

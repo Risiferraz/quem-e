@@ -759,7 +759,7 @@ const dicas = {
         "Dica 1: Era um centurião romano",
         "Dica 2: Morava em Cesareia e era piedoso e temente a Deus",
         "Dica 3: Teve uma visão de um anjo de Deus dizendo que fosse procurar Simão Pedro em Jope.",
-        "Dica 4: Quando Pedro falava com ele, o Espírito Santo caiu sobre todos os que estavem ouvindo a Palavra de Deus",
+        "Dica 4: Quando Pedro falava com ele, o Espírito Santo caiu sobre todos os que, com ele, ouviam a Palavra de Deus",
         "Dica 5: Pedro disse a ele: 'Você sabe que é proibido a um judeu ajuntar-se com gentios",
     ],
     "Crispo": [
@@ -3892,3 +3892,8 @@ const dicas = {
         "Dica 5: Junto com o sacerdote Josué, teve papel fundamental na reconstrução do Templo",
     ],
 };
+// for (const [personagem, dicasPersonagem] of Object.entries(dicas)) {
+//     dicas[personagem] = dicasPersonagem.map(dica =>
+//         dica.replace(/^(Dica [1-5]:)/, '<strong style="font-family: Arial, sans-serif; font-weight: bold;">$1</strong>')
+//     );
+// }

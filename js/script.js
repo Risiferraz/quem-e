@@ -474,6 +474,7 @@ document.addEventListener("DOMContentLoaded", () => { // Espera o carregamento c
         document.getElementById("dicas").style.display = "none";
         document.getElementById("teclado").style.display = "none";
         document.getElementById("palavra-secreta").style.display = "none";
+        document.getElementById("rodape").style.gridArea = "5 / 1";
         ajustarBoxQuadrada();
       }, 5000);
     }
@@ -510,6 +511,7 @@ function verificarPalavraPreenchida() {
       document.getElementById("dicas").style.display = "none"; // Esconde as dicas
       document.getElementById("teclado").style.display = "none"; // Esconde o teclado
       document.getElementById("palavra-secreta").style.gridArea = "1 / 1"; // Ajusta a área da palavra secreta no grid
+      document.getElementById("rodape").style.gridArea = "5 / 1";
       ajustarBoxQuadrada();
     }, 1000);
   }
