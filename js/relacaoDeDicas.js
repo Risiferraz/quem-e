@@ -2072,11 +2072,11 @@ const dicas = {
         "Dica 5: Convidaram a ele para se tornar o sacerdote de toda a tribo, o que ele aceitou de bom grado, indo embora com eles"
     ],
     "Jonatas44": [
-        "Dica 1: Era um valente guerreiro, lutou várias vezes os filisteus",
+        "Dica 1: Era um valente guerreiro, lutou várias vezes contra os filisteus",
         "Dica 2: Morreu em combate no monte Gilboa. Os filisteus penduraram seu corpo na muralha de Bete-Seã",
         "Dica 3: Tinha um filho chamado Mefibosete",
-        "Dica 4: Fez um pacto com Davi, visto que o amava como à sua própria vida",
-        "Dica 5: Era o primogênito do primeiro rei de Israel, e herdeiro do trono",
+        "Dica 4: Era o primogênito do primeiro rei de Israel, e herdeiro do trono",
+        "Dica 5: Fez um pacto com Davi, visto que o amava como à sua própria vida",
     ],
     "Jonatas55": [
         "Dica 1: Era filho do sacerdote Abiatar",
