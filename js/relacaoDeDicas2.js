@@ -762,13 +762,6 @@ const dicas = {
         "Dica 4: Um dos quatro grandes profetas",
         "Dica 5: Em uma de suas visões, ele viu um grande vale cheio de ossos secos",
     ],
-    "Farao-Neco": [
-        "Dica 1: Era rei do Egito",
-        "Dica 2: Lutou contra o rei da Assíria em Megido",
-        "Dica 3: Na batalha de Megido, ele matou ao rei Josias",
-        "Dica 4: Ele prendeu Jeoacaz em Ribla e o levou para o Egito",
-        "Dica 5: Constituiu Eliaquim rei no lugar de Jeoacaz, mudando-lhe o nome para Jeoaquim",
-    ],
     "Filemom": [
         "Dica 1: Paulo lhe escreveu uma carta",
         "Dica 2: Tinha um escravo que fugiu",

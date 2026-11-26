@@ -106,7 +106,6 @@ const listaDePersonagens = [
   "Eva",
   "Ezequias",
   "Ezequiel",
-  "Farao-Neco",
   "Filemom",
   "Fileto",
   "Filipe33",

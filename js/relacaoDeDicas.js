@@ -1192,7 +1192,7 @@ const dicas = {
     "Farao-Neco": [
         "Dica 1: Era rei do Egito",
         "Dica 2: Lutou contra o rei da Assíria em Megido",
-        "Dica 3: Na batalha de Megido, ele matou ao rei Josias",
+        "Dica 3: Na batalha de Megido, ele matou o rei Josias",
         "Dica 4: Ele prendeu Jeoacaz em Ribla e o levou para o Egito",
         "Dica 5: Constituiu Eliaquim rei no lugar de Jeoacaz, mudando-lhe o nome para Jeoaquim",
     ],
