@@ -1,13 +1,58 @@
-@media screen and (max-width: 800px) and (max-height: 900px) {
+@media screen and (max-height: 900px) {
 
     #container {
         height: auto;
-        grid-template-rows: 23dvh 10dvh 31dvh 14dvh 22dvh;
+        grid-template-rows: 25dvh 11dvh 32dvh 15dvh 17dvh;
         /* background-color: #f0f0f0; */
+    }
+
+    #mensagem-game-over-erro {
+        bottom: 0%;
+    }
+
+    #imagem-over {
+        width: 58%;
+    }
+
+    #rodape {
+        --tamanho-controle: clamp(5.6rem, min(17dvw, 9dvh), 8rem);
+    }
+
+    #marcatempo,
+    #marcapontuacao,
+    #sair {
+        width: var(--tamanho-controle);
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        border-width: calc(var(--tamanho-controle) * 0.05);
+    }
+
+    #marcatempo,
+    #marcapontuacao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: calc(var(--tamanho-controle) * 0.05);
+        overflow-wrap: anywhere;
+    }
+
+    #marcatempo h5,
+    #marcapontuacao h5 {
+        font-size: calc(var(--tamanho-controle) * 0.16);
+        line-height: 1.1;
+    }
+
+    #cronometro,
+    #indicador,
+    #sair {
+        font-size: calc(var(--tamanho-controle) * 0.27);
+        line-height: 1.1;
     }
 }
 
 @media screen and (max-width: 576px) {
+
     #mensagem-dica,
     #mensagem-dica2,
     #mensagem-letra-certa,
